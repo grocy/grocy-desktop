@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Product Id="*" Name="grocy-desktop" Language="1033" Version="1.0.0.0" Manufacturer="Bernd Bestel" UpgradeCode="78f7234c-0724-4b82-8ff7-4ca0e8761871">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perUser" Description="ERP beyond your fridge" Manufacturer="Bernd Bestel" Keywords="" Comments="" />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MediaTemplate EmbedCab="yes" />
+
+		<Icon Id="icon.ico" SourceFile="$(var.SolutionDir)grocy-desktop\grocy-desktop_icon.ico"/>
+		<Property Id="ARPPRODUCTICON" Value="icon.ico" />
+
+		<Feature Id="ProductFeature" Title="grocy-desktop Setup" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+			<ComponentRef Id="ApplicationShortcut" />
+			<ComponentRef Id="ApplicationShortcutDesktop" />
+		</Feature>
+
+		<Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER" />
+		<UI>
+			<UIRef Id="WixUI_InstallDir" />
+			<Publish Dialog="WelcomeDlg" Control="Next" Event="NewDialog" Value="InstallDirDlg" Order="2">1</Publish>
+			<Publish Dialog="VerifyReadyDlg" Control="Back" Event="NewDialog" Value="WelcomeDlg" Order="2">1</Publish>
+			<Publish Dialog="ExitDialog" Control="Finish" Event="DoAction" Value="LaunchApplication">WIXUI_EXITDIALOGOPTIONALCHECKBOX = 1 and NOT Installed</Publish>
+		</UI>
+		<Property Id="WIXUI_EXITDIALOGOPTIONALCHECKBOXTEXT" Value="Start grocy-desktop after finishing installation" />
+
+		<Property Id="WixShellExecTarget" Value="[INSTALLFOLDER]grocy-desktop.exe" />
+		<CustomAction Id="LaunchApplication" BinaryKey="WixCA" DllEntry="WixShellExec" Impersonate="yes" />
+		
+		<Upgrade Id="6BFE12C7-63CC-48DB-BCFC-7A7DE95D72C1">
+			<UpgradeVersion OnlyDetect="no" Property="PREVIOUSFOUND" Minimum="1.0.0.0" IncludeMinimum="yes" Maximum="99.0.0.0" IncludeMaximum="no" />
+		</Upgrade>
+	
+		<CustomAction Id="CleanAdditionalFiles" Directory="ProgramFilesFolder" ExeCommand="cmd /C &quot;rd /S /Q .\grocy-desktop&quot;" Execute="deferred" Return="ignore" HideTarget="no" Impersonate="no" />
+		<InstallExecuteSequence>
+			<Custom Action="CleanAdditionalFiles" Before="RemoveFiles" >
+				REMOVE="ALL"
+			</Custom>
+		</InstallExecuteSequence>
+	</Product>
+
+	<Fragment>
+		<SetProperty Id="ProgramFilesFolder" Value="[LocalAppDataFolder]" Before="CostFinalize"><![CDATA[NOT Privileged]]></SetProperty>
+		
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFilesFolder">
+				<Directory Id="INSTALLFOLDER" Name="grocy-desktop" />
+			</Directory>
+			<Directory Id="ProgramMenuFolder" />
+			<Directory Id="DesktopFolder" Name="Desktop" />
+		</Directory>
+	</Fragment>
+
+	<Fragment>
+		<DirectoryRef Id="ProgramMenuFolder">
+			<Component Id="ApplicationShortcut" Guid="5B9422D4-A456-4CCE-8A0F-0810175D3C6C">
+				<Shortcut Id="ApplicationStartMenuShortcut" Name="grocy" Description="ERP beyond your fridge" Target="[INSTALLFOLDER]grocy-desktop.exe" WorkingDirectory="INSTALLFOLDER" />
+				<RemoveFolder Id="RemoveApplicationProgramsFolder" Directory="ProgramMenuFolder" On="uninstall" />
+				<RegistryValue Root="HKCU" Key="Software\grocy-desktop" Name="installed" Type="integer" Value="1" KeyPath="yes" />
+			</Component>
+		</DirectoryRef>
+		<DirectoryRef Id="DesktopFolder">
+			<Component Id="ApplicationShortcutDesktop" Guid="5CD9307F-C3DE-45FC-A3E8-B5B4A96BFDAF">
+				<Shortcut Id="ApplicationDesktopShortcut" Name="grocy" Description="ERP beyond your fridge" Target="[INSTALLFOLDER]grocy-desktop.exe" WorkingDirectory="INSTALLFOLDER" />
+				<RemoveFolder Id="RemoveDesktopFolder" Directory="DesktopFolder" On="uninstall" />
+				<RegistryValue Root="HKCU" Key="Software\grocy-desktop" Name="installed" Type="integer" Value="1" KeyPath="yes" />
+			</Component>
+		</DirectoryRef>
+	</Fragment>
+
+	<Fragment>
+		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+			<Component Guid="1C4E283B-5834-4027-A753-AE150FA5B650">
+				<File Id="PrimaryApplicationExecutable" Source="$(var.SolutionDir)grocy-desktop\bin\$(var.Configuration)\grocy-desktop.exe" KeyPath="yes" Checksum="yes"></File>
+				<File Id="PrimaryApplicationExecutableConfig" Source="$(var.SolutionDir)grocy-desktop\bin\$(var.Configuration)\grocy-desktop.exe.config"></File>
+				<File Id="GrocyReleasePackage" Source="$(var.SolutionDir)embedded_dependencies\grocy.zip"></File>
+				<File Id="PhpPackage" Source="$(var.SolutionDir)embedded_dependencies\php.zip"></File>
+				<File Id="CefSharpPackagex86" Source="$(var.SolutionDir)embedded_dependencies\cefx86.zip"></File>
+				<File Id="CefSharpPackagex64" Source="$(var.SolutionDir)embedded_dependencies\cefx64.zip"></File>
+				<RemoveFolder Id="PurgeAppFolder" Directory="INSTALLFOLDER" On="uninstall" />
+			</Component>
+		</ComponentGroup>
+	</Fragment>
+</Wix>
