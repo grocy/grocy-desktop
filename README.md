@@ -22,7 +22,7 @@ grocy-desktop is a .Net Windows Forms application. It uses [CefSharp](https://gi
 The installer has bundled, beside the application itself and the CefSharp dependencies, a for grocy configured PHP version (in `embedded_dependencies/php.zip`) and the current grocy release. grocy itself can also be updated separately, see above. Everything will be unpacked to `%localappdata%\grocy-desktop`.
 
 ### What happens on start
-grocy-desktop will to the following things and then opens the locally hosted instance in the integrated browser:
+grocy-desktop will do the following things and then opens the locally hosted instance in the integrated browser:
 - Unpacking the dependency ZIP files, if needed
 - Configuring grocy in embedded mode (it will save its data in `%appdata%\grocy-desktop\grocy-data`)
 - Starting a PHP development server on a free random port, bound to localhost
