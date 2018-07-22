@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Bernd Bestel")]
 [assembly: AssemblyProduct("grocy")]
-[assembly: AssemblyCopyright("Licensed under the MIT License (Bernd Bestel 2018)")]
+[assembly: AssemblyCopyright("Licensed under the MIT license (Bernd Bestel 2018)")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

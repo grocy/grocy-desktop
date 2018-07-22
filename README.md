@@ -27,6 +27,9 @@ grocy-desktop will do the following things and then opens the locally hosted ins
 - Configuring grocy in embedded mode (it will save its data in `%appdata%\grocy-desktop\grocy-data`)
 - Starting a PHP development server on a free random port, bound to localhost
 
+## Screenshots
+![grocy-desktop](https://github.com/berrnd/grocy-desktop/raw/master/publication_assets/grocy-desktop.png "grocy-desktop")
+
 ### How to build
 You will need Visual Studio 2017. All dependencies are included, available via NuGet or will be downloaded at compile time (see build events).
 The setup is built using [WiX Toolset](http://wixtoolset.org), which should be installed along with the [Wix Toolset Visual Studio 2017 Extension](https://marketplace.visualstudio.com/items?itemName=RobMensching.WixToolsetVisualStudio2017Extension).

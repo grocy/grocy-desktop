@@ -153,8 +153,11 @@
   <Import Project="..\packages\CefSharp.Common.65.0.0\build\CefSharp.Common.targets" Condition="Exists('..\packages\CefSharp.Common.65.0.0\build\CefSharp.Common.targets')" />
   <Import Project="..\packages\CefSharp.WinForms.65.0.0\build\CefSharp.WinForms.targets" Condition="Exists('..\packages\CefSharp.WinForms.65.0.0\build\CefSharp.WinForms.targets')" />
   <PropertyGroup>
-    <PreBuildEvent>
-    </PreBuildEvent>
+    <PreBuildEvent>if $(ConfigurationName)==Release (
+    del "$(SolutionDir)embedded_dependencies\cefx64.zip"
+    del "$(SolutionDir)embedded_dependencies\cefx86.zip"
+    del "$(SolutionDir)embedded_dependencies\grocy.zip"
+)</PreBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
     <PostBuildEvent>if not exist "$(SolutionDir)embedded_dependencies\cefx64.zip" (
