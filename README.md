@@ -24,7 +24,7 @@ The installer has bundled, beside the application itself and the CefSharp depend
 ### What happens on start
 grocy-desktop will do the following things and then opens the locally hosted instance in the integrated browser:
 - Unpacking the dependency ZIP files, if needed
-- Configuring grocy in embedded mode (it will save its data in `%appdata%\grocy-desktop\grocy-data`, this path can be changed (top menu bar `FIle -> Configure/change data location`)
+- Configuring grocy in embedded mode (it will save its data in `%appdata%\grocy-desktop\grocy-data`, this path can be changed (top menu bar `File -> Configure/change data location`)
 - Starting a PHP development server on a free random port, bound to localhost
 
 ## Screenshots

@@ -44,6 +44,8 @@
 			this.panel_Main = new System.Windows.Forms.Panel();
 			this.configurechangeDataLocationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+			this.backupDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.restoreDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip_Main.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -62,6 +64,8 @@
 			// fileToolStripMenuItem
 			// 
 			this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.backupDataToolStripMenuItem,
+            this.restoreDataToolStripMenuItem,
             this.configurechangeDataLocationToolStripMenuItem,
             this.toolStripSeparator3,
             this.showPHPServerOutputToolStripMenuItem,
@@ -162,6 +166,20 @@
 			this.toolStripSeparator3.Name = "toolStripSeparator3";
 			this.toolStripSeparator3.Size = new System.Drawing.Size(240, 6);
 			// 
+			// backupDataToolStripMenuItem
+			// 
+			this.backupDataToolStripMenuItem.Name = "backupDataToolStripMenuItem";
+			this.backupDataToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
+			this.backupDataToolStripMenuItem.Text = "Backup data";
+			this.backupDataToolStripMenuItem.Click += new System.EventHandler(this.backupDataToolStripMenuItem_Click);
+			// 
+			// restoreDataToolStripMenuItem
+			// 
+			this.restoreDataToolStripMenuItem.Name = "restoreDataToolStripMenuItem";
+			this.restoreDataToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
+			this.restoreDataToolStripMenuItem.Text = "Restore data";
+			this.restoreDataToolStripMenuItem.Click += new System.EventHandler(this.restoreDataToolStripMenuItem_Click);
+			// 
 			// FrmMain
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -202,6 +220,8 @@
 		private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem configurechangeDataLocationToolStripMenuItem;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+		private System.Windows.Forms.ToolStripMenuItem backupDataToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem restoreDataToolStripMenuItem;
 	}
 }
 

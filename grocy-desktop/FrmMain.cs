@@ -2,6 +2,8 @@
 using CefSharp.WinForms;
 using System;
 using System.IO;
+using System.IO.Compression;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace GrocyDesktop
@@ -106,6 +108,49 @@ namespace GrocyDesktop
 						Directory.Delete(this.UserSettings.GrocyDataLocation, true);
 						this.UserSettings.GrocyDataLocation = dialog.SelectedPath;
 						this.UserSettings.Save();
+						Extensions.RestartApp();
+					}
+				}
+			}
+		}
+
+		private void backupDataToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			using (SaveFileDialog dialog = new SaveFileDialog())
+			{
+				dialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop).ToString();
+				dialog.Filter = "ZIP files|*.zip";
+				dialog.CheckPathExists = true;
+				dialog.DefaultExt = ".zip";
+				dialog.FileName = "grocy-desktop-backup.zip";
+
+				if (dialog.ShowDialog() == DialogResult.OK)
+				{
+					ZipFile.CreateFromDirectory(this.UserSettings.GrocyDataLocation, dialog.FileName);
+					MessageBox.Show("Backup successfully created.", "grocy-desktop Backup", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				}
+			}
+		}
+
+		private void restoreDataToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			using (OpenFileDialog dialog = new OpenFileDialog())
+			{
+				dialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop).ToString();
+				dialog.Filter = "ZIP files|*.zip";
+				dialog.CheckPathExists = true;
+				dialog.CheckFileExists = true;
+				dialog.DefaultExt = ".zip";
+
+				if (dialog.ShowDialog() == DialogResult.OK)
+				{
+					if (MessageBox.Show("The current data will be overwritten and grocy-desktop will restart, continue?", "Restore grocy data", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+					{
+						this.PhpServer.StopServer();
+						Thread.Sleep(2000); // Just give php.exe some time to stop...
+						Directory.Delete(this.UserSettings.GrocyDataLocation, true);
+						Directory.CreateDirectory(this.UserSettings.GrocyDataLocation);
+						ZipFile.ExtractToDirectory(dialog.FileName, this.UserSettings.GrocyDataLocation);
 						Extensions.RestartApp();
 					}
 				}
