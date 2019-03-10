@@ -1,4 +1,6 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
+using System.Windows.Forms;
 
 namespace GrocyDesktop
 {
@@ -15,6 +17,12 @@ namespace GrocyDesktop
 			{
 				File.Copy(newPath, newPath.Replace(source, destination), true);
 			}
+		}
+
+		public static void RestartApp()
+		{
+			Application.Restart();
+			Environment.Exit(0);
 		}
 	}
 }

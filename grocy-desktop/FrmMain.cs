@@ -16,6 +16,7 @@ namespace GrocyDesktop
 		private ChromiumWebBrowser Browser;
 		private PhpDevelopmentServerManager PhpServer;
 		private GrocyEnvironmentManager GrocyEnvironmentManager;
+		private UserSettings UserSettings = UserSettings.Load();
 
 		private void SetupCef()
 		{
@@ -38,7 +39,7 @@ namespace GrocyDesktop
 
 		private void SetupGrocy()
 		{
-			this.GrocyEnvironmentManager = new GrocyEnvironmentManager(Path.Combine(Program.BaseExecutingPath, @"grocy"));
+			this.GrocyEnvironmentManager = new GrocyEnvironmentManager(Path.Combine(Program.BaseExecutingPath, @"grocy"), this.UserSettings.GrocyDataLocation);
 			this.GrocyEnvironmentManager.Setup(this.PhpServer.Url);
 		}
 
@@ -56,6 +57,8 @@ namespace GrocyDesktop
 			{
 				this.PhpServer.StopServer();
 			}
+
+			this.UserSettings.Save();
 		}
 
 		private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -85,6 +88,28 @@ namespace GrocyDesktop
 			this.PhpServer.StartServer();
 			this.GrocyEnvironmentManager.Setup(this.PhpServer.Url);
 			this.Browser.Load(this.PhpServer.Url);
+		}
+
+		private void configurechangeDataLocationToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			using (FolderBrowserDialog dialog = new FolderBrowserDialog())
+			{
+				dialog.RootFolder = Environment.SpecialFolder.Desktop;
+				dialog.SelectedPath = this.UserSettings.GrocyDataLocation;
+				
+				if (dialog.ShowDialog() == DialogResult.OK)
+				{
+					if (MessageBox.Show("grocy-desktop will restart to apply the changed settings, continue?", "Change grocy data location", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+					{
+						this.PhpServer.StopServer();
+						Extensions.CopyFolder(this.UserSettings.GrocyDataLocation, dialog.SelectedPath);
+						Directory.Delete(this.UserSettings.GrocyDataLocation, true);
+						this.UserSettings.GrocyDataLocation = dialog.SelectedPath;
+						this.UserSettings.Save();
+						Extensions.RestartApp();
+					}
+				}
+			}
 		}
 	}
 }

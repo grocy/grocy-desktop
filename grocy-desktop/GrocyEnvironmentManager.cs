@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 
@@ -7,13 +6,14 @@ namespace GrocyDesktop
 {
 	public class GrocyEnvironmentManager
 	{
-		public GrocyEnvironmentManager(string grocyBasePath)
+		public GrocyEnvironmentManager(string grocyBasePath, string grocyDataPath)
 		{
 			this.BasePath = grocyBasePath;
+			this.DataPath = grocyDataPath;
 		}
 
 		private string BasePath;
-		private string DataPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), @"grocy-desktop\grocy-data");
+		private string DataPath;
 
 		public void Setup(string baseUrl)
 		{

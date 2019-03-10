@@ -35,13 +35,15 @@
 			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
 			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.grocyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.debugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.showBrowserDeveloperToolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
 			this.aboutGrocydesktopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.panel_Main = new System.Windows.Forms.Panel();
-			this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.configurechangeDataLocationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
 			this.menuStrip_Main.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -60,6 +62,8 @@
 			// fileToolStripMenuItem
 			// 
 			this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.configurechangeDataLocationToolStripMenuItem,
+            this.toolStripSeparator3,
             this.showPHPServerOutputToolStripMenuItem,
             this.toolStripSeparator1,
             this.exitToolStripMenuItem});
@@ -70,19 +74,19 @@
 			// showPHPServerOutputToolStripMenuItem
 			// 
 			this.showPHPServerOutputToolStripMenuItem.Name = "showPHPServerOutputToolStripMenuItem";
-			this.showPHPServerOutputToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+			this.showPHPServerOutputToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
 			this.showPHPServerOutputToolStripMenuItem.Text = "Show PHP server output";
 			this.showPHPServerOutputToolStripMenuItem.Click += new System.EventHandler(this.showPHPServerOutputToolStripMenuItem_Click);
 			// 
 			// toolStripSeparator1
 			// 
 			this.toolStripSeparator1.Name = "toolStripSeparator1";
-			this.toolStripSeparator1.Size = new System.Drawing.Size(199, 6);
+			this.toolStripSeparator1.Size = new System.Drawing.Size(240, 6);
 			// 
 			// exitToolStripMenuItem
 			// 
 			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-			this.exitToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+			this.exitToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
 			this.exitToolStripMenuItem.Text = "Exit";
 			this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
 			// 
@@ -93,6 +97,13 @@
 			this.grocyToolStripMenuItem.Name = "grocyToolStripMenuItem";
 			this.grocyToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
 			this.grocyToolStripMenuItem.Text = "grocy";
+			// 
+			// updateToolStripMenuItem
+			// 
+			this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
+			this.updateToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.updateToolStripMenuItem.Text = "Update";
+			this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
 			// 
 			// helpToolStripMenuItem
 			// 
@@ -139,12 +150,17 @@
 			this.panel_Main.Size = new System.Drawing.Size(600, 342);
 			this.panel_Main.TabIndex = 1;
 			// 
-			// updateToolStripMenuItem
+			// configurechangeDataLocationToolStripMenuItem
 			// 
-			this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-			this.updateToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			this.updateToolStripMenuItem.Text = "Update";
-			this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
+			this.configurechangeDataLocationToolStripMenuItem.Name = "configurechangeDataLocationToolStripMenuItem";
+			this.configurechangeDataLocationToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
+			this.configurechangeDataLocationToolStripMenuItem.Text = "Configure/change data location";
+			this.configurechangeDataLocationToolStripMenuItem.Click += new System.EventHandler(this.configurechangeDataLocationToolStripMenuItem_Click);
+			// 
+			// toolStripSeparator3
+			// 
+			this.toolStripSeparator3.Name = "toolStripSeparator3";
+			this.toolStripSeparator3.Size = new System.Drawing.Size(240, 6);
 			// 
 			// FrmMain
 			// 
@@ -184,6 +200,8 @@
 		private System.Windows.Forms.ToolStripMenuItem aboutGrocydesktopToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem showBrowserDeveloperToolsToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem configurechangeDataLocationToolStripMenuItem;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
 	}
 }
 
