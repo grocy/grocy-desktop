@@ -1,14 +1,14 @@
 # grocy-desktop
-A (windows) desktop application wrapper for [grocy](https://github.com/berrnd/grocy)
+A (Windows) desktop application wrapper for [grocy](https://github.com/grocy/grocy)
 
 ## Motivation
-grocy is a selfhosted PHP web application, so normally runs on webservers. If you are not so familiar with the technical things regarding webservers, but just want to have grocy running like a normal desktop application, this is what you need.
+grocy is a selfhosted PHP web application, so normally runs on webservers. If you are not so familiar with the technical things regarding webservers, but just want to have grocy running like a normal (Windows) desktop application, this is what you need.
 
 ## How to install
 Just download and execute the [latest release](https://releases.grocy.info/latest-desktop), afterwards you will have a shortcut on your desktop which starts grocy.
 
 ## How to update
-Just download and execute the [latest release](https://releases.grocy.info/latest-desktop). grocy itself can also be updated separately (top menu bar `grocy/Update`).
+Just download and execute the [latest release](https://releases.grocy.info/latest-desktop). grocy itself can also be updated separately (top menu bar `grocy -> Update`).
 
 ## Localization
 grocy-desktop itself is not localized, but grocy is and will use automatically the localization based on your system language, if available.
@@ -24,7 +24,7 @@ The installer has bundled, beside the application itself and the CefSharp depend
 ### What happens on start
 grocy-desktop will do the following things and then opens the locally hosted instance in the integrated browser:
 - Unpacking the dependency ZIP files, if needed
-- Configuring grocy in embedded mode (it will save its data in `%appdata%\grocy-desktop\grocy-data`)
+- Configuring grocy in embedded mode (it will save its data in `%appdata%\grocy-desktop\grocy-data`, this path can be changed (top menu bar `FIle -> Configure/change data location`)
 - Starting a PHP development server on a free random port, bound to localhost
 
 ## Screenshots
