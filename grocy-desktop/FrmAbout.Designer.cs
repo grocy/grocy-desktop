@@ -70,7 +70,7 @@
 			this.linkLabel_MainProjectLink.Size = new System.Drawing.Size(242, 17);
 			this.linkLabel_MainProjectLink.TabIndex = 3;
 			this.linkLabel_MainProjectLink.TabStop = true;
-			this.linkLabel_MainProjectLink.Text = "http://grocy.info";
+			this.linkLabel_MainProjectLink.Text = "https://grocy.info";
 			this.linkLabel_MainProjectLink.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.linkLabel_MainProjectLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_MainProjectLink_LinkClicked);
 			// 
