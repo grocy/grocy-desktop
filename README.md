@@ -10,7 +10,7 @@ Just download and execute the [latest release](https://releases.grocy.info/lates
 ## How to update
 Just download and execute the [latest release](https://releases.grocy.info/latest-desktop). grocy itself can also be updated separately (top menu bar `grocy -> Update`).
 
-# How to backup/restore
+## How to backup/restore
 All grocy user data can be exported and restored as a ZIP file (see the `File` menu in the top menu bar).
 
 ## Localization
