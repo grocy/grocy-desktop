@@ -1,13 +1,12 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using System.Xml.Serialization;
 
 namespace GrocyDesktop
 {
 	public class UserSettings
 	{
-		private static string SettingsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), @"grocy-desktop\UserSettings.xml");
-		public string GrocyDataLocation = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), @"grocy-desktop\grocy-data");
+		private static string SettingsPath = Path.Combine(Program.BaseFixedUserDataFolderPath, "UserSettings.xml");
+		public string GrocyDataLocation = Path.Combine(Program.BaseFixedUserDataFolderPath, "grocy-data");
 
 		public static UserSettings Load()
 		{

@@ -11,6 +11,11 @@ namespace GrocyDesktop
 	{
 		private const string LATEST_GROCY_RELEASE_URL = "https://releases.grocy.info/latest";
 
+		public readonly static string CefExecutingPath = Path.Combine(Program.RuntimeDependenciesExecutingPath, "cef");
+		public readonly static string CefCachePath = Path.Combine(Program.RuntimeDependenciesExecutingPath, "cef-cache");
+		public readonly static string PhpExecutingPath = Path.Combine(Program.RuntimeDependenciesExecutingPath, "php");
+		public readonly static string GrocyExecutingPath = Path.Combine(Program.BaseFixedUserDataFolderPath, "grocy");
+
 		public static async Task UnpackIncludedDependenciesIfNeeded(Form ownerFormReference = null)
 		{
 			FrmWait waitWindow = null;
@@ -20,9 +25,9 @@ namespace GrocyDesktop
 				waitWindow.Show(ownerFormReference);
 			}
 
-			//CefSharp x64
+			// CefSharp x64
 			string cefZipPathx64 = Path.Combine(Program.BaseExecutingPath, "cefx64.zip");
-			string cefPathx64 = Path.Combine(Program.BaseExecutingPath, "x64");
+			string cefPathx64 = Path.Combine(CefExecutingPath, "x64");
 			if (!Directory.Exists(cefPathx64))
 			{
 				if (waitWindow != null)
@@ -32,9 +37,9 @@ namespace GrocyDesktop
 				await Task.Run(() => ZipFile.ExtractToDirectory(cefZipPathx64, cefPathx64));
 			}
 
-			//CefSharp x86
+			// CefSharp x86
 			string cefZipPathx86 = Path.Combine(Program.BaseExecutingPath, "cefx86.zip");
-			string cefPathx86 = Path.Combine(Program.BaseExecutingPath, "x86");
+			string cefPathx86 = Path.Combine(CefExecutingPath, "x86");
 			if (!Directory.Exists(cefPathx86))
 			{
 				if (waitWindow != null)
@@ -44,28 +49,35 @@ namespace GrocyDesktop
 				await Task.Run(() => ZipFile.ExtractToDirectory(cefZipPathx86, cefPathx86));
 			}
 
-			//PHP
+			// PHP
 			string phpZipPath = Path.Combine(Program.BaseExecutingPath, "php.zip");
-			string phpPath = Path.Combine(Program.BaseExecutingPath, "php");
-			if (!Directory.Exists(phpPath))
+			if (!Directory.Exists(PhpExecutingPath))
 			{
 				if (waitWindow != null)
 				{
 					waitWindow.SetStatus("Preparing embedded PHP server...");
 				}
-				await Task.Run(() => ZipFile.ExtractToDirectory(phpZipPath, phpPath));
+				await Task.Run(() => ZipFile.ExtractToDirectory(phpZipPath, PhpExecutingPath));
 			}
 
-			//grocy
+			// grocy
 			string grocyZipPath = Path.Combine(Program.BaseExecutingPath, "grocy.zip");
-			string grocyPath = Path.Combine(Program.BaseExecutingPath, "grocy");
-			if (!Directory.Exists(grocyPath))
+			if (!Directory.Exists(GrocyExecutingPath))
 			{
 				if (waitWindow != null)
 				{
 					waitWindow.SetStatus("Preparing grocy...");
 				}
-				await Task.Run(() => ZipFile.ExtractToDirectory(grocyZipPath, grocyPath));
+				await Task.Run(() => ZipFile.ExtractToDirectory(grocyZipPath, GrocyExecutingPath));
+			}
+
+			// Cleanup old runtime dependency folders
+			foreach (string item in Directory.GetDirectories(Program.RuntimeDependenciesBasePath))
+			{
+				if (new DirectoryInfo(item).Name != Program.RunningVersion)
+				{
+					Directory.Delete(item, true);
+				}
 			}
 
 			if (waitWindow != null)
@@ -83,18 +95,12 @@ namespace GrocyDesktop
 				waitWindow.Show(ownerFormReference);
 			}
 
-			string grocyZipPath = Path.Combine(Program.BaseExecutingPath, "grocy.zip");
-			if (File.Exists(grocyZipPath))
+			if (Directory.Exists(GrocyExecutingPath))
 			{
-				File.Delete(grocyZipPath);
+				Directory.Delete(GrocyExecutingPath, true);
 			}
 
-			string grocyPath = Path.Combine(Program.BaseExecutingPath, "grocy");
-			if (Directory.Exists(grocyPath))
-			{
-				Directory.Delete(grocyPath, true);
-			}
-
+			string grocyZipPath = Path.GetTempFileName();
 			using (WebClient wc = new WebClient())
 			{
 				if (waitWindow != null)
@@ -108,7 +114,8 @@ namespace GrocyDesktop
 			{
 				waitWindow.SetStatus("Preparing grocy...");
 			}
-			await Task.Run(() => ZipFile.ExtractToDirectory(grocyZipPath, grocyPath));
+			await Task.Run(() => ZipFile.ExtractToDirectory(grocyZipPath, GrocyExecutingPath));
+			File.Delete(grocyZipPath);
 
 			if (waitWindow != null)
 			{

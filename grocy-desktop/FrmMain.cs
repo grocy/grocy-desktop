@@ -25,7 +25,9 @@ namespace GrocyDesktop
 			Cef.EnableHighDPISupport();
 
 			CefSettings cefSettings = new CefSettings();
-			cefSettings.BrowserSubprocessPath = @"x86\CefSharp.BrowserSubprocess.exe";
+			cefSettings.BrowserSubprocessPath = Path.Combine(GrocyDesktopDependencyManager.CefExecutingPath, @"x86\CefSharp.BrowserSubprocess.exe");
+			cefSettings.CachePath = GrocyDesktopDependencyManager.CefCachePath;
+			cefSettings.LogFile = Path.Combine(GrocyDesktopDependencyManager.CefCachePath, "cef.log");
 			Cef.Initialize(cefSettings, performDependencyCheck: false, browserProcessHandler: null);
 
 			this.Browser = new ChromiumWebBrowser(this.PhpServer.Url);
@@ -35,13 +37,13 @@ namespace GrocyDesktop
 
 		private void SetupPhpServer()
 		{
-			this.PhpServer = new PhpDevelopmentServerManager(Path.Combine(Program.BaseExecutingPath, "php"), Path.Combine(Program.BaseExecutingPath, @"grocy\public"));
+			this.PhpServer = new PhpDevelopmentServerManager(GrocyDesktopDependencyManager.PhpExecutingPath, Path.Combine(GrocyDesktopDependencyManager.GrocyExecutingPath, "public"));
 			this.PhpServer.StartServer();
 		}
 
 		private void SetupGrocy()
 		{
-			this.GrocyEnvironmentManager = new GrocyEnvironmentManager(Path.Combine(Program.BaseExecutingPath, @"grocy"), this.UserSettings.GrocyDataLocation);
+			this.GrocyEnvironmentManager = new GrocyEnvironmentManager(GrocyDesktopDependencyManager.GrocyExecutingPath, this.UserSettings.GrocyDataLocation);
 			this.GrocyEnvironmentManager.Setup(this.PhpServer.Url);
 		}
 
