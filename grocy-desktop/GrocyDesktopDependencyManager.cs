@@ -25,18 +25,6 @@ namespace GrocyDesktop
 				waitWindow.Show(ownerFormReference);
 			}
 
-			// CefSharp x64
-			string cefZipPathx64 = Path.Combine(Program.BaseExecutingPath, "cefx64.zip");
-			string cefPathx64 = Path.Combine(CefExecutingPath, "x64");
-			if (!Directory.Exists(cefPathx64))
-			{
-				if (waitWindow != null)
-				{
-					waitWindow.SetStatus("Preparing embedded web browser (x64)...");
-				}
-				await Task.Run(() => ZipFile.ExtractToDirectory(cefZipPathx64, cefPathx64));
-			}
-
 			// CefSharp x86
 			string cefZipPathx86 = Path.Combine(Program.BaseExecutingPath, "cefx86.zip");
 			string cefPathx86 = Path.Combine(CefExecutingPath, "x86");

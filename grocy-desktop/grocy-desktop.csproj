@@ -145,17 +145,12 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>if $(ConfigurationName)==Release (
-    del "$(SolutionDir)embedded_dependencies\cefx64.zip"
     del "$(SolutionDir)embedded_dependencies\cefx86.zip"
     del "$(SolutionDir)embedded_dependencies\grocy.zip"
 )</PreBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <PostBuildEvent>if not exist "$(SolutionDir)embedded_dependencies\cefx64.zip" (
-    "$(SolutionDir)build_tools\7za.exe" a -r "$(SolutionDir)embedded_dependencies\cefx64.zip" "$(TargetDir)\x64\*"
-)
-
-if not exist "$(SolutionDir)embedded_dependencies\cefx86.zip" (
+    <PostBuildEvent>if not exist "$(SolutionDir)embedded_dependencies\cefx86.zip" (
     "$(SolutionDir)build_tools\7za.exe" a -r "$(SolutionDir)embedded_dependencies\cefx86.zip" "$(TargetDir)\x86\*"
 )
 

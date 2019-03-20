@@ -46,14 +46,13 @@
     copy "$(TargetDir)grocy_desktop_setup.msi" "$(SolutionDir).deploy\grocy-desktop_x.x.x.msi"
 
     robocopy "$(SolutionDir)appx_dependencies" "$(SolutionDir).deploy\appx_content" /MIR
-    copy "$(SolutionDir)embedded_dependencies\cefx64.zip" "$(SolutionDir).deploy\appx_content\cefx64.zip"
     copy "$(SolutionDir)embedded_dependencies\cefx86.zip" "$(SolutionDir).deploy\appx_content\cefx86.zip"
     copy "$(SolutionDir)embedded_dependencies\grocy.zip" "$(SolutionDir).deploy\appx_content\grocy.zip"
     copy "$(SolutionDir)embedded_dependencies\php.zip" "$(SolutionDir).deploy\appx_content\php.zip"
     copy "$(SolutionDir)grocy-desktop\bin\Release\grocy-desktop.exe" "$(SolutionDir).deploy\appx_content\grocy-desktop.exe"
     copy "$(SolutionDir)grocy-desktop\bin\Release\grocy-desktop.exe.config" "$(SolutionDir).deploy\appx_content\grocy-desktop.exe.config"
     "%25programfiles(x86)%25\Windows Kits\10\bin\10.0.17763.0\x86\MakeAppx.exe" pack /d "$(SolutionDir).deploy\appx_content" /p "$(SolutionDir).deploy\grocy-desktop_x.x.x.appx"
-    REM "%25programfiles(x86)%25\Windows Kits\10\bin\10.0.17763.0\x86\signtool.exe" sign /fd sha256 /f "C:\Users\bb\Desktop\cert.pfx" /p 123456 "$(SolutionDir).deploy\grocy-desktop_x.x.x.appx"
+    "%25programfiles(x86)%25\Windows Kits\10\bin\10.0.17763.0\x86\signtool.exe" sign /fd sha256 /f "$(SolutionDir)appx_dependencies\grocy-desktop_developer_cert.pfx" /p "123456" "$(SolutionDir).deploy\grocy-desktop_x.x.x.appx"
 )</PostBuildEvent>
   </PropertyGroup>
   <!--
