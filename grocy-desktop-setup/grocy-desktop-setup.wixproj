@@ -45,7 +45,7 @@
     <PostBuildEvent>if $(ConfigurationName)==Release (
     copy "$(TargetDir)grocy_desktop_setup.msi" "$(SolutionDir).deploy\grocy-desktop_x.x.x.msi"
 
-    robocopy "$(SolutionDir)appx_dependencies" "$(SolutionDir).deploy\appx_content" /MIR
+    robocopy "$(SolutionDir)appx_dependencies" "$(SolutionDir).deploy\appx_content" /MIR /XF "grocy-desktop_developer_cert.pfx" /XF "README.md"
     copy "$(SolutionDir)embedded_dependencies\cefx86.zip" "$(SolutionDir).deploy\appx_content\cefx86.zip"
     copy "$(SolutionDir)embedded_dependencies\grocy.zip" "$(SolutionDir).deploy\appx_content\grocy.zip"
     copy "$(SolutionDir)embedded_dependencies\php.zip" "$(SolutionDir).deploy\appx_content\php.zip"
