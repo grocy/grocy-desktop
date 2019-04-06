@@ -10,7 +10,7 @@ grocy is a selfhosted PHP web application, so normally runs on webservers. If yo
 - Microsoft Store  
 <a href="//www.microsoft.com/store/apps/9nwb1trnnksf?cid=storebadge&ocid=badge"><img src="https://assets.windowsphone.com/85864462-9c82-451e-9355-a3d5f874397a/English_get-it-from-MS_InvariantCulture_Default.png" alt="Get it from Microsoft" width="150px" /></a>
 
-Please note that the user data is not automatically transfered when switching between the classic installer and the Microsoft Store version, plese use the [backup/restore functionality](#how-to-backuprestore) to transfer your data.
+Please note that the user data is not automatically transfered when switching between the classic installer and the Microsoft Store version, please use the [backup/restore functionality](#how-to-backuprestore) to transfer your data.
 
 ## How to update
 Just download and execute the [latest release](https://releases.grocy.info/latest-desktop). grocy itself can also be updated separately (top menu bar `grocy -> Update`).
