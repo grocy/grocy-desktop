@@ -7,8 +7,8 @@ grocy is a selfhosted PHP web application, so normally runs on webservers. If yo
 ## How to install
 - Classic installer
   - Just download and execute the [latest release](https://releases.grocy.info/latest-desktop), afterwards you will have a shortcut on your desktop which starts grocy.
-- Microsoft Store 
-<a href='//www.microsoft.com/store/apps/9nwb1trnnksf?cid=storebadge&ocid=badge'><img src='https://assets.windowsphone.com/85864462-9c82-451e-9355-a3d5f874397a/English_get-it-from-MS_InvariantCulture_Default.png' alt='English badge' style='width: 284px; height: 104px;'/></a>
+- Microsoft Store  
+<a href="//www.microsoft.com/store/apps/9nwb1trnnksf?cid=storebadge&ocid=badge"><img src="https://assets.windowsphone.com/85864462-9c82-451e-9355-a3d5f874397a/English_get-it-from-MS_InvariantCulture_Default.png" alt="Get it from Microsoft" width="150px" /></a>
 
 Please note that the user data is not automatically transfered when switching between the classic installer and the Microsoft Store version, plese use the [backup/restore functionality](#how-to-backuprestore) to transfer your data.
 
