@@ -152,7 +152,6 @@
   </PropertyGroup>
   <PropertyGroup>
     <PostBuildEvent>if not exist "$(SolutionDir)embedded_dependencies\cefx86.zip" (
-    "$(SolutionDir)build_tools\7za.exe" x -o"$(TargetDir)\x86" "$(SolutionDir)embedded_dependencies\vc2015x86.zip"
     "$(SolutionDir)build_tools\7za.exe" a -r "$(SolutionDir)embedded_dependencies\cefx86.zip" "$(TargetDir)\x86\*"
 )
 

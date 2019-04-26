@@ -25,6 +25,8 @@ namespace GrocyDesktop
 				waitWindow.Show(ownerFormReference);
 			}
 
+			string vc2015x86ZipPath = Path.Combine(Program.BaseExecutingPath, "vc2015x86.zip");
+
 			// CefSharp x86
 			string cefZipPathx86 = Path.Combine(Program.BaseExecutingPath, "cefx86.zip");
 			string cefPathx86 = Path.Combine(CefExecutingPath, "x86");
@@ -35,6 +37,7 @@ namespace GrocyDesktop
 					waitWindow.SetStatus("Preparing embedded web browser (x86)...");
 				}
 				await Task.Run(() => ZipFile.ExtractToDirectory(cefZipPathx86, cefPathx86));
+				await Task.Run(() => ZipFile.ExtractToDirectory(vc2015x86ZipPath, cefPathx86));
 			}
 
 			// PHP
@@ -46,6 +49,7 @@ namespace GrocyDesktop
 					waitWindow.SetStatus("Preparing embedded PHP server...");
 				}
 				await Task.Run(() => ZipFile.ExtractToDirectory(phpZipPath, PhpExecutingPath));
+				await Task.Run(() => ZipFile.ExtractToDirectory(vc2015x86ZipPath, PhpExecutingPath));
 			}
 
 			// grocy
