@@ -47,6 +47,7 @@ namespace GrocyDesktop
 			this.PhpProcess.StartInfo.RedirectStandardOutput = true;
 			this.PhpProcess.StartInfo.RedirectStandardError = true;
 			this.PhpProcess.StartInfo.CreateNoWindow = true;
+			this.PhpProcess.EnableRaisingEvents = true;
 			this.PhpProcess.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
 			this.PhpProcess.OutputDataReceived += this.PhpProcess_OutputDataReceived;
 			this.PhpProcess.ErrorDataReceived += PhpProcess_OutputDataReceived;
@@ -65,10 +66,10 @@ namespace GrocyDesktop
 		{
 			// When the process exits without intention, restart it for PHP_PROCESS_MAX_UNINTENDED_RESTARTS times
 			// but only when this not happens more often than PHP_PROCESS_MAX_UNINTENDED_RESTARTS in PHP_PROCESS_UNINTENDED_RESTARTS_TIMESPAN_MINUTES minutes
-
+			
 			if (!this.NextPhpProcessExitIsIntended)
 			{
-				this.PhpProcessUnintentedRestartsCache.Add(new CacheItem(DateTime.Now.ToString()), new CacheItemPolicy() { AbsoluteExpiration = DateTime.UtcNow.AddMinutes(PHP_PROCESS_UNINTENDED_RESTARTS_TIMESPAN_MINUTES) });
+				this.PhpProcessUnintentedRestartsCache.Add(new CacheItem(DateTime.Now.ToString(), "dummy"), new CacheItemPolicy() { AbsoluteExpiration = DateTime.UtcNow.AddMinutes(PHP_PROCESS_UNINTENDED_RESTARTS_TIMESPAN_MINUTES) });
 
 				if (this.PhpProcessUnintentedRestartsCache.GetCount() <= PHP_PROCESS_MAX_UNINTENDED_RESTARTS)
 				{
