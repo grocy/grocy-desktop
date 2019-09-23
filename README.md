@@ -41,9 +41,9 @@ grocy-desktop will do the following things and then opens the locally hosted ins
 ![grocy-desktop](https://github.com/berrnd/grocy-desktop/raw/master/publication_assets/grocy-desktop.png "grocy-desktop")
 
 ### How to build
-You will need Visual Studio 2017. All dependencies are included, available via NuGet or will be downloaded at compile time (see build events).
-The setup is built using [WiX Toolset](http://wixtoolset.org), which should be installed along with the [Wix Toolset Visual Studio 2017 Extension](https://marketplace.visualstudio.com/items?itemName=RobMensching.WixToolsetVisualStudio2017Extension).
-To build the Appx package (UWP app) you will need the [Windows 10 SDK](https://developer.microsoft.com/en-US/windows/downloads/windows-10-sdk) (this is done in the Post-build event of the `grocy-desktop-setup` project).
+You will need Visual Studio 2019. All dependencies are included, available via NuGet or will be downloaded at compile time (see build events).
+The setup is built using [WiX Toolset](http://wixtoolset.org), which should be installed along with the [Wix Toolset Visual Studio 2019 Extension](https://marketplace.visualstudio.com/items?itemName=WixToolset.WixToolsetVisualStudio2019Extension).
+To build the Appx package (UWP app) you will need the [Windows 10 SDK 10.0.18362.0](https://developer.microsoft.com/en-US/windows/downloads/windows-10-sdk) (this is done in the Post-build event of the `grocy-desktop-setup` project).
 
 ## License
 The MIT License (MIT)
