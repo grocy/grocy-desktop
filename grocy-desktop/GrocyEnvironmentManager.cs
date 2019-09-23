@@ -44,9 +44,9 @@ namespace GrocyDesktop
 		private List<string> GetAvailableLocalizations()
 		{
 			List<string> list = new List<string>();
-			foreach (string item in Directory.GetFiles(Path.Combine(this.BasePath, "localization")))
+			foreach (string item in Directory.GetDirectories(Path.Combine(this.BasePath, "localization")))
 			{
-				list.Add(Path.GetFileNameWithoutExtension(item));
+				list.Add(Path.GetFileName(item));
 			}
 			return list;
 		}
@@ -54,14 +54,16 @@ namespace GrocyDesktop
 		private string GuessLocalization()
 		{
 			string systemCulture = CultureInfo.CurrentCulture.TwoLetterISOLanguageName.ToLower();
-			if (this.GetAvailableLocalizations().Contains(systemCulture))
+
+			foreach (string item in this.GetAvailableLocalizations())
 			{
-				return systemCulture;
+				if (item.StartsWith(systemCulture, System.StringComparison.OrdinalIgnoreCase))
+				{
+					return systemCulture;
+				}
 			}
-			else
-			{
-				return "en";
-			}
+
+			return "en";
 		}
 	}
 }
