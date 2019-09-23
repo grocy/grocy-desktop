@@ -37,7 +37,9 @@ namespace GrocyDesktop
 					waitWindow.SetStatus("Preparing embedded web browser (x86)...");
 				}
 				await Task.Run(() => ZipFile.ExtractToDirectory(cefZipPathx86, cefPathx86));
-				await Task.Run(() => ZipFile.ExtractToDirectory(vc2015x86ZipPath, cefPathx86));
+
+				// Seems that CEF 75 has now bundled the VC runtime dependencies itself...
+				//await Task.Run(() => ZipFile.ExtractToDirectory(vc2015x86ZipPath, cefPathx86));
 			}
 
 			// PHP
