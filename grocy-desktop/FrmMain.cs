@@ -28,6 +28,8 @@ namespace GrocyDesktop
 			cefSettings.BrowserSubprocessPath = Path.Combine(GrocyDesktopDependencyManager.CefExecutingPath, @"x86\CefSharp.BrowserSubprocess.exe");
 			cefSettings.CachePath = GrocyDesktopDependencyManager.CefCachePath;
 			cefSettings.LogFile = Path.Combine(GrocyDesktopDependencyManager.CefCachePath, "cef.log");
+			cefSettings.CefCommandLineArgs.Add("--enable-media-stream", "");
+			cefSettings.CefCommandLineArgs.Add("--unsafely-treat-insecure-origin-as-secure", this.PhpServer.Url);
 			Cef.Initialize(cefSettings, performDependencyCheck: false, browserProcessHandler: null);
 
 			this.Browser = new ChromiumWebBrowser(this.PhpServer.Url);
