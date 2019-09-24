@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.IO.Compression;
 using System.Windows.Forms;
 
 namespace GrocyDesktop
@@ -23,6 +24,35 @@ namespace GrocyDesktop
 		{
 			Application.Restart();
 			Environment.Exit(0);
+		}
+
+		public static void ExtractZipToDirectory(string archiveFilePath, string destinationDirectory, bool overwrite)
+		{
+			using (ZipArchive archive = new ZipArchive(File.OpenRead(archiveFilePath)))
+			{
+				if (!overwrite)
+				{
+					archive.ExtractToDirectory(destinationDirectory);
+					return;
+				}
+
+				foreach (ZipArchiveEntry file in archive.Entries)
+				{
+					string completeFileName = Path.Combine(destinationDirectory, file.FullName);
+					string directory = Path.GetDirectoryName(completeFileName);
+
+					if (!Directory.Exists(directory))
+					{
+						Directory.CreateDirectory(directory);
+					}
+
+
+					if (file.Name != string.Empty)
+					{
+						file.ExtractToFile(completeFileName, true);
+					}
+				}
+			}
 		}
 	}
 }
