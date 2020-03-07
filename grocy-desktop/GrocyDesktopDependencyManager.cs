@@ -24,7 +24,7 @@ namespace GrocyDesktop
 				waitWindow.Show(ownerFormReference);
 			}
 
-			string vc2015x86ZipPath = Path.Combine(Program.BaseExecutingPath, "vc2015x86.zip");
+			string vc2019x86ZipPath = Path.Combine(Program.BaseExecutingPath, "vc2019x86.zip");
 
 			// CefSharp x86
 			string cefZipPathx86 = Path.Combine(Program.BaseExecutingPath, "cefx86.zip");
@@ -38,7 +38,7 @@ namespace GrocyDesktop
 				await Task.Run(() => Extensions.ExtractZipToDirectory(cefZipPathx86, cefPathx86, true));
 
 				// Seems that CEF 75 has now bundled the VC runtime dependencies itself...
-				//await Task.Run(() => ZipFile.ExtractToDirectory(vc2015x86ZipPath, cefPathx86));
+				//await Task.Run(() => ZipFile.ExtractToDirectory(vc2019x86ZipPath, cefPathx86));
 			}
 
 			// PHP
@@ -50,7 +50,7 @@ namespace GrocyDesktop
 					waitWindow.SetStatus("Preparing embedded PHP server...");
 				}
 				await Task.Run(() => Extensions.ExtractZipToDirectory(phpZipPath, PhpExecutingPath, true));
-				await Task.Run(() => Extensions.ExtractZipToDirectory(vc2015x86ZipPath, PhpExecutingPath, true));
+				await Task.Run(() => Extensions.ExtractZipToDirectory(vc2019x86ZipPath, PhpExecutingPath, true));
 			}
 
 			// grocy

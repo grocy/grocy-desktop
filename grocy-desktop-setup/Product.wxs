@@ -75,7 +75,7 @@
 				<File Id="PrimaryApplicationExecutableConfig" Source="$(var.SolutionDir)grocy-desktop\bin\$(var.Configuration)\grocy-desktop.exe.config"></File>
 				<File Id="GrocyReleasePackage" Source="$(var.SolutionDir)embedded_dependencies\grocy.zip"></File>
 				<File Id="PhpPackage" Source="$(var.SolutionDir)embedded_dependencies\php.zip"></File>
-				<File Id="VC2015x86Package" Source="$(var.SolutionDir)embedded_dependencies\vc2015x86.zip"></File>
+				<File Id="VC2019x86Package" Source="$(var.SolutionDir)embedded_dependencies\vc2019x86.zip"></File>
 				<File Id="CefSharpPackagex86" Source="$(var.SolutionDir)embedded_dependencies\cefx86.zip"></File>
 				<RemoveFolder Id="PurgeAppFolder" Directory="INSTALLFOLDER" On="uninstall" />
 			</Component>
