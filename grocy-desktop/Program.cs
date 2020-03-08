@@ -33,6 +33,7 @@ namespace GrocyDesktop
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
+			DpiAwarenessHelper.SetupDpiAwareness();
 
 			// For CefSharp.BrowserSubprocess
 			AppDomain.CurrentDomain.AssemblyResolve += CurrentDomain_AssemblyResolve;
