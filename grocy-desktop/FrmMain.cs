@@ -160,5 +160,16 @@ namespace GrocyDesktop
 				}
 			}
 		}
+
+		private void recreateDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			if (MessageBox.Show("This will delete and recreate the grocy database, means all your data will be wiped, really continue?", "Recreate grocy database", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+			{
+				this.PhpServer.StopServer();
+				Thread.Sleep(2000); // Just give php.exe some time to stop...
+				File.Delete(Path.Combine(this.UserSettings.GrocyDataLocation, "grocy.db"));
+				Extensions.RestartApp();
+			}
+		}
 	}
 }

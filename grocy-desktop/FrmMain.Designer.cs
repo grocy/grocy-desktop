@@ -31,6 +31,10 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
 			this.menuStrip_Main = new System.Windows.Forms.MenuStrip();
 			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.backupDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.restoreDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.configurechangeDataLocationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
 			this.showPHPServerOutputToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
 			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,10 +46,8 @@
 			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
 			this.aboutGrocydesktopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.panel_Main = new System.Windows.Forms.Panel();
-			this.configurechangeDataLocationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-			this.backupDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.restoreDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.recreateDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
 			this.menuStrip_Main.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -75,6 +77,32 @@
 			this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
 			this.fileToolStripMenuItem.Text = "File";
 			// 
+			// backupDataToolStripMenuItem
+			// 
+			this.backupDataToolStripMenuItem.Name = "backupDataToolStripMenuItem";
+			this.backupDataToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
+			this.backupDataToolStripMenuItem.Text = "Backup data";
+			this.backupDataToolStripMenuItem.Click += new System.EventHandler(this.backupDataToolStripMenuItem_Click);
+			// 
+			// restoreDataToolStripMenuItem
+			// 
+			this.restoreDataToolStripMenuItem.Name = "restoreDataToolStripMenuItem";
+			this.restoreDataToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
+			this.restoreDataToolStripMenuItem.Text = "Restore data";
+			this.restoreDataToolStripMenuItem.Click += new System.EventHandler(this.restoreDataToolStripMenuItem_Click);
+			// 
+			// configurechangeDataLocationToolStripMenuItem
+			// 
+			this.configurechangeDataLocationToolStripMenuItem.Name = "configurechangeDataLocationToolStripMenuItem";
+			this.configurechangeDataLocationToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
+			this.configurechangeDataLocationToolStripMenuItem.Text = "Configure/change data location";
+			this.configurechangeDataLocationToolStripMenuItem.Click += new System.EventHandler(this.configurechangeDataLocationToolStripMenuItem_Click);
+			// 
+			// toolStripSeparator3
+			// 
+			this.toolStripSeparator3.Name = "toolStripSeparator3";
+			this.toolStripSeparator3.Size = new System.Drawing.Size(240, 6);
+			// 
 			// showPHPServerOutputToolStripMenuItem
 			// 
 			this.showPHPServerOutputToolStripMenuItem.Name = "showPHPServerOutputToolStripMenuItem";
@@ -97,7 +125,9 @@
 			// grocyToolStripMenuItem
 			// 
 			this.grocyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.updateToolStripMenuItem});
+            this.updateToolStripMenuItem,
+            this.toolStripSeparator4,
+            this.recreateDatabaseToolStripMenuItem});
 			this.grocyToolStripMenuItem.Name = "grocyToolStripMenuItem";
 			this.grocyToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
 			this.grocyToolStripMenuItem.Text = "grocy";
@@ -154,31 +184,17 @@
 			this.panel_Main.Size = new System.Drawing.Size(600, 342);
 			this.panel_Main.TabIndex = 1;
 			// 
-			// configurechangeDataLocationToolStripMenuItem
+			// recreateDatabaseToolStripMenuItem
 			// 
-			this.configurechangeDataLocationToolStripMenuItem.Name = "configurechangeDataLocationToolStripMenuItem";
-			this.configurechangeDataLocationToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
-			this.configurechangeDataLocationToolStripMenuItem.Text = "Configure/change data location";
-			this.configurechangeDataLocationToolStripMenuItem.Click += new System.EventHandler(this.configurechangeDataLocationToolStripMenuItem_Click);
+			this.recreateDatabaseToolStripMenuItem.Name = "recreateDatabaseToolStripMenuItem";
+			this.recreateDatabaseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.recreateDatabaseToolStripMenuItem.Text = "Recreate database";
+			this.recreateDatabaseToolStripMenuItem.Click += new System.EventHandler(this.recreateDatabaseToolStripMenuItem_Click);
 			// 
-			// toolStripSeparator3
+			// toolStripSeparator4
 			// 
-			this.toolStripSeparator3.Name = "toolStripSeparator3";
-			this.toolStripSeparator3.Size = new System.Drawing.Size(240, 6);
-			// 
-			// backupDataToolStripMenuItem
-			// 
-			this.backupDataToolStripMenuItem.Name = "backupDataToolStripMenuItem";
-			this.backupDataToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
-			this.backupDataToolStripMenuItem.Text = "Backup data";
-			this.backupDataToolStripMenuItem.Click += new System.EventHandler(this.backupDataToolStripMenuItem_Click);
-			// 
-			// restoreDataToolStripMenuItem
-			// 
-			this.restoreDataToolStripMenuItem.Name = "restoreDataToolStripMenuItem";
-			this.restoreDataToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
-			this.restoreDataToolStripMenuItem.Text = "Restore data";
-			this.restoreDataToolStripMenuItem.Click += new System.EventHandler(this.restoreDataToolStripMenuItem_Click);
+			this.toolStripSeparator4.Name = "toolStripSeparator4";
+			this.toolStripSeparator4.Size = new System.Drawing.Size(177, 6);
 			// 
 			// FrmMain
 			// 
@@ -222,6 +238,8 @@
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
 		private System.Windows.Forms.ToolStripMenuItem backupDataToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem restoreDataToolStripMenuItem;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+		private System.Windows.Forms.ToolStripMenuItem recreateDatabaseToolStripMenuItem;
 	}
 }
 
