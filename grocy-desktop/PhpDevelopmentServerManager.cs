@@ -16,7 +16,7 @@ namespace GrocyDesktop
 			this.WwwDirectory = wwwPath;
 			this.Port = this.GetRandomFreePortNumber();
 			this.OutputLines = new List<string>();
-			this.PhpProcessUnintentedRestartsCache = new MemoryCache("PhpDevelopmentServerManager_RestartCache");
+			this.PhpProcessUnintentedRestartsCache = new MemoryCache("PhpDevelopmentServerManager_RestartCache" + Guid.NewGuid());
 		}
 
 		private string BinDirectory;

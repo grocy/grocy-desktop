@@ -26,7 +26,7 @@ namespace GrocyDesktop
 		private void SetupCef()
 		{
 			Cef.EnableHighDPISupport();
-
+			
 			CefSettings cefSettings = new CefSettings();
 			cefSettings.BrowserSubprocessPath = Path.Combine(GrocyDesktopDependencyManager.CefExecutingPath, @"x86\CefSharp.BrowserSubprocess.exe");
 			cefSettings.CachePath = GrocyDesktopDependencyManager.CefCachePath;
@@ -35,13 +35,25 @@ namespace GrocyDesktop
 			cefSettings.CefCommandLineArgs.Add("--unsafely-treat-insecure-origin-as-secure", this.GrocyPhpServer.Url);
 			Cef.Initialize(cefSettings, performDependencyCheck: false, browserProcessHandler: null);
 
-			this.GrocyBrowser = new ChromiumWebBrowser(this.GrocyPhpServer.Url);
-			this.GrocyBrowser.Dock = DockStyle.Fill;
-			this.tabPage_grocy.Controls.Add(this.GrocyBrowser);
+			if (this.UserSettings.EnableBarcodeBuddyIntegration)
+			{
+				this.GrocyBrowser = new ChromiumWebBrowser(this.GrocyPhpServer.Url);
+				this.GrocyBrowser.Dock = DockStyle.Fill;
+				this.tabPage_grocy.Controls.Add(this.GrocyBrowser);
 
-			this.BarcodeBuddyBrowser = new ChromiumWebBrowser(this.BarcodeBuddyPhpServer.Url);
-			this.BarcodeBuddyBrowser.Dock = DockStyle.Fill;
-			this.tabPage_BarcodeBuddy.Controls.Add(this.BarcodeBuddyBrowser);
+				this.BarcodeBuddyBrowser = new ChromiumWebBrowser(this.BarcodeBuddyPhpServer.Url);
+				this.BarcodeBuddyBrowser.Dock = DockStyle.Fill;
+				this.tabPage_BarcodeBuddy.Controls.Add(this.BarcodeBuddyBrowser);
+			}
+			else
+			{
+				this.tabControl1.Visible = false;
+				this.barcodeBuddyToolStripMenuItem.Visible = false;
+
+				this.GrocyBrowser = new ChromiumWebBrowser(this.GrocyPhpServer.Url);
+				this.GrocyBrowser.Dock = DockStyle.Fill;
+				this.panel_Main.Controls.Add(this.GrocyBrowser);
+			}
 		}
 
 		private void SetupPhpServer()
@@ -70,8 +82,13 @@ namespace GrocyDesktop
 			await GrocyDesktopDependencyManager.UnpackIncludedDependenciesIfNeeded(this);
 			this.SetupPhpServer();
 			this.SetupGrocy();
-			this.SetupBarcodeBuddy();
+			if (this.UserSettings.EnableBarcodeBuddyIntegration)
+			{
+				this.SetupBarcodeBuddy();
+			}
 			this.SetupCef();
+
+			this.enableBarcodeBuddytoolStripMenuItem.Checked = this.UserSettings.EnableBarcodeBuddyIntegration;
 		}
 
 		private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
@@ -81,7 +98,7 @@ namespace GrocyDesktop
 				this.GrocyPhpServer.StopServer();
 			}
 
-			if (this.BarcodeBuddyPhpServer != null)
+			if (this.UserSettings.EnableBarcodeBuddyIntegration && this.BarcodeBuddyPhpServer != null)
 			{
 				this.BarcodeBuddyPhpServer.StopServer();
 			}
@@ -96,14 +113,22 @@ namespace GrocyDesktop
 
 		private void showPHPServerOutputToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			new FrmShowText("grocy PHP server output", this.GrocyPhpServer.GetConsoleOutput()).ShowDialog(this);
-			new FrmShowText("BarcodeBuddy PHP server output", this.BarcodeBuddyPhpServer.GetConsoleOutput()).ShowDialog(this);
+			new FrmShowText("grocy PHP server output", this.GrocyPhpServer.GetConsoleOutput()).Show(this);
+
+			if (this.UserSettings.EnableBarcodeBuddyIntegration)
+			{
+				new FrmShowText("Barcode Buddy PHP server output", this.BarcodeBuddyPhpServer.GetConsoleOutput()).Show(this);
+			}
 		}
 
 		private void showBrowserDeveloperToolsToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			this.GrocyBrowser.ShowDevTools();
-			this.BarcodeBuddyBrowser.ShowDevTools();
+
+			if (this.UserSettings.EnableBarcodeBuddyIntegration)
+			{
+				this.BarcodeBuddyBrowser.ShowDevTools();
+			}
 		}
 
 		private void aboutGrocydesktopToolStripMenuItem_Click(object sender, EventArgs e)
@@ -114,6 +139,7 @@ namespace GrocyDesktop
 		private async void updateToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			this.GrocyPhpServer.StopServer();
+			Thread.Sleep(2000); // Just give php.exe some time to stop...
 			await GrocyDesktopDependencyManager.UpdateEmbeddedGrocyRelease(this);
 			this.GrocyPhpServer.StartServer();
 			this.GrocyEnvironmentManager.Setup(this.GrocyPhpServer.Url);
@@ -194,6 +220,23 @@ namespace GrocyDesktop
 				File.Delete(Path.Combine(this.UserSettings.GrocyDataLocation, "grocy.db"));
 				Extensions.RestartApp();
 			}
+		}
+
+		private async void updateToolStripMenuItem1_Click(object sender, EventArgs e)
+		{
+			this.BarcodeBuddyPhpServer.StopServer();
+			Thread.Sleep(2000); // Just give php.exe some time to stop...
+			await GrocyDesktopDependencyManager.UpdateEmbeddedBarcodeBuddyRelease(this);
+			this.BarcodeBuddyPhpServer.StartServer();
+			this.BarcodeBuddyEnvironmentManager.Setup(this.BarcodeBuddyPhpServer.Url);
+			this.BarcodeBuddyBrowser.Load(this.BarcodeBuddyPhpServer.Url);
+		}
+
+		private void enableBarcodeBuddytoolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			this.UserSettings.EnableBarcodeBuddyIntegration = this.enableBarcodeBuddytoolStripMenuItem.Checked;
+			this.UserSettings.Save();
+			Extensions.RestartApp();
 		}
 	}
 }

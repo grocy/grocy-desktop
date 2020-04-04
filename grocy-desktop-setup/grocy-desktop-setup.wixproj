@@ -48,10 +48,12 @@
     robocopy "$(SolutionDir)appx_dependencies" "$(SolutionDir).deploy\appx_content" /MIR /XF "grocy-desktop_developer_cert.pfx" /XF "README.md"
     copy "$(SolutionDir)embedded_dependencies\cefx86.zip" "$(SolutionDir).deploy\appx_content\cefx86.zip"
     copy "$(SolutionDir)embedded_dependencies\grocy.zip" "$(SolutionDir).deploy\appx_content\grocy.zip"
+    copy "$(SolutionDir)embedded_dependencies\barcodebuddy.zip" "$(SolutionDir).deploy\appx_content\barcodebuddy.zip"
     copy "$(SolutionDir)embedded_dependencies\php.zip" "$(SolutionDir).deploy\appx_content\php.zip"
     copy "$(SolutionDir)embedded_dependencies\vc2019x86.zip" "$(SolutionDir).deploy\appx_content\vc2019x86.zip"
     copy "$(SolutionDir)grocy-desktop\bin\Release\grocy-desktop.exe" "$(SolutionDir).deploy\appx_content\grocy-desktop.exe"
     copy "$(SolutionDir)grocy-desktop\bin\Release\grocy-desktop.exe.config" "$(SolutionDir).deploy\appx_content\grocy-desktop.exe.config"
+    copy "$(SolutionDir)grocy-desktop\bin\Release\Newtonsoft.Json.dll" "$(SolutionDir).deploy\appx_content\Newtonsoft.Json.dll"
     "%25programfiles(x86)%25\Windows Kits\10\bin\10.0.18362.0\x86\MakeAppx.exe" pack /d "$(SolutionDir).deploy\appx_content" /p "$(SolutionDir).deploy\grocy-desktop_x.x.x.appx"
     "%25programfiles(x86)%25\Windows Kits\10\bin\10.0.18362.0\x86\signtool.exe" sign /fd sha256 /f "$(SolutionDir)appx_dependencies\grocy-desktop_developer_cert.pfx" /p "123456" "$(SolutionDir).deploy\grocy-desktop_x.x.x.appx"
 )</PostBuildEvent>

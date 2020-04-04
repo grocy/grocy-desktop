@@ -73,6 +73,7 @@
 			<Component Guid="1C4E283B-5834-4027-A753-AE150FA5B650">
 				<File Id="PrimaryApplicationExecutable" Source="$(var.SolutionDir)grocy-desktop\bin\$(var.Configuration)\grocy-desktop.exe" KeyPath="yes" Checksum="yes"></File>
 				<File Id="PrimaryApplicationExecutableConfig" Source="$(var.SolutionDir)grocy-desktop\bin\$(var.Configuration)\grocy-desktop.exe.config"></File>
+				<File Id="NewtonsoftJsonDependency" Source="$(var.SolutionDir)grocy-desktop\bin\$(var.Configuration)\Newtonsoft.Json.dll" KeyPath="yes" Checksum="yes"></File>
 				<File Id="GrocyReleasePackage" Source="$(var.SolutionDir)embedded_dependencies\grocy.zip"></File>
 				<File Id="BarcodeBuddyReleasePackage" Source="$(var.SolutionDir)embedded_dependencies\barcodebuddy.zip"></File>
 				<File Id="PhpPackage" Source="$(var.SolutionDir)embedded_dependencies\php.zip"></File>

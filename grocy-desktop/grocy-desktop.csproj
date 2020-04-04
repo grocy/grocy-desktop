@@ -46,11 +46,15 @@
     <ApplicationIcon>grocy-desktop_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.IO.Compression" />
     <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -155,15 +159,15 @@
   </PropertyGroup>
   <PropertyGroup>
     <PostBuildEvent>if not exist "$(SolutionDir)embedded_dependencies\cefx86.zip" (
-    "$(SolutionDir)build_tools\7za.exe" a -r "$(SolutionDir)embedded_dependencies\cefx86.zip" "$(TargetDir)\x86\*"
+    PowerShell -ExecutionPolicy Unrestricted -Command "&amp; Get-ChildItem '$(TargetDir)\x86\*' -Recurse | Compress-Archive -DestinationPath '$(SolutionDir)embedded_dependencies\cefx86.zip'"
 )
 
 if not exist "$(SolutionDir)embedded_dependencies\grocy.zip" (
-    "$(SolutionDir)build_tools\wget.exe" "https://releases.grocy.info/latest" -O "$(SolutionDir)embedded_dependencies\grocy.zip"
+    PowerShell -ExecutionPolicy Unrestricted -Command "&amp; Invoke-WebRequest 'https://releases.grocy.info/latest' -OutFile '$(SolutionDir)embedded_dependencies\grocy.zip'"
 )
 
 if not exist "$(SolutionDir)embedded_dependencies\barcodebuddy.zip" (
-    "$(SolutionDir)build_tools\wget.exe" "https://github.com/Forceu/barcodebuddy/archive/master.zip" -O "$(SolutionDir)embedded_dependencies\barcodebuddy.zip"
+    PowerShell -ExecutionPolicy Unrestricted -Command "&amp; Invoke-WebRequest ('https://github.com/Forceu/barcodebuddy/archive/' + (Invoke-RestMethod -Uri https://api.github.com/repos/Forceu/barcodebuddy/releases/latest | Select -Expand tag_name) + '.zip') -OutFile '$(SolutionDir)embedded_dependencies\barcodebuddy.zip'"
 )
 </PostBuildEvent>
   </PropertyGroup>
