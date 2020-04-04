@@ -95,6 +95,7 @@
       <DependentUpon>FrmWait.cs</DependentUpon>
     </Compile>
     <Compile Include="GrocyDesktopDependencyManager.cs" />
+    <Compile Include="BarcodeBuddyEnvironmentManager.cs" />
     <Compile Include="GrocyEnvironmentManager.cs" />
     <Compile Include="PhpDevelopmentServerManager.cs" />
     <Compile Include="Program.cs" />
@@ -159,6 +160,10 @@
 
 if not exist "$(SolutionDir)embedded_dependencies\grocy.zip" (
     "$(SolutionDir)build_tools\wget.exe" "https://releases.grocy.info/latest" -O "$(SolutionDir)embedded_dependencies\grocy.zip"
+)
+
+if not exist "$(SolutionDir)embedded_dependencies\barcodebuddy.zip" (
+    "$(SolutionDir)build_tools\wget.exe" "https://github.com/Forceu/barcodebuddy/archive/master.zip" -O "$(SolutionDir)embedded_dependencies\barcodebuddy.zip"
 )
 </PostBuildEvent>
   </PropertyGroup>

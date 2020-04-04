@@ -15,9 +15,12 @@ namespace GrocyDesktop
 			InitializeComponent();
 		}
 
-		private ChromiumWebBrowser Browser;
-		private PhpDevelopmentServerManager PhpServer;
+		private ChromiumWebBrowser GrocyBrowser;
+		private ChromiumWebBrowser BarcodeBuddyBrowser;
+		private PhpDevelopmentServerManager GrocyPhpServer;
+		private PhpDevelopmentServerManager BarcodeBuddyPhpServer;
 		private GrocyEnvironmentManager GrocyEnvironmentManager;
+		private BarcodeBuddyEnvironmentManager BarcodeBuddyEnvironmentManager;
 		private UserSettings UserSettings = UserSettings.Load();
 
 		private void SetupCef()
@@ -29,24 +32,37 @@ namespace GrocyDesktop
 			cefSettings.CachePath = GrocyDesktopDependencyManager.CefCachePath;
 			cefSettings.LogFile = Path.Combine(GrocyDesktopDependencyManager.CefCachePath, "cef.log");
 			cefSettings.CefCommandLineArgs.Add("--enable-media-stream", "");
-			cefSettings.CefCommandLineArgs.Add("--unsafely-treat-insecure-origin-as-secure", this.PhpServer.Url);
+			cefSettings.CefCommandLineArgs.Add("--unsafely-treat-insecure-origin-as-secure", this.GrocyPhpServer.Url);
 			Cef.Initialize(cefSettings, performDependencyCheck: false, browserProcessHandler: null);
 
-			this.Browser = new ChromiumWebBrowser(this.PhpServer.Url);
-			this.Browser.Dock = DockStyle.Fill;
-			this.panel_Main.Controls.Add(this.Browser);
+			this.GrocyBrowser = new ChromiumWebBrowser(this.GrocyPhpServer.Url);
+			this.GrocyBrowser.Dock = DockStyle.Fill;
+			this.tabPage_grocy.Controls.Add(this.GrocyBrowser);
+
+			this.BarcodeBuddyBrowser = new ChromiumWebBrowser(this.BarcodeBuddyPhpServer.Url);
+			this.BarcodeBuddyBrowser.Dock = DockStyle.Fill;
+			this.tabPage_BarcodeBuddy.Controls.Add(this.BarcodeBuddyBrowser);
 		}
 
 		private void SetupPhpServer()
 		{
-			this.PhpServer = new PhpDevelopmentServerManager(GrocyDesktopDependencyManager.PhpExecutingPath, Path.Combine(GrocyDesktopDependencyManager.GrocyExecutingPath, "public"));
-			this.PhpServer.StartServer();
+			this.GrocyPhpServer = new PhpDevelopmentServerManager(GrocyDesktopDependencyManager.PhpExecutingPath, Path.Combine(GrocyDesktopDependencyManager.GrocyExecutingPath, "public"));
+			this.GrocyPhpServer.StartServer();
+
+			this.BarcodeBuddyPhpServer = new PhpDevelopmentServerManager(GrocyDesktopDependencyManager.PhpExecutingPath, GrocyDesktopDependencyManager.BarcodeBuddyExecutingPath);
+			this.BarcodeBuddyPhpServer.StartServer();
 		}
 
 		private void SetupGrocy()
 		{
 			this.GrocyEnvironmentManager = new GrocyEnvironmentManager(GrocyDesktopDependencyManager.GrocyExecutingPath, this.UserSettings.GrocyDataLocation);
-			this.GrocyEnvironmentManager.Setup(this.PhpServer.Url);
+			this.GrocyEnvironmentManager.Setup(this.GrocyPhpServer.Url);
+		}
+
+		private void SetupBarcodeBuddy()
+		{
+			this.BarcodeBuddyEnvironmentManager = new BarcodeBuddyEnvironmentManager(GrocyDesktopDependencyManager.BarcodeBuddyExecutingPath);
+			this.BarcodeBuddyEnvironmentManager.Setup(this.GrocyPhpServer.Url.TrimEnd('/') + "/api");
 		}
 
 		private async void FrmMain_Shown(object sender, EventArgs e)
@@ -54,14 +70,20 @@ namespace GrocyDesktop
 			await GrocyDesktopDependencyManager.UnpackIncludedDependenciesIfNeeded(this);
 			this.SetupPhpServer();
 			this.SetupGrocy();
+			this.SetupBarcodeBuddy();
 			this.SetupCef();
 		}
 
 		private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
 		{
-			if (this.PhpServer != null)
+			if (this.GrocyPhpServer != null)
 			{
-				this.PhpServer.StopServer();
+				this.GrocyPhpServer.StopServer();
+			}
+
+			if (this.BarcodeBuddyPhpServer != null)
+			{
+				this.BarcodeBuddyPhpServer.StopServer();
 			}
 
 			this.UserSettings.Save();
@@ -74,12 +96,14 @@ namespace GrocyDesktop
 
 		private void showPHPServerOutputToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			new FrmShowText("PHP server output", this.PhpServer.GetConsoleOutput()).ShowDialog(this);
+			new FrmShowText("grocy PHP server output", this.GrocyPhpServer.GetConsoleOutput()).ShowDialog(this);
+			new FrmShowText("BarcodeBuddy PHP server output", this.BarcodeBuddyPhpServer.GetConsoleOutput()).ShowDialog(this);
 		}
 
 		private void showBrowserDeveloperToolsToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			this.Browser.ShowDevTools();
+			this.GrocyBrowser.ShowDevTools();
+			this.BarcodeBuddyBrowser.ShowDevTools();
 		}
 
 		private void aboutGrocydesktopToolStripMenuItem_Click(object sender, EventArgs e)
@@ -89,11 +113,11 @@ namespace GrocyDesktop
 
 		private async void updateToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			this.PhpServer.StopServer();
+			this.GrocyPhpServer.StopServer();
 			await GrocyDesktopDependencyManager.UpdateEmbeddedGrocyRelease(this);
-			this.PhpServer.StartServer();
-			this.GrocyEnvironmentManager.Setup(this.PhpServer.Url);
-			this.Browser.Load(this.PhpServer.Url);
+			this.GrocyPhpServer.StartServer();
+			this.GrocyEnvironmentManager.Setup(this.GrocyPhpServer.Url);
+			this.GrocyBrowser.Load(this.GrocyPhpServer.Url);
 		}
 
 		private void configurechangeDataLocationToolStripMenuItem_Click(object sender, EventArgs e)
@@ -107,7 +131,7 @@ namespace GrocyDesktop
 				{
 					if (MessageBox.Show("grocy-desktop will restart to apply the changed settings, continue?", "Change grocy data location", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
 					{
-						this.PhpServer.StopServer();
+						this.GrocyPhpServer.StopServer();
 						Extensions.CopyFolder(this.UserSettings.GrocyDataLocation, dialog.SelectedPath);
 						Directory.Delete(this.UserSettings.GrocyDataLocation, true);
 						this.UserSettings.GrocyDataLocation = dialog.SelectedPath;
@@ -150,7 +174,7 @@ namespace GrocyDesktop
 				{
 					if (MessageBox.Show("The current data will be overwritten and grocy-desktop will restart, continue?", "Restore grocy data", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
 					{
-						this.PhpServer.StopServer();
+						this.GrocyPhpServer.StopServer();
 						Thread.Sleep(2000); // Just give php.exe some time to stop...
 						Directory.Delete(this.UserSettings.GrocyDataLocation, true);
 						Directory.CreateDirectory(this.UserSettings.GrocyDataLocation);
@@ -165,7 +189,7 @@ namespace GrocyDesktop
 		{
 			if (MessageBox.Show("This will delete and recreate the grocy database, means all your data will be wiped, really continue?", "Recreate grocy database", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
 			{
-				this.PhpServer.StopServer();
+				this.GrocyPhpServer.StopServer();
 				Thread.Sleep(2000); // Just give php.exe some time to stop...
 				File.Delete(Path.Combine(this.UserSettings.GrocyDataLocation, "grocy.db"));
 				Extensions.RestartApp();

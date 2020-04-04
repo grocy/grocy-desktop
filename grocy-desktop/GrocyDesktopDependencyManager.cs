@@ -14,6 +14,7 @@ namespace GrocyDesktop
 		public readonly static string CefCachePath = Path.Combine(Program.RuntimeDependenciesExecutingPath, "cef-cache");
 		public readonly static string PhpExecutingPath = Path.Combine(Program.RuntimeDependenciesExecutingPath, "php");
 		public readonly static string GrocyExecutingPath = Path.Combine(Program.BaseFixedUserDataFolderPath, "grocy");
+		public readonly static string BarcodeBuddyExecutingPath = Path.Combine(Program.BaseFixedUserDataFolderPath, "barcodebuddy\\barcodebuddy-master");
 
 		public static async Task UnpackIncludedDependenciesIfNeeded(Form ownerFormReference = null)
 		{
@@ -62,6 +63,17 @@ namespace GrocyDesktop
 					waitWindow.SetStatus("Preparing grocy...");
 				}
 				await Task.Run(() => Extensions.ExtractZipToDirectory(grocyZipPath, GrocyExecutingPath, true));
+			}
+
+			// BarcodeBuddy
+			string barcodeBuddyZipPath = Path.Combine(Program.BaseExecutingPath, "barcodebuddy.zip");
+			if (!Directory.Exists(BarcodeBuddyExecutingPath))
+			{
+				if (waitWindow != null)
+				{
+					waitWindow.SetStatus("Preparing Barcode Buddy...");
+				}
+				await Task.Run(() => Extensions.ExtractZipToDirectory(barcodeBuddyZipPath, BarcodeBuddyExecutingPath, true));
 			}
 
 			// Cleanup old runtime dependency folders

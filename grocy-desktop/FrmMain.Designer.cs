@@ -40,15 +40,20 @@
 			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.grocyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+			this.recreateDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.debugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.showBrowserDeveloperToolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
 			this.aboutGrocydesktopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.panel_Main = new System.Windows.Forms.Panel();
-			this.recreateDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+			this.tabControl1 = new System.Windows.Forms.TabControl();
+			this.tabPage_grocy = new System.Windows.Forms.TabPage();
+			this.tabPage_BarcodeBuddy = new System.Windows.Forms.TabPage();
 			this.menuStrip_Main.SuspendLayout();
+			this.panel_Main.SuspendLayout();
+			this.tabControl1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// menuStrip_Main
@@ -135,9 +140,21 @@
 			// updateToolStripMenuItem
 			// 
 			this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-			this.updateToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.updateToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
 			this.updateToolStripMenuItem.Text = "Update";
 			this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
+			// 
+			// toolStripSeparator4
+			// 
+			this.toolStripSeparator4.Name = "toolStripSeparator4";
+			this.toolStripSeparator4.Size = new System.Drawing.Size(166, 6);
+			// 
+			// recreateDatabaseToolStripMenuItem
+			// 
+			this.recreateDatabaseToolStripMenuItem.Name = "recreateDatabaseToolStripMenuItem";
+			this.recreateDatabaseToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+			this.recreateDatabaseToolStripMenuItem.Text = "Recreate database";
+			this.recreateDatabaseToolStripMenuItem.Click += new System.EventHandler(this.recreateDatabaseToolStripMenuItem_Click);
 			// 
 			// helpToolStripMenuItem
 			// 
@@ -178,23 +195,42 @@
 			// 
 			// panel_Main
 			// 
+			this.panel_Main.Controls.Add(this.tabControl1);
 			this.panel_Main.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.panel_Main.Location = new System.Drawing.Point(0, 24);
 			this.panel_Main.Name = "panel_Main";
 			this.panel_Main.Size = new System.Drawing.Size(600, 342);
 			this.panel_Main.TabIndex = 1;
 			// 
-			// recreateDatabaseToolStripMenuItem
+			// tabControl1
 			// 
-			this.recreateDatabaseToolStripMenuItem.Name = "recreateDatabaseToolStripMenuItem";
-			this.recreateDatabaseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			this.recreateDatabaseToolStripMenuItem.Text = "Recreate database";
-			this.recreateDatabaseToolStripMenuItem.Click += new System.EventHandler(this.recreateDatabaseToolStripMenuItem_Click);
+			this.tabControl1.Controls.Add(this.tabPage_grocy);
+			this.tabControl1.Controls.Add(this.tabPage_BarcodeBuddy);
+			this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.tabControl1.Location = new System.Drawing.Point(0, 0);
+			this.tabControl1.Name = "tabControl1";
+			this.tabControl1.Padding = new System.Drawing.Point(0, 0);
+			this.tabControl1.SelectedIndex = 0;
+			this.tabControl1.Size = new System.Drawing.Size(600, 342);
+			this.tabControl1.TabIndex = 0;
 			// 
-			// toolStripSeparator4
+			// tabPage_grocy
 			// 
-			this.toolStripSeparator4.Name = "toolStripSeparator4";
-			this.toolStripSeparator4.Size = new System.Drawing.Size(177, 6);
+			this.tabPage_grocy.Location = new System.Drawing.Point(4, 22);
+			this.tabPage_grocy.Name = "tabPage_grocy";
+			this.tabPage_grocy.Size = new System.Drawing.Size(592, 316);
+			this.tabPage_grocy.TabIndex = 0;
+			this.tabPage_grocy.Text = "grocy";
+			this.tabPage_grocy.UseVisualStyleBackColor = true;
+			// 
+			// tabPage_BarcodeBuddy
+			// 
+			this.tabPage_BarcodeBuddy.Location = new System.Drawing.Point(4, 22);
+			this.tabPage_BarcodeBuddy.Name = "tabPage_BarcodeBuddy";
+			this.tabPage_BarcodeBuddy.Size = new System.Drawing.Size(592, 316);
+			this.tabPage_BarcodeBuddy.TabIndex = 1;
+			this.tabPage_BarcodeBuddy.Text = "Barcode Buddy";
+			this.tabPage_BarcodeBuddy.UseVisualStyleBackColor = true;
 			// 
 			// FrmMain
 			// 
@@ -214,6 +250,8 @@
 			this.Shown += new System.EventHandler(this.FrmMain_Shown);
 			this.menuStrip_Main.ResumeLayout(false);
 			this.menuStrip_Main.PerformLayout();
+			this.panel_Main.ResumeLayout(false);
+			this.tabControl1.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -240,6 +278,9 @@
 		private System.Windows.Forms.ToolStripMenuItem restoreDataToolStripMenuItem;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
 		private System.Windows.Forms.ToolStripMenuItem recreateDatabaseToolStripMenuItem;
+		private System.Windows.Forms.TabControl tabControl1;
+		private System.Windows.Forms.TabPage tabPage_grocy;
+		private System.Windows.Forms.TabPage tabPage_BarcodeBuddy;
 	}
 }
 
