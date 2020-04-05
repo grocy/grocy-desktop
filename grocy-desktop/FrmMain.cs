@@ -1,6 +1,7 @@
 ﻿using CefSharp;
 using CefSharp.WinForms;
 using System;
+using System.Globalization;
 using System.IO;
 using System.IO.Compression;
 using System.Threading;
@@ -33,6 +34,7 @@ namespace GrocyDesktop
 			cefSettings.LogFile = Path.Combine(GrocyDesktopDependencyManager.CefCachePath, "cef.log");
 			cefSettings.CefCommandLineArgs.Add("--enable-media-stream", "");
 			cefSettings.CefCommandLineArgs.Add("--unsafely-treat-insecure-origin-as-secure", this.GrocyPhpServer.Url);
+			cefSettings.CefCommandLineArgs.Add("--lang", CultureInfo.CurrentCulture.TwoLetterISOLanguageName);
 			Cef.Initialize(cefSettings, performDependencyCheck: false, browserProcessHandler: null);
 
 			if (this.UserSettings.EnableBarcodeBuddyIntegration)
