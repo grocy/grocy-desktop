@@ -16,13 +16,16 @@ namespace GrocyDesktop
 		{
 			get
 			{
-				using (WebClient wc = new WebClient())
-				{
-					wc.Headers.Add("User-Agent", "grocy-desktop/" + Program.RunningVersion);
-					string latestReleaseJson = wc.DownloadString("https://api.github.com/repos/Forceu/barcodebuddy/releases/latest");
-					JObject latestRelease = JObject.Parse(latestReleaseJson);
-					return "https://github.com/Forceu/barcodebuddy/archive/" + latestRelease["tag_name"] + ".zip";
-				}
+				// master branch for now (testing)
+				return "https://github.com/Forceu/barcodebuddy/archive/master.zip";
+
+				//using (WebClient wc = new WebClient())
+				//{
+				//	wc.Headers.Add("User-Agent", "grocy-desktop/" + Program.RunningVersion);
+				//	string latestReleaseJson = wc.DownloadString("https://api.github.com/repos/Forceu/barcodebuddy/releases/latest");
+				//	JObject latestRelease = JObject.Parse(latestReleaseJson);
+				//	return "https://github.com/Forceu/barcodebuddy/archive/" + latestRelease["tag_name"] + ".zip";
+				//}
 			}
 		}
 
@@ -32,7 +35,7 @@ namespace GrocyDesktop
 		public readonly static string GrocyExecutingPath = Path.Combine(Program.BaseFixedUserDataFolderPath, "grocy");
 		public readonly static string BarcodeBuddyExecutingPath = Path.Combine(Program.BaseFixedUserDataFolderPath, "barcodebuddy");
 
-		public static async Task UnpackIncludedDependenciesIfNeeded(Form ownerFormReference = null)
+		public static async Task UnpackIncludedDependenciesIfNeeded(UserSettings settings, Form ownerFormReference = null)
 		{
 			FrmWait waitWindow = null;
 			if (ownerFormReference != null)
@@ -82,16 +85,19 @@ namespace GrocyDesktop
 			}
 
 			// Barcode Buddy
-			string barcodeBuddyZipPath = Path.Combine(Program.BaseExecutingPath, "barcodebuddy.zip");
-			if (!Directory.Exists(BarcodeBuddyExecutingPath))
+			if (settings.EnableBarcodeBuddyIntegration)
 			{
-				if (waitWindow != null)
+				string barcodeBuddyZipPath = Path.Combine(Program.BaseExecutingPath, "barcodebuddy.zip");
+				if (!Directory.Exists(BarcodeBuddyExecutingPath))
 				{
-					waitWindow.SetStatus("Preparing Barcode Buddy...");
+					if (waitWindow != null)
+					{
+						waitWindow.SetStatus("Preparing Barcode Buddy...");
+					}
+					await Task.Run(() => Extensions.ExtractZipToDirectory(barcodeBuddyZipPath, BarcodeBuddyExecutingPath + "-tmp", true));
+					Directory.Move(Directory.GetDirectories(BarcodeBuddyExecutingPath + "-tmp").First(), BarcodeBuddyExecutingPath);
+					Directory.Delete(BarcodeBuddyExecutingPath + "-tmp", true);
 				}
-				await Task.Run(() => Extensions.ExtractZipToDirectory(barcodeBuddyZipPath, BarcodeBuddyExecutingPath + "-tmp", true));
-				Directory.Move(Directory.GetDirectories(BarcodeBuddyExecutingPath + "-tmp").First(), BarcodeBuddyExecutingPath);
-				Directory.Delete(BarcodeBuddyExecutingPath + "-tmp", true);
 			}
 
 			// Cleanup old runtime dependency folders

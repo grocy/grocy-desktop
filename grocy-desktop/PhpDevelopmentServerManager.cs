@@ -10,17 +10,24 @@ namespace GrocyDesktop
 {
 	public class PhpDevelopmentServerManager
 	{
-		public PhpDevelopmentServerManager(string phpBinDirectoryPath, string wwwPath)
+		public PhpDevelopmentServerManager(string phpBinDirectoryPath, string wwwPath, Dictionary<string, string> environmentVariables = null)
 		{
 			this.BinDirectory = phpBinDirectoryPath;
 			this.WwwDirectory = wwwPath;
+			this.EnvironmentVariables = environmentVariables;
 			this.Port = this.GetRandomFreePortNumber();
 			this.OutputLines = new List<string>();
 			this.PhpProcessUnintentedRestartsCache = new MemoryCache("PhpDevelopmentServerManager_RestartCache" + Guid.NewGuid());
+
+			if (this.EnvironmentVariables == null)
+			{
+				this.EnvironmentVariables = new Dictionary<string, string>();
+			}
 		}
 
 		private string BinDirectory;
 		private string WwwDirectory;
+		private Dictionary<string, string> EnvironmentVariables;
 		private Process PhpProcess;
 		private List<string> OutputLines;
 		private MemoryCache PhpProcessUnintentedRestartsCache;
@@ -56,6 +63,11 @@ namespace GrocyDesktop
 			this.PhpProcess.StartInfo.FileName = Path.Combine(this.BinDirectory, "php.exe");
 			this.PhpProcess.StartInfo.Arguments = "-S localhost:" + this.Port;
 			this.PhpProcess.StartInfo.WorkingDirectory = this.WwwDirectory;
+			
+			foreach (KeyValuePair<string, string> item in this.EnvironmentVariables)
+			{
+				this.PhpProcess.StartInfo.EnvironmentVariables.Add(item.Key, item.Value);
+			}
 
 			this.PhpProcess.Start();
 			this.PhpProcess.BeginOutputReadLine();
@@ -86,6 +98,11 @@ namespace GrocyDesktop
 			{
 				this.PhpProcess.Kill();
 			}
+		}
+
+		public void SetEnvironmenVariables(Dictionary<string, string> environmentVariables)
+		{
+			this.EnvironmentVariables = environmentVariables;
 		}
 
 		public string GetConsoleOutput()

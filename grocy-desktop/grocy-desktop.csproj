@@ -167,7 +167,8 @@ if not exist "$(SolutionDir)embedded_dependencies\grocy.zip" (
 )
 
 if not exist "$(SolutionDir)embedded_dependencies\barcodebuddy.zip" (
-    PowerShell -ExecutionPolicy Unrestricted -Command "&amp; Invoke-WebRequest ('https://github.com/Forceu/barcodebuddy/archive/' + (Invoke-RestMethod -Uri https://api.github.com/repos/Forceu/barcodebuddy/releases/latest | Select -Expand tag_name) + '.zip') -OutFile '$(SolutionDir)embedded_dependencies\barcodebuddy.zip'"
+    rem PowerShell -ExecutionPolicy Unrestricted -Command "&amp; Invoke-WebRequest ('https://github.com/Forceu/barcodebuddy/archive/' + (Invoke-RestMethod -Uri https://api.github.com/repos/Forceu/barcodebuddy/releases/latest | Select -Expand tag_name) + '.zip') -OutFile '$(SolutionDir)embedded_dependencies\barcodebuddy.zip'"
+	PowerShell -ExecutionPolicy Unrestricted -Command "&amp; Invoke-WebRequest 'https://github.com/Forceu/barcodebuddy/archive/master.zip' -OutFile '$(SolutionDir)embedded_dependencies\barcodebuddy.zip'"
 )
 </PostBuildEvent>
   </PropertyGroup>

@@ -56,17 +56,10 @@ namespace GrocyDesktop
 			}
 		}
 
-		private void SetupPhpServer()
+		private void SetupGrocy()
 		{
 			this.GrocyPhpServer = new PhpDevelopmentServerManager(GrocyDesktopDependencyManager.PhpExecutingPath, Path.Combine(GrocyDesktopDependencyManager.GrocyExecutingPath, "public"));
 			this.GrocyPhpServer.StartServer();
-
-			this.BarcodeBuddyPhpServer = new PhpDevelopmentServerManager(GrocyDesktopDependencyManager.PhpExecutingPath, GrocyDesktopDependencyManager.BarcodeBuddyExecutingPath);
-			this.BarcodeBuddyPhpServer.StartServer();
-		}
-
-		private void SetupGrocy()
-		{
 			this.GrocyEnvironmentManager = new GrocyEnvironmentManager(GrocyDesktopDependencyManager.GrocyExecutingPath, this.UserSettings.GrocyDataLocation);
 			this.GrocyEnvironmentManager.Setup(this.GrocyPhpServer.Url);
 		}
@@ -74,13 +67,15 @@ namespace GrocyDesktop
 		private void SetupBarcodeBuddy()
 		{
 			this.BarcodeBuddyEnvironmentManager = new BarcodeBuddyEnvironmentManager(GrocyDesktopDependencyManager.BarcodeBuddyExecutingPath);
-			this.BarcodeBuddyEnvironmentManager.Setup(this.GrocyPhpServer.Url.TrimEnd('/') + "/api");
+			this.BarcodeBuddyPhpServer = new PhpDevelopmentServerManager(GrocyDesktopDependencyManager.PhpExecutingPath, GrocyDesktopDependencyManager.BarcodeBuddyExecutingPath);
+			this.BarcodeBuddyEnvironmentManager.Setup(this.GrocyPhpServer.Url.TrimEnd('/') + "/api/");
+			this.BarcodeBuddyPhpServer.SetEnvironmenVariables(this.BarcodeBuddyEnvironmentManager.GetEnvironmentVariables());
+			this.BarcodeBuddyPhpServer.StartServer();
 		}
 
 		private async void FrmMain_Shown(object sender, EventArgs e)
 		{
-			await GrocyDesktopDependencyManager.UnpackIncludedDependenciesIfNeeded(this);
-			this.SetupPhpServer();
+			await GrocyDesktopDependencyManager.UnpackIncludedDependenciesIfNeeded(this.UserSettings, this);
 			this.SetupGrocy();
 			if (this.UserSettings.EnableBarcodeBuddyIntegration)
 			{
