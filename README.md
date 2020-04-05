@@ -19,7 +19,9 @@ Just download and execute the [latest release](https://releases.grocy.info/lates
 All grocy user data can be exported and restored as a ZIP file (see the `File` menu in the top menu bar).
 
 ## Localization
-grocy-desktop itself is not localized, but grocy is and will use automatically the localization based on your system language, if available.
+grocy-desktop is fully localizable - the default language is English (integrated into code), a German localization is always maintained by me.
+You can easily help translating grocy at https://www.transifex.com/grocy/grocy-desktop, if your language is incomplete or not available yet.
+(grocy-desktop and grocy will use automatically the localization based on your system language, if available.)
 
 ## Things worth to know
 

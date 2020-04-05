@@ -112,6 +112,10 @@
     <EmbeddedResource Include="FrmDisplayException.resx">
       <DependentUpon>FrmDisplayException.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.de.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,7 +172,7 @@ if not exist "$(SolutionDir)embedded_dependencies\grocy.zip" (
 
 if not exist "$(SolutionDir)embedded_dependencies\barcodebuddy.zip" (
     rem PowerShell -ExecutionPolicy Unrestricted -Command "&amp; Invoke-WebRequest ('https://github.com/Forceu/barcodebuddy/archive/' + (Invoke-RestMethod -Uri https://api.github.com/repos/Forceu/barcodebuddy/releases/latest | Select -Expand tag_name) + '.zip') -OutFile '$(SolutionDir)embedded_dependencies\barcodebuddy.zip'"
-	PowerShell -ExecutionPolicy Unrestricted -Command "&amp; Invoke-WebRequest 'https://github.com/Forceu/barcodebuddy/archive/master.zip' -OutFile '$(SolutionDir)embedded_dependencies\barcodebuddy.zip'"
+    PowerShell -ExecutionPolicy Unrestricted -Command "&amp; Invoke-WebRequest 'https://github.com/Forceu/barcodebuddy/archive/master.zip' -OutFile '$(SolutionDir)embedded_dependencies\barcodebuddy.zip'"
 )
 </PostBuildEvent>
   </PropertyGroup>

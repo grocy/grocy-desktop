@@ -4,6 +4,7 @@ using System;
 using System.Globalization;
 using System.IO;
 using System.IO.Compression;
+using System.Resources;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -16,6 +17,7 @@ namespace GrocyDesktop
 			InitializeComponent();
 		}
 
+		private ResourceManager ResourceManager = new ResourceManager(typeof(FrmMain));
 		private ChromiumWebBrowser GrocyBrowser;
 		private ChromiumWebBrowser BarcodeBuddyBrowser;
 		private PhpDevelopmentServerManager GrocyPhpServer;
@@ -41,20 +43,20 @@ namespace GrocyDesktop
 			{
 				this.GrocyBrowser = new ChromiumWebBrowser(this.GrocyPhpServer.Url);
 				this.GrocyBrowser.Dock = DockStyle.Fill;
-				this.tabPage_grocy.Controls.Add(this.GrocyBrowser);
+				this.TabPage_Grocy.Controls.Add(this.GrocyBrowser);
 
 				this.BarcodeBuddyBrowser = new ChromiumWebBrowser(this.BarcodeBuddyPhpServer.Url);
 				this.BarcodeBuddyBrowser.Dock = DockStyle.Fill;
-				this.tabPage_BarcodeBuddy.Controls.Add(this.BarcodeBuddyBrowser);
+				this.TabPage_BarcodeBuddy.Controls.Add(this.BarcodeBuddyBrowser);
 			}
 			else
 			{
-				this.tabControl1.Visible = false;
-				this.barcodeBuddyToolStripMenuItem.Visible = false;
+				this.TabControl_Main.Visible = false;
+				this.ToolStripMenuItem_BarcodeBuddy.Visible = false;
 
 				this.GrocyBrowser = new ChromiumWebBrowser(this.GrocyPhpServer.Url);
 				this.GrocyBrowser.Dock = DockStyle.Fill;
-				this.panel_Main.Controls.Add(this.GrocyBrowser);
+				this.Panel_Main.Controls.Add(this.GrocyBrowser);
 			}
 		}
 
@@ -85,7 +87,7 @@ namespace GrocyDesktop
 			}
 			this.SetupCef();
 
-			this.enableBarcodeBuddytoolStripMenuItem.Checked = this.UserSettings.EnableBarcodeBuddyIntegration;
+			this.ToolStripMenuItem_EnableBarcodeBuddy.Checked = this.UserSettings.EnableBarcodeBuddyIntegration;
 		}
 
 		private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
@@ -103,22 +105,21 @@ namespace GrocyDesktop
 			this.UserSettings.Save();
 		}
 
-		private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+		private void ToolStripMenuItem_Exit_Click(object sender, EventArgs e)
 		{
 			this.Close();
 		}
 
-		private void showPHPServerOutputToolStripMenuItem_Click(object sender, EventArgs e)
+		private void ToolStripMenuItem_ShowPhpServerOutput_Click(object sender, EventArgs e)
 		{
-			new FrmShowText("grocy PHP server output", this.GrocyPhpServer.GetConsoleOutput()).Show(this);
-
+			new FrmShowText("grocy " + this.ResourceManager.GetString("STRING_PHPServerOutput"), this.GrocyPhpServer.GetConsoleOutput()).Show(this);
 			if (this.UserSettings.EnableBarcodeBuddyIntegration)
 			{
-				new FrmShowText("Barcode Buddy PHP server output", this.BarcodeBuddyPhpServer.GetConsoleOutput()).Show(this);
+				new FrmShowText("Barcode Buddy " + this.ResourceManager.GetString("STRING_PHPServerOutput"), this.BarcodeBuddyPhpServer.GetConsoleOutput()).Show(this);
 			}
 		}
 
-		private void showBrowserDeveloperToolsToolStripMenuItem_Click(object sender, EventArgs e)
+		private void ToolStripMenuItem_ShowBrowserDeveloperTools_Click(object sender, EventArgs e)
 		{
 			this.GrocyBrowser.ShowDevTools();
 
@@ -128,12 +129,12 @@ namespace GrocyDesktop
 			}
 		}
 
-		private void aboutGrocydesktopToolStripMenuItem_Click(object sender, EventArgs e)
+		private void ToolStripMenuItem_About_Click(object sender, EventArgs e)
 		{
 			new FrmAbout().ShowDialog(this);
 		}
 
-		private async void updateToolStripMenuItem_Click(object sender, EventArgs e)
+		private async void ToolStripMenuItem_UpdateGrocy_Click(object sender, EventArgs e)
 		{
 			this.GrocyPhpServer.StopServer();
 			Thread.Sleep(2000); // Just give php.exe some time to stop...
@@ -143,7 +144,7 @@ namespace GrocyDesktop
 			this.GrocyBrowser.Load(this.GrocyPhpServer.Url);
 		}
 
-		private void configurechangeDataLocationToolStripMenuItem_Click(object sender, EventArgs e)
+		private void ToolStripMenuItem_ConfigureChangeDataLocation_Click(object sender, EventArgs e)
 		{
 			using (FolderBrowserDialog dialog = new FolderBrowserDialog())
 			{
@@ -152,7 +153,7 @@ namespace GrocyDesktop
 				
 				if (dialog.ShowDialog() == DialogResult.OK)
 				{
-					if (MessageBox.Show("grocy-desktop will restart to apply the changed settings, continue?", "Change grocy data location", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+					if (MessageBox.Show(this.ResourceManager.GetString("STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue"), this.ResourceManager.GetString("STRING_ChangeDataLocation"), MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
 					{
 						this.GrocyPhpServer.StopServer();
 						Extensions.CopyFolder(this.UserSettings.GrocyDataLocation, dialog.SelectedPath);
@@ -165,7 +166,7 @@ namespace GrocyDesktop
 			}
 		}
 
-		private void backupDataToolStripMenuItem_Click(object sender, EventArgs e)
+		private void ToolStripMenuItem_BackupData_Click(object sender, EventArgs e)
 		{
 			using (SaveFileDialog dialog = new SaveFileDialog())
 			{
@@ -178,12 +179,12 @@ namespace GrocyDesktop
 				if (dialog.ShowDialog() == DialogResult.OK)
 				{
 					ZipFile.CreateFromDirectory(this.UserSettings.GrocyDataLocation, dialog.FileName);
-					MessageBox.Show("Backup successfully created.", "grocy-desktop Backup", MessageBoxButtons.OK, MessageBoxIcon.Information);
+					MessageBox.Show(this.ResourceManager.GetString("STRING_BackupSuccessfullyCreated"), this.ResourceManager.GetString("STRING_Backup"), MessageBoxButtons.OK, MessageBoxIcon.Information);
 				}
 			}
 		}
 
-		private void restoreDataToolStripMenuItem_Click(object sender, EventArgs e)
+		private void ToolStripMenuItem_RestoreData_Click(object sender, EventArgs e)
 		{
 			using (OpenFileDialog dialog = new OpenFileDialog())
 			{
@@ -195,7 +196,7 @@ namespace GrocyDesktop
 
 				if (dialog.ShowDialog() == DialogResult.OK)
 				{
-					if (MessageBox.Show("The current data will be overwritten and grocy-desktop will restart, continue?", "Restore grocy data", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+					if (MessageBox.Show(this.ResourceManager.GetString("STRING_TheCurrentDataWillBeOverwrittenAndGrocydesktopWillRestartContinue"), this.ResourceManager.GetString("STRING_Restore"), MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
 					{
 						this.GrocyPhpServer.StopServer();
 						Thread.Sleep(2000); // Just give php.exe some time to stop...
@@ -208,9 +209,9 @@ namespace GrocyDesktop
 			}
 		}
 
-		private void recreateDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
+		private void ToolStripMenuItem_RecreateGrocyDatabase_Click(object sender, EventArgs e)
 		{
-			if (MessageBox.Show("This will delete and recreate the grocy database, means all your data will be wiped, really continue?", "Recreate grocy database", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+			if (MessageBox.Show(this.ResourceManager.GetString("STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue"), this.ResourceManager.GetString("ToolStripMenuItem_RecreateGrocyDatabase.Text"), MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
 			{
 				this.GrocyPhpServer.StopServer();
 				Thread.Sleep(2000); // Just give php.exe some time to stop...
@@ -219,7 +220,7 @@ namespace GrocyDesktop
 			}
 		}
 
-		private async void updateToolStripMenuItem1_Click(object sender, EventArgs e)
+		private async void ToolStripMenuItem_UpdateBarcodeBuddy_Click(object sender, EventArgs e)
 		{
 			this.BarcodeBuddyPhpServer.StopServer();
 			Thread.Sleep(2000); // Just give php.exe some time to stop...
@@ -229,9 +230,9 @@ namespace GrocyDesktop
 			this.BarcodeBuddyBrowser.Load(this.BarcodeBuddyPhpServer.Url);
 		}
 
-		private void enableBarcodeBuddytoolStripMenuItem_Click(object sender, EventArgs e)
+		private void ToolStripMenuItem_EnableBarcodeBuddy_Click(object sender, EventArgs e)
 		{
-			this.UserSettings.EnableBarcodeBuddyIntegration = this.enableBarcodeBuddytoolStripMenuItem.Checked;
+			this.UserSettings.EnableBarcodeBuddyIntegration = this.ToolStripMenuItem_EnableBarcodeBuddy.Checked;
 			this.UserSettings.Save();
 			Extensions.RestartApp();
 		}

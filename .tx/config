@@ -1,0 +1,8 @@
+[main]
+host = https://www.transifex.com
+
+[grocy-desktop.FrmMain]
+file_filter = grocy-desktop/FrmMain.<lang>.resx
+source_file = grocy-desktop/FrmMain.resx
+source_lang = en
+type = RESX

@@ -28,258 +28,289 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
-			this.menuStrip_Main = new System.Windows.Forms.MenuStrip();
-			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.enableBarcodeBuddytoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.MenuStrip_Main = new System.Windows.Forms.MenuStrip();
+			this.ToolStripMenuItem_File = new System.Windows.Forms.ToolStripMenuItem();
+			this.ToolStripMenuItem_EnableBarcodeBuddy = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-			this.backupDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.restoreDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.configurechangeDataLocationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.ToolStripMenuItem_BackupData = new System.Windows.Forms.ToolStripMenuItem();
+			this.ToolStripMenuItem_RestoreData = new System.Windows.Forms.ToolStripMenuItem();
+			this.ToolStripMenuItem_ConfigureChangeDataLocation = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.grocyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.ToolStripMenuItem_Exit = new System.Windows.Forms.ToolStripMenuItem();
+			this.ToolStripMenuItem_grocy = new System.Windows.Forms.ToolStripMenuItem();
+			this.ToolStripMenuItem_UpdateGrocy = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-			this.recreateDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.barcodeBuddyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.updateToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-			this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.debugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.showBrowserDeveloperToolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.ToolStripMenuItem_RecreateGrocyDatabase = new System.Windows.Forms.ToolStripMenuItem();
+			this.ToolStripMenuItem_BarcodeBuddy = new System.Windows.Forms.ToolStripMenuItem();
+			this.ToolStripMenuItem_UpdateBarcodeBuddy = new System.Windows.Forms.ToolStripMenuItem();
+			this.ToolStripMenuItem_Help = new System.Windows.Forms.ToolStripMenuItem();
+			this.ToolStripMenuItem_Debug = new System.Windows.Forms.ToolStripMenuItem();
+			this.ToolStripMenuItem_ShowPhpServerOutput = new System.Windows.Forms.ToolStripMenuItem();
+			this.ToolStripMenuItem_ShowBrowserDeveloperTools = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-			this.aboutGrocydesktopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.panel_Main = new System.Windows.Forms.Panel();
-			this.tabControl1 = new System.Windows.Forms.TabControl();
-			this.tabPage_grocy = new System.Windows.Forms.TabPage();
-			this.tabPage_BarcodeBuddy = new System.Windows.Forms.TabPage();
-			this.showPHPServerOutputToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.menuStrip_Main.SuspendLayout();
-			this.panel_Main.SuspendLayout();
-			this.tabControl1.SuspendLayout();
+			this.ToolStripMenuItem_About = new System.Windows.Forms.ToolStripMenuItem();
+			this.Panel_Main = new System.Windows.Forms.Panel();
+			this.TabControl_Main = new System.Windows.Forms.TabControl();
+			this.TabPage_Grocy = new System.Windows.Forms.TabPage();
+			this.TabPage_BarcodeBuddy = new System.Windows.Forms.TabPage();
+			this.ContextMenuStrip_DummyForResxStrings = new System.Windows.Forms.ContextMenuStrip(this.components);
+			this.STRING_PHPServerOutput = new System.Windows.Forms.ToolStripMenuItem();
+			this.STRING_ChangeDataLocation = new System.Windows.Forms.ToolStripMenuItem();
+			this.STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue = new System.Windows.Forms.ToolStripMenuItem();
+			this.STRING_Backup = new System.Windows.Forms.ToolStripMenuItem();
+			this.STRING_BackupSuccessfullyCreated = new System.Windows.Forms.ToolStripMenuItem();
+			this.STRING_Restore = new System.Windows.Forms.ToolStripMenuItem();
+			this.STRING_TheCurrentDataWillBeOverwrittenAndGrocydesktopWillRestartContinue = new System.Windows.Forms.ToolStripMenuItem();
+			this.STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue = new System.Windows.Forms.ToolStripMenuItem();
+			this.MenuStrip_Main.SuspendLayout();
+			this.Panel_Main.SuspendLayout();
+			this.TabControl_Main.SuspendLayout();
+			this.ContextMenuStrip_DummyForResxStrings.SuspendLayout();
 			this.SuspendLayout();
 			// 
-			// menuStrip_Main
+			// MenuStrip_Main
 			// 
-			this.menuStrip_Main.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.grocyToolStripMenuItem,
-            this.barcodeBuddyToolStripMenuItem,
-            this.helpToolStripMenuItem});
-			this.menuStrip_Main.Location = new System.Drawing.Point(0, 0);
-			this.menuStrip_Main.Name = "menuStrip_Main";
-			this.menuStrip_Main.Size = new System.Drawing.Size(600, 24);
-			this.menuStrip_Main.TabIndex = 0;
-			this.menuStrip_Main.Text = "menuStrip1";
+			this.MenuStrip_Main.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItem_File,
+            this.ToolStripMenuItem_grocy,
+            this.ToolStripMenuItem_BarcodeBuddy,
+            this.ToolStripMenuItem_Help});
+			resources.ApplyResources(this.MenuStrip_Main, "MenuStrip_Main");
+			this.MenuStrip_Main.Name = "MenuStrip_Main";
 			// 
-			// fileToolStripMenuItem
+			// ToolStripMenuItem_File
 			// 
-			this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.enableBarcodeBuddytoolStripMenuItem,
+			this.ToolStripMenuItem_File.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItem_EnableBarcodeBuddy,
             this.toolStripSeparator5,
-            this.backupDataToolStripMenuItem,
-            this.restoreDataToolStripMenuItem,
-            this.configurechangeDataLocationToolStripMenuItem,
+            this.ToolStripMenuItem_BackupData,
+            this.ToolStripMenuItem_RestoreData,
+            this.ToolStripMenuItem_ConfigureChangeDataLocation,
             this.toolStripSeparator3,
-            this.exitToolStripMenuItem});
-			this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-			this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-			this.fileToolStripMenuItem.Text = "File";
+            this.ToolStripMenuItem_Exit});
+			this.ToolStripMenuItem_File.Name = "ToolStripMenuItem_File";
+			resources.ApplyResources(this.ToolStripMenuItem_File, "ToolStripMenuItem_File");
 			// 
-			// enableBarcodeBuddytoolStripMenuItem
+			// ToolStripMenuItem_EnableBarcodeBuddy
 			// 
-			this.enableBarcodeBuddytoolStripMenuItem.CheckOnClick = true;
-			this.enableBarcodeBuddytoolStripMenuItem.Name = "enableBarcodeBuddytoolStripMenuItem";
-			this.enableBarcodeBuddytoolStripMenuItem.Size = new System.Drawing.Size(243, 22);
-			this.enableBarcodeBuddytoolStripMenuItem.Text = "Enable Barcode Buddy";
-			this.enableBarcodeBuddytoolStripMenuItem.Click += new System.EventHandler(this.enableBarcodeBuddytoolStripMenuItem_Click);
+			this.ToolStripMenuItem_EnableBarcodeBuddy.CheckOnClick = true;
+			this.ToolStripMenuItem_EnableBarcodeBuddy.Name = "ToolStripMenuItem_EnableBarcodeBuddy";
+			resources.ApplyResources(this.ToolStripMenuItem_EnableBarcodeBuddy, "ToolStripMenuItem_EnableBarcodeBuddy");
+			this.ToolStripMenuItem_EnableBarcodeBuddy.Click += new System.EventHandler(this.ToolStripMenuItem_EnableBarcodeBuddy_Click);
 			// 
 			// toolStripSeparator5
 			// 
 			this.toolStripSeparator5.Name = "toolStripSeparator5";
-			this.toolStripSeparator5.Size = new System.Drawing.Size(240, 6);
+			resources.ApplyResources(this.toolStripSeparator5, "toolStripSeparator5");
 			// 
-			// backupDataToolStripMenuItem
+			// ToolStripMenuItem_BackupData
 			// 
-			this.backupDataToolStripMenuItem.Name = "backupDataToolStripMenuItem";
-			this.backupDataToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
-			this.backupDataToolStripMenuItem.Text = "Backup data";
-			this.backupDataToolStripMenuItem.Click += new System.EventHandler(this.backupDataToolStripMenuItem_Click);
+			this.ToolStripMenuItem_BackupData.Name = "ToolStripMenuItem_BackupData";
+			resources.ApplyResources(this.ToolStripMenuItem_BackupData, "ToolStripMenuItem_BackupData");
+			this.ToolStripMenuItem_BackupData.Click += new System.EventHandler(this.ToolStripMenuItem_BackupData_Click);
 			// 
-			// restoreDataToolStripMenuItem
+			// ToolStripMenuItem_RestoreData
 			// 
-			this.restoreDataToolStripMenuItem.Name = "restoreDataToolStripMenuItem";
-			this.restoreDataToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
-			this.restoreDataToolStripMenuItem.Text = "Restore data";
-			this.restoreDataToolStripMenuItem.Click += new System.EventHandler(this.restoreDataToolStripMenuItem_Click);
+			this.ToolStripMenuItem_RestoreData.Name = "ToolStripMenuItem_RestoreData";
+			resources.ApplyResources(this.ToolStripMenuItem_RestoreData, "ToolStripMenuItem_RestoreData");
+			this.ToolStripMenuItem_RestoreData.Click += new System.EventHandler(this.ToolStripMenuItem_RestoreData_Click);
 			// 
-			// configurechangeDataLocationToolStripMenuItem
+			// ToolStripMenuItem_ConfigureChangeDataLocation
 			// 
-			this.configurechangeDataLocationToolStripMenuItem.Name = "configurechangeDataLocationToolStripMenuItem";
-			this.configurechangeDataLocationToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
-			this.configurechangeDataLocationToolStripMenuItem.Text = "Configure/change data location";
-			this.configurechangeDataLocationToolStripMenuItem.Click += new System.EventHandler(this.configurechangeDataLocationToolStripMenuItem_Click);
+			this.ToolStripMenuItem_ConfigureChangeDataLocation.Name = "ToolStripMenuItem_ConfigureChangeDataLocation";
+			resources.ApplyResources(this.ToolStripMenuItem_ConfigureChangeDataLocation, "ToolStripMenuItem_ConfigureChangeDataLocation");
+			this.ToolStripMenuItem_ConfigureChangeDataLocation.Click += new System.EventHandler(this.ToolStripMenuItem_ConfigureChangeDataLocation_Click);
 			// 
 			// toolStripSeparator3
 			// 
 			this.toolStripSeparator3.Name = "toolStripSeparator3";
-			this.toolStripSeparator3.Size = new System.Drawing.Size(240, 6);
+			resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
 			// 
-			// exitToolStripMenuItem
+			// ToolStripMenuItem_Exit
 			// 
-			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-			this.exitToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
-			this.exitToolStripMenuItem.Text = "Exit";
-			this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+			this.ToolStripMenuItem_Exit.Name = "ToolStripMenuItem_Exit";
+			resources.ApplyResources(this.ToolStripMenuItem_Exit, "ToolStripMenuItem_Exit");
+			this.ToolStripMenuItem_Exit.Click += new System.EventHandler(this.ToolStripMenuItem_Exit_Click);
 			// 
-			// grocyToolStripMenuItem
+			// ToolStripMenuItem_grocy
 			// 
-			this.grocyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.updateToolStripMenuItem,
+			this.ToolStripMenuItem_grocy.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItem_UpdateGrocy,
             this.toolStripSeparator4,
-            this.recreateDatabaseToolStripMenuItem});
-			this.grocyToolStripMenuItem.Name = "grocyToolStripMenuItem";
-			this.grocyToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
-			this.grocyToolStripMenuItem.Text = "grocy";
+            this.ToolStripMenuItem_RecreateGrocyDatabase});
+			this.ToolStripMenuItem_grocy.Name = "ToolStripMenuItem_grocy";
+			resources.ApplyResources(this.ToolStripMenuItem_grocy, "ToolStripMenuItem_grocy");
 			// 
-			// updateToolStripMenuItem
+			// ToolStripMenuItem_UpdateGrocy
 			// 
-			this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-			this.updateToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			this.updateToolStripMenuItem.Text = "Update";
-			this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
+			this.ToolStripMenuItem_UpdateGrocy.Name = "ToolStripMenuItem_UpdateGrocy";
+			resources.ApplyResources(this.ToolStripMenuItem_UpdateGrocy, "ToolStripMenuItem_UpdateGrocy");
+			this.ToolStripMenuItem_UpdateGrocy.Click += new System.EventHandler(this.ToolStripMenuItem_UpdateGrocy_Click);
 			// 
 			// toolStripSeparator4
 			// 
 			this.toolStripSeparator4.Name = "toolStripSeparator4";
-			this.toolStripSeparator4.Size = new System.Drawing.Size(177, 6);
+			resources.ApplyResources(this.toolStripSeparator4, "toolStripSeparator4");
 			// 
-			// recreateDatabaseToolStripMenuItem
+			// ToolStripMenuItem_RecreateGrocyDatabase
 			// 
-			this.recreateDatabaseToolStripMenuItem.Name = "recreateDatabaseToolStripMenuItem";
-			this.recreateDatabaseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			this.recreateDatabaseToolStripMenuItem.Text = "Recreate database";
-			this.recreateDatabaseToolStripMenuItem.Click += new System.EventHandler(this.recreateDatabaseToolStripMenuItem_Click);
+			this.ToolStripMenuItem_RecreateGrocyDatabase.Name = "ToolStripMenuItem_RecreateGrocyDatabase";
+			resources.ApplyResources(this.ToolStripMenuItem_RecreateGrocyDatabase, "ToolStripMenuItem_RecreateGrocyDatabase");
+			this.ToolStripMenuItem_RecreateGrocyDatabase.Click += new System.EventHandler(this.ToolStripMenuItem_RecreateGrocyDatabase_Click);
 			// 
-			// barcodeBuddyToolStripMenuItem
+			// ToolStripMenuItem_BarcodeBuddy
 			// 
-			this.barcodeBuddyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.updateToolStripMenuItem1});
-			this.barcodeBuddyToolStripMenuItem.Name = "barcodeBuddyToolStripMenuItem";
-			this.barcodeBuddyToolStripMenuItem.Size = new System.Drawing.Size(99, 20);
-			this.barcodeBuddyToolStripMenuItem.Text = "Barcode Buddy";
+			this.ToolStripMenuItem_BarcodeBuddy.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItem_UpdateBarcodeBuddy});
+			this.ToolStripMenuItem_BarcodeBuddy.Name = "ToolStripMenuItem_BarcodeBuddy";
+			resources.ApplyResources(this.ToolStripMenuItem_BarcodeBuddy, "ToolStripMenuItem_BarcodeBuddy");
 			// 
-			// updateToolStripMenuItem1
+			// ToolStripMenuItem_UpdateBarcodeBuddy
 			// 
-			this.updateToolStripMenuItem1.Name = "updateToolStripMenuItem1";
-			this.updateToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-			this.updateToolStripMenuItem1.Text = "Update";
-			this.updateToolStripMenuItem1.Click += new System.EventHandler(this.updateToolStripMenuItem1_Click);
+			this.ToolStripMenuItem_UpdateBarcodeBuddy.Name = "ToolStripMenuItem_UpdateBarcodeBuddy";
+			resources.ApplyResources(this.ToolStripMenuItem_UpdateBarcodeBuddy, "ToolStripMenuItem_UpdateBarcodeBuddy");
+			this.ToolStripMenuItem_UpdateBarcodeBuddy.Click += new System.EventHandler(this.ToolStripMenuItem_UpdateBarcodeBuddy_Click);
 			// 
-			// helpToolStripMenuItem
+			// ToolStripMenuItem_Help
 			// 
-			this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.debugToolStripMenuItem,
+			this.ToolStripMenuItem_Help.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItem_Debug,
             this.toolStripSeparator2,
-            this.aboutGrocydesktopToolStripMenuItem});
-			this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-			this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-			this.helpToolStripMenuItem.Text = "Help";
+            this.ToolStripMenuItem_About});
+			this.ToolStripMenuItem_Help.Name = "ToolStripMenuItem_Help";
+			resources.ApplyResources(this.ToolStripMenuItem_Help, "ToolStripMenuItem_Help");
 			// 
-			// debugToolStripMenuItem
+			// ToolStripMenuItem_Debug
 			// 
-			this.debugToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.showPHPServerOutputToolStripMenuItem,
-            this.showBrowserDeveloperToolsToolStripMenuItem});
-			this.debugToolStripMenuItem.Name = "debugToolStripMenuItem";
-			this.debugToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-			this.debugToolStripMenuItem.Text = "Debug";
+			this.ToolStripMenuItem_Debug.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItem_ShowPhpServerOutput,
+            this.ToolStripMenuItem_ShowBrowserDeveloperTools});
+			this.ToolStripMenuItem_Debug.Name = "ToolStripMenuItem_Debug";
+			resources.ApplyResources(this.ToolStripMenuItem_Debug, "ToolStripMenuItem_Debug");
 			// 
-			// showBrowserDeveloperToolsToolStripMenuItem
+			// ToolStripMenuItem_ShowPhpServerOutput
 			// 
-			this.showBrowserDeveloperToolsToolStripMenuItem.Name = "showBrowserDeveloperToolsToolStripMenuItem";
-			this.showBrowserDeveloperToolsToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
-			this.showBrowserDeveloperToolsToolStripMenuItem.Text = "Show browser developer tools";
-			this.showBrowserDeveloperToolsToolStripMenuItem.Click += new System.EventHandler(this.showBrowserDeveloperToolsToolStripMenuItem_Click);
+			this.ToolStripMenuItem_ShowPhpServerOutput.Name = "ToolStripMenuItem_ShowPhpServerOutput";
+			resources.ApplyResources(this.ToolStripMenuItem_ShowPhpServerOutput, "ToolStripMenuItem_ShowPhpServerOutput");
+			this.ToolStripMenuItem_ShowPhpServerOutput.Click += new System.EventHandler(this.ToolStripMenuItem_ShowPhpServerOutput_Click);
+			// 
+			// ToolStripMenuItem_ShowBrowserDeveloperTools
+			// 
+			this.ToolStripMenuItem_ShowBrowserDeveloperTools.Name = "ToolStripMenuItem_ShowBrowserDeveloperTools";
+			resources.ApplyResources(this.ToolStripMenuItem_ShowBrowserDeveloperTools, "ToolStripMenuItem_ShowBrowserDeveloperTools");
+			this.ToolStripMenuItem_ShowBrowserDeveloperTools.Click += new System.EventHandler(this.ToolStripMenuItem_ShowBrowserDeveloperTools_Click);
 			// 
 			// toolStripSeparator2
 			// 
 			this.toolStripSeparator2.Name = "toolStripSeparator2";
-			this.toolStripSeparator2.Size = new System.Drawing.Size(184, 6);
+			resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
 			// 
-			// aboutGrocydesktopToolStripMenuItem
+			// ToolStripMenuItem_About
 			// 
-			this.aboutGrocydesktopToolStripMenuItem.Name = "aboutGrocydesktopToolStripMenuItem";
-			this.aboutGrocydesktopToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-			this.aboutGrocydesktopToolStripMenuItem.Text = "About grocy-desktop";
-			this.aboutGrocydesktopToolStripMenuItem.Click += new System.EventHandler(this.aboutGrocydesktopToolStripMenuItem_Click);
+			this.ToolStripMenuItem_About.Name = "ToolStripMenuItem_About";
+			resources.ApplyResources(this.ToolStripMenuItem_About, "ToolStripMenuItem_About");
+			this.ToolStripMenuItem_About.Click += new System.EventHandler(this.ToolStripMenuItem_About_Click);
 			// 
-			// panel_Main
+			// Panel_Main
 			// 
-			this.panel_Main.Controls.Add(this.tabControl1);
-			this.panel_Main.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.panel_Main.Location = new System.Drawing.Point(0, 24);
-			this.panel_Main.Name = "panel_Main";
-			this.panel_Main.Size = new System.Drawing.Size(600, 342);
-			this.panel_Main.TabIndex = 1;
+			this.Panel_Main.Controls.Add(this.TabControl_Main);
+			resources.ApplyResources(this.Panel_Main, "Panel_Main");
+			this.Panel_Main.Name = "Panel_Main";
 			// 
-			// tabControl1
+			// TabControl_Main
 			// 
-			this.tabControl1.Controls.Add(this.tabPage_grocy);
-			this.tabControl1.Controls.Add(this.tabPage_BarcodeBuddy);
-			this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.tabControl1.Location = new System.Drawing.Point(0, 0);
-			this.tabControl1.Name = "tabControl1";
-			this.tabControl1.Padding = new System.Drawing.Point(0, 0);
-			this.tabControl1.SelectedIndex = 0;
-			this.tabControl1.Size = new System.Drawing.Size(600, 342);
-			this.tabControl1.TabIndex = 0;
+			this.TabControl_Main.Controls.Add(this.TabPage_Grocy);
+			this.TabControl_Main.Controls.Add(this.TabPage_BarcodeBuddy);
+			resources.ApplyResources(this.TabControl_Main, "TabControl_Main");
+			this.TabControl_Main.Name = "TabControl_Main";
+			this.TabControl_Main.SelectedIndex = 0;
 			// 
-			// tabPage_grocy
+			// TabPage_Grocy
 			// 
-			this.tabPage_grocy.Location = new System.Drawing.Point(4, 22);
-			this.tabPage_grocy.Name = "tabPage_grocy";
-			this.tabPage_grocy.Size = new System.Drawing.Size(592, 316);
-			this.tabPage_grocy.TabIndex = 0;
-			this.tabPage_grocy.Text = "grocy";
-			this.tabPage_grocy.UseVisualStyleBackColor = true;
+			resources.ApplyResources(this.TabPage_Grocy, "TabPage_Grocy");
+			this.TabPage_Grocy.Name = "TabPage_Grocy";
+			this.TabPage_Grocy.UseVisualStyleBackColor = true;
 			// 
-			// tabPage_BarcodeBuddy
+			// TabPage_BarcodeBuddy
 			// 
-			this.tabPage_BarcodeBuddy.Location = new System.Drawing.Point(4, 22);
-			this.tabPage_BarcodeBuddy.Name = "tabPage_BarcodeBuddy";
-			this.tabPage_BarcodeBuddy.Size = new System.Drawing.Size(592, 316);
-			this.tabPage_BarcodeBuddy.TabIndex = 1;
-			this.tabPage_BarcodeBuddy.Text = "Barcode Buddy";
-			this.tabPage_BarcodeBuddy.UseVisualStyleBackColor = true;
+			resources.ApplyResources(this.TabPage_BarcodeBuddy, "TabPage_BarcodeBuddy");
+			this.TabPage_BarcodeBuddy.Name = "TabPage_BarcodeBuddy";
+			this.TabPage_BarcodeBuddy.UseVisualStyleBackColor = true;
 			// 
-			// showPHPServerOutputToolStripMenuItem
+			// ContextMenuStrip_DummyForResxStrings
 			// 
-			this.showPHPServerOutputToolStripMenuItem.Name = "showPHPServerOutputToolStripMenuItem";
-			this.showPHPServerOutputToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
-			this.showPHPServerOutputToolStripMenuItem.Text = "Show PHP server output";
-			this.showPHPServerOutputToolStripMenuItem.Click += new System.EventHandler(this.showPHPServerOutputToolStripMenuItem_Click);
+			this.ContextMenuStrip_DummyForResxStrings.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.STRING_PHPServerOutput,
+            this.STRING_ChangeDataLocation,
+            this.STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue,
+            this.STRING_Backup,
+            this.STRING_BackupSuccessfullyCreated,
+            this.STRING_Restore,
+            this.STRING_TheCurrentDataWillBeOverwrittenAndGrocydesktopWillRestartContinue,
+            this.STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue});
+			this.ContextMenuStrip_DummyForResxStrings.Name = "ContextMenuStrip_DummyForResxStrings";
+			resources.ApplyResources(this.ContextMenuStrip_DummyForResxStrings, "ContextMenuStrip_DummyForResxStrings");
+			// 
+			// STRING_PHPServerOutput
+			// 
+			this.STRING_PHPServerOutput.Name = "STRING_PHPServerOutput";
+			resources.ApplyResources(this.STRING_PHPServerOutput, "STRING_PHPServerOutput");
+			// 
+			// STRING_ChangeDataLocation
+			// 
+			this.STRING_ChangeDataLocation.Name = "STRING_ChangeDataLocation";
+			resources.ApplyResources(this.STRING_ChangeDataLocation, "STRING_ChangeDataLocation");
+			// 
+			// STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue
+			// 
+			this.STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue.Name = "STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue";
+			resources.ApplyResources(this.STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue, "STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue");
+			// 
+			// STRING_Backup
+			// 
+			this.STRING_Backup.Name = "STRING_Backup";
+			resources.ApplyResources(this.STRING_Backup, "STRING_Backup");
+			// 
+			// STRING_BackupSuccessfullyCreated
+			// 
+			this.STRING_BackupSuccessfullyCreated.Name = "STRING_BackupSuccessfullyCreated";
+			resources.ApplyResources(this.STRING_BackupSuccessfullyCreated, "STRING_BackupSuccessfullyCreated");
+			// 
+			// STRING_Restore
+			// 
+			this.STRING_Restore.Name = "STRING_Restore";
+			resources.ApplyResources(this.STRING_Restore, "STRING_Restore");
+			// 
+			// STRING_TheCurrentDataWillBeOverwrittenAndGrocydesktopWillRestartContinue
+			// 
+			this.STRING_TheCurrentDataWillBeOverwrittenAndGrocydesktopWillRestartContinue.Name = "STRING_TheCurrentDataWillBeOverwrittenAndGrocydesktopWillRestartContinue";
+			resources.ApplyResources(this.STRING_TheCurrentDataWillBeOverwrittenAndGrocydesktopWillRestartContinue, "STRING_TheCurrentDataWillBeOverwrittenAndGrocydesktopWillRestartContinue");
+			// 
+			// STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue
+			// 
+			this.STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue.Name = "STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReally" +
+    "Continue";
+			resources.ApplyResources(this.STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue, "STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReally" +
+        "Continue");
 			// 
 			// FrmMain
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			resources.ApplyResources(this, "$this");
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.AutoSize = true;
-			this.ClientSize = new System.Drawing.Size(600, 366);
-			this.Controls.Add(this.panel_Main);
-			this.Controls.Add(this.menuStrip_Main);
-			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-			this.MainMenuStrip = this.menuStrip_Main;
-			this.Margin = new System.Windows.Forms.Padding(2);
+			this.Controls.Add(this.Panel_Main);
+			this.Controls.Add(this.MenuStrip_Main);
+			this.MainMenuStrip = this.MenuStrip_Main;
 			this.Name = "FrmMain";
-			this.Text = "grocy";
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMain_FormClosing);
 			this.Shown += new System.EventHandler(this.FrmMain_Shown);
-			this.menuStrip_Main.ResumeLayout(false);
-			this.menuStrip_Main.PerformLayout();
-			this.panel_Main.ResumeLayout(false);
-			this.tabControl1.ResumeLayout(false);
+			this.MenuStrip_Main.ResumeLayout(false);
+			this.MenuStrip_Main.PerformLayout();
+			this.Panel_Main.ResumeLayout(false);
+			this.TabControl_Main.ResumeLayout(false);
+			this.ContextMenuStrip_DummyForResxStrings.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -287,31 +318,40 @@
 
 		#endregion
 
-		private System.Windows.Forms.MenuStrip menuStrip_Main;
-		private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-		private System.Windows.Forms.Panel panel_Main;
-		private System.Windows.Forms.ToolStripMenuItem grocyToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem debugToolStripMenuItem;
+		private System.Windows.Forms.MenuStrip MenuStrip_Main;
+		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_File;
+		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Exit;
+		private System.Windows.Forms.Panel Panel_Main;
+		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_grocy;
+		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Help;
+		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Debug;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-		private System.Windows.Forms.ToolStripMenuItem aboutGrocydesktopToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem showBrowserDeveloperToolsToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem configurechangeDataLocationToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_About;
+		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_ShowBrowserDeveloperTools;
+		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_UpdateGrocy;
+		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_ConfigureChangeDataLocation;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-		private System.Windows.Forms.ToolStripMenuItem backupDataToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem restoreDataToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_BackupData;
+		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_RestoreData;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-		private System.Windows.Forms.ToolStripMenuItem recreateDatabaseToolStripMenuItem;
-		private System.Windows.Forms.TabControl tabControl1;
-		private System.Windows.Forms.TabPage tabPage_grocy;
-		private System.Windows.Forms.TabPage tabPage_BarcodeBuddy;
-		private System.Windows.Forms.ToolStripMenuItem barcodeBuddyToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem1;
-		private System.Windows.Forms.ToolStripMenuItem enableBarcodeBuddytoolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_RecreateGrocyDatabase;
+		private System.Windows.Forms.TabControl TabControl_Main;
+		private System.Windows.Forms.TabPage TabPage_Grocy;
+		private System.Windows.Forms.TabPage TabPage_BarcodeBuddy;
+		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_BarcodeBuddy;
+		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_UpdateBarcodeBuddy;
+		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_EnableBarcodeBuddy;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-		private System.Windows.Forms.ToolStripMenuItem showPHPServerOutputToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_ShowPhpServerOutput;
+		private System.Windows.Forms.ContextMenuStrip ContextMenuStrip_DummyForResxStrings;
+		private System.Windows.Forms.ToolStripMenuItem STRING_PHPServerOutput;
+		private System.Windows.Forms.ToolStripMenuItem STRING_ChangeDataLocation;
+		private System.Windows.Forms.ToolStripMenuItem STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue;
+		private System.Windows.Forms.ToolStripMenuItem STRING_Backup;
+		private System.Windows.Forms.ToolStripMenuItem STRING_BackupSuccessfullyCreated;
+		private System.Windows.Forms.ToolStripMenuItem STRING_Restore;
+		private System.Windows.Forms.ToolStripMenuItem STRING_TheCurrentDataWillBeOverwrittenAndGrocydesktopWillRestartContinue;
+		private System.Windows.Forms.ToolStripMenuItem STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue;
 	}
 }
 
