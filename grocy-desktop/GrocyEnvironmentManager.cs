@@ -20,6 +20,7 @@ namespace GrocyDesktop
 			File.WriteAllText(Path.Combine(this.BasePath, "embedded.txt"), this.DataPath);
 			this.SetSetting("CULTURE", this.GuessLocalization());
 			this.SetSetting("BASE_URL", baseUrl);
+			this.SetSetting("CURRENCY", new RegionInfo(CultureInfo.CurrentCulture.LCID).ISOCurrencySymbol);
 
 			Extensions.CopyFolder(Path.Combine(this.BasePath, "data"), this.DataPath);
 			File.Copy(Path.Combine(this.BasePath, "config-dist.php"), Path.Combine(this.DataPath, "config.php"), true);
