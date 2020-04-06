@@ -11,6 +11,7 @@
 
 		<Feature Id="ProductFeature" Title="grocy-desktop Setup" Level="1">
 			<ComponentGroupRef Id="ProductComponents" />
+			<ComponentRef Id="RESOURCES_DE" />
 			<ComponentRef Id="ApplicationShortcut" />
 			<ComponentRef Id="ApplicationShortcutDesktop" />
 		</Feature>
@@ -44,7 +45,9 @@
 		
 		<Directory Id="TARGETDIR" Name="SourceDir">
 			<Directory Id="ProgramFilesFolder">
-				<Directory Id="INSTALLFOLDER" Name="grocy-desktop" />
+				<Directory Id="INSTALLFOLDER" Name="grocy-desktop">
+					<Directory Id="RESOURCES_DE" Name="de" />
+				</Directory>
 			</Directory>
 			<Directory Id="ProgramMenuFolder" />
 			<Directory Id="DesktopFolder" Name="Desktop" />
@@ -74,7 +77,6 @@
 				<File Id="PrimaryApplicationExecutable" Source="$(var.SolutionDir)grocy-desktop\bin\$(var.Configuration)\grocy-desktop.exe" KeyPath="yes" Checksum="yes"></File>
 				<File Id="PrimaryApplicationExecutableConfig" Source="$(var.SolutionDir)grocy-desktop\bin\$(var.Configuration)\grocy-desktop.exe.config"></File>
 				<File Id="NewtonsoftJsonDependency" Source="$(var.SolutionDir)grocy-desktop\bin\$(var.Configuration)\Newtonsoft.Json.dll"></File>
-				<File Id="LocalizationResourcesDe" Source="$(var.SolutionDir)grocy-desktop\bin\$(var.Configuration)\de\grocy-desktop.resources.dll"></File>
 				<File Id="GrocyReleasePackage" Source="$(var.SolutionDir)embedded_dependencies\grocy.zip"></File>
 				<File Id="BarcodeBuddyReleasePackage" Source="$(var.SolutionDir)embedded_dependencies\barcodebuddy.zip"></File>
 				<File Id="PhpPackage" Source="$(var.SolutionDir)embedded_dependencies\php.zip"></File>
@@ -83,5 +85,8 @@
 				<RemoveFolder Id="PurgeAppFolder" Directory="INSTALLFOLDER" On="uninstall" />
 			</Component>
 		</ComponentGroup>
+		<Component Id="RESOURCES_DE" Directory="RESOURCES_DE">
+			<File Id="LocalizationResourcesDe" Source="$(var.SolutionDir)grocy-desktop\bin\$(var.Configuration)\de\grocy-desktop.resources.dll" KeyPath="yes" Checksum="yes"></File>
+		</Component>
 	</Fragment>
 </Wix>
