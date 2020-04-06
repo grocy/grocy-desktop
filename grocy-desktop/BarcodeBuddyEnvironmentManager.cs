@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.IO;
+using System.Text;
 
 namespace GrocyDesktop
 {
@@ -9,12 +10,12 @@ namespace GrocyDesktop
 		{
 			this.BasePath = basePath;
 			this.DataPath = barcodeBuddyDataPath;
-			this.EnvironmentVariables = new Dictionary<string, string>();
+			this.Settings = new Dictionary<string, string>();
 		}
 
 		private string BasePath;
 		private string DataPath;
-		private Dictionary<string, string> EnvironmentVariables;
+		private Dictionary<string, string> Settings;
 
 		public void Setup(string grocyApiUrl)
 		{
@@ -35,20 +36,35 @@ namespace GrocyDesktop
 
 		public void SetSetting(string name, string value)
 		{
-			string envVarKey = "BBUDDY_" + name.ToUpper();
-			if (this.EnvironmentVariables.ContainsKey(envVarKey))
+			string settingKey = name.ToUpper();
+			if (this.Settings.ContainsKey(settingKey))
 			{
-				this.EnvironmentVariables[envVarKey] = value;
+				this.Settings[settingKey] = value;
 			}
 			else
 			{
-				this.EnvironmentVariables.Add(envVarKey, value);
+				this.Settings.Add(settingKey, value);
 			}
 		}
 
 		public Dictionary<string, string> GetEnvironmentVariables()
 		{
-			return this.EnvironmentVariables;
+			// Barcode Buddy needs the settings semicolon separated in a single environment var
+			// Example: BBUDDY_OVERRIDDEN_USER_CONFIG="GROCY_API_URL=https://myurl/api/;GROCY_API_KEY=1234"
+
+			StringBuilder allSettingsString = new StringBuilder();
+			foreach (KeyValuePair<string, string> item in this.Settings)
+			{
+				allSettingsString.Append(item.Key);
+				allSettingsString.Append("=");
+				allSettingsString.Append(item.Value);
+				allSettingsString.Append(";");
+			}
+			allSettingsString.Length--; // Removes the last character (trailing semicolon)
+			
+			Dictionary<string, string> dict = new Dictionary<string, string>();
+			dict.Add("BBUDDY_OVERRIDDEN_USER_CONFIG", allSettingsString.ToString());
+			return dict;
 		}
 	}
 }
