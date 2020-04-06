@@ -1,22 +1,36 @@
 ﻿using System.Collections.Generic;
+using System.IO;
 
 namespace GrocyDesktop
 {
 	public class BarcodeBuddyEnvironmentManager
 	{
-		public BarcodeBuddyEnvironmentManager(string basePath)
+		public BarcodeBuddyEnvironmentManager(string basePath, string barcodeBuddyDataPath)
 		{
 			this.BasePath = basePath;
+			this.DataPath = barcodeBuddyDataPath;
 			this.EnvironmentVariables = new Dictionary<string, string>();
 		}
 
 		private string BasePath;
+		private string DataPath;
 		private Dictionary<string, string> EnvironmentVariables;
 
 		public void Setup(string grocyApiUrl)
 		{
+			if (!Directory.Exists(this.DataPath))
+			{
+				Directory.CreateDirectory(this.DataPath);
+			}
+
 			this.SetSetting("GROCY_API_URL", grocyApiUrl);
 			this.SetSetting("GROCY_API_KEY", "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"); // Dummy, not needed, due to disabled authentication, but required
+			this.SetSetting("DISABLE_AUTHENTICATION", "true");
+			this.SetSetting("CONFIG_PATH", Path.Combine(this.DataPath, "config.php"));
+			this.SetSetting("AUTHDB_PATH", Path.Combine(this.DataPath, "users.db"));
+			this.SetSetting("DATABASE_PATH", Path.Combine(this.DataPath, "barcodebuddy.db"));
+
+			File.Copy(Path.Combine(this.BasePath, "config-dist.php"), Path.Combine(this.DataPath, "config.php"), true);
 		}
 
 		public void SetSetting(string name, string value)

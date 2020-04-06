@@ -7,6 +7,7 @@ namespace GrocyDesktop
 	{
 		private static string SettingsPath = Path.Combine(Program.BaseFixedUserDataFolderPath, "UserSettings.xml");
 		public string GrocyDataLocation = Path.Combine(Program.BaseFixedUserDataFolderPath, "grocy-data");
+		public string BarcodeBuddyDataLocation = Path.Combine(Program.BaseFixedUserDataFolderPath, "barcodebuddy-data");
 		public bool EnableBarcodeBuddyIntegration = false;
 
 		public static UserSettings Load()
