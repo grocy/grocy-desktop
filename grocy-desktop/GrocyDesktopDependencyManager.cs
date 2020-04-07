@@ -3,6 +3,7 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Resources;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -29,6 +30,8 @@ namespace GrocyDesktop
 			}
 		}
 
+		private static ResourceManager ResourceManager = new ResourceManager(typeof(FrmMain));
+
 		public readonly static string CefExecutingPath = Path.Combine(Program.RuntimeDependenciesExecutingPath, "cef");
 		public readonly static string CefCachePath = Path.Combine(Program.RuntimeDependenciesExecutingPath, "cef-cache");
 		public readonly static string PhpExecutingPath = Path.Combine(Program.RuntimeDependenciesExecutingPath, "php");
@@ -53,7 +56,7 @@ namespace GrocyDesktop
 			{
 				if (waitWindow != null)
 				{
-					waitWindow.SetStatus("Preparing embedded web browser (x86)...");
+					waitWindow.SetStatus(ResourceManager.GetString("STRING_PreparingWebbrowser.Text"));
 				}
 				await Task.Run(() => Extensions.ExtractZipToDirectory(cefZipPathx86, cefPathx86, true));
 
@@ -67,7 +70,7 @@ namespace GrocyDesktop
 			{
 				if (waitWindow != null)
 				{
-					waitWindow.SetStatus("Preparing embedded PHP server...");
+					waitWindow.SetStatus(ResourceManager.GetString("STRING_PreparingPhpServer.Text"));
 				}
 				await Task.Run(() => Extensions.ExtractZipToDirectory(phpZipPath, PhpExecutingPath, true));
 				await Task.Run(() => Extensions.ExtractZipToDirectory(vc2019x86ZipPath, PhpExecutingPath, true));
@@ -79,7 +82,7 @@ namespace GrocyDesktop
 			{
 				if (waitWindow != null)
 				{
-					waitWindow.SetStatus("Preparing grocy...");
+					waitWindow.SetStatus(ResourceManager.GetString("STRING_PreparingGrocy.Text"));
 				}
 				await Task.Run(() => Extensions.ExtractZipToDirectory(grocyZipPath, GrocyExecutingPath, true));
 			}
@@ -92,7 +95,7 @@ namespace GrocyDesktop
 				{
 					if (waitWindow != null)
 					{
-						waitWindow.SetStatus("Preparing Barcode Buddy...");
+						waitWindow.SetStatus(ResourceManager.GetString("STRING_PreparingBarcodeBuddy.Text"));
 					}
 					await Task.Run(() => Extensions.ExtractZipToDirectory(barcodeBuddyZipPath, BarcodeBuddyExecutingPath + "-tmp", true));
 					Directory.Move(Directory.GetDirectories(BarcodeBuddyExecutingPath + "-tmp").First(), BarcodeBuddyExecutingPath);
@@ -134,14 +137,14 @@ namespace GrocyDesktop
 			{
 				if (waitWindow != null)
 				{
-					waitWindow.SetStatus("Downloading latest grocy release...");
+					waitWindow.SetStatus(ResourceManager.GetString("STRING_DownloadingGrocyRelease.Text"));
 				}
 				await wc.DownloadFileTaskAsync(new Uri(LATEST_GROCY_RELEASE_URL), grocyZipPath);
 			}
 
 			if (waitWindow != null)
 			{
-				waitWindow.SetStatus("Preparing grocy...");
+				waitWindow.SetStatus(ResourceManager.GetString("STRING_PreparingGrocy.Text"));
 			}
 			await Task.Run(() => Extensions.ExtractZipToDirectory(grocyZipPath, GrocyExecutingPath, true));
 			File.Delete(grocyZipPath);
@@ -171,14 +174,14 @@ namespace GrocyDesktop
 			{
 				if (waitWindow != null)
 				{
-					waitWindow.SetStatus("Downloading latest Barcode Buddy release...");
+					waitWindow.SetStatus(ResourceManager.GetString("STRING_DownloadingBarcodeBuddyRelease.Text"));
 				}
 				await wc.DownloadFileTaskAsync(new Uri(LATEST_BARCODE_BUDDY_RELEASE_URL), barcodeBuddyZipPath);
 			}
 
 			if (waitWindow != null)
 			{
-				waitWindow.SetStatus("Preparing Barcode Buddy...");
+				waitWindow.SetStatus(ResourceManager.GetString("STRING_PreparingBarcodeBuddy.Text"));
 			}
 			await Task.Run(() => Extensions.ExtractZipToDirectory(barcodeBuddyZipPath, BarcodeBuddyExecutingPath + "-tmp", true));
 			Directory.Move(Directory.GetDirectories(BarcodeBuddyExecutingPath + "-tmp").First(), BarcodeBuddyExecutingPath);

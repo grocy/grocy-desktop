@@ -441,8 +441,44 @@
   <data name="STRING_SayThanksQuestion.Text" xml:space="preserve">
     <value>Do you find grocy useful?</value>
   </data>
+  <data name="STRING_PreparingWebbrowser.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
+  </data>
+  <data name="STRING_PreparingWebbrowser.Text" xml:space="preserve">
+    <value>Preparing embedded web browser (x86)...</value>
+  </data>
+  <data name="STRING_PreparingPhpServer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
+  </data>
+  <data name="STRING_PreparingPhpServer.Text" xml:space="preserve">
+    <value>Preparing embedded PHP server...</value>
+  </data>
+  <data name="STRING_PreparingGrocy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
+  </data>
+  <data name="STRING_PreparingGrocy.Text" xml:space="preserve">
+    <value>Preparing grocy...</value>
+  </data>
+  <data name="STRING_PreparingBarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
+  </data>
+  <data name="STRING_PreparingBarcodeBuddy.Text" xml:space="preserve">
+    <value>Preparing Barcode Buddy...</value>
+  </data>
+  <data name="STRING_DownloadingGrocyRelease.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
+  </data>
+  <data name="STRING_DownloadingGrocyRelease.Text" xml:space="preserve">
+    <value>Downloading latest grocy release...</value>
+  </data>
+  <data name="STRING_DownloadingBarcodeBuddyRelease.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
+  </data>
+  <data name="STRING_DownloadingBarcodeBuddyRelease.Text" xml:space="preserve">
+    <value>Downloading latest Barcode Buddy release...</value>
+  </data>
   <data name="ContextMenuStrip_DummyForResxStrings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>593, 268</value>
+    <value>593, 400</value>
   </data>
   <data name="&gt;&gt;ContextMenuStrip_DummyForResxStrings.Name" xml:space="preserve">
     <value>ContextMenuStrip_DummyForResxStrings</value>
@@ -937,6 +973,42 @@
     <value>STRING_SayThanksQuestion</value>
   </data>
   <data name="&gt;&gt;STRING_SayThanksQuestion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;STRING_PreparingWebbrowser.Name" xml:space="preserve">
+    <value>STRING_PreparingWebbrowser</value>
+  </data>
+  <data name="&gt;&gt;STRING_PreparingWebbrowser.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;STRING_PreparingPhpServer.Name" xml:space="preserve">
+    <value>STRING_PreparingPhpServer</value>
+  </data>
+  <data name="&gt;&gt;STRING_PreparingPhpServer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;STRING_PreparingGrocy.Name" xml:space="preserve">
+    <value>STRING_PreparingGrocy</value>
+  </data>
+  <data name="&gt;&gt;STRING_PreparingGrocy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;STRING_PreparingBarcodeBuddy.Name" xml:space="preserve">
+    <value>STRING_PreparingBarcodeBuddy</value>
+  </data>
+  <data name="&gt;&gt;STRING_PreparingBarcodeBuddy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;STRING_DownloadingBarcodeBuddyRelease.Name" xml:space="preserve">
+    <value>STRING_DownloadingBarcodeBuddyRelease</value>
+  </data>
+  <data name="&gt;&gt;STRING_DownloadingBarcodeBuddyRelease.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;STRING_DownloadingGrocyRelease.Name" xml:space="preserve">
+    <value>STRING_DownloadingGrocyRelease</value>
+  </data>
+  <data name="&gt;&gt;STRING_DownloadingGrocyRelease.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

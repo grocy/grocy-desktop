@@ -71,6 +71,12 @@
 			this.STRING_ZipFiles = new System.Windows.Forms.ToolStripMenuItem();
 			this.STRING_SayThanks = new System.Windows.Forms.ToolStripMenuItem();
 			this.STRING_SayThanksQuestion = new System.Windows.Forms.ToolStripMenuItem();
+			this.STRING_PreparingWebbrowser = new System.Windows.Forms.ToolStripMenuItem();
+			this.STRING_PreparingPhpServer = new System.Windows.Forms.ToolStripMenuItem();
+			this.STRING_PreparingGrocy = new System.Windows.Forms.ToolStripMenuItem();
+			this.STRING_PreparingBarcodeBuddy = new System.Windows.Forms.ToolStripMenuItem();
+			this.STRING_DownloadingBarcodeBuddyRelease = new System.Windows.Forms.ToolStripMenuItem();
+			this.STRING_DownloadingGrocyRelease = new System.Windows.Forms.ToolStripMenuItem();
 			this.MenuStrip_Main.SuspendLayout();
 			this.Panel_Main.SuspendLayout();
 			this.TabControl_Main.SuspendLayout();
@@ -240,7 +246,13 @@
             this.STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue,
             this.STRING_ZipFiles,
             this.STRING_SayThanks,
-            this.STRING_SayThanksQuestion});
+            this.STRING_SayThanksQuestion,
+            this.STRING_PreparingWebbrowser,
+            this.STRING_PreparingPhpServer,
+            this.STRING_PreparingGrocy,
+            this.STRING_PreparingBarcodeBuddy,
+            this.STRING_DownloadingGrocyRelease,
+            this.STRING_DownloadingBarcodeBuddyRelease});
 			this.ContextMenuStrip_DummyForResxStrings.Name = "ContextMenuStrip_DummyForResxStrings";
 			resources.ApplyResources(this.ContextMenuStrip_DummyForResxStrings, "ContextMenuStrip_DummyForResxStrings");
 			// 
@@ -347,6 +359,36 @@
 			this.STRING_SayThanksQuestion.Name = "STRING_SayThanksQuestion";
 			resources.ApplyResources(this.STRING_SayThanksQuestion, "STRING_SayThanksQuestion");
 			// 
+			// STRING_PreparingWebbrowser
+			// 
+			this.STRING_PreparingWebbrowser.Name = "STRING_PreparingWebbrowser";
+			resources.ApplyResources(this.STRING_PreparingWebbrowser, "STRING_PreparingWebbrowser");
+			// 
+			// STRING_PreparingPhpServer
+			// 
+			this.STRING_PreparingPhpServer.Name = "STRING_PreparingPhpServer";
+			resources.ApplyResources(this.STRING_PreparingPhpServer, "STRING_PreparingPhpServer");
+			// 
+			// STRING_PreparingGrocy
+			// 
+			this.STRING_PreparingGrocy.Name = "STRING_PreparingGrocy";
+			resources.ApplyResources(this.STRING_PreparingGrocy, "STRING_PreparingGrocy");
+			// 
+			// STRING_PreparingBarcodeBuddy
+			// 
+			this.STRING_PreparingBarcodeBuddy.Name = "STRING_PreparingBarcodeBuddy";
+			resources.ApplyResources(this.STRING_PreparingBarcodeBuddy, "STRING_PreparingBarcodeBuddy");
+			// 
+			// STRING_DownloadingBarcodeBuddyRelease
+			// 
+			this.STRING_DownloadingBarcodeBuddyRelease.Name = "STRING_DownloadingBarcodeBuddyRelease";
+			resources.ApplyResources(this.STRING_DownloadingBarcodeBuddyRelease, "STRING_DownloadingBarcodeBuddyRelease");
+			// 
+			// STRING_DownloadingGrocyRelease
+			// 
+			this.STRING_DownloadingGrocyRelease.Name = "STRING_DownloadingGrocyRelease";
+			resources.ApplyResources(this.STRING_DownloadingGrocyRelease, "STRING_DownloadingGrocyRelease");
+			// 
 			// FrmMain
 			// 
 			resources.ApplyResources(this, "$this");
@@ -411,6 +453,12 @@
 		private System.Windows.Forms.ToolStripMenuItem STRING_ZipFiles;
 		private System.Windows.Forms.ToolStripMenuItem STRING_SayThanks;
 		private System.Windows.Forms.ToolStripMenuItem STRING_SayThanksQuestion;
+		private System.Windows.Forms.ToolStripMenuItem STRING_PreparingWebbrowser;
+		private System.Windows.Forms.ToolStripMenuItem STRING_PreparingPhpServer;
+		private System.Windows.Forms.ToolStripMenuItem STRING_PreparingGrocy;
+		private System.Windows.Forms.ToolStripMenuItem STRING_PreparingBarcodeBuddy;
+		private System.Windows.Forms.ToolStripMenuItem STRING_DownloadingBarcodeBuddyRelease;
+		private System.Windows.Forms.ToolStripMenuItem STRING_DownloadingGrocyRelease;
 	}
 }
 
