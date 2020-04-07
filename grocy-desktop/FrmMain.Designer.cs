@@ -34,10 +34,6 @@
 			this.ToolStripMenuItem_File = new System.Windows.Forms.ToolStripMenuItem();
 			this.ToolStripMenuItem_EnableBarcodeBuddy = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-			this.ToolStripMenuItem_BackupData = new System.Windows.Forms.ToolStripMenuItem();
-			this.ToolStripMenuItem_RestoreData = new System.Windows.Forms.ToolStripMenuItem();
-			this.ToolStripMenuItem_ConfigureChangeDataLocation = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
 			this.ToolStripMenuItem_Exit = new System.Windows.Forms.ToolStripMenuItem();
 			this.ToolStripMenuItem_grocy = new System.Windows.Forms.ToolStripMenuItem();
 			this.ToolStripMenuItem_UpdateGrocy = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,6 +60,17 @@
 			this.STRING_Restore = new System.Windows.Forms.ToolStripMenuItem();
 			this.STRING_TheCurrentDataWillBeOverwrittenAndGrocydesktopWillRestartContinue = new System.Windows.Forms.ToolStripMenuItem();
 			this.STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue = new System.Windows.Forms.ToolStripMenuItem();
+			this.ToolStripMenuItem_ConfigureChangeDataLocationGrocy = new System.Windows.Forms.ToolStripMenuItem();
+			this.ToolStripMenuItem_BackupDataGrocy = new System.Windows.Forms.ToolStripMenuItem();
+			this.ToolStripMenuItem_RestoreDataGrocy = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+			this.ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy = new System.Windows.Forms.ToolStripMenuItem();
+			this.ToolStripMenuItem_BackupDataBarcodeBuddy = new System.Windows.Forms.ToolStripMenuItem();
+			this.ToolStripMenuItem_RestoreDataBarcodeBuddy = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+			this.STRING_ZipFiles = new System.Windows.Forms.ToolStripMenuItem();
+			this.STRING_SayThanks = new System.Windows.Forms.ToolStripMenuItem();
+			this.STRING_SayThanksQuestion = new System.Windows.Forms.ToolStripMenuItem();
 			this.MenuStrip_Main.SuspendLayout();
 			this.Panel_Main.SuspendLayout();
 			this.TabControl_Main.SuspendLayout();
@@ -85,10 +92,6 @@
 			this.ToolStripMenuItem_File.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripMenuItem_EnableBarcodeBuddy,
             this.toolStripSeparator5,
-            this.ToolStripMenuItem_BackupData,
-            this.ToolStripMenuItem_RestoreData,
-            this.ToolStripMenuItem_ConfigureChangeDataLocation,
-            this.toolStripSeparator3,
             this.ToolStripMenuItem_Exit});
 			this.ToolStripMenuItem_File.Name = "ToolStripMenuItem_File";
 			resources.ApplyResources(this.ToolStripMenuItem_File, "ToolStripMenuItem_File");
@@ -105,29 +108,6 @@
 			this.toolStripSeparator5.Name = "toolStripSeparator5";
 			resources.ApplyResources(this.toolStripSeparator5, "toolStripSeparator5");
 			// 
-			// ToolStripMenuItem_BackupData
-			// 
-			this.ToolStripMenuItem_BackupData.Name = "ToolStripMenuItem_BackupData";
-			resources.ApplyResources(this.ToolStripMenuItem_BackupData, "ToolStripMenuItem_BackupData");
-			this.ToolStripMenuItem_BackupData.Click += new System.EventHandler(this.ToolStripMenuItem_BackupData_Click);
-			// 
-			// ToolStripMenuItem_RestoreData
-			// 
-			this.ToolStripMenuItem_RestoreData.Name = "ToolStripMenuItem_RestoreData";
-			resources.ApplyResources(this.ToolStripMenuItem_RestoreData, "ToolStripMenuItem_RestoreData");
-			this.ToolStripMenuItem_RestoreData.Click += new System.EventHandler(this.ToolStripMenuItem_RestoreData_Click);
-			// 
-			// ToolStripMenuItem_ConfigureChangeDataLocation
-			// 
-			this.ToolStripMenuItem_ConfigureChangeDataLocation.Name = "ToolStripMenuItem_ConfigureChangeDataLocation";
-			resources.ApplyResources(this.ToolStripMenuItem_ConfigureChangeDataLocation, "ToolStripMenuItem_ConfigureChangeDataLocation");
-			this.ToolStripMenuItem_ConfigureChangeDataLocation.Click += new System.EventHandler(this.ToolStripMenuItem_ConfigureChangeDataLocation_Click);
-			// 
-			// toolStripSeparator3
-			// 
-			this.toolStripSeparator3.Name = "toolStripSeparator3";
-			resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
-			// 
 			// ToolStripMenuItem_Exit
 			// 
 			this.ToolStripMenuItem_Exit.Name = "ToolStripMenuItem_Exit";
@@ -138,6 +118,10 @@
 			// 
 			this.ToolStripMenuItem_grocy.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripMenuItem_UpdateGrocy,
+            this.toolStripSeparator1,
+            this.ToolStripMenuItem_BackupDataGrocy,
+            this.ToolStripMenuItem_RestoreDataGrocy,
+            this.ToolStripMenuItem_ConfigureChangeDataLocationGrocy,
             this.toolStripSeparator4,
             this.ToolStripMenuItem_RecreateGrocyDatabase});
 			this.ToolStripMenuItem_grocy.Name = "ToolStripMenuItem_grocy";
@@ -163,7 +147,11 @@
 			// ToolStripMenuItem_BarcodeBuddy
 			// 
 			this.ToolStripMenuItem_BarcodeBuddy.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolStripMenuItem_UpdateBarcodeBuddy});
+            this.ToolStripMenuItem_UpdateBarcodeBuddy,
+            this.toolStripSeparator3,
+            this.ToolStripMenuItem_BackupDataBarcodeBuddy,
+            this.ToolStripMenuItem_RestoreDataBarcodeBuddy,
+            this.ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy});
 			this.ToolStripMenuItem_BarcodeBuddy.Name = "ToolStripMenuItem_BarcodeBuddy";
 			resources.ApplyResources(this.ToolStripMenuItem_BarcodeBuddy, "ToolStripMenuItem_BarcodeBuddy");
 			// 
@@ -249,7 +237,10 @@
             this.STRING_BackupSuccessfullyCreated,
             this.STRING_Restore,
             this.STRING_TheCurrentDataWillBeOverwrittenAndGrocydesktopWillRestartContinue,
-            this.STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue});
+            this.STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue,
+            this.STRING_ZipFiles,
+            this.STRING_SayThanks,
+            this.STRING_SayThanksQuestion});
 			this.ContextMenuStrip_DummyForResxStrings.Name = "ContextMenuStrip_DummyForResxStrings";
 			resources.ApplyResources(this.ContextMenuStrip_DummyForResxStrings, "ContextMenuStrip_DummyForResxStrings");
 			// 
@@ -295,6 +286,67 @@
 			resources.ApplyResources(this.STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue, "STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReally" +
         "Continue");
 			// 
+			// ToolStripMenuItem_ConfigureChangeDataLocationGrocy
+			// 
+			this.ToolStripMenuItem_ConfigureChangeDataLocationGrocy.Name = "ToolStripMenuItem_ConfigureChangeDataLocationGrocy";
+			resources.ApplyResources(this.ToolStripMenuItem_ConfigureChangeDataLocationGrocy, "ToolStripMenuItem_ConfigureChangeDataLocationGrocy");
+			this.ToolStripMenuItem_ConfigureChangeDataLocationGrocy.Click += new System.EventHandler(this.ToolStripMenuItem_ConfigureChangeDataLocationGrocy_Click);
+			// 
+			// ToolStripMenuItem_BackupDataGrocy
+			// 
+			this.ToolStripMenuItem_BackupDataGrocy.Name = "ToolStripMenuItem_BackupDataGrocy";
+			resources.ApplyResources(this.ToolStripMenuItem_BackupDataGrocy, "ToolStripMenuItem_BackupDataGrocy");
+			this.ToolStripMenuItem_BackupDataGrocy.Click += new System.EventHandler(this.ToolStripMenuItem_BackupDataGrocy_Click);
+			// 
+			// ToolStripMenuItem_RestoreDataGrocy
+			// 
+			this.ToolStripMenuItem_RestoreDataGrocy.Name = "ToolStripMenuItem_RestoreDataGrocy";
+			resources.ApplyResources(this.ToolStripMenuItem_RestoreDataGrocy, "ToolStripMenuItem_RestoreDataGrocy");
+			this.ToolStripMenuItem_RestoreDataGrocy.Click += new System.EventHandler(this.ToolStripMenuItem_RestoreDataGrocy_Click);
+			// 
+			// toolStripSeparator1
+			// 
+			this.toolStripSeparator1.Name = "toolStripSeparator1";
+			resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
+			// 
+			// ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy
+			// 
+			this.ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy.Name = "ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy";
+			resources.ApplyResources(this.ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy, "ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy");
+			this.ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy.Click += new System.EventHandler(this.ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy_Click);
+			// 
+			// ToolStripMenuItem_BackupDataBarcodeBuddy
+			// 
+			this.ToolStripMenuItem_BackupDataBarcodeBuddy.Name = "ToolStripMenuItem_BackupDataBarcodeBuddy";
+			resources.ApplyResources(this.ToolStripMenuItem_BackupDataBarcodeBuddy, "ToolStripMenuItem_BackupDataBarcodeBuddy");
+			this.ToolStripMenuItem_BackupDataBarcodeBuddy.Click += new System.EventHandler(this.ToolStripMenuItem_BackupDataBarcodeBuddy_Click);
+			// 
+			// ToolStripMenuItem_RestoreDataBarcodeBuddy
+			// 
+			this.ToolStripMenuItem_RestoreDataBarcodeBuddy.Name = "ToolStripMenuItem_RestoreDataBarcodeBuddy";
+			resources.ApplyResources(this.ToolStripMenuItem_RestoreDataBarcodeBuddy, "ToolStripMenuItem_RestoreDataBarcodeBuddy");
+			this.ToolStripMenuItem_RestoreDataBarcodeBuddy.Click += new System.EventHandler(this.ToolStripMenuItem_RestoreDataBarcodeBuddy_Click);
+			// 
+			// toolStripSeparator3
+			// 
+			this.toolStripSeparator3.Name = "toolStripSeparator3";
+			resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
+			// 
+			// STRING_ZipFiles
+			// 
+			this.STRING_ZipFiles.Name = "STRING_ZipFiles";
+			resources.ApplyResources(this.STRING_ZipFiles, "STRING_ZipFiles");
+			// 
+			// STRING_SayThanks
+			// 
+			this.STRING_SayThanks.Name = "STRING_SayThanks";
+			resources.ApplyResources(this.STRING_SayThanks, "STRING_SayThanks");
+			// 
+			// STRING_SayThanksQuestion
+			// 
+			this.STRING_SayThanksQuestion.Name = "STRING_SayThanksQuestion";
+			resources.ApplyResources(this.STRING_SayThanksQuestion, "STRING_SayThanksQuestion");
+			// 
 			// FrmMain
 			// 
 			resources.ApplyResources(this, "$this");
@@ -329,10 +381,6 @@
 		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_About;
 		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_ShowBrowserDeveloperTools;
 		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_UpdateGrocy;
-		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_ConfigureChangeDataLocation;
-		private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_BackupData;
-		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_RestoreData;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
 		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_RecreateGrocyDatabase;
 		private System.Windows.Forms.TabControl TabControl_Main;
@@ -352,6 +400,17 @@
 		private System.Windows.Forms.ToolStripMenuItem STRING_Restore;
 		private System.Windows.Forms.ToolStripMenuItem STRING_TheCurrentDataWillBeOverwrittenAndGrocydesktopWillRestartContinue;
 		private System.Windows.Forms.ToolStripMenuItem STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_BackupDataGrocy;
+		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_RestoreDataGrocy;
+		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_ConfigureChangeDataLocationGrocy;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_BackupDataBarcodeBuddy;
+		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_RestoreDataBarcodeBuddy;
+		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy;
+		private System.Windows.Forms.ToolStripMenuItem STRING_ZipFiles;
+		private System.Windows.Forms.ToolStripMenuItem STRING_SayThanks;
+		private System.Windows.Forms.ToolStripMenuItem STRING_SayThanksQuestion;
 	}
 }
 

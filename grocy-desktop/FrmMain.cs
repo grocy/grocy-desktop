@@ -144,71 +144,6 @@ namespace GrocyDesktop
 			this.GrocyBrowser.Load(this.GrocyPhpServer.Url);
 		}
 
-		private void ToolStripMenuItem_ConfigureChangeDataLocation_Click(object sender, EventArgs e)
-		{
-			using (FolderBrowserDialog dialog = new FolderBrowserDialog())
-			{
-				dialog.RootFolder = Environment.SpecialFolder.Desktop;
-				dialog.SelectedPath = this.UserSettings.GrocyDataLocation;
-				
-				if (dialog.ShowDialog() == DialogResult.OK)
-				{
-					if (MessageBox.Show(this.ResourceManager.GetString("STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue.Text"), this.ResourceManager.GetString("STRING_ChangeDataLocation.Text"), MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-					{
-						this.GrocyPhpServer.StopServer();
-						Extensions.CopyFolder(this.UserSettings.GrocyDataLocation, dialog.SelectedPath);
-						Directory.Delete(this.UserSettings.GrocyDataLocation, true);
-						this.UserSettings.GrocyDataLocation = dialog.SelectedPath;
-						this.UserSettings.Save();
-						Extensions.RestartApp();
-					}
-				}
-			}
-		}
-
-		private void ToolStripMenuItem_BackupData_Click(object sender, EventArgs e)
-		{
-			using (SaveFileDialog dialog = new SaveFileDialog())
-			{
-				dialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop).ToString();
-				dialog.Filter = "ZIP files|*.zip";
-				dialog.CheckPathExists = true;
-				dialog.DefaultExt = ".zip";
-				dialog.FileName = "grocy-desktop-backup.zip";
-
-				if (dialog.ShowDialog() == DialogResult.OK)
-				{
-					ZipFile.CreateFromDirectory(this.UserSettings.GrocyDataLocation, dialog.FileName);
-					MessageBox.Show(this.ResourceManager.GetString("STRING_BackupSuccessfullyCreated.Text"), this.ResourceManager.GetString("STRING_Backup.Text"), MessageBoxButtons.OK, MessageBoxIcon.Information);
-				}
-			}
-		}
-
-		private void ToolStripMenuItem_RestoreData_Click(object sender, EventArgs e)
-		{
-			using (OpenFileDialog dialog = new OpenFileDialog())
-			{
-				dialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop).ToString();
-				dialog.Filter = "ZIP files|*.zip";
-				dialog.CheckPathExists = true;
-				dialog.CheckFileExists = true;
-				dialog.DefaultExt = ".zip";
-
-				if (dialog.ShowDialog() == DialogResult.OK)
-				{
-					if (MessageBox.Show(this.ResourceManager.GetString("STRING_TheCurrentDataWillBeOverwrittenAndGrocydesktopWillRestartContinue.Text"), this.ResourceManager.GetString("STRING_Restore.Text"), MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-					{
-						this.GrocyPhpServer.StopServer();
-						Thread.Sleep(2000); // Just give php.exe some time to stop...
-						Directory.Delete(this.UserSettings.GrocyDataLocation, true);
-						Directory.CreateDirectory(this.UserSettings.GrocyDataLocation);
-						ZipFile.ExtractToDirectory(dialog.FileName, this.UserSettings.GrocyDataLocation);
-						Extensions.RestartApp();
-					}
-				}
-			}
-		}
-
 		private void ToolStripMenuItem_RecreateGrocyDatabase_Click(object sender, EventArgs e)
 		{
 			if (MessageBox.Show(this.ResourceManager.GetString("STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue.Text"), this.ResourceManager.GetString("ToolStripMenuItem_RecreateGrocyDatabase.Text"), MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
@@ -235,6 +170,146 @@ namespace GrocyDesktop
 			this.UserSettings.EnableBarcodeBuddyIntegration = this.ToolStripMenuItem_EnableBarcodeBuddy.Checked;
 			this.UserSettings.Save();
 			Extensions.RestartApp();
+		}
+
+		private void ToolStripMenuItem_BackupDataGrocy_Click(object sender, EventArgs e)
+		{
+			using (SaveFileDialog dialog = new SaveFileDialog())
+			{
+				dialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop).ToString();
+				dialog.Filter = this.ResourceManager.GetString("STRING_ZipFiles.Text") + "|*.zip";
+				dialog.CheckPathExists = true;
+				dialog.DefaultExt = ".zip";
+				dialog.FileName = "grocy-desktop-backup_grocy-data.zip";
+
+				if (dialog.ShowDialog() == DialogResult.OK)
+				{
+					if (File.Exists(dialog.FileName))
+					{
+						File.Delete(dialog.FileName);
+					}
+
+					ZipFile.CreateFromDirectory(this.UserSettings.GrocyDataLocation, dialog.FileName);
+					MessageBox.Show(this.ResourceManager.GetString("STRING_BackupSuccessfullyCreated.Text"), this.ResourceManager.GetString("STRING_Backup.Text"), MessageBoxButtons.OK, MessageBoxIcon.Information);
+				}
+			}
+		}
+
+		private void ToolStripMenuItem_RestoreDataGrocy_Click(object sender, EventArgs e)
+		{
+			using (OpenFileDialog dialog = new OpenFileDialog())
+			{
+				dialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop).ToString();
+				dialog.Filter = this.ResourceManager.GetString("STRING_ZipFiles.Text") + "|*.zip";
+				dialog.CheckPathExists = true;
+				dialog.CheckFileExists = true;
+				dialog.DefaultExt = ".zip";
+
+				if (dialog.ShowDialog() == DialogResult.OK)
+				{
+					if (MessageBox.Show(this.ResourceManager.GetString("STRING_TheCurrentDataWillBeOverwrittenAndGrocydesktopWillRestartContinue.Text"), this.ResourceManager.GetString("STRING_Restore.Text"), MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+					{
+						this.GrocyPhpServer.StopServer();
+						Thread.Sleep(2000); // Just give php.exe some time to stop...
+						Directory.Delete(this.UserSettings.GrocyDataLocation, true);
+						Directory.CreateDirectory(this.UserSettings.GrocyDataLocation);
+						ZipFile.ExtractToDirectory(dialog.FileName, this.UserSettings.GrocyDataLocation);
+						Extensions.RestartApp();
+					}
+				}
+			}
+		}
+
+		private void ToolStripMenuItem_ConfigureChangeDataLocationGrocy_Click(object sender, EventArgs e)
+		{
+			using (FolderBrowserDialog dialog = new FolderBrowserDialog())
+			{
+				dialog.RootFolder = Environment.SpecialFolder.Desktop;
+				dialog.SelectedPath = this.UserSettings.GrocyDataLocation;
+
+				if (dialog.ShowDialog() == DialogResult.OK)
+				{
+					if (MessageBox.Show(this.ResourceManager.GetString("STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue.Text"), this.ResourceManager.GetString("STRING_ChangeDataLocation.Text"), MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+					{
+						this.GrocyPhpServer.StopServer();
+						Extensions.CopyFolder(this.UserSettings.GrocyDataLocation, dialog.SelectedPath);
+						Directory.Delete(this.UserSettings.GrocyDataLocation, true);
+						this.UserSettings.GrocyDataLocation = dialog.SelectedPath;
+						this.UserSettings.Save();
+						Extensions.RestartApp();
+					}
+				}
+			}
+		}
+
+		private void ToolStripMenuItem_BackupDataBarcodeBuddy_Click(object sender, EventArgs e)
+		{
+			using (SaveFileDialog dialog = new SaveFileDialog())
+			{
+				dialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop).ToString();
+				dialog.Filter = this.ResourceManager.GetString("STRING_ZipFiles.Text") + "|*.zip";
+				dialog.CheckPathExists = true;
+				dialog.DefaultExt = ".zip";
+				dialog.FileName = "grocy-desktop-backup_barcodebuddy-data.zip";
+
+				if (dialog.ShowDialog() == DialogResult.OK)
+				{
+					if (File.Exists(dialog.FileName))
+					{
+						File.Delete(dialog.FileName);
+					}
+
+					ZipFile.CreateFromDirectory(this.UserSettings.BarcodeBuddyDataLocation, dialog.FileName);
+					MessageBox.Show(this.ResourceManager.GetString("STRING_BackupSuccessfullyCreated.Text"), this.ResourceManager.GetString("STRING_Backup.Text"), MessageBoxButtons.OK, MessageBoxIcon.Information);
+				}
+			}
+		}
+
+		private void ToolStripMenuItem_RestoreDataBarcodeBuddy_Click(object sender, EventArgs e)
+		{
+			using (OpenFileDialog dialog = new OpenFileDialog())
+			{
+				dialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop).ToString();
+				dialog.Filter = this.ResourceManager.GetString("STRING_ZipFiles.Text") + "|*.zip";
+				dialog.CheckPathExists = true;
+				dialog.CheckFileExists = true;
+				dialog.DefaultExt = ".zip";
+
+				if (dialog.ShowDialog() == DialogResult.OK)
+				{
+					if (MessageBox.Show(this.ResourceManager.GetString("STRING_TheCurrentDataWillBeOverwrittenAndGrocydesktopWillRestartContinue.Text"), this.ResourceManager.GetString("STRING_Restore.Text"), MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+					{
+						this.GrocyPhpServer.StopServer();
+						Thread.Sleep(2000); // Just give php.exe some time to stop...
+						Directory.Delete(this.UserSettings.BarcodeBuddyDataLocation, true);
+						Directory.CreateDirectory(this.UserSettings.BarcodeBuddyDataLocation);
+						ZipFile.ExtractToDirectory(dialog.FileName, this.UserSettings.BarcodeBuddyDataLocation);
+						Extensions.RestartApp();
+					}
+				}
+			}
+		}
+
+		private void ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy_Click(object sender, EventArgs e)
+		{
+			using (FolderBrowserDialog dialog = new FolderBrowserDialog())
+			{
+				dialog.RootFolder = Environment.SpecialFolder.Desktop;
+				dialog.SelectedPath = this.UserSettings.BarcodeBuddyDataLocation;
+
+				if (dialog.ShowDialog() == DialogResult.OK)
+				{
+					if (MessageBox.Show(this.ResourceManager.GetString("STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue.Text"), this.ResourceManager.GetString("STRING_ChangeDataLocation.Text"), MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+					{
+						this.GrocyPhpServer.StopServer();
+						Extensions.CopyFolder(this.UserSettings.BarcodeBuddyDataLocation, dialog.SelectedPath);
+						Directory.Delete(this.UserSettings.BarcodeBuddyDataLocation, true);
+						this.UserSettings.BarcodeBuddyDataLocation = dialog.SelectedPath;
+						this.UserSettings.Save();
+						Extensions.RestartApp();
+					}
+				}
+			}
 		}
 	}
 }

@@ -1,5 +1,5 @@
 ﻿using System.Diagnostics;
-using System.Reflection;
+using System.Resources;
 using System.Windows.Forms;
 
 namespace GrocyDesktop
@@ -11,14 +11,19 @@ namespace GrocyDesktop
 			InitializeComponent();
 		}
 
-		private void linkLabel_MainProjectLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-		{
-			Process.Start(this.linkLabel_MainProjectLink.Text);
-		}
+		private ResourceManager ResourceManager = new ResourceManager(typeof(FrmMain));
 
 		private void FrmAbout_Load(object sender, System.EventArgs e)
 		{
-			this.label_Version.Text = this.label_Version.Text.Replace("xxxx", FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).ProductVersion);
+			this.Text = this.ResourceManager.GetString("ToolStripMenuItem_About.Text");
+			this.Label_SayThanksQuestions.Text = this.ResourceManager.GetString("STRING_SayThanksQuestion.Text");
+			this.LinkLabel_SayThanks.Text = this.ResourceManager.GetString("STRING_SayThanks.Text") + "❤";
+			this.Label_Version.Text = this.Label_Version.Text.Replace("xxxx", Program.RunningVersion);
+		}
+
+		private void LinkLabel_SayThanks_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			Process.Start("https://grocy.info/#say-thanks");
 		}
 	}
 }
