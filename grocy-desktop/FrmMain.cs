@@ -112,10 +112,10 @@ namespace GrocyDesktop
 
 		private void ToolStripMenuItem_ShowPhpServerOutput_Click(object sender, EventArgs e)
 		{
-			new FrmShowText("grocy " + this.ResourceManager.GetString("STRING_PHPServerOutput"), this.GrocyPhpServer.GetConsoleOutput()).Show(this);
+			new FrmShowText("grocy " + this.ResourceManager.GetString("STRING_PHPServerOutput.Text"), this.GrocyPhpServer.GetConsoleOutput()).Show(this);
 			if (this.UserSettings.EnableBarcodeBuddyIntegration)
 			{
-				new FrmShowText("Barcode Buddy " + this.ResourceManager.GetString("STRING_PHPServerOutput"), this.BarcodeBuddyPhpServer.GetConsoleOutput()).Show(this);
+				new FrmShowText("Barcode Buddy " + this.ResourceManager.GetString("STRING_PHPServerOutput.Text"), this.BarcodeBuddyPhpServer.GetConsoleOutput()).Show(this);
 			}
 		}
 
@@ -153,7 +153,7 @@ namespace GrocyDesktop
 				
 				if (dialog.ShowDialog() == DialogResult.OK)
 				{
-					if (MessageBox.Show(this.ResourceManager.GetString("STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue"), this.ResourceManager.GetString("STRING_ChangeDataLocation"), MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+					if (MessageBox.Show(this.ResourceManager.GetString("STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue.Text"), this.ResourceManager.GetString("STRING_ChangeDataLocation.Text"), MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
 					{
 						this.GrocyPhpServer.StopServer();
 						Extensions.CopyFolder(this.UserSettings.GrocyDataLocation, dialog.SelectedPath);
@@ -179,7 +179,7 @@ namespace GrocyDesktop
 				if (dialog.ShowDialog() == DialogResult.OK)
 				{
 					ZipFile.CreateFromDirectory(this.UserSettings.GrocyDataLocation, dialog.FileName);
-					MessageBox.Show(this.ResourceManager.GetString("STRING_BackupSuccessfullyCreated"), this.ResourceManager.GetString("STRING_Backup"), MessageBoxButtons.OK, MessageBoxIcon.Information);
+					MessageBox.Show(this.ResourceManager.GetString("STRING_BackupSuccessfullyCreated.Text"), this.ResourceManager.GetString("STRING_Backup.Text"), MessageBoxButtons.OK, MessageBoxIcon.Information);
 				}
 			}
 		}
@@ -196,7 +196,7 @@ namespace GrocyDesktop
 
 				if (dialog.ShowDialog() == DialogResult.OK)
 				{
-					if (MessageBox.Show(this.ResourceManager.GetString("STRING_TheCurrentDataWillBeOverwrittenAndGrocydesktopWillRestartContinue"), this.ResourceManager.GetString("STRING_Restore"), MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+					if (MessageBox.Show(this.ResourceManager.GetString("STRING_TheCurrentDataWillBeOverwrittenAndGrocydesktopWillRestartContinue.Text"), this.ResourceManager.GetString("STRING_Restore.Text"), MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
 					{
 						this.GrocyPhpServer.StopServer();
 						Thread.Sleep(2000); // Just give php.exe some time to stop...
@@ -211,7 +211,7 @@ namespace GrocyDesktop
 
 		private void ToolStripMenuItem_RecreateGrocyDatabase_Click(object sender, EventArgs e)
 		{
-			if (MessageBox.Show(this.ResourceManager.GetString("STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue"), this.ResourceManager.GetString("ToolStripMenuItem_RecreateGrocyDatabase.Text"), MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+			if (MessageBox.Show(this.ResourceManager.GetString("STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue.Text"), this.ResourceManager.GetString("ToolStripMenuItem_RecreateGrocyDatabase.Text"), MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
 			{
 				this.GrocyPhpServer.StopServer();
 				Thread.Sleep(2000); // Just give php.exe some time to stop...
