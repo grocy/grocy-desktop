@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Net;
+using System.Net.NetworkInformation;
 using System.Net.Sockets;
 using System.Runtime.Caching;
 
@@ -10,14 +11,30 @@ namespace GrocyDesktop
 {
 	public class PhpDevelopmentServerManager
 	{
-		public PhpDevelopmentServerManager(string phpBinDirectoryPath, string wwwPath, Dictionary<string, string> environmentVariables = null)
+		public PhpDevelopmentServerManager(string phpBinDirectoryPath, string wwwPath, bool externallyAccessible, Dictionary<string, string> environmentVariables = null, int desiredPort = -1)
 		{
 			this.BinDirectory = phpBinDirectoryPath;
 			this.WwwDirectory = wwwPath;
+			this.ExternallyAccessible = externallyAccessible;
 			this.EnvironmentVariables = environmentVariables;
-			this.Port = this.GetRandomFreePortNumber();
 			this.OutputLines = new List<string>();
 			this.PhpProcessUnintentedRestartsCache = new MemoryCache("PhpDevelopmentServerManager_RestartCache" + Guid.NewGuid());
+
+			if (desiredPort == -1)
+			{
+				this.Port = this.GetRandomFreePortNumber();
+			}
+			else
+			{
+				if (this.IsPortFree(desiredPort))
+				{
+					this.Port = desiredPort;
+				}
+				else
+				{
+					this.Port = this.GetRandomFreePortNumber();
+				}
+			}
 
 			if (this.EnvironmentVariables == null)
 			{
@@ -27,6 +44,7 @@ namespace GrocyDesktop
 
 		private string BinDirectory;
 		private string WwwDirectory;
+		private bool ExternallyAccessible;
 		private Dictionary<string, string> EnvironmentVariables;
 		private Process PhpProcess;
 		private List<string> OutputLines;
@@ -37,7 +55,23 @@ namespace GrocyDesktop
 		private const int PHP_PROCESS_MAX_UNINTENDED_RESTARTS = 5;
 
 		public int Port { get; private set; }
-		public string Url
+		public string IpUrl
+		{
+			get
+			{
+				return "http://" + this.GetNetworkIp() + ":" + this.Port.ToString();
+			}
+		}
+
+		public string HostnameUrl
+		{
+			get
+			{
+				return "http://" + this.GetHostname() + ":" + this.Port.ToString();
+			}
+		}
+
+		public string LocalUrl
 		{
 			get
 			{
@@ -48,6 +82,12 @@ namespace GrocyDesktop
 		public void StartServer()
 		{
 			this.NextPhpProcessExitIsIntended = false;
+
+			string bindingEndpoint = "localhost";
+			if (this.ExternallyAccessible)
+			{
+				bindingEndpoint = "0.0.0.0";
+			}
 
 			this.PhpProcess = new Process();
 			this.PhpProcess.StartInfo.UseShellExecute = false;
@@ -61,7 +101,7 @@ namespace GrocyDesktop
 			this.PhpProcess.Exited += PhpProcess_Exited;
 
 			this.PhpProcess.StartInfo.FileName = Path.Combine(this.BinDirectory, "php.exe");
-			this.PhpProcess.StartInfo.Arguments = "-S localhost:" + this.Port;
+			this.PhpProcess.StartInfo.Arguments = "-S " + bindingEndpoint + ":" + this.Port;
 			this.PhpProcess.StartInfo.WorkingDirectory = this.WwwDirectory;
 			
 			foreach (KeyValuePair<string, string> item in this.EnvironmentVariables)
@@ -120,11 +160,59 @@ namespace GrocyDesktop
 
 		private int GetRandomFreePortNumber()
 		{
-			TcpListener l = new TcpListener(IPAddress.Loopback, 0);
+			TcpListener l = new TcpListener(IPAddress.Any, 0);
 			l.Start();
 			int port = ((IPEndPoint)l.LocalEndpoint).Port;
 			l.Stop();
 			return port;
+		}
+
+		private bool IsPortFree(int port)
+		{
+			try
+			{
+				TcpListener l = new TcpListener(IPAddress.Any, port);
+				l.Start();
+				l.Stop();
+				return true;
+			}
+			catch (Exception)
+			{
+				return false;
+			}
+		}
+
+		private string GetHostname()
+		{
+			if (NetworkInterface.GetIsNetworkAvailable())
+			{
+				return Dns.GetHostName();
+			}
+			else
+			{
+				return "localhost";
+			}
+		}
+
+		private string GetNetworkIp()
+		{
+			if (NetworkInterface.GetIsNetworkAvailable())
+			{
+				var host = Dns.GetHostEntry(Dns.GetHostName());
+				foreach (IPAddress item in host.AddressList)
+				{
+					if (item.AddressFamily == AddressFamily.InterNetwork)
+					{
+						return item.ToString();
+					}
+				}
+
+				return "127.0.0.1";
+			}
+			else
+			{
+				return "127.0.0.1";
+			}
 		}
 	}
 }

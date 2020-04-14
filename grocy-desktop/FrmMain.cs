@@ -35,17 +35,17 @@ namespace GrocyDesktop
 			cefSettings.CachePath = GrocyDesktopDependencyManager.CefCachePath;
 			cefSettings.LogFile = Path.Combine(GrocyDesktopDependencyManager.CefCachePath, "cef.log");
 			cefSettings.CefCommandLineArgs.Add("--enable-media-stream", "");
-			cefSettings.CefCommandLineArgs.Add("--unsafely-treat-insecure-origin-as-secure", this.GrocyPhpServer.Url);
+			cefSettings.CefCommandLineArgs.Add("--unsafely-treat-insecure-origin-as-secure", this.GrocyPhpServer.LocalUrl);
 			cefSettings.CefCommandLineArgs.Add("--lang", CultureInfo.CurrentCulture.TwoLetterISOLanguageName);
 			Cef.Initialize(cefSettings, performDependencyCheck: false, browserProcessHandler: null);
 
 			if (this.UserSettings.EnableBarcodeBuddyIntegration)
 			{
-				this.GrocyBrowser = new ChromiumWebBrowser(this.GrocyPhpServer.Url);
+				this.GrocyBrowser = new ChromiumWebBrowser(this.GrocyPhpServer.LocalUrl);
 				this.GrocyBrowser.Dock = DockStyle.Fill;
 				this.TabPage_Grocy.Controls.Add(this.GrocyBrowser);
 
-				this.BarcodeBuddyBrowser = new ChromiumWebBrowser(this.BarcodeBuddyPhpServer.Url);
+				this.BarcodeBuddyBrowser = new ChromiumWebBrowser(this.BarcodeBuddyPhpServer.LocalUrl);
 				this.BarcodeBuddyBrowser.Dock = DockStyle.Fill;
 				this.TabPage_BarcodeBuddy.Controls.Add(this.BarcodeBuddyBrowser);
 			}
@@ -54,25 +54,27 @@ namespace GrocyDesktop
 				this.TabControl_Main.Visible = false;
 				this.ToolStripMenuItem_BarcodeBuddy.Visible = false;
 
-				this.GrocyBrowser = new ChromiumWebBrowser(this.GrocyPhpServer.Url);
+				this.GrocyBrowser = new ChromiumWebBrowser(this.GrocyPhpServer.LocalUrl);
 				this.GrocyBrowser.Dock = DockStyle.Fill;
 				this.Panel_Main.Controls.Add(this.GrocyBrowser);
 			}
+
+			this.StatusStrip_Main.Visible = this.UserSettings.EnableExternalWebserverAccess;
 		}
 
 		private void SetupGrocy()
 		{
-			this.GrocyPhpServer = new PhpDevelopmentServerManager(GrocyDesktopDependencyManager.PhpExecutingPath, Path.Combine(GrocyDesktopDependencyManager.GrocyExecutingPath, "public"));
+			this.GrocyPhpServer = new PhpDevelopmentServerManager(GrocyDesktopDependencyManager.PhpExecutingPath, Path.Combine(GrocyDesktopDependencyManager.GrocyExecutingPath, "public"), this.UserSettings.EnableExternalWebserverAccess, null, this.UserSettings.GrocyWebserverDesiredPort);
 			this.GrocyPhpServer.StartServer();
 			this.GrocyEnvironmentManager = new GrocyEnvironmentManager(GrocyDesktopDependencyManager.GrocyExecutingPath, this.UserSettings.GrocyDataLocation);
-			this.GrocyEnvironmentManager.Setup(this.GrocyPhpServer.Url);
+			this.GrocyEnvironmentManager.Setup();
 		}
 
 		private void SetupBarcodeBuddy()
 		{
 			this.BarcodeBuddyEnvironmentManager = new BarcodeBuddyEnvironmentManager(GrocyDesktopDependencyManager.BarcodeBuddyExecutingPath, this.UserSettings.BarcodeBuddyDataLocation);
-			this.BarcodeBuddyPhpServer = new PhpDevelopmentServerManager(GrocyDesktopDependencyManager.PhpExecutingPath, GrocyDesktopDependencyManager.BarcodeBuddyExecutingPath);
-			this.BarcodeBuddyEnvironmentManager.Setup(this.GrocyPhpServer.Url.TrimEnd('/') + "/api/");
+			this.BarcodeBuddyPhpServer = new PhpDevelopmentServerManager(GrocyDesktopDependencyManager.PhpExecutingPath, GrocyDesktopDependencyManager.BarcodeBuddyExecutingPath, this.UserSettings.EnableExternalWebserverAccess, null, this.UserSettings.BarcodeBuddyWebserverDesiredPort);
+			this.BarcodeBuddyEnvironmentManager.Setup(this.GrocyPhpServer.LocalUrl.TrimEnd('/') + "/api/");
 			this.BarcodeBuddyPhpServer.SetEnvironmenVariables(this.BarcodeBuddyEnvironmentManager.GetEnvironmentVariables());
 			this.BarcodeBuddyPhpServer.StartServer();
 		}
@@ -88,6 +90,23 @@ namespace GrocyDesktop
 			this.SetupCef();
 
 			this.ToolStripMenuItem_EnableBarcodeBuddy.Checked = this.UserSettings.EnableBarcodeBuddyIntegration;
+			this.ToolStripMenuItem_EnableExternalAccess.Checked = this.UserSettings.EnableExternalWebserverAccess;
+
+			string externalAccessInfo = string.Empty;
+			if (this.UserSettings.EnableBarcodeBuddyIntegration)
+			{
+				this.ToolStripStatusLabel_ExternalAccessInfo.Text = this.ResourceManager.GetString("STRING_GrocyAndBarcodeBuddyExternalAccessInfo.Text")
+					.Replace("%1$s", this.GrocyPhpServer.HostnameUrl)
+					.Replace("%2$s", this.GrocyPhpServer.IpUrl)
+					.Replace("%3$s", this.BarcodeBuddyPhpServer.HostnameUrl)
+					.Replace("%4$s", this.BarcodeBuddyPhpServer.IpUrl);
+			}
+			else
+			{
+				this.ToolStripStatusLabel_ExternalAccessInfo.Text = this.ResourceManager.GetString("STRING_GrocyExternalAccessInfo.Text")
+					.Replace("%1$s", this.GrocyPhpServer.HostnameUrl)
+					.Replace("%2$s", this.GrocyPhpServer.IpUrl);
+			}
 		}
 
 		private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
@@ -140,8 +159,8 @@ namespace GrocyDesktop
 			Thread.Sleep(2000); // Just give php.exe some time to stop...
 			await GrocyDesktopDependencyManager.UpdateEmbeddedGrocyRelease(this);
 			this.GrocyPhpServer.StartServer();
-			this.GrocyEnvironmentManager.Setup(this.GrocyPhpServer.Url);
-			this.GrocyBrowser.Load(this.GrocyPhpServer.Url);
+			this.GrocyEnvironmentManager.Setup();
+			this.GrocyBrowser.Load(this.GrocyPhpServer.LocalUrl);
 		}
 
 		private void ToolStripMenuItem_RecreateGrocyDatabase_Click(object sender, EventArgs e)
@@ -161,8 +180,8 @@ namespace GrocyDesktop
 			Thread.Sleep(2000); // Just give php.exe some time to stop...
 			await GrocyDesktopDependencyManager.UpdateEmbeddedBarcodeBuddyRelease(this);
 			this.BarcodeBuddyPhpServer.StartServer();
-			this.BarcodeBuddyEnvironmentManager.Setup(this.BarcodeBuddyPhpServer.Url);
-			this.BarcodeBuddyBrowser.Load(this.BarcodeBuddyPhpServer.Url);
+			this.BarcodeBuddyEnvironmentManager.Setup(this.BarcodeBuddyPhpServer.LocalUrl);
+			this.BarcodeBuddyBrowser.Load(this.BarcodeBuddyPhpServer.LocalUrl);
 		}
 
 		private void ToolStripMenuItem_EnableBarcodeBuddy_Click(object sender, EventArgs e)
@@ -310,6 +329,13 @@ namespace GrocyDesktop
 					}
 				}
 			}
+		}
+
+		private void ToolStripMenuItem_EnableExternalAccess_Click(object sender, EventArgs e)
+		{
+			this.UserSettings.EnableExternalWebserverAccess = this.ToolStripMenuItem_EnableExternalAccess.Checked;
+			this.UserSettings.Save();
+			Extensions.RestartApp();
 		}
 	}
 }

@@ -9,6 +9,9 @@ namespace GrocyDesktop
 		public string GrocyDataLocation = Path.Combine(Program.BaseFixedUserDataFolderPath, "grocy-data");
 		public string BarcodeBuddyDataLocation = Path.Combine(Program.BaseFixedUserDataFolderPath, "barcodebuddy-data");
 		public bool EnableBarcodeBuddyIntegration = false;
+		public int GrocyWebserverDesiredPort = 4010;
+		public int BarcodeBuddyWebserverDesiredPort = 4011;
+		public bool EnableExternalWebserverAccess = false;
 
 		public static UserSettings Load()
 		{

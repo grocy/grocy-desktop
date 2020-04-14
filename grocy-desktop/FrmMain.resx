@@ -121,6 +121,34 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="MenuStrip_Main.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="MenuStrip_Main.Size" type="System.Drawing.Size, System.Drawing">
+    <value>600, 24</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="MenuStrip_Main.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;MenuStrip_Main.Name" xml:space="preserve">
+    <value>MenuStrip_Main</value>
+  </data>
+  <data name="&gt;&gt;MenuStrip_Main.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuStrip_Main.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MenuStrip_Main.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ToolStripMenuItem_File.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 20</value>
+  </data>
+  <data name="ToolStripMenuItem_File.Text" xml:space="preserve">
+    <value>File</value>
+  </data>
   <data name="ToolStripMenuItem_EnableBarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
     <value>192, 22</value>
   </data>
@@ -136,11 +164,11 @@
   <data name="ToolStripMenuItem_Exit.Text" xml:space="preserve">
     <value>Exit</value>
   </data>
-  <data name="ToolStripMenuItem_File.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 20</value>
+  <data name="ToolStripMenuItem_grocy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 20</value>
   </data>
-  <data name="ToolStripMenuItem_File.Text" xml:space="preserve">
-    <value>File</value>
+  <data name="ToolStripMenuItem_grocy.Text" xml:space="preserve">
+    <value>grocy</value>
   </data>
   <data name="ToolStripMenuItem_UpdateGrocy.Size" type="System.Drawing.Size, System.Drawing">
     <value>243, 22</value>
@@ -178,11 +206,11 @@
   <data name="ToolStripMenuItem_RecreateGrocyDatabase.Text" xml:space="preserve">
     <value>Recreate database</value>
   </data>
-  <data name="ToolStripMenuItem_grocy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 20</value>
+  <data name="ToolStripMenuItem_BarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 20</value>
   </data>
-  <data name="ToolStripMenuItem_grocy.Text" xml:space="preserve">
-    <value>grocy</value>
+  <data name="ToolStripMenuItem_BarcodeBuddy.Text" xml:space="preserve">
+    <value>Barcode Buddy</value>
   </data>
   <data name="ToolStripMenuItem_UpdateBarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
     <value>243, 22</value>
@@ -211,11 +239,17 @@
   <data name="ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy.Text" xml:space="preserve">
     <value>Configure/change data location</value>
   </data>
-  <data name="ToolStripMenuItem_BarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 20</value>
+  <data name="ToolStripMenuItem_Help.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 20</value>
   </data>
-  <data name="ToolStripMenuItem_BarcodeBuddy.Text" xml:space="preserve">
-    <value>Barcode Buddy</value>
+  <data name="ToolStripMenuItem_Help.Text" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="ToolStripMenuItem_Debug.Size" type="System.Drawing.Size, System.Drawing">
+    <value>187, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_Debug.Text" xml:space="preserve">
+    <value>Debug</value>
   </data>
   <data name="ToolStripMenuItem_ShowPhpServerOutput.Size" type="System.Drawing.Size, System.Drawing">
     <value>232, 22</value>
@@ -229,12 +263,6 @@
   <data name="ToolStripMenuItem_ShowBrowserDeveloperTools.Text" xml:space="preserve">
     <value>Show browser developer tools</value>
   </data>
-  <data name="ToolStripMenuItem_Debug.Size" type="System.Drawing.Size, System.Drawing">
-    <value>187, 22</value>
-  </data>
-  <data name="ToolStripMenuItem_Debug.Text" xml:space="preserve">
-    <value>Debug</value>
-  </data>
   <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 6</value>
   </data>
@@ -244,33 +272,108 @@
   <data name="ToolStripMenuItem_About.Text" xml:space="preserve">
     <value>About grocy-desktop</value>
   </data>
-  <data name="ToolStripMenuItem_Help.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 20</value>
+  <metadata name="StatusStrip_Main.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>437, 17</value>
+  </metadata>
+  <data name="&gt;&gt;StatusStrip_Main.Name" xml:space="preserve">
+    <value>StatusStrip_Main</value>
   </data>
-  <data name="ToolStripMenuItem_Help.Text" xml:space="preserve">
-    <value>Help</value>
+  <data name="&gt;&gt;StatusStrip_Main.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="MenuStrip_Main.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="&gt;&gt;StatusStrip_Main.Parent" xml:space="preserve">
+    <value>Panel_Main</value>
   </data>
-  <data name="MenuStrip_Main.Size" type="System.Drawing.Size, System.Drawing">
-    <value>600, 24</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="MenuStrip_Main.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;StatusStrip_Main.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;MenuStrip_Main.Name" xml:space="preserve">
-    <value>MenuStrip_Main</value>
+  <data name="&gt;&gt;TabControl_Main.Name" xml:space="preserve">
+    <value>TabControl_Main</value>
   </data>
-  <data name="&gt;&gt;MenuStrip_Main.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;TabControl_Main.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;MenuStrip_Main.Parent" xml:space="preserve">
+  <data name="&gt;&gt;TabControl_Main.Parent" xml:space="preserve">
+    <value>Panel_Main</value>
+  </data>
+  <data name="&gt;&gt;TabControl_Main.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Panel_Main.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Panel_Main.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 24</value>
+  </data>
+  <data name="Panel_Main.Size" type="System.Drawing.Size, System.Drawing">
+    <value>600, 342</value>
+  </data>
+  <data name="Panel_Main.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;Panel_Main.Name" xml:space="preserve">
+    <value>Panel_Main</value>
+  </data>
+  <data name="&gt;&gt;Panel_Main.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Panel_Main.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;MenuStrip_Main.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;Panel_Main.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;TabPage_Grocy.Name" xml:space="preserve">
+    <value>TabPage_Grocy</value>
+  </data>
+  <data name="&gt;&gt;TabPage_Grocy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabPage_Grocy.Parent" xml:space="preserve">
+    <value>TabControl_Main</value>
+  </data>
+  <data name="&gt;&gt;TabPage_Grocy.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;TabPage_BarcodeBuddy.Name" xml:space="preserve">
+    <value>TabPage_BarcodeBuddy</value>
+  </data>
+  <data name="&gt;&gt;TabPage_BarcodeBuddy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabPage_BarcodeBuddy.Parent" xml:space="preserve">
+    <value>TabControl_Main</value>
+  </data>
+  <data name="&gt;&gt;TabPage_BarcodeBuddy.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="TabControl_Main.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="TabControl_Main.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="TabControl_Main.Padding" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="TabControl_Main.Size" type="System.Drawing.Size, System.Drawing">
+    <value>600, 342</value>
+  </data>
+  <data name="TabControl_Main.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;TabControl_Main.Name" xml:space="preserve">
+    <value>TabControl_Main</value>
+  </data>
+  <data name="&gt;&gt;TabControl_Main.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabControl_Main.Parent" xml:space="preserve">
+    <value>Panel_Main</value>
+  </data>
+  <data name="&gt;&gt;TabControl_Main.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="TabPage_Grocy.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -318,58 +421,6 @@
     <value>TabControl_Main</value>
   </data>
   <data name="&gt;&gt;TabPage_BarcodeBuddy.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="TabControl_Main.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="TabControl_Main.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="TabControl_Main.Padding" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="TabControl_Main.Size" type="System.Drawing.Size, System.Drawing">
-    <value>600, 342</value>
-  </data>
-  <data name="TabControl_Main.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;TabControl_Main.Name" xml:space="preserve">
-    <value>TabControl_Main</value>
-  </data>
-  <data name="&gt;&gt;TabControl_Main.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TabControl_Main.Parent" xml:space="preserve">
-    <value>Panel_Main</value>
-  </data>
-  <data name="&gt;&gt;TabControl_Main.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="Panel_Main.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="Panel_Main.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 24</value>
-  </data>
-  <data name="Panel_Main.Size" type="System.Drawing.Size, System.Drawing">
-    <value>600, 342</value>
-  </data>
-  <data name="Panel_Main.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;Panel_Main.Name" xml:space="preserve">
-    <value>Panel_Main</value>
-  </data>
-  <data name="&gt;&gt;Panel_Main.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Panel_Main.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Panel_Main.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <metadata name="ContextMenuStrip_DummyForResxStrings.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -477,14 +528,65 @@
   <data name="STRING_DownloadingBarcodeBuddyRelease.Text" xml:space="preserve">
     <value>Downloading latest Barcode Buddy release...</value>
   </data>
+  <data name="STRING_GrocyExternalAccessInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
+  </data>
+  <data name="STRING_GrocyExternalAccessInfo.Text" xml:space="preserve">
+    <value>Access grocy externally via %1$s or %2$s</value>
+  </data>
+  <data name="STRING_GrocyAndBarcodeBuddyExternalAccessInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
+  </data>
+  <data name="STRING_GrocyAndBarcodeBuddyExternalAccessInfo.Text" xml:space="preserve">
+    <value>Access grocy externally via %1$s or %2$s and Barcode Buddy via %3$s or %4$s</value>
+  </data>
   <data name="ContextMenuStrip_DummyForResxStrings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>593, 400</value>
+    <value>593, 444</value>
   </data>
   <data name="&gt;&gt;ContextMenuStrip_DummyForResxStrings.Name" xml:space="preserve">
     <value>ContextMenuStrip_DummyForResxStrings</value>
   </data>
   <data name="&gt;&gt;ContextMenuStrip_DummyForResxStrings.Type" xml:space="preserve">
     <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ToolStripMenuItem_EnableExternalAccess.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_EnableExternalAccess.Text" xml:space="preserve">
+    <value>Enable external access</value>
+  </data>
+  <metadata name="StatusStrip_Main.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>437, 17</value>
+  </metadata>
+  <data name="StatusStrip_Main.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 320</value>
+  </data>
+  <data name="StatusStrip_Main.Size" type="System.Drawing.Size, System.Drawing">
+    <value>600, 22</value>
+  </data>
+  <data name="StatusStrip_Main.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="StatusStrip_Main.Text" xml:space="preserve">
+    <value>statusStrip1</value>
+  </data>
+  <data name="&gt;&gt;StatusStrip_Main.Name" xml:space="preserve">
+    <value>StatusStrip_Main</value>
+  </data>
+  <data name="&gt;&gt;StatusStrip_Main.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;StatusStrip_Main.Parent" xml:space="preserve">
+    <value>Panel_Main</value>
+  </data>
+  <data name="&gt;&gt;StatusStrip_Main.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ToolStripStatusLabel_ExternalAccessInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>217, 17</value>
+  </data>
+  <data name="ToolStripStatusLabel_ExternalAccessInfo.Text" xml:space="preserve">
+    <value>ToolStripStatusLabel_ExternalAccessInfo</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -801,6 +903,30 @@
   <data name="&gt;&gt;ToolStripMenuItem_UpdateGrocy.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
+    <value>toolStripSeparator1</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_BackupDataGrocy.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_BackupDataGrocy</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_BackupDataGrocy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_RestoreDataGrocy.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_RestoreDataGrocy</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_RestoreDataGrocy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_ConfigureChangeDataLocationGrocy.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_ConfigureChangeDataLocationGrocy</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_ConfigureChangeDataLocationGrocy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;toolStripSeparator4.Name" xml:space="preserve">
     <value>toolStripSeparator4</value>
   </data>
@@ -823,6 +949,30 @@
     <value>ToolStripMenuItem_UpdateBarcodeBuddy</value>
   </data>
   <data name="&gt;&gt;ToolStripMenuItem_UpdateBarcodeBuddy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator3.Name" xml:space="preserve">
+    <value>toolStripSeparator3</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_BackupDataBarcodeBuddy.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_BackupDataBarcodeBuddy</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_BackupDataBarcodeBuddy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_RestoreDataBarcodeBuddy.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_RestoreDataBarcodeBuddy</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_RestoreDataBarcodeBuddy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ToolStripMenuItem_Help.Name" xml:space="preserve">
@@ -909,54 +1059,6 @@
   <data name="&gt;&gt;STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ToolStripMenuItem_ConfigureChangeDataLocationGrocy.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_ConfigureChangeDataLocationGrocy</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_ConfigureChangeDataLocationGrocy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_BackupDataGrocy.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_BackupDataGrocy</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_BackupDataGrocy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_RestoreDataGrocy.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_RestoreDataGrocy</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_RestoreDataGrocy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
-    <value>toolStripSeparator1</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_BackupDataBarcodeBuddy.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_BackupDataBarcodeBuddy</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_BackupDataBarcodeBuddy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_RestoreDataBarcodeBuddy.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_RestoreDataBarcodeBuddy</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_RestoreDataBarcodeBuddy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator3.Name" xml:space="preserve">
-    <value>toolStripSeparator3</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;STRING_ZipFiles.Name" xml:space="preserve">
     <value>STRING_ZipFiles</value>
   </data>
@@ -999,16 +1101,40 @@
   <data name="&gt;&gt;STRING_PreparingBarcodeBuddy.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;STRING_DownloadingGrocyRelease.Name" xml:space="preserve">
+    <value>STRING_DownloadingGrocyRelease</value>
+  </data>
+  <data name="&gt;&gt;STRING_DownloadingGrocyRelease.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;STRING_DownloadingBarcodeBuddyRelease.Name" xml:space="preserve">
     <value>STRING_DownloadingBarcodeBuddyRelease</value>
   </data>
   <data name="&gt;&gt;STRING_DownloadingBarcodeBuddyRelease.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;STRING_DownloadingGrocyRelease.Name" xml:space="preserve">
-    <value>STRING_DownloadingGrocyRelease</value>
+  <data name="&gt;&gt;ToolStripMenuItem_EnableExternalAccess.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_EnableExternalAccess</value>
   </data>
-  <data name="&gt;&gt;STRING_DownloadingGrocyRelease.Type" xml:space="preserve">
+  <data name="&gt;&gt;ToolStripMenuItem_EnableExternalAccess.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripStatusLabel_ExternalAccessInfo.Name" xml:space="preserve">
+    <value>ToolStripStatusLabel_ExternalAccessInfo</value>
+  </data>
+  <data name="&gt;&gt;ToolStripStatusLabel_ExternalAccessInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;STRING_GrocyExternalAccessInfo.Name" xml:space="preserve">
+    <value>STRING_GrocyExternalAccessInfo</value>
+  </data>
+  <data name="&gt;&gt;STRING_GrocyExternalAccessInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;STRING_GrocyAndBarcodeBuddyExternalAccessInfo.Name" xml:space="preserve">
+    <value>STRING_GrocyAndBarcodeBuddyExternalAccessInfo</value>
+  </data>
+  <data name="&gt;&gt;STRING_GrocyAndBarcodeBuddyExternalAccessInfo.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

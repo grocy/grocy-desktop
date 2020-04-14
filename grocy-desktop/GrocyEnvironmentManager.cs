@@ -15,11 +15,11 @@ namespace GrocyDesktop
 		private string BasePath;
 		private string DataPath;
 
-		public void Setup(string baseUrl)
+		public void Setup()
 		{
 			File.WriteAllText(Path.Combine(this.BasePath, "embedded.txt"), this.DataPath);
 			this.SetSetting("CULTURE", this.GuessLocalization());
-			this.SetSetting("BASE_URL", baseUrl);
+			this.SetSetting("BASE_URL", "/");
 			this.SetSetting("CURRENCY", new RegionInfo(CultureInfo.CurrentCulture.LCID).ISOCurrencySymbol);
 
 			Extensions.CopyFolder(Path.Combine(this.BasePath, "data"), this.DataPath);
