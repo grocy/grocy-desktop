@@ -1,6 +1,7 @@
 ﻿using CefSharp;
 using CefSharp.WinForms;
 using System;
+using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.IO.Compression;
@@ -24,6 +25,7 @@ namespace GrocyDesktop
 		private PhpDevelopmentServerManager BarcodeBuddyPhpServer;
 		private GrocyEnvironmentManager GrocyEnvironmentManager;
 		private BarcodeBuddyEnvironmentManager BarcodeBuddyEnvironmentManager;
+		private PhpProcessManager BarcodeBuddyWebsocketServerPhpProcess;
 		private UserSettings UserSettings = UserSettings.Load();
 
 		private void SetupCef()
@@ -77,6 +79,9 @@ namespace GrocyDesktop
 			this.BarcodeBuddyEnvironmentManager.Setup(this.GrocyPhpServer.LocalUrl.TrimEnd('/') + "/api/");
 			this.BarcodeBuddyPhpServer.SetEnvironmenVariables(this.BarcodeBuddyEnvironmentManager.GetEnvironmentVariables());
 			this.BarcodeBuddyPhpServer.StartServer();
+
+			this.BarcodeBuddyWebsocketServerPhpProcess = new PhpProcessManager(GrocyDesktopDependencyManager.PhpExecutingPath, GrocyDesktopDependencyManager.BarcodeBuddyExecutingPath, "wsserver.php");
+			this.BarcodeBuddyWebsocketServerPhpProcess.Start();
 		}
 
 		private async void FrmMain_Shown(object sender, EventArgs e)
@@ -121,6 +126,11 @@ namespace GrocyDesktop
 				this.BarcodeBuddyPhpServer.StopServer();
 			}
 
+			if (this.UserSettings.EnableBarcodeBuddyIntegration && this.BarcodeBuddyWebsocketServerPhpProcess != null)
+			{
+				this.BarcodeBuddyWebsocketServerPhpProcess.Stop();
+			}
+
 			this.UserSettings.Save();
 		}
 
@@ -135,6 +145,7 @@ namespace GrocyDesktop
 			if (this.UserSettings.EnableBarcodeBuddyIntegration)
 			{
 				new FrmShowText("Barcode Buddy " + this.ResourceManager.GetString("STRING_PHPServerOutput.Text"), this.BarcodeBuddyPhpServer.GetConsoleOutput()).Show(this);
+				new FrmShowText("Barcode Buddy " + this.ResourceManager.GetString("STRING_PHPServerOutput.Text") + " (Websocket Server)", this.BarcodeBuddyWebsocketServerPhpProcess.GetConsoleOutput()).Show(this);
 			}
 		}
 

@@ -101,6 +101,7 @@
     <Compile Include="GrocyDesktopDependencyManager.cs" />
     <Compile Include="BarcodeBuddyEnvironmentManager.cs" />
     <Compile Include="GrocyEnvironmentManager.cs" />
+    <Compile Include="PhpProcessManager.cs" />
     <Compile Include="PhpDevelopmentServerManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
