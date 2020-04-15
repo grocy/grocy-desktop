@@ -6,14 +6,55 @@ namespace GrocyDesktop
 {
 	public class GrocyEnvironmentManager
 	{
-		public GrocyEnvironmentManager(string grocyBasePath, string grocyDataPath)
+		public GrocyEnvironmentManager(string grocyBasePath, string grocyDataPath, int desiredPort = -1)
 		{
 			this.BasePath = grocyBasePath;
 			this.DataPath = grocyDataPath;
+
+			if (desiredPort == -1)
+			{
+				this.Port = Extensions.GetRandomFreePort();
+			}
+			else
+			{
+				if (Extensions.IsPortFree(desiredPort))
+				{
+					this.Port = desiredPort;
+				}
+				else
+				{
+					this.Port = Extensions.GetRandomFreePort();
+				}
+			}
 		}
 
 		private string BasePath;
 		private string DataPath;
+		public int Port { get; private set; }
+
+		public string IpUrl
+		{
+			get
+			{
+				return "http://" + Extensions.GetNetworkIp() + ":" + this.Port.ToString();
+			}
+		}
+
+		public string HostnameUrl
+		{
+			get
+			{
+				return "http://" + Extensions.GetHostname() + ":" + this.Port.ToString();
+			}
+		}
+
+		public string LocalUrl
+		{
+			get
+			{
+				return "http://localhost:" + this.Port.ToString();
+			}
+		}
 
 		public void Setup()
 		{

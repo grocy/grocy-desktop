@@ -5,16 +5,57 @@ namespace GrocyDesktop
 {
 	public class BarcodeBuddyEnvironmentManager
 	{
-		public BarcodeBuddyEnvironmentManager(string basePath, string barcodeBuddyDataPath)
+		public BarcodeBuddyEnvironmentManager(string basePath, string barcodeBuddyDataPath, int desiredPort = -1)
 		{
 			this.BasePath = basePath;
 			this.DataPath = barcodeBuddyDataPath;
 			this.EnvironmentVariables = new Dictionary<string, string>();
+
+			if (desiredPort == -1)
+			{
+				this.Port = Extensions.GetRandomFreePort();
+			}
+			else
+			{
+				if (Extensions.IsPortFree(desiredPort))
+				{
+					this.Port = desiredPort;
+				}
+				else
+				{
+					this.Port = Extensions.GetRandomFreePort();
+				}
+			}
 		}
 
 		private string BasePath;
 		private string DataPath;
 		private Dictionary<string, string> EnvironmentVariables;
+		public int Port { get; private set; }
+
+		public string IpUrl
+		{
+			get
+			{
+				return "http://" + Extensions.GetNetworkIp() + ":" + this.Port.ToString();
+			}
+		}
+
+		public string HostnameUrl
+		{
+			get
+			{
+				return "http://" + Extensions.GetHostname() + ":" + this.Port.ToString();
+			}
+		}
+
+		public string LocalUrl
+		{
+			get
+			{
+				return "http://localhost:" + this.Port.ToString();
+			}
+		}
 
 		public void Setup(string grocyApiUrl)
 		{

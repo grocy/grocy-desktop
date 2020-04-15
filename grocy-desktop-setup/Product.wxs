@@ -79,6 +79,7 @@
 				<File Id="NewtonsoftJsonDependency" Source="$(var.SolutionDir)grocy-desktop\bin\$(var.Configuration)\Newtonsoft.Json.dll"></File>
 				<File Id="GrocyReleasePackage" Source="$(var.SolutionDir)embedded_dependencies\grocy.zip"></File>
 				<File Id="BarcodeBuddyReleasePackage" Source="$(var.SolutionDir)embedded_dependencies\barcodebuddy.zip"></File>
+				<File Id="NginxPackage" Source="$(var.SolutionDir)embedded_dependencies\nginx.zip"></File>
 				<File Id="PhpPackage" Source="$(var.SolutionDir)embedded_dependencies\php.zip"></File>
 				<File Id="VC2019x86Package" Source="$(var.SolutionDir)embedded_dependencies\vc2019x86.zip"></File>
 				<File Id="CefSharpPackagex86" Source="$(var.SolutionDir)embedded_dependencies\cefx86.zip"></File>

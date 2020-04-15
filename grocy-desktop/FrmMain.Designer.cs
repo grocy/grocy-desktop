@@ -33,6 +33,7 @@
 			this.MenuStrip_Main = new System.Windows.Forms.MenuStrip();
 			this.ToolStripMenuItem_File = new System.Windows.Forms.ToolStripMenuItem();
 			this.ToolStripMenuItem_EnableBarcodeBuddy = new System.Windows.Forms.ToolStripMenuItem();
+			this.ToolStripMenuItem_EnableExternalAccess = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
 			this.ToolStripMenuItem_Exit = new System.Windows.Forms.ToolStripMenuItem();
 			this.ToolStripMenuItem_grocy = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,16 +52,18 @@
 			this.ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy = new System.Windows.Forms.ToolStripMenuItem();
 			this.ToolStripMenuItem_Help = new System.Windows.Forms.ToolStripMenuItem();
 			this.ToolStripMenuItem_Debug = new System.Windows.Forms.ToolStripMenuItem();
-			this.ToolStripMenuItem_ShowPhpServerOutput = new System.Windows.Forms.ToolStripMenuItem();
+			this.ToolStripMenuItem_ShowPhpRuntimeOutput = new System.Windows.Forms.ToolStripMenuItem();
 			this.ToolStripMenuItem_ShowBrowserDeveloperTools = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
 			this.ToolStripMenuItem_About = new System.Windows.Forms.ToolStripMenuItem();
 			this.Panel_Main = new System.Windows.Forms.Panel();
+			this.StatusStrip_Main = new System.Windows.Forms.StatusStrip();
+			this.ToolStripStatusLabel_ExternalAccessInfo = new System.Windows.Forms.ToolStripStatusLabel();
 			this.TabControl_Main = new System.Windows.Forms.TabControl();
 			this.TabPage_Grocy = new System.Windows.Forms.TabPage();
 			this.TabPage_BarcodeBuddy = new System.Windows.Forms.TabPage();
 			this.ContextMenuStrip_DummyForResxStrings = new System.Windows.Forms.ContextMenuStrip(this.components);
-			this.STRING_PHPServerOutput = new System.Windows.Forms.ToolStripMenuItem();
+			this.STRING_PHPOutput = new System.Windows.Forms.ToolStripMenuItem();
 			this.STRING_ChangeDataLocation = new System.Windows.Forms.ToolStripMenuItem();
 			this.STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue = new System.Windows.Forms.ToolStripMenuItem();
 			this.STRING_Backup = new System.Windows.Forms.ToolStripMenuItem();
@@ -72,21 +75,21 @@
 			this.STRING_SayThanks = new System.Windows.Forms.ToolStripMenuItem();
 			this.STRING_SayThanksQuestion = new System.Windows.Forms.ToolStripMenuItem();
 			this.STRING_PreparingWebbrowser = new System.Windows.Forms.ToolStripMenuItem();
-			this.STRING_PreparingPhpServer = new System.Windows.Forms.ToolStripMenuItem();
+			this.STRING_PreparingWebserver = new System.Windows.Forms.ToolStripMenuItem();
+			this.STRING_PreparingPhpRuntime = new System.Windows.Forms.ToolStripMenuItem();
 			this.STRING_PreparingGrocy = new System.Windows.Forms.ToolStripMenuItem();
 			this.STRING_PreparingBarcodeBuddy = new System.Windows.Forms.ToolStripMenuItem();
 			this.STRING_DownloadingGrocyRelease = new System.Windows.Forms.ToolStripMenuItem();
 			this.STRING_DownloadingBarcodeBuddyRelease = new System.Windows.Forms.ToolStripMenuItem();
-			this.ToolStripMenuItem_EnableExternalAccess = new System.Windows.Forms.ToolStripMenuItem();
-			this.StatusStrip_Main = new System.Windows.Forms.StatusStrip();
-			this.ToolStripStatusLabel_ExternalAccessInfo = new System.Windows.Forms.ToolStripStatusLabel();
 			this.STRING_GrocyExternalAccessInfo = new System.Windows.Forms.ToolStripMenuItem();
 			this.STRING_GrocyAndBarcodeBuddyExternalAccessInfo = new System.Windows.Forms.ToolStripMenuItem();
+			this.ToolStripMenuItem_ShowNginxOutput = new System.Windows.Forms.ToolStripMenuItem();
+			this.STRING_NginxOutput = new System.Windows.Forms.ToolStripMenuItem();
 			this.MenuStrip_Main.SuspendLayout();
 			this.Panel_Main.SuspendLayout();
+			this.StatusStrip_Main.SuspendLayout();
 			this.TabControl_Main.SuspendLayout();
 			this.ContextMenuStrip_DummyForResxStrings.SuspendLayout();
-			this.StatusStrip_Main.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// MenuStrip_Main
@@ -115,6 +118,13 @@
 			this.ToolStripMenuItem_EnableBarcodeBuddy.Name = "ToolStripMenuItem_EnableBarcodeBuddy";
 			resources.ApplyResources(this.ToolStripMenuItem_EnableBarcodeBuddy, "ToolStripMenuItem_EnableBarcodeBuddy");
 			this.ToolStripMenuItem_EnableBarcodeBuddy.Click += new System.EventHandler(this.ToolStripMenuItem_EnableBarcodeBuddy_Click);
+			// 
+			// ToolStripMenuItem_EnableExternalAccess
+			// 
+			this.ToolStripMenuItem_EnableExternalAccess.CheckOnClick = true;
+			this.ToolStripMenuItem_EnableExternalAccess.Name = "ToolStripMenuItem_EnableExternalAccess";
+			resources.ApplyResources(this.ToolStripMenuItem_EnableExternalAccess, "ToolStripMenuItem_EnableExternalAccess");
+			this.ToolStripMenuItem_EnableExternalAccess.Click += new System.EventHandler(this.ToolStripMenuItem_EnableExternalAccess_Click);
 			// 
 			// toolStripSeparator5
 			// 
@@ -232,16 +242,17 @@
 			// ToolStripMenuItem_Debug
 			// 
 			this.ToolStripMenuItem_Debug.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolStripMenuItem_ShowPhpServerOutput,
+            this.ToolStripMenuItem_ShowNginxOutput,
+            this.ToolStripMenuItem_ShowPhpRuntimeOutput,
             this.ToolStripMenuItem_ShowBrowserDeveloperTools});
 			this.ToolStripMenuItem_Debug.Name = "ToolStripMenuItem_Debug";
 			resources.ApplyResources(this.ToolStripMenuItem_Debug, "ToolStripMenuItem_Debug");
 			// 
-			// ToolStripMenuItem_ShowPhpServerOutput
+			// ToolStripMenuItem_ShowPhpRuntimeOutput
 			// 
-			this.ToolStripMenuItem_ShowPhpServerOutput.Name = "ToolStripMenuItem_ShowPhpServerOutput";
-			resources.ApplyResources(this.ToolStripMenuItem_ShowPhpServerOutput, "ToolStripMenuItem_ShowPhpServerOutput");
-			this.ToolStripMenuItem_ShowPhpServerOutput.Click += new System.EventHandler(this.ToolStripMenuItem_ShowPhpServerOutput_Click);
+			this.ToolStripMenuItem_ShowPhpRuntimeOutput.Name = "ToolStripMenuItem_ShowPhpRuntimeOutput";
+			resources.ApplyResources(this.ToolStripMenuItem_ShowPhpRuntimeOutput, "ToolStripMenuItem_ShowPhpRuntimeOutput");
+			this.ToolStripMenuItem_ShowPhpRuntimeOutput.Click += new System.EventHandler(this.ToolStripMenuItem_ShowPhpServerOutput_Click);
 			// 
 			// ToolStripMenuItem_ShowBrowserDeveloperTools
 			// 
@@ -267,6 +278,18 @@
 			resources.ApplyResources(this.Panel_Main, "Panel_Main");
 			this.Panel_Main.Name = "Panel_Main";
 			// 
+			// StatusStrip_Main
+			// 
+			this.StatusStrip_Main.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripStatusLabel_ExternalAccessInfo});
+			resources.ApplyResources(this.StatusStrip_Main, "StatusStrip_Main");
+			this.StatusStrip_Main.Name = "StatusStrip_Main";
+			// 
+			// ToolStripStatusLabel_ExternalAccessInfo
+			// 
+			this.ToolStripStatusLabel_ExternalAccessInfo.Name = "ToolStripStatusLabel_ExternalAccessInfo";
+			resources.ApplyResources(this.ToolStripStatusLabel_ExternalAccessInfo, "ToolStripStatusLabel_ExternalAccessInfo");
+			// 
 			// TabControl_Main
 			// 
 			this.TabControl_Main.Controls.Add(this.TabPage_Grocy);
@@ -290,7 +313,7 @@
 			// ContextMenuStrip_DummyForResxStrings
 			// 
 			this.ContextMenuStrip_DummyForResxStrings.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.STRING_PHPServerOutput,
+            this.STRING_PHPOutput,
             this.STRING_ChangeDataLocation,
             this.STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue,
             this.STRING_Backup,
@@ -302,20 +325,22 @@
             this.STRING_SayThanks,
             this.STRING_SayThanksQuestion,
             this.STRING_PreparingWebbrowser,
-            this.STRING_PreparingPhpServer,
+            this.STRING_PreparingWebserver,
+            this.STRING_PreparingPhpRuntime,
             this.STRING_PreparingGrocy,
             this.STRING_PreparingBarcodeBuddy,
             this.STRING_DownloadingGrocyRelease,
             this.STRING_DownloadingBarcodeBuddyRelease,
             this.STRING_GrocyExternalAccessInfo,
-            this.STRING_GrocyAndBarcodeBuddyExternalAccessInfo});
+            this.STRING_GrocyAndBarcodeBuddyExternalAccessInfo,
+            this.STRING_NginxOutput});
 			this.ContextMenuStrip_DummyForResxStrings.Name = "ContextMenuStrip_DummyForResxStrings";
 			resources.ApplyResources(this.ContextMenuStrip_DummyForResxStrings, "ContextMenuStrip_DummyForResxStrings");
 			// 
-			// STRING_PHPServerOutput
+			// STRING_PHPOutput
 			// 
-			this.STRING_PHPServerOutput.Name = "STRING_PHPServerOutput";
-			resources.ApplyResources(this.STRING_PHPServerOutput, "STRING_PHPServerOutput");
+			this.STRING_PHPOutput.Name = "STRING_PHPOutput";
+			resources.ApplyResources(this.STRING_PHPOutput, "STRING_PHPOutput");
 			// 
 			// STRING_ChangeDataLocation
 			// 
@@ -374,10 +399,15 @@
 			this.STRING_PreparingWebbrowser.Name = "STRING_PreparingWebbrowser";
 			resources.ApplyResources(this.STRING_PreparingWebbrowser, "STRING_PreparingWebbrowser");
 			// 
-			// STRING_PreparingPhpServer
+			// STRING_PreparingWebserver
 			// 
-			this.STRING_PreparingPhpServer.Name = "STRING_PreparingPhpServer";
-			resources.ApplyResources(this.STRING_PreparingPhpServer, "STRING_PreparingPhpServer");
+			this.STRING_PreparingWebserver.Name = "STRING_PreparingWebserver";
+			resources.ApplyResources(this.STRING_PreparingWebserver, "STRING_PreparingWebserver");
+			// 
+			// STRING_PreparingPhpRuntime
+			// 
+			this.STRING_PreparingPhpRuntime.Name = "STRING_PreparingPhpRuntime";
+			resources.ApplyResources(this.STRING_PreparingPhpRuntime, "STRING_PreparingPhpRuntime");
 			// 
 			// STRING_PreparingGrocy
 			// 
@@ -399,25 +429,6 @@
 			this.STRING_DownloadingBarcodeBuddyRelease.Name = "STRING_DownloadingBarcodeBuddyRelease";
 			resources.ApplyResources(this.STRING_DownloadingBarcodeBuddyRelease, "STRING_DownloadingBarcodeBuddyRelease");
 			// 
-			// ToolStripMenuItem_EnableExternalAccess
-			// 
-			this.ToolStripMenuItem_EnableExternalAccess.CheckOnClick = true;
-			this.ToolStripMenuItem_EnableExternalAccess.Name = "ToolStripMenuItem_EnableExternalAccess";
-			resources.ApplyResources(this.ToolStripMenuItem_EnableExternalAccess, "ToolStripMenuItem_EnableExternalAccess");
-			this.ToolStripMenuItem_EnableExternalAccess.Click += new System.EventHandler(this.ToolStripMenuItem_EnableExternalAccess_Click);
-			// 
-			// StatusStrip_Main
-			// 
-			this.StatusStrip_Main.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolStripStatusLabel_ExternalAccessInfo});
-			resources.ApplyResources(this.StatusStrip_Main, "StatusStrip_Main");
-			this.StatusStrip_Main.Name = "StatusStrip_Main";
-			// 
-			// ToolStripStatusLabel_ExternalAccessInfo
-			// 
-			this.ToolStripStatusLabel_ExternalAccessInfo.Name = "ToolStripStatusLabel_ExternalAccessInfo";
-			resources.ApplyResources(this.ToolStripStatusLabel_ExternalAccessInfo, "ToolStripStatusLabel_ExternalAccessInfo");
-			// 
 			// STRING_GrocyExternalAccessInfo
 			// 
 			this.STRING_GrocyExternalAccessInfo.Name = "STRING_GrocyExternalAccessInfo";
@@ -427,6 +438,17 @@
 			// 
 			this.STRING_GrocyAndBarcodeBuddyExternalAccessInfo.Name = "STRING_GrocyAndBarcodeBuddyExternalAccessInfo";
 			resources.ApplyResources(this.STRING_GrocyAndBarcodeBuddyExternalAccessInfo, "STRING_GrocyAndBarcodeBuddyExternalAccessInfo");
+			// 
+			// ToolStripMenuItem_ShowNginxOutput
+			// 
+			this.ToolStripMenuItem_ShowNginxOutput.Name = "ToolStripMenuItem_ShowNginxOutput";
+			resources.ApplyResources(this.ToolStripMenuItem_ShowNginxOutput, "ToolStripMenuItem_ShowNginxOutput");
+			this.ToolStripMenuItem_ShowNginxOutput.Click += new System.EventHandler(this.ToolStripMenuItem_ShowNginxOutput_Click);
+			// 
+			// STRING_NginxOutput
+			// 
+			this.STRING_NginxOutput.Name = "STRING_NginxOutput";
+			resources.ApplyResources(this.STRING_NginxOutput, "STRING_NginxOutput");
 			// 
 			// FrmMain
 			// 
@@ -443,10 +465,10 @@
 			this.MenuStrip_Main.PerformLayout();
 			this.Panel_Main.ResumeLayout(false);
 			this.Panel_Main.PerformLayout();
-			this.TabControl_Main.ResumeLayout(false);
-			this.ContextMenuStrip_DummyForResxStrings.ResumeLayout(false);
 			this.StatusStrip_Main.ResumeLayout(false);
 			this.StatusStrip_Main.PerformLayout();
+			this.TabControl_Main.ResumeLayout(false);
+			this.ContextMenuStrip_DummyForResxStrings.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -474,9 +496,9 @@
 		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_UpdateBarcodeBuddy;
 		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_EnableBarcodeBuddy;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_ShowPhpServerOutput;
+		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_ShowPhpRuntimeOutput;
 		private System.Windows.Forms.ContextMenuStrip ContextMenuStrip_DummyForResxStrings;
-		private System.Windows.Forms.ToolStripMenuItem STRING_PHPServerOutput;
+		private System.Windows.Forms.ToolStripMenuItem STRING_PHPOutput;
 		private System.Windows.Forms.ToolStripMenuItem STRING_ChangeDataLocation;
 		private System.Windows.Forms.ToolStripMenuItem STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue;
 		private System.Windows.Forms.ToolStripMenuItem STRING_Backup;
@@ -496,7 +518,7 @@
 		private System.Windows.Forms.ToolStripMenuItem STRING_SayThanks;
 		private System.Windows.Forms.ToolStripMenuItem STRING_SayThanksQuestion;
 		private System.Windows.Forms.ToolStripMenuItem STRING_PreparingWebbrowser;
-		private System.Windows.Forms.ToolStripMenuItem STRING_PreparingPhpServer;
+		private System.Windows.Forms.ToolStripMenuItem STRING_PreparingPhpRuntime;
 		private System.Windows.Forms.ToolStripMenuItem STRING_PreparingGrocy;
 		private System.Windows.Forms.ToolStripMenuItem STRING_PreparingBarcodeBuddy;
 		private System.Windows.Forms.ToolStripMenuItem STRING_DownloadingBarcodeBuddyRelease;
@@ -506,6 +528,9 @@
 		private System.Windows.Forms.ToolStripStatusLabel ToolStripStatusLabel_ExternalAccessInfo;
 		private System.Windows.Forms.ToolStripMenuItem STRING_GrocyExternalAccessInfo;
 		private System.Windows.Forms.ToolStripMenuItem STRING_GrocyAndBarcodeBuddyExternalAccessInfo;
+		private System.Windows.Forms.ToolStripMenuItem STRING_PreparingWebserver;
+		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_ShowNginxOutput;
+		private System.Windows.Forms.ToolStripMenuItem STRING_NginxOutput;
 	}
 }
 

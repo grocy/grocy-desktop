@@ -1,12 +1,11 @@
 ﻿using CefSharp;
 using CefSharp.WinForms;
 using System;
-using System.Diagnostics;
+using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.IO.Compression;
 using System.Resources;
-using System.Threading;
 using System.Windows.Forms;
 
 namespace GrocyDesktop
@@ -21,11 +20,12 @@ namespace GrocyDesktop
 		private ResourceManager ResourceManager = new ResourceManager(typeof(FrmMain));
 		private ChromiumWebBrowser GrocyBrowser;
 		private ChromiumWebBrowser BarcodeBuddyBrowser;
-		private PhpDevelopmentServerManager GrocyPhpServer;
-		private PhpDevelopmentServerManager BarcodeBuddyPhpServer;
+		private NginxServerManager NginxServer;
+		private PhpProcessManager PhpFastCgiServer;
+		private int PhpFastCgiServerPort;
 		private GrocyEnvironmentManager GrocyEnvironmentManager;
 		private BarcodeBuddyEnvironmentManager BarcodeBuddyEnvironmentManager;
-		private PhpProcessManager BarcodeBuddyWebsocketServerPhpProcess;
+		private PhpProcessManager BarcodeBuddyWebsocketServer;
 		private UserSettings UserSettings = UserSettings.Load();
 
 		private void SetupCef()
@@ -37,17 +37,17 @@ namespace GrocyDesktop
 			cefSettings.CachePath = GrocyDesktopDependencyManager.CefCachePath;
 			cefSettings.LogFile = Path.Combine(GrocyDesktopDependencyManager.CefCachePath, "cef.log");
 			cefSettings.CefCommandLineArgs.Add("--enable-media-stream", "");
-			cefSettings.CefCommandLineArgs.Add("--unsafely-treat-insecure-origin-as-secure", this.GrocyPhpServer.LocalUrl);
+			cefSettings.CefCommandLineArgs.Add("--unsafely-treat-insecure-origin-as-secure", this.GrocyEnvironmentManager.LocalUrl);
 			cefSettings.CefCommandLineArgs.Add("--lang", CultureInfo.CurrentCulture.TwoLetterISOLanguageName);
 			Cef.Initialize(cefSettings, performDependencyCheck: false, browserProcessHandler: null);
 
 			if (this.UserSettings.EnableBarcodeBuddyIntegration)
 			{
-				this.GrocyBrowser = new ChromiumWebBrowser(this.GrocyPhpServer.LocalUrl);
+				this.GrocyBrowser = new ChromiumWebBrowser(this.GrocyEnvironmentManager.LocalUrl);
 				this.GrocyBrowser.Dock = DockStyle.Fill;
 				this.TabPage_Grocy.Controls.Add(this.GrocyBrowser);
 
-				this.BarcodeBuddyBrowser = new ChromiumWebBrowser(this.BarcodeBuddyPhpServer.LocalUrl);
+				this.BarcodeBuddyBrowser = new ChromiumWebBrowser(this.BarcodeBuddyEnvironmentManager.LocalUrl);
 				this.BarcodeBuddyBrowser.Dock = DockStyle.Fill;
 				this.TabPage_BarcodeBuddy.Controls.Add(this.BarcodeBuddyBrowser);
 			}
@@ -56,7 +56,7 @@ namespace GrocyDesktop
 				this.TabControl_Main.Visible = false;
 				this.ToolStripMenuItem_BarcodeBuddy.Visible = false;
 
-				this.GrocyBrowser = new ChromiumWebBrowser(this.GrocyPhpServer.LocalUrl);
+				this.GrocyBrowser = new ChromiumWebBrowser(this.GrocyEnvironmentManager.LocalUrl);
 				this.GrocyBrowser.Dock = DockStyle.Fill;
 				this.Panel_Main.Controls.Add(this.GrocyBrowser);
 			}
@@ -64,24 +64,60 @@ namespace GrocyDesktop
 			this.StatusStrip_Main.Visible = this.UserSettings.EnableExternalWebserverAccess;
 		}
 
+		private void SetupNginx()
+		{
+			string nginxConfFilePath = Path.Combine(GrocyDesktopDependencyManager.NginxExecutingPath, "conf", "nginx.conf");
+			File.Copy(Path.Combine(GrocyDesktopDependencyManager.NginxExecutingPath, "conf", "nginx.conf.template"), nginxConfFilePath, true);
+			Extensions.ReplaceInTextFile(nginxConfFilePath, "$GROCYPORT$", this.GrocyEnvironmentManager.Port.ToString());
+			Extensions.ReplaceInTextFile(nginxConfFilePath, "$GROCYROOT$", Path.Combine(GrocyDesktopDependencyManager.GrocyExecutingPath, "public").Replace("\\", "/"));
+			Extensions.ReplaceInTextFile(nginxConfFilePath, "$PHPFASTCGIPORT$", this.PhpFastCgiServerPort.ToString());
+			if (this.UserSettings.EnableExternalWebserverAccess)
+			{
+				Extensions.ReplaceInTextFile(nginxConfFilePath, "$INTERFACE$", "*");
+			}
+			else
+			{
+				Extensions.ReplaceInTextFile(nginxConfFilePath, "$INTERFACE$", "localhost");
+			}
+
+			if (this.UserSettings.EnableBarcodeBuddyIntegration)
+			{
+				Extensions.ReplaceInTextFile(nginxConfFilePath, "#$BARCODEBUDDYDISABLED$", string.Empty);
+				Extensions.ReplaceInTextFile(nginxConfFilePath, "$BARCODEBUDDYPORT$", this.BarcodeBuddyEnvironmentManager.Port.ToString());
+				Extensions.ReplaceInTextFile(nginxConfFilePath, "$BARCODEBUDDYROOT$", GrocyDesktopDependencyManager.BarcodeBuddyExecutingPath.Replace("\\", "/"));
+			}
+
+			this.NginxServer = new NginxServerManager(GrocyDesktopDependencyManager.NginxExecutingPath);
+			this.NginxServer.Start();
+		}
+
+		private void SetupPhpFastCgiServer()
+		{
+			this.PhpFastCgiServerPort = Extensions.GetRandomFreePort();
+
+			Dictionary<string, string> environmentVariables = null;
+			if (this.UserSettings.EnableBarcodeBuddyIntegration)
+			{
+				environmentVariables = this.BarcodeBuddyEnvironmentManager.GetEnvironmentVariables();
+			}
+
+			this.PhpFastCgiServer = new PhpProcessManager(GrocyDesktopDependencyManager.PhpExecutingPath, GrocyDesktopDependencyManager.PhpExecutingPath, "-b 127.0.0.1:" + this.PhpFastCgiServerPort.ToString(), true, environmentVariables);
+			this.PhpFastCgiServer.Start();
+		}
+
 		private void SetupGrocy()
 		{
-			this.GrocyPhpServer = new PhpDevelopmentServerManager(GrocyDesktopDependencyManager.PhpExecutingPath, Path.Combine(GrocyDesktopDependencyManager.GrocyExecutingPath, "public"), this.UserSettings.EnableExternalWebserverAccess, null, this.UserSettings.GrocyWebserverDesiredPort);
-			this.GrocyPhpServer.StartServer();
-			this.GrocyEnvironmentManager = new GrocyEnvironmentManager(GrocyDesktopDependencyManager.GrocyExecutingPath, this.UserSettings.GrocyDataLocation);
+			this.GrocyEnvironmentManager = new GrocyEnvironmentManager(GrocyDesktopDependencyManager.GrocyExecutingPath, this.UserSettings.GrocyDataLocation, this.UserSettings.GrocyWebserverDesiredPort);
 			this.GrocyEnvironmentManager.Setup();
 		}
 
 		private void SetupBarcodeBuddy()
 		{
-			this.BarcodeBuddyEnvironmentManager = new BarcodeBuddyEnvironmentManager(GrocyDesktopDependencyManager.BarcodeBuddyExecutingPath, this.UserSettings.BarcodeBuddyDataLocation);
-			this.BarcodeBuddyPhpServer = new PhpDevelopmentServerManager(GrocyDesktopDependencyManager.PhpExecutingPath, GrocyDesktopDependencyManager.BarcodeBuddyExecutingPath, this.UserSettings.EnableExternalWebserverAccess, null, this.UserSettings.BarcodeBuddyWebserverDesiredPort);
-			this.BarcodeBuddyEnvironmentManager.Setup(this.GrocyPhpServer.LocalUrl.TrimEnd('/') + "/api/");
-			this.BarcodeBuddyPhpServer.SetEnvironmenVariables(this.BarcodeBuddyEnvironmentManager.GetEnvironmentVariables());
-			this.BarcodeBuddyPhpServer.StartServer();
+			this.BarcodeBuddyEnvironmentManager = new BarcodeBuddyEnvironmentManager(GrocyDesktopDependencyManager.BarcodeBuddyExecutingPath, this.UserSettings.BarcodeBuddyDataLocation, this.UserSettings.BarcodeBuddyWebserverDesiredPort);
+			this.BarcodeBuddyEnvironmentManager.Setup(this.GrocyEnvironmentManager.LocalUrl.TrimEnd('/') + "/api/");
 
-			this.BarcodeBuddyWebsocketServerPhpProcess = new PhpProcessManager(GrocyDesktopDependencyManager.PhpExecutingPath, GrocyDesktopDependencyManager.BarcodeBuddyExecutingPath, "wsserver.php");
-			this.BarcodeBuddyWebsocketServerPhpProcess.Start();
+			this.BarcodeBuddyWebsocketServer = new PhpProcessManager(GrocyDesktopDependencyManager.PhpExecutingPath, GrocyDesktopDependencyManager.BarcodeBuddyExecutingPath, "wsserver.php", false);
+			this.BarcodeBuddyWebsocketServer.Start();
 		}
 
 		private async void FrmMain_Shown(object sender, EventArgs e)
@@ -92,6 +128,8 @@ namespace GrocyDesktop
 			{
 				this.SetupBarcodeBuddy();
 			}
+			this.SetupPhpFastCgiServer();
+			this.SetupNginx();
 			this.SetupCef();
 
 			this.ToolStripMenuItem_EnableBarcodeBuddy.Checked = this.UserSettings.EnableBarcodeBuddyIntegration;
@@ -101,34 +139,29 @@ namespace GrocyDesktop
 			if (this.UserSettings.EnableBarcodeBuddyIntegration)
 			{
 				this.ToolStripStatusLabel_ExternalAccessInfo.Text = this.ResourceManager.GetString("STRING_GrocyAndBarcodeBuddyExternalAccessInfo.Text")
-					.Replace("%1$s", this.GrocyPhpServer.HostnameUrl)
-					.Replace("%2$s", this.GrocyPhpServer.IpUrl)
-					.Replace("%3$s", this.BarcodeBuddyPhpServer.HostnameUrl)
-					.Replace("%4$s", this.BarcodeBuddyPhpServer.IpUrl);
+					.Replace("%1$s", this.GrocyEnvironmentManager.HostnameUrl)
+					.Replace("%2$s", this.GrocyEnvironmentManager.IpUrl)
+					.Replace("%3$s", this.BarcodeBuddyEnvironmentManager.HostnameUrl)
+					.Replace("%4$s", this.BarcodeBuddyEnvironmentManager.IpUrl);
 			}
 			else
 			{
 				this.ToolStripStatusLabel_ExternalAccessInfo.Text = this.ResourceManager.GetString("STRING_GrocyExternalAccessInfo.Text")
-					.Replace("%1$s", this.GrocyPhpServer.HostnameUrl)
-					.Replace("%2$s", this.GrocyPhpServer.IpUrl);
+					.Replace("%1$s", this.GrocyEnvironmentManager.HostnameUrl)
+					.Replace("%2$s", this.GrocyEnvironmentManager.IpUrl);
 			}
 		}
 
 		private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
 		{
-			if (this.GrocyPhpServer != null)
+			if (this.NginxServer != null)
 			{
-				this.GrocyPhpServer.StopServer();
+				this.NginxServer.Stop();
 			}
 
-			if (this.UserSettings.EnableBarcodeBuddyIntegration && this.BarcodeBuddyPhpServer != null)
+			if (this.PhpFastCgiServer != null)
 			{
-				this.BarcodeBuddyPhpServer.StopServer();
-			}
-
-			if (this.UserSettings.EnableBarcodeBuddyIntegration && this.BarcodeBuddyWebsocketServerPhpProcess != null)
-			{
-				this.BarcodeBuddyWebsocketServerPhpProcess.Stop();
+				this.PhpFastCgiServer.Stop();
 			}
 
 			this.UserSettings.Save();
@@ -141,12 +174,16 @@ namespace GrocyDesktop
 
 		private void ToolStripMenuItem_ShowPhpServerOutput_Click(object sender, EventArgs e)
 		{
-			new FrmShowText("grocy " + this.ResourceManager.GetString("STRING_PHPServerOutput.Text"), this.GrocyPhpServer.GetConsoleOutput()).Show(this);
+			new FrmShowText(this.ResourceManager.GetString("STRING_PHPOutput.Text"), this.PhpFastCgiServer.GetConsoleOutput()).Show(this);
 			if (this.UserSettings.EnableBarcodeBuddyIntegration)
 			{
-				new FrmShowText("Barcode Buddy " + this.ResourceManager.GetString("STRING_PHPServerOutput.Text"), this.BarcodeBuddyPhpServer.GetConsoleOutput()).Show(this);
-				new FrmShowText("Barcode Buddy " + this.ResourceManager.GetString("STRING_PHPServerOutput.Text") + " (Websocket Server)", this.BarcodeBuddyWebsocketServerPhpProcess.GetConsoleOutput()).Show(this);
+				new FrmShowText("Barcode Buddy " + this.ResourceManager.GetString("STRING_PHPOutput.Text") + " (Websocket Server)", this.BarcodeBuddyWebsocketServer.GetConsoleOutput()).Show(this);
 			}
+		}
+
+		private void ToolStripMenuItem_ShowNginxOutput_Click(object sender, EventArgs e)
+		{
+			new FrmShowText(this.ResourceManager.GetString("STRING_NginxOutput.Text"), this.NginxServer.GetConsoleOutput()).Show(this);
 		}
 
 		private void ToolStripMenuItem_ShowBrowserDeveloperTools_Click(object sender, EventArgs e)
@@ -166,20 +203,15 @@ namespace GrocyDesktop
 
 		private async void ToolStripMenuItem_UpdateGrocy_Click(object sender, EventArgs e)
 		{
-			this.GrocyPhpServer.StopServer();
-			Thread.Sleep(2000); // Just give php.exe some time to stop...
 			await GrocyDesktopDependencyManager.UpdateEmbeddedGrocyRelease(this);
-			this.GrocyPhpServer.StartServer();
 			this.GrocyEnvironmentManager.Setup();
-			this.GrocyBrowser.Load(this.GrocyPhpServer.LocalUrl);
+			this.GrocyBrowser.Load(this.GrocyEnvironmentManager.LocalUrl);
 		}
 
 		private void ToolStripMenuItem_RecreateGrocyDatabase_Click(object sender, EventArgs e)
 		{
 			if (MessageBox.Show(this.ResourceManager.GetString("STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue.Text"), this.ResourceManager.GetString("ToolStripMenuItem_RecreateGrocyDatabase.Text"), MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
 			{
-				this.GrocyPhpServer.StopServer();
-				Thread.Sleep(2000); // Just give php.exe some time to stop...
 				File.Delete(Path.Combine(this.UserSettings.GrocyDataLocation, "grocy.db"));
 				Extensions.RestartApp();
 			}
@@ -187,12 +219,9 @@ namespace GrocyDesktop
 
 		private async void ToolStripMenuItem_UpdateBarcodeBuddy_Click(object sender, EventArgs e)
 		{
-			this.BarcodeBuddyPhpServer.StopServer();
-			Thread.Sleep(2000); // Just give php.exe some time to stop...
 			await GrocyDesktopDependencyManager.UpdateEmbeddedBarcodeBuddyRelease(this);
-			this.BarcodeBuddyPhpServer.StartServer();
-			this.BarcodeBuddyEnvironmentManager.Setup(this.BarcodeBuddyPhpServer.LocalUrl);
-			this.BarcodeBuddyBrowser.Load(this.BarcodeBuddyPhpServer.LocalUrl);
+			this.BarcodeBuddyEnvironmentManager.Setup(this.GrocyEnvironmentManager.LocalUrl);
+			this.BarcodeBuddyBrowser.Load(this.BarcodeBuddyEnvironmentManager.LocalUrl);
 		}
 
 		private void ToolStripMenuItem_EnableBarcodeBuddy_Click(object sender, EventArgs e)
@@ -239,8 +268,6 @@ namespace GrocyDesktop
 				{
 					if (MessageBox.Show(this.ResourceManager.GetString("STRING_TheCurrentDataWillBeOverwrittenAndGrocydesktopWillRestartContinue.Text"), this.ResourceManager.GetString("STRING_Restore.Text"), MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
 					{
-						this.GrocyPhpServer.StopServer();
-						Thread.Sleep(2000); // Just give php.exe some time to stop...
 						Directory.Delete(this.UserSettings.GrocyDataLocation, true);
 						Directory.CreateDirectory(this.UserSettings.GrocyDataLocation);
 						ZipFile.ExtractToDirectory(dialog.FileName, this.UserSettings.GrocyDataLocation);
@@ -261,7 +288,6 @@ namespace GrocyDesktop
 				{
 					if (MessageBox.Show(this.ResourceManager.GetString("STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue.Text"), this.ResourceManager.GetString("STRING_ChangeDataLocation.Text"), MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
 					{
-						this.GrocyPhpServer.StopServer();
 						Extensions.CopyFolder(this.UserSettings.GrocyDataLocation, dialog.SelectedPath);
 						Directory.Delete(this.UserSettings.GrocyDataLocation, true);
 						this.UserSettings.GrocyDataLocation = dialog.SelectedPath;
@@ -309,8 +335,6 @@ namespace GrocyDesktop
 				{
 					if (MessageBox.Show(this.ResourceManager.GetString("STRING_TheCurrentDataWillBeOverwrittenAndGrocydesktopWillRestartContinue.Text"), this.ResourceManager.GetString("STRING_Restore.Text"), MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
 					{
-						this.GrocyPhpServer.StopServer();
-						Thread.Sleep(2000); // Just give php.exe some time to stop...
 						Directory.Delete(this.UserSettings.BarcodeBuddyDataLocation, true);
 						Directory.CreateDirectory(this.UserSettings.BarcodeBuddyDataLocation);
 						ZipFile.ExtractToDirectory(dialog.FileName, this.UserSettings.BarcodeBuddyDataLocation);
@@ -331,7 +355,6 @@ namespace GrocyDesktop
 				{
 					if (MessageBox.Show(this.ResourceManager.GetString("STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue.Text"), this.ResourceManager.GetString("STRING_ChangeDataLocation.Text"), MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
 					{
-						this.GrocyPhpServer.StopServer();
 						Extensions.CopyFolder(this.UserSettings.BarcodeBuddyDataLocation, dialog.SelectedPath);
 						Directory.Delete(this.UserSettings.BarcodeBuddyDataLocation, true);
 						this.UserSettings.BarcodeBuddyDataLocation = dialog.SelectedPath;

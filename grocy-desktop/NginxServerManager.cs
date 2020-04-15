@@ -5,15 +5,13 @@ using System.IO;
 
 namespace GrocyDesktop
 {
-	public class PhpProcessManager
+	public class NginxServerManager
 	{
-		public PhpProcessManager(string binDirectory, string workingDirectory, string arguments, bool useFastCgi, Dictionary<string, string> environmentVariables = null)
+		public NginxServerManager(string binDirectory, string arguments = "", Dictionary<string, string> environmentVariables = null)
 		{
 			this.BinDirectory = binDirectory;
-			this.WorkingDirectory = workingDirectory;
 			this.Arguments = arguments;
 			this.EnvironmentVariables = environmentVariables;
-			this.UseFastCgi = useFastCgi;
 			this.OutputLines = new List<string>();
 
 			if (this.EnvironmentVariables == null)
@@ -23,12 +21,10 @@ namespace GrocyDesktop
 		}
 
 		private string BinDirectory;
-		private string WorkingDirectory;
 		private string Arguments;
 		private Dictionary<string, string> EnvironmentVariables;
 		private Process Process;
 		private List<string> OutputLines;
-		private bool UseFastCgi;
 		
 		public void Start()
 		{
@@ -36,22 +32,15 @@ namespace GrocyDesktop
 			this.Process.StartInfo.UseShellExecute = false;
 			this.Process.StartInfo.RedirectStandardOutput = true;
 			this.Process.StartInfo.RedirectStandardError = true;
-			this.Process.StartInfo.RedirectStandardInput = true;
 			this.Process.StartInfo.CreateNoWindow = true;
 			this.Process.EnableRaisingEvents = true;
 			this.Process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
 			this.Process.OutputDataReceived += this.Process_OutputDataReceived;
 			this.Process.ErrorDataReceived += this.Process_OutputDataReceived;
 
-			string exe = "php.exe";
-			if (this.UseFastCgi)
-			{
-				exe = "php-cgi.exe";
-			}
-
-			this.Process.StartInfo.FileName = Path.Combine(this.BinDirectory, exe);
+			this.Process.StartInfo.FileName = Path.Combine(this.BinDirectory, "nginx.exe");
 			this.Process.StartInfo.Arguments = this.Arguments;
-			this.Process.StartInfo.WorkingDirectory = this.WorkingDirectory;
+			this.Process.StartInfo.WorkingDirectory = this.BinDirectory;
 			
 			foreach (KeyValuePair<string, string> item in this.EnvironmentVariables)
 			{
@@ -67,7 +56,7 @@ namespace GrocyDesktop
 		{
 			if (this.Process != null && !this.Process.HasExited)
 			{
-				this.Process.StandardInput.Close();
+				Process.Start(Path.Combine(this.BinDirectory, "nginx.exe"), "-s stop");
 				this.Process.Kill();
 			}
 		}

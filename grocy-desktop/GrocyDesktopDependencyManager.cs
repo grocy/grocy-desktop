@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json.Linq;
-using System;
+﻿using System;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -34,6 +33,7 @@ namespace GrocyDesktop
 
 		public readonly static string CefExecutingPath = Path.Combine(Program.RuntimeDependenciesExecutingPath, "cef");
 		public readonly static string CefCachePath = Path.Combine(Program.RuntimeDependenciesExecutingPath, "cef-cache");
+		public readonly static string NginxExecutingPath = Path.Combine(Program.RuntimeDependenciesExecutingPath, "nginx");
 		public readonly static string PhpExecutingPath = Path.Combine(Program.RuntimeDependenciesExecutingPath, "php");
 		public readonly static string GrocyExecutingPath = Path.Combine(Program.BaseFixedUserDataFolderPath, "grocy");
 		public readonly static string BarcodeBuddyExecutingPath = Path.Combine(Program.BaseFixedUserDataFolderPath, "barcodebuddy");
@@ -59,9 +59,17 @@ namespace GrocyDesktop
 					waitWindow.SetStatus(ResourceManager.GetString("STRING_PreparingWebbrowser.Text"));
 				}
 				await Task.Run(() => Extensions.ExtractZipToDirectory(cefZipPathx86, cefPathx86, true));
+			}
 
-				// Seems that CEF 75 has now bundled the VC runtime dependencies itself...
-				//await Task.Run(() => ZipFile.ExtractToDirectory(vc2019x86ZipPath, cefPathx86));
+			// nginx
+			string nginxZipPath = Path.Combine(Program.BaseExecutingPath, "nginx.zip");
+			if (!Directory.Exists(NginxExecutingPath))
+			{
+				if (waitWindow != null)
+				{
+					waitWindow.SetStatus(ResourceManager.GetString("STRING_PreparingWebserver.Text"));
+				}
+				await Task.Run(() => Extensions.ExtractZipToDirectory(nginxZipPath, NginxExecutingPath, true));
 			}
 
 			// PHP
@@ -70,7 +78,7 @@ namespace GrocyDesktop
 			{
 				if (waitWindow != null)
 				{
-					waitWindow.SetStatus(ResourceManager.GetString("STRING_PreparingPhpServer.Text"));
+					waitWindow.SetStatus(ResourceManager.GetString("STRING_PreparingPhpRuntime.Text"));
 				}
 				await Task.Run(() => Extensions.ExtractZipToDirectory(phpZipPath, PhpExecutingPath, true));
 				await Task.Run(() => Extensions.ExtractZipToDirectory(vc2019x86ZipPath, PhpExecutingPath, true));
