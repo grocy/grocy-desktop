@@ -30,6 +30,7 @@ namespace GrocyDesktop
 			this.SetSetting("AUTHDB_PATH", Path.Combine(this.DataPath, "users.db"));
 			this.SetSetting("DATABASE_PATH", Path.Combine(this.DataPath, "barcodebuddy.db"));
 			this.SetSetting("CURL_ALLOW_INSECURE_SSL_CA", "true");
+			this.SetSetting("HIDE_LINK_GROCY", "true");
 
 			File.Copy(Path.Combine(this.BasePath, "config-dist.php"), Path.Combine(this.DataPath, "config.php"), true);
 		}
