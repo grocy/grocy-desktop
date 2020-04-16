@@ -141,12 +141,14 @@ namespace GrocyDesktop
 			{
 				this.SetupBarcodeBuddy();
 			}
+			this.UserDataSyncRestore();
 			this.SetupPhpFastCgiServer();
 			this.SetupNginx();
 			this.SetupCef();
 
 			this.ToolStripMenuItem_EnableBarcodeBuddy.Checked = this.UserSettings.EnableBarcodeBuddyIntegration;
 			this.ToolStripMenuItem_EnableExternalAccess.Checked = this.UserSettings.EnableExternalWebserverAccess;
+			this.ToolStripMenuItem_EnableUserDataSync.Checked = this.UserSettings.EnableUserDataSync;
 
 			if (this.UserSettings.EnableBarcodeBuddyIntegration)
 			{
@@ -175,6 +177,8 @@ namespace GrocyDesktop
 			{
 				this.PhpFastCgiServer.Stop();
 			}
+
+			this.UserDataSyncSave();
 		}
 
 		private void ToolStripMenuItem_Exit_Click(object sender, EventArgs e)
@@ -380,6 +384,79 @@ namespace GrocyDesktop
 			this.UserSettings.EnableExternalWebserverAccess = this.ToolStripMenuItem_EnableExternalAccess.Checked;
 			this.UserSettings.Save();
 			ApplicationHelper.RestartApp();
+		}
+
+		private void ToolStripMenuItem_EnableUserDataSync_Click(object sender, EventArgs e)
+		{
+			this.UserSettings.EnableUserDataSync = this.ToolStripMenuItem_EnableUserDataSync.Checked;
+
+			if (this.ToolStripMenuItem_EnableUserDataSync.Checked)
+			{
+				using (FolderBrowserDialog dialog = new FolderBrowserDialog())
+				{
+					dialog.RootFolder = Environment.SpecialFolder.Desktop;
+					dialog.SelectedPath = this.UserSettings.UserDataSyncFolderPath;
+
+					if (dialog.ShowDialog() == DialogResult.OK)
+					{
+						this.UserSettings.UserDataSyncFolderPath = dialog.SelectedPath;
+					}
+					else
+					{
+						this.UserSettings.UserDataSyncFolderPath = string.Empty;
+					}
+				}
+			}
+
+			this.UserSettings.Save();
+		}
+
+		private void UserDataSyncSave()
+		{
+			if (this.UserSettings.EnableUserDataSync && !string.IsNullOrEmpty(this.UserSettings.UserDataSyncFolderPath) && Directory.Exists(this.UserSettings.UserDataSyncFolderPath))
+			{
+				string grocySyncZipPath = Path.Combine(this.UserSettings.UserDataSyncFolderPath, "grocy-data.zip");
+				if (File.Exists(grocySyncZipPath))
+				{
+					File.Delete(grocySyncZipPath);
+				}
+				ZipFile.CreateFromDirectory(this.UserSettings.GrocyDataLocation, grocySyncZipPath);
+
+				if (this.UserSettings.EnableBarcodeBuddyIntegration)
+				{
+					string barcodeBuddySyncZipPath = Path.Combine(this.UserSettings.UserDataSyncFolderPath, "barcodebuddy-data.zip");
+					if (File.Exists(barcodeBuddySyncZipPath))
+					{
+						File.Delete(barcodeBuddySyncZipPath);
+					}
+					ZipFile.CreateFromDirectory(this.UserSettings.BarcodeBuddyDataLocation, barcodeBuddySyncZipPath);
+				}
+			}
+		}
+
+		private void UserDataSyncRestore()
+		{
+			if (this.UserSettings.EnableUserDataSync && !string.IsNullOrEmpty(this.UserSettings.UserDataSyncFolderPath) && Directory.Exists(this.UserSettings.UserDataSyncFolderPath))
+			{
+				string grocySyncZipPath = Path.Combine(this.UserSettings.UserDataSyncFolderPath, "grocy-data.zip");
+				if (File.Exists(grocySyncZipPath))
+				{
+					Directory.Delete(this.UserSettings.GrocyDataLocation, true);
+					Directory.CreateDirectory(this.UserSettings.GrocyDataLocation);
+					ZipFile.ExtractToDirectory(grocySyncZipPath, this.UserSettings.GrocyDataLocation);
+				}
+				
+				if (this.UserSettings.EnableBarcodeBuddyIntegration)
+				{
+					string barcodeBuddySyncZipPath = Path.Combine(this.UserSettings.UserDataSyncFolderPath, "barcodebuddy-data.zip");
+					if (File.Exists(barcodeBuddySyncZipPath))
+					{
+						Directory.Delete(this.UserSettings.BarcodeBuddyDataLocation, true);
+						Directory.CreateDirectory(this.UserSettings.BarcodeBuddyDataLocation);
+						ZipFile.ExtractToDirectory(barcodeBuddySyncZipPath, this.UserSettings.BarcodeBuddyDataLocation);
+					}
+				}
+			}
 		}
 	}
 }

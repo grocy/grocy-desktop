@@ -12,6 +12,8 @@ namespace GrocyDesktop
 		public int GrocyWebserverDesiredPort = 4010;
 		public int BarcodeBuddyWebserverDesiredPort = 4011;
 		public bool EnableExternalWebserverAccess = false;
+		public bool EnableUserDataSync = false;
+		public string UserDataSyncFolderPath = string.Empty;
 
 		public static UserSettings Load()
 		{

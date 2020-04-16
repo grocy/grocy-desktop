@@ -52,6 +52,7 @@
 			this.ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy = new System.Windows.Forms.ToolStripMenuItem();
 			this.ToolStripMenuItem_Help = new System.Windows.Forms.ToolStripMenuItem();
 			this.ToolStripMenuItem_Debug = new System.Windows.Forms.ToolStripMenuItem();
+			this.ToolStripMenuItem_ShowNginxOutput = new System.Windows.Forms.ToolStripMenuItem();
 			this.ToolStripMenuItem_ShowPhpRuntimeOutput = new System.Windows.Forms.ToolStripMenuItem();
 			this.ToolStripMenuItem_ShowBrowserDeveloperTools = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
@@ -83,8 +84,8 @@
 			this.STRING_DownloadingBarcodeBuddyRelease = new System.Windows.Forms.ToolStripMenuItem();
 			this.STRING_GrocyExternalAccessInfo = new System.Windows.Forms.ToolStripMenuItem();
 			this.STRING_GrocyAndBarcodeBuddyExternalAccessInfo = new System.Windows.Forms.ToolStripMenuItem();
-			this.ToolStripMenuItem_ShowNginxOutput = new System.Windows.Forms.ToolStripMenuItem();
 			this.STRING_NginxOutput = new System.Windows.Forms.ToolStripMenuItem();
+			this.ToolStripMenuItem_EnableUserDataSync = new System.Windows.Forms.ToolStripMenuItem();
 			this.MenuStrip_Main.SuspendLayout();
 			this.Panel_Main.SuspendLayout();
 			this.StatusStrip_Main.SuspendLayout();
@@ -107,6 +108,7 @@
 			this.ToolStripMenuItem_File.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripMenuItem_EnableBarcodeBuddy,
             this.ToolStripMenuItem_EnableExternalAccess,
+            this.ToolStripMenuItem_EnableUserDataSync,
             this.toolStripSeparator5,
             this.ToolStripMenuItem_Exit});
 			this.ToolStripMenuItem_File.Name = "ToolStripMenuItem_File";
@@ -247,6 +249,12 @@
             this.ToolStripMenuItem_ShowBrowserDeveloperTools});
 			this.ToolStripMenuItem_Debug.Name = "ToolStripMenuItem_Debug";
 			resources.ApplyResources(this.ToolStripMenuItem_Debug, "ToolStripMenuItem_Debug");
+			// 
+			// ToolStripMenuItem_ShowNginxOutput
+			// 
+			this.ToolStripMenuItem_ShowNginxOutput.Name = "ToolStripMenuItem_ShowNginxOutput";
+			resources.ApplyResources(this.ToolStripMenuItem_ShowNginxOutput, "ToolStripMenuItem_ShowNginxOutput");
+			this.ToolStripMenuItem_ShowNginxOutput.Click += new System.EventHandler(this.ToolStripMenuItem_ShowNginxOutput_Click);
 			// 
 			// ToolStripMenuItem_ShowPhpRuntimeOutput
 			// 
@@ -439,16 +447,17 @@
 			this.STRING_GrocyAndBarcodeBuddyExternalAccessInfo.Name = "STRING_GrocyAndBarcodeBuddyExternalAccessInfo";
 			resources.ApplyResources(this.STRING_GrocyAndBarcodeBuddyExternalAccessInfo, "STRING_GrocyAndBarcodeBuddyExternalAccessInfo");
 			// 
-			// ToolStripMenuItem_ShowNginxOutput
-			// 
-			this.ToolStripMenuItem_ShowNginxOutput.Name = "ToolStripMenuItem_ShowNginxOutput";
-			resources.ApplyResources(this.ToolStripMenuItem_ShowNginxOutput, "ToolStripMenuItem_ShowNginxOutput");
-			this.ToolStripMenuItem_ShowNginxOutput.Click += new System.EventHandler(this.ToolStripMenuItem_ShowNginxOutput_Click);
-			// 
 			// STRING_NginxOutput
 			// 
 			this.STRING_NginxOutput.Name = "STRING_NginxOutput";
 			resources.ApplyResources(this.STRING_NginxOutput, "STRING_NginxOutput");
+			// 
+			// ToolStripMenuItem_EnableUserDataSync
+			// 
+			this.ToolStripMenuItem_EnableUserDataSync.CheckOnClick = true;
+			this.ToolStripMenuItem_EnableUserDataSync.Name = "ToolStripMenuItem_EnableUserDataSync";
+			resources.ApplyResources(this.ToolStripMenuItem_EnableUserDataSync, "ToolStripMenuItem_EnableUserDataSync");
+			this.ToolStripMenuItem_EnableUserDataSync.Click += new System.EventHandler(this.ToolStripMenuItem_EnableUserDataSync_Click);
 			// 
 			// FrmMain
 			// 
@@ -531,6 +540,7 @@
 		private System.Windows.Forms.ToolStripMenuItem STRING_PreparingWebserver;
 		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_ShowNginxOutput;
 		private System.Windows.Forms.ToolStripMenuItem STRING_NginxOutput;
+		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_EnableUserDataSync;
 	}
 }
 
