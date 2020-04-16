@@ -31,7 +31,7 @@ Both grocy and Barcode Buddy (if enabled) can be optionally accessed from extern
 See the status bar for information about the URLs.
 
 ## User data synchronization
-If you want to have grocy-desktop on more than one machine, you can enable the synchronization of all user data via `File -> Enable user data synchronization`.
+If you want to have grocy-desktop on more than one machine, you can enable synchronization of all user data via `File -> Enable user data synchronization`.
 All user data will be exported to the selected directory an closing the application and restored on application start (e. g. use any cloud-synced directory for that).
 
 ## Things worth to know
@@ -40,16 +40,16 @@ All user data will be exported to the selected directory an closing the applicat
 grocy-desktop is a .Net Windows Forms application. It uses [CefSharp](https://github.com/cefsharp/CefSharp) as an integrated browser and utilizes [nginx](https://nginx.org) / [PHP](https://www.php.net/) (FastCGI)  to host grocy. The UWP app (Appx package to be distributed through the Microsoft Store) is built using [Desktop Bridge](https://developer.microsoft.com/en-us/windows/bridges/desktop), all needed dependencies/manifests are located in the `appx_dependencies` folder.
 
 ### What the installer does
-The installer has bundled, beside the application itself and the CefSharp dependencies, a for grocy configured PHP and nginx version (in `embedded_dependencies/php.zip`) and the current grocy and Barcode Buddy release. grocy and Barcode Buddy (if enabled) can also be updated separately, see above. Everything will be unpacked to `%localappdata%\grocy-desktop` by default, the path can also be changed during the installation process. (This does not apply when running/installing the UWP app, normally from the Microsoft Store - UWP apps have their own default package locations.)
+The installer has bundled, beside the application itself and the CefSharp dependencies, a for grocy configured PHP and nginx version (in `embedded_dependencies/php.zip` / `embedded_dependencies/nginx.zip`) and the current grocy and Barcode Buddy release. grocy and Barcode Buddy (if enabled) can also be updated separately, see above. Everything will be unpacked to `%localappdata%\grocy-desktop` by default, the path can also be changed during the installation process. (This does not apply when running/installing the UWP app, normally from the Microsoft Store - UWP apps have their own default package locations.)
 
 ### What happens on start
 grocy-desktop will do the following things and then opens the locally hosted instance in the integrated browser:
-- Unpacking the dependency ZIP files, if needed, to `%appdata%\grocy-desktop\runtime-dependencies` and grocy itself to `%appdata%\grocy-desktop\grocy`
-  - When running the UWP app (normally installed from the Microsoft Store), the used paths are `%userprofile%\.grocy-desktop\runtime-dependencies` and `%userprofile%\.grocy-desktop\grocy`
-- Configuring grocy and Barcode Buddy (if enabled) in embedded mode (user data will be saved `%appdata%\grocy-desktop\grocy-data` / `%appdata%\grocy-desktop\barcodebuddy-data`, thes paths can be changed (see the `grocy` and `Barcode Buddy` (if enabled) menu in the top menu bar)
+- Unpacking the dependency ZIP files, if needed, to `%appdata%\grocy-desktop\runtime-dependencies`, grocy to `%appdata%\grocy-desktop\grocy` and (if enabled) Barcode Buddy to `%appdata%\grocy-desktop\barcodebuddy`
+  - When running the UWP app (normally installed from the Microsoft Store), the used paths are `%userprofile%\.grocy-desktop\runtime-dependencies` and `%userprofile%\.grocy-desktop\grocy` / `%userprofile%\.grocy-desktop\barcodebuddy`
+- Configuring grocy and Barcode Buddy (if enabled) in embedded mode (user data will be saved `%appdata%\grocy-desktop\grocy-data` / `%appdata%\grocy-desktop\barcodebuddy-data`, these paths can be changed (see the `grocy` and `Barcode Buddy` (if enabled) menu in the top menu bar)
   - When running the UWP app (normally installed from the Microsoft Store), the default path is `%userprofile%\.grocy-desktop\grocy-data` / `%userprofile%\.grocy-desktop\barcodebuddy-data`
+  - The default ports used are `4010` for grocy and `4011` for Barcode Buddy, if they're already used, a random free port is used instead
 - Starting nginx, bound to `localhost` if external access is disabled, otherwise bound to all network interfaces
-  - The default ports used are `4010` for grocy and `4011`, if they're already used, a random free port is used instead
 - Starting PHP FastCGI, bound to `localhost` on a random free port
 
 ## Contributing / Say thanks
