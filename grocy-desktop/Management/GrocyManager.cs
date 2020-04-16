@@ -1,4 +1,5 @@
 ﻿using GrocyDesktop.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
@@ -96,13 +97,25 @@ namespace GrocyDesktop.Management
 
 		private string GuessLocalization()
 		{
-			string systemCulture = CultureInfo.CurrentCulture.TwoLetterISOLanguageName.ToLower();
-
-			foreach (string item in this.GetAvailableLocalizations())
+			List<string> availableLocalizations = this.GetAvailableLocalizations();
+			string systemCulture = CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
+			string systemSubculture = CultureInfo.CurrentCulture.Name.Replace("-", "_");
+			
+			// Try to find the "sub" culture first
+			foreach (string item in availableLocalizations)
 			{
-				if (item.StartsWith(systemCulture, System.StringComparison.OrdinalIgnoreCase))
+				if (item.Equals(systemSubculture, StringComparison.OrdinalIgnoreCase))
 				{
-					return systemCulture;
+					return item;
+				}
+			}
+
+			// Afterwards the "main" culture
+			foreach (string item in availableLocalizations)
+			{
+				if (item.Equals(systemCulture, StringComparison.OrdinalIgnoreCase))
+				{
+					return item;
 				}
 			}
 
