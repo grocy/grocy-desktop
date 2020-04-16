@@ -13,23 +13,34 @@ grocy is a selfhosted PHP web application, so normally runs on webservers. If yo
 Please note that the user data is not automatically transfered when switching between the classic installer and the Microsoft Store version, please use the [backup/restore functionality](#how-to-backuprestore) to transfer your data.
 
 ## How to update
-Just download and execute the [latest release](https://releases.grocy.info/latest-desktop). grocy itself can also be updated separately (top menu bar `grocy -> Update`).
+Just download and execute the [latest release](https://releases.grocy.info/latest-desktop). grocy and Barcode Buddy (if enabled) can also be updated separately (top menu bar `grocy` and `Barcode Buddy`).
 
 ## How to backup/restore
-All grocy user data can be exported and restored as a ZIP file (see the `File` menu in the top menu bar).
+All user data can be exported and restored as a ZIP file (see the `grocy` and `Barcode Buddy` (if enabled) menu in the top menu bar).
 
 ## Localization
 grocy-desktop is fully localizable - the default language is English (integrated into code), a German localization is always maintained by me.
 You can easily help translating grocy at https://www.transifex.com/grocy/grocy-desktop, if your language is incomplete or not available yet.
 (grocy-desktop and grocy will use automatically the localization based on your system language, if available.)
 
+## Barcode Buddy integration
+Barcode Buddy (https://github.com/Forceu/barcodebuddy) is a barcode helper tool for grocy and can be activated via `File -> Enable Barcode Buddy`.
+
+## External access
+Both grocy and Barcode Buddy (if enabled) can be optionally accessed from external machines, external access can be enabled via `File -> Enable external access` (please accept the native Windows firewall question accordingly).
+See the status bar for information about the URLs.
+
+## User data synchronization
+If you want to have grocy-desktop on more than one machine, you can enable the synchronization of all user data via `File -> Enable user data synchronization`.
+All user data will be exported to the selected directory an closing the application and restored on application start (e. g. use any cloud-synced directory for that).
+
 ## Things worth to know
 
 ### How this works technically
-grocy-desktop is a .Net Windows Forms application. It uses [CefSharp](https://github.com/cefsharp/CefSharp) as an integrated browser and utilizes the in PHP integrated development server to host grocy. The UWP app (Appx package to be distributed through the Microsoft Store) is built using the [Desktop Bridge](https://developer.microsoft.com/en-us/windows/bridges/desktop), all needed dependencies/manifests are located in the `appx_dependencies` folder.
+grocy-desktop is a .Net Windows Forms application. It uses [CefSharp](https://github.com/cefsharp/CefSharp) as an integrated browser and utilizes [nginx](https://nginx.org) to host grocy. The UWP app (Appx package to be distributed through the Microsoft Store) is built using the [Desktop Bridge](https://developer.microsoft.com/en-us/windows/bridges/desktop), all needed dependencies/manifests are located in the `appx_dependencies` folder.
 
 ### What the installer does
-The installer has bundled, beside the application itself and the CefSharp dependencies, a for grocy configured PHP version (in `embedded_dependencies/php.zip`) and the current grocy release. grocy itself can also be updated separately, see above. Everything will be unpacked to `%localappdata%\grocy-desktop` by default, the path can also be changed during the installation process. (This does not apply when running/installing the UWP app, normally from the Microsoft Store - UWP apps have their own default package locations.)
+The installer has bundled, beside the application itself and the CefSharp dependencies, a for grocy configured PHP and nginx version (in `embedded_dependencies/php.zip`) and the current grocy and Barcode Buddy release. grocy and Barcode Buddy (if enabled) can also be updated separately, see above. Everything will be unpacked to `%localappdata%\grocy-desktop` by default, the path can also be changed during the installation process. (This does not apply when running/installing the UWP app, normally from the Microsoft Store - UWP apps have their own default package locations.)
 
 ### What happens on start
 grocy-desktop will do the following things and then opens the locally hosted instance in the integrated browser:
@@ -37,7 +48,8 @@ grocy-desktop will do the following things and then opens the locally hosted ins
   - When running the UWP app (normally installed from the Microsoft Store), the used paths are `%userprofile%\.grocy-desktop\runtime-dependencies` and `%userprofile%\.grocy-desktop\grocy`
 - Configuring grocy in embedded mode (it will save its data in `%appdata%\grocy-desktop\grocy-data`, this path can be changed (top menu bar `File -> Configure/change data location`)
   - When running the UWP app (normally installed from the Microsoft Store), the default path is `%userprofile%\.grocy-desktop\grocy-data`
-- Starting a PHP development server on a free random port, bound to localhost
+- Starting nginx, bound to `localhost` if external access is disabled, otherwise bound to all network interfaces
+  - The default ports used are `4010` for grocy and `4011`, if they're already used, a random free port is used instead
 
 ## Screenshots
 ![grocy-desktop](https://github.com/berrnd/grocy-desktop/raw/master/publication_assets/grocy-desktop.png "grocy-desktop")
