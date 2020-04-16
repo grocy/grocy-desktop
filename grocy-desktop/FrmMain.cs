@@ -90,7 +90,7 @@ namespace GrocyDesktop
 			}
 			else
 			{
-				IOHelper.ReplaceInTextFile(nginxConfFilePath, "$INTERFACE$", "localhost");
+				IOHelper.ReplaceInTextFile(nginxConfFilePath, "$INTERFACE$", "127.0.0.1");
 			}
 
 			if (this.UserSettings.EnableBarcodeBuddyIntegration)

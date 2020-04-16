@@ -67,6 +67,7 @@ namespace GrocyDesktop.Management
 
 			IOHelper.CopyFolder(Path.Combine(this.BasePath, "data"), this.DataPath);
 			File.Copy(Path.Combine(this.BasePath, "config-dist.php"), Path.Combine(this.DataPath, "config.php"), true);
+			File.Copy(Path.Combine(this.BasePath, "config-dist.php"), Path.Combine(this.BasePath, "data", "config.php"), true); // Dummy
 
 			foreach (string item in Directory.GetFiles(Path.Combine(this.DataPath, "viewcache")))
 			{
