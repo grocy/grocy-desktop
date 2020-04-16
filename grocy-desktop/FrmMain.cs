@@ -168,14 +168,19 @@ namespace GrocyDesktop
 
 		private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
 		{
+			if (this.PhpFastCgiServer != null)
+			{
+				this.PhpFastCgiServer.Stop();
+			}
+
 			if (this.NginxServer != null)
 			{
 				this.NginxServer.Stop();
 			}
 
-			if (this.PhpFastCgiServer != null)
+			if (this.UserSettings.EnableBarcodeBuddyIntegration && this.BarcodeBuddyWebsocketServer != null)
 			{
-				this.PhpFastCgiServer.Stop();
+				this.BarcodeBuddyWebsocketServer.Stop();
 			}
 
 			this.UserDataSyncSave();
@@ -422,7 +427,7 @@ namespace GrocyDesktop
 				}
 				ZipFile.CreateFromDirectory(this.UserSettings.GrocyDataLocation, grocySyncZipPath);
 
-				if (this.UserSettings.EnableBarcodeBuddyIntegration)
+				if (this.UserSettings.EnableBarcodeBuddyIntegration && Directory.Exists(this.UserSettings.BarcodeBuddyDataLocation))
 				{
 					string barcodeBuddySyncZipPath = Path.Combine(this.UserSettings.UserDataSyncFolderPath, "barcodebuddy-data.zip");
 					if (File.Exists(barcodeBuddySyncZipPath))

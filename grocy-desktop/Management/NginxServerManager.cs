@@ -56,15 +56,25 @@ namespace GrocyDesktop.Management
 		{
 			if (this.Process != null && !this.Process.HasExited)
 			{
-				Process.Start(Path.Combine(this.BinDirectory, "nginx.exe"), "-s stop");
+				Process nginxStopSignalProcess = new Process();
+				nginxStopSignalProcess.StartInfo.UseShellExecute = false;
+				nginxStopSignalProcess.StartInfo.CreateNoWindow = true;
+				nginxStopSignalProcess.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+				nginxStopSignalProcess.StartInfo.FileName = Path.Combine(this.BinDirectory, "nginx.exe");
+				nginxStopSignalProcess.StartInfo.Arguments = "-s stop";
+				nginxStopSignalProcess.StartInfo.WorkingDirectory = this.BinDirectory;
+				nginxStopSignalProcess.Start();
+				nginxStopSignalProcess.WaitForExit();
 
-				try
+				if (!this.Process.HasExited)
 				{
-					this.Process.CloseMainWindow();
-				}
-				catch (Exception)
-				{
-					this.Process.Kill();
+					try
+					{
+						this.Process.CloseMainWindow();
+						this.Process.Kill();
+					}
+					catch (Exception)
+					{ }
 				}
 			}
 		}

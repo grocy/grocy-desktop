@@ -70,11 +70,10 @@ namespace GrocyDesktop.Management
 				try
 				{
 					this.Process.CloseMainWindow();
-				}
-				catch (Exception)
-				{
 					this.Process.Kill();
 				}
+				catch (Exception)
+				{ }
 			}
 		}
 
