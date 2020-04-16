@@ -23,12 +23,27 @@ namespace GrocyDesktop
 		private ChromiumWebBrowser GrocyBrowser;
 		private ChromiumWebBrowser BarcodeBuddyBrowser;
 		private NginxServerManager NginxServer;
-		private PhpManager PhpFastCgiServer;
-		private int PhpFastCgiServerPort;
 		private GrocyManager GrocyManager;
 		private BarcodeBuddyManager BarcodeBuddyManager;
 		private PhpManager BarcodeBuddyWebsocketServer;
 		private UserSettings UserSettings = UserSettings.Load();
+
+		private PhpManager PhpFastCgiServer1;
+		private int PhpFastCgiServerPort1;
+		private PhpManager PhpFastCgiServer2;
+		private int PhpFastCgiServerPort2;
+		private PhpManager PhpFastCgiServer3;
+		private int PhpFastCgiServerPort3;
+		private PhpManager PhpFastCgiServer4;
+		private int PhpFastCgiServerPort4;
+		private PhpManager PhpFastCgiServer5;
+		private int PhpFastCgiServerPort5;
+		private PhpManager PhpFastCgiServer6;
+		private int PhpFastCgiServerPort6;
+		private PhpManager PhpFastCgiServer7;
+		private int PhpFastCgiServerPort7;
+		private PhpManager PhpFastCgiServer8;
+		private int PhpFastCgiServerPort8;
 
 		private void SetupCef()
 		{
@@ -82,7 +97,14 @@ namespace GrocyDesktop
 
 			IOHelper.ReplaceInTextFile(nginxConfFilePath, "$GROCYPORT$", this.GrocyManager.Port.ToString());
 			IOHelper.ReplaceInTextFile(nginxConfFilePath, "$GROCYROOT$", Path.Combine(GrocyDesktopDependencyManager.GrocyExecutingPath, "public").Replace("\\", "/"));
-			IOHelper.ReplaceInTextFile(nginxConfFilePath, "$PHPFASTCGIPORT$", this.PhpFastCgiServerPort.ToString());
+			IOHelper.ReplaceInTextFile(nginxConfFilePath, "$PHPFASTCGIPORT1$", this.PhpFastCgiServerPort1.ToString());
+			IOHelper.ReplaceInTextFile(nginxConfFilePath, "$PHPFASTCGIPORT2$", this.PhpFastCgiServerPort2.ToString());
+			IOHelper.ReplaceInTextFile(nginxConfFilePath, "$PHPFASTCGIPORT3$", this.PhpFastCgiServerPort3.ToString());
+			IOHelper.ReplaceInTextFile(nginxConfFilePath, "$PHPFASTCGIPORT4$", this.PhpFastCgiServerPort4.ToString());
+			IOHelper.ReplaceInTextFile(nginxConfFilePath, "$PHPFASTCGIPORT5$", this.PhpFastCgiServerPort5.ToString());
+			IOHelper.ReplaceInTextFile(nginxConfFilePath, "$PHPFASTCGIPORT6$", this.PhpFastCgiServerPort6.ToString());
+			IOHelper.ReplaceInTextFile(nginxConfFilePath, "$PHPFASTCGIPORT7$", this.PhpFastCgiServerPort7.ToString());
+			IOHelper.ReplaceInTextFile(nginxConfFilePath, "$PHPFASTCGIPORT8$", this.PhpFastCgiServerPort8.ToString());
 
 			if (this.UserSettings.EnableExternalWebserverAccess)
 			{
@@ -106,7 +128,14 @@ namespace GrocyDesktop
 
 		private void SetupPhpFastCgiServer()
 		{
-			this.PhpFastCgiServerPort = NetHelper.GetRandomFreePort();
+			this.PhpFastCgiServerPort1 = NetHelper.GetRandomFreePort();
+			this.PhpFastCgiServerPort2 = NetHelper.GetRandomFreePort();
+			this.PhpFastCgiServerPort3 = NetHelper.GetRandomFreePort();
+			this.PhpFastCgiServerPort4 = NetHelper.GetRandomFreePort();
+			this.PhpFastCgiServerPort5 = NetHelper.GetRandomFreePort();
+			this.PhpFastCgiServerPort6 = NetHelper.GetRandomFreePort();
+			this.PhpFastCgiServerPort7 = NetHelper.GetRandomFreePort();
+			this.PhpFastCgiServerPort8 = NetHelper.GetRandomFreePort();
 
 			Dictionary<string, string> environmentVariables = null;
 			if (this.UserSettings.EnableBarcodeBuddyIntegration)
@@ -114,8 +143,22 @@ namespace GrocyDesktop
 				environmentVariables = this.BarcodeBuddyManager.GetEnvironmentVariables();
 			}
 
-			this.PhpFastCgiServer = new PhpManager(GrocyDesktopDependencyManager.PhpExecutingPath, GrocyDesktopDependencyManager.PhpExecutingPath, "-b 127.0.0.1:" + this.PhpFastCgiServerPort.ToString(), true, environmentVariables);
-			this.PhpFastCgiServer.Start();
+			this.PhpFastCgiServer1 = new PhpManager(GrocyDesktopDependencyManager.PhpExecutingPath, GrocyDesktopDependencyManager.PhpExecutingPath, "-b 127.0.0.1:" + this.PhpFastCgiServerPort1.ToString(), true, environmentVariables);
+			this.PhpFastCgiServer1.Start();
+			this.PhpFastCgiServer2 = new PhpManager(GrocyDesktopDependencyManager.PhpExecutingPath, GrocyDesktopDependencyManager.PhpExecutingPath, "-b 127.0.0.1:" + this.PhpFastCgiServerPort2.ToString(), true, environmentVariables);
+			this.PhpFastCgiServer2.Start();
+			this.PhpFastCgiServer3 = new PhpManager(GrocyDesktopDependencyManager.PhpExecutingPath, GrocyDesktopDependencyManager.PhpExecutingPath, "-b 127.0.0.1:" + this.PhpFastCgiServerPort3.ToString(), true, environmentVariables);
+			this.PhpFastCgiServer3.Start();
+			this.PhpFastCgiServer4 = new PhpManager(GrocyDesktopDependencyManager.PhpExecutingPath, GrocyDesktopDependencyManager.PhpExecutingPath, "-b 127.0.0.1:" + this.PhpFastCgiServerPort4.ToString(), true, environmentVariables);
+			this.PhpFastCgiServer4.Start();
+			this.PhpFastCgiServer5 = new PhpManager(GrocyDesktopDependencyManager.PhpExecutingPath, GrocyDesktopDependencyManager.PhpExecutingPath, "-b 127.0.0.1:" + this.PhpFastCgiServerPort5.ToString(), true, environmentVariables);
+			this.PhpFastCgiServer5.Start();
+			this.PhpFastCgiServer6 = new PhpManager(GrocyDesktopDependencyManager.PhpExecutingPath, GrocyDesktopDependencyManager.PhpExecutingPath, "-b 127.0.0.1:" + this.PhpFastCgiServerPort6.ToString(), true, environmentVariables);
+			this.PhpFastCgiServer6.Start();
+			this.PhpFastCgiServer7 = new PhpManager(GrocyDesktopDependencyManager.PhpExecutingPath, GrocyDesktopDependencyManager.PhpExecutingPath, "-b 127.0.0.1:" + this.PhpFastCgiServerPort7.ToString(), true, environmentVariables);
+			this.PhpFastCgiServer7.Start();
+			this.PhpFastCgiServer8 = new PhpManager(GrocyDesktopDependencyManager.PhpExecutingPath, GrocyDesktopDependencyManager.PhpExecutingPath, "-b 127.0.0.1:" + this.PhpFastCgiServerPort8.ToString(), true, environmentVariables);
+			this.PhpFastCgiServer8.Start();
 		}
 
 		private void SetupGrocy()
@@ -168,9 +211,37 @@ namespace GrocyDesktop
 
 		private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
 		{
-			if (this.PhpFastCgiServer != null)
+			if (this.PhpFastCgiServer1 != null)
 			{
-				this.PhpFastCgiServer.Stop();
+				this.PhpFastCgiServer1.Stop();
+			}
+			if (this.PhpFastCgiServer2 != null)
+			{
+				this.PhpFastCgiServer2.Stop();
+			}
+			if (this.PhpFastCgiServer3 != null)
+			{
+				this.PhpFastCgiServer3.Stop();
+			}
+			if (this.PhpFastCgiServer4 != null)
+			{
+				this.PhpFastCgiServer4.Stop();
+			}
+			if (this.PhpFastCgiServer5 != null)
+			{
+				this.PhpFastCgiServer5.Stop();
+			}
+			if (this.PhpFastCgiServer6 != null)
+			{
+				this.PhpFastCgiServer6.Stop();
+			}
+			if (this.PhpFastCgiServer7 != null)
+			{
+				this.PhpFastCgiServer7.Stop();
+			}
+			if (this.PhpFastCgiServer8 != null)
+			{
+				this.PhpFastCgiServer8.Stop();
 			}
 
 			if (this.NginxServer != null)
@@ -193,7 +264,14 @@ namespace GrocyDesktop
 
 		private void ToolStripMenuItem_ShowPhpRuntimeOutput_Click(object sender, EventArgs e)
 		{
-			new FrmShowText(this.ResourceManager.GetString("STRING_PHPOutput.Text"), this.PhpFastCgiServer.GetConsoleOutput()).Show(this);
+			new FrmShowText(this.ResourceManager.GetString("STRING_PHPOutput.Text") + " (FastCGI Server 1)", this.PhpFastCgiServer1.GetConsoleOutput()).Show(this);
+			new FrmShowText(this.ResourceManager.GetString("STRING_PHPOutput.Text") + " (FastCGI Server 2)", this.PhpFastCgiServer2.GetConsoleOutput()).Show(this);
+			new FrmShowText(this.ResourceManager.GetString("STRING_PHPOutput.Text") + " (FastCGI Server 3)", this.PhpFastCgiServer3.GetConsoleOutput()).Show(this);
+			new FrmShowText(this.ResourceManager.GetString("STRING_PHPOutput.Text") + " (FastCGI Server 4)", this.PhpFastCgiServer4.GetConsoleOutput()).Show(this);
+			new FrmShowText(this.ResourceManager.GetString("STRING_PHPOutput.Text") + " (FastCGI Server 5)", this.PhpFastCgiServer5.GetConsoleOutput()).Show(this);
+			new FrmShowText(this.ResourceManager.GetString("STRING_PHPOutput.Text") + " (FastCGI Server 6)", this.PhpFastCgiServer6.GetConsoleOutput()).Show(this);
+			new FrmShowText(this.ResourceManager.GetString("STRING_PHPOutput.Text") + " (FastCGI Server 7)", this.PhpFastCgiServer7.GetConsoleOutput()).Show(this);
+			new FrmShowText(this.ResourceManager.GetString("STRING_PHPOutput.Text") + " (FastCGI Server 8)", this.PhpFastCgiServer8.GetConsoleOutput()).Show(this);
 			if (this.UserSettings.EnableBarcodeBuddyIntegration)
 			{
 				new FrmShowText("Barcode Buddy " + this.ResourceManager.GetString("STRING_PHPOutput.Text") + " (Websocket Server)", this.BarcodeBuddyWebsocketServer.GetConsoleOutput()).Show(this);
