@@ -1,4 +1,6 @@
-﻿using System;
+﻿using GrocyDesktop.Helpers;
+using Newtonsoft.Json.Linq;
+using System;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -6,26 +8,26 @@ using System.Resources;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GrocyDesktop
+namespace GrocyDesktop.Management
 {
 	public class GrocyDesktopDependencyManager
 	{
+		private GrocyDesktopDependencyManager()
+		{ }
+
 		private const string LATEST_GROCY_RELEASE_URL = "https://releases.grocy.info/latest";
 
 		private static string LATEST_BARCODE_BUDDY_RELEASE_URL
 		{
 			get
 			{
-				// master branch for now (testing)
-				return "https://github.com/Forceu/barcodebuddy/archive/master.zip";
-
-				//using (WebClient wc = new WebClient())
-				//{
-				//	wc.Headers.Add("User-Agent", "grocy-desktop/" + Program.RunningVersion);
-				//	string latestReleaseJson = wc.DownloadString("https://api.github.com/repos/Forceu/barcodebuddy/releases/latest");
-				//	JObject latestRelease = JObject.Parse(latestReleaseJson);
-				//	return "https://github.com/Forceu/barcodebuddy/archive/" + latestRelease["tag_name"] + ".zip";
-				//}
+				using (WebClient wc = new WebClient())
+				{
+					wc.Headers.Add("User-Agent", "grocy-desktop/" + Program.RunningVersion);
+					string latestReleaseJson = wc.DownloadString("https://api.github.com/repos/Forceu/barcodebuddy/releases/latest");
+					JObject latestRelease = JObject.Parse(latestReleaseJson);
+					return "https://github.com/Forceu/barcodebuddy/archive/" + latestRelease["tag_name"] + ".zip";
+				}
 			}
 		}
 
@@ -58,7 +60,7 @@ namespace GrocyDesktop
 				{
 					waitWindow.SetStatus(ResourceManager.GetString("STRING_PreparingWebbrowser.Text"));
 				}
-				await Task.Run(() => Extensions.ExtractZipToDirectory(cefZipPathx86, cefPathx86, true));
+				await Task.Run(() => IOHelper.ExtractZipToDirectory(cefZipPathx86, cefPathx86, true));
 			}
 
 			// nginx
@@ -69,7 +71,7 @@ namespace GrocyDesktop
 				{
 					waitWindow.SetStatus(ResourceManager.GetString("STRING_PreparingWebserver.Text"));
 				}
-				await Task.Run(() => Extensions.ExtractZipToDirectory(nginxZipPath, NginxExecutingPath, true));
+				await Task.Run(() => IOHelper.ExtractZipToDirectory(nginxZipPath, NginxExecutingPath, true));
 			}
 
 			// PHP
@@ -80,8 +82,8 @@ namespace GrocyDesktop
 				{
 					waitWindow.SetStatus(ResourceManager.GetString("STRING_PreparingPhpRuntime.Text"));
 				}
-				await Task.Run(() => Extensions.ExtractZipToDirectory(phpZipPath, PhpExecutingPath, true));
-				await Task.Run(() => Extensions.ExtractZipToDirectory(vc2019x86ZipPath, PhpExecutingPath, true));
+				await Task.Run(() => IOHelper.ExtractZipToDirectory(phpZipPath, PhpExecutingPath, true));
+				await Task.Run(() => IOHelper.ExtractZipToDirectory(vc2019x86ZipPath, PhpExecutingPath, true));
 			}
 
 			// grocy
@@ -92,7 +94,7 @@ namespace GrocyDesktop
 				{
 					waitWindow.SetStatus(ResourceManager.GetString("STRING_PreparingGrocy.Text"));
 				}
-				await Task.Run(() => Extensions.ExtractZipToDirectory(grocyZipPath, GrocyExecutingPath, true));
+				await Task.Run(() => IOHelper.ExtractZipToDirectory(grocyZipPath, GrocyExecutingPath, true));
 			}
 
 			// Barcode Buddy
@@ -105,7 +107,7 @@ namespace GrocyDesktop
 					{
 						waitWindow.SetStatus(ResourceManager.GetString("STRING_PreparingBarcodeBuddy.Text"));
 					}
-					await Task.Run(() => Extensions.ExtractZipToDirectory(barcodeBuddyZipPath, BarcodeBuddyExecutingPath + "-tmp", true));
+					await Task.Run(() => IOHelper.ExtractZipToDirectory(barcodeBuddyZipPath, BarcodeBuddyExecutingPath + "-tmp", true));
 					Directory.Move(Directory.GetDirectories(BarcodeBuddyExecutingPath + "-tmp").First(), BarcodeBuddyExecutingPath);
 					Directory.Delete(BarcodeBuddyExecutingPath + "-tmp", true);
 				}
@@ -154,7 +156,7 @@ namespace GrocyDesktop
 			{
 				waitWindow.SetStatus(ResourceManager.GetString("STRING_PreparingGrocy.Text"));
 			}
-			await Task.Run(() => Extensions.ExtractZipToDirectory(grocyZipPath, GrocyExecutingPath, true));
+			await Task.Run(() => IOHelper.ExtractZipToDirectory(grocyZipPath, GrocyExecutingPath, true));
 			File.Delete(grocyZipPath);
 
 			if (waitWindow != null)
@@ -191,7 +193,7 @@ namespace GrocyDesktop
 			{
 				waitWindow.SetStatus(ResourceManager.GetString("STRING_PreparingBarcodeBuddy.Text"));
 			}
-			await Task.Run(() => Extensions.ExtractZipToDirectory(barcodeBuddyZipPath, BarcodeBuddyExecutingPath + "-tmp", true));
+			await Task.Run(() => IOHelper.ExtractZipToDirectory(barcodeBuddyZipPath, BarcodeBuddyExecutingPath + "-tmp", true));
 			Directory.Move(Directory.GetDirectories(BarcodeBuddyExecutingPath + "-tmp").First(), BarcodeBuddyExecutingPath);
 			Directory.Delete(BarcodeBuddyExecutingPath + "-tmp", true);
 			File.Delete(barcodeBuddyZipPath);

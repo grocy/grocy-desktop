@@ -29,28 +29,28 @@
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmShowText));
-			this.textBox_Text = new System.Windows.Forms.TextBox();
+			this.TextBox_Text = new System.Windows.Forms.TextBox();
 			this.SuspendLayout();
 			// 
-			// textBox_Text
+			// TextBox_Text
 			// 
-			this.textBox_Text.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+			this.TextBox_Text.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.textBox_Text.Location = new System.Drawing.Point(12, 12);
-			this.textBox_Text.Multiline = true;
-			this.textBox_Text.Name = "textBox_Text";
-			this.textBox_Text.ReadOnly = true;
-			this.textBox_Text.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.textBox_Text.Size = new System.Drawing.Size(776, 426);
-			this.textBox_Text.TabIndex = 0;
+			this.TextBox_Text.Location = new System.Drawing.Point(12, 12);
+			this.TextBox_Text.Multiline = true;
+			this.TextBox_Text.Name = "TextBox_Text";
+			this.TextBox_Text.ReadOnly = true;
+			this.TextBox_Text.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+			this.TextBox_Text.Size = new System.Drawing.Size(776, 426);
+			this.TextBox_Text.TabIndex = 0;
 			// 
 			// FrmShowText
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
-			this.Controls.Add(this.textBox_Text);
+			this.Controls.Add(this.TextBox_Text);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "FrmShowText";
@@ -64,6 +64,6 @@
 
 		#endregion
 
-		private System.Windows.Forms.TextBox textBox_Text;
+		private System.Windows.Forms.TextBox TextBox_Text;
 	}
 }

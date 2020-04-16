@@ -252,7 +252,7 @@
 			// 
 			this.ToolStripMenuItem_ShowPhpRuntimeOutput.Name = "ToolStripMenuItem_ShowPhpRuntimeOutput";
 			resources.ApplyResources(this.ToolStripMenuItem_ShowPhpRuntimeOutput, "ToolStripMenuItem_ShowPhpRuntimeOutput");
-			this.ToolStripMenuItem_ShowPhpRuntimeOutput.Click += new System.EventHandler(this.ToolStripMenuItem_ShowPhpServerOutput_Click);
+			this.ToolStripMenuItem_ShowPhpRuntimeOutput.Click += new System.EventHandler(this.ToolStripMenuItem_ShowPhpRuntimeOutput_Click);
 			// 
 			// ToolStripMenuItem_ShowBrowserDeveloperTools
 			// 

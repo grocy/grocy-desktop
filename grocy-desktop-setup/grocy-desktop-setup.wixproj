@@ -50,6 +50,7 @@
     copy "$(SolutionDir)embedded_dependencies\grocy.zip" "$(SolutionDir).deploy\appx_content\grocy.zip"
     copy "$(SolutionDir)embedded_dependencies\barcodebuddy.zip" "$(SolutionDir).deploy\appx_content\barcodebuddy.zip"
     copy "$(SolutionDir)embedded_dependencies\php.zip" "$(SolutionDir).deploy\appx_content\php.zip"
+	    copy "$(SolutionDir)embedded_dependencies\nginx.zip" "$(SolutionDir).deploy\appx_content\nginx.zip"
     copy "$(SolutionDir)embedded_dependencies\vc2019x86.zip" "$(SolutionDir).deploy\appx_content\vc2019x86.zip"
     copy "$(SolutionDir)grocy-desktop\bin\Release\grocy-desktop.exe" "$(SolutionDir).deploy\appx_content\grocy-desktop.exe"
     copy "$(SolutionDir)grocy-desktop\bin\Release\grocy-desktop.exe.config" "$(SolutionDir).deploy\appx_content\grocy-desktop.exe.config"

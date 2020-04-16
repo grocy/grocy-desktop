@@ -11,7 +11,7 @@ namespace GrocyDesktop
 
 		public void SetStatus(string status)
 		{
-			this.label_Status.Text = status;
+			this.Label_Status.Text = status;
 		}
 	}
 }

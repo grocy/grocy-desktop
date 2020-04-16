@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 
-namespace GrocyDesktop
+namespace GrocyDesktop.Management
 {
 	public class NginxServerManager
 	{
@@ -57,7 +57,15 @@ namespace GrocyDesktop
 			if (this.Process != null && !this.Process.HasExited)
 			{
 				Process.Start(Path.Combine(this.BinDirectory, "nginx.exe"), "-s stop");
-				this.Process.Kill();
+
+				try
+				{
+					this.Process.CloseMainWindow();
+				}
+				catch (Exception)
+				{
+					this.Process.Kill();
+				}
 			}
 		}
 

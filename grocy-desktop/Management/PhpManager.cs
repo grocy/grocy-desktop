@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 
-namespace GrocyDesktop
+namespace GrocyDesktop.Management
 {
-	public class PhpProcessManager
+	public class PhpManager
 	{
-		public PhpProcessManager(string binDirectory, string workingDirectory, string arguments, bool useFastCgi, Dictionary<string, string> environmentVariables = null)
+		public PhpManager(string binDirectory, string workingDirectory, string arguments, bool useFastCgi, Dictionary<string, string> environmentVariables = null)
 		{
 			this.BinDirectory = binDirectory;
 			this.WorkingDirectory = workingDirectory;
@@ -67,8 +67,14 @@ namespace GrocyDesktop
 		{
 			if (this.Process != null && !this.Process.HasExited)
 			{
-				this.Process.StandardInput.Close();
-				this.Process.Kill();
+				try
+				{
+					this.Process.CloseMainWindow();
+				}
+				catch (Exception)
+				{
+					this.Process.Kill();
+				}
 			}
 		}
 

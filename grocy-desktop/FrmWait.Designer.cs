@@ -28,35 +28,35 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.progressBar_Status = new System.Windows.Forms.ProgressBar();
-			this.label_Status = new System.Windows.Forms.Label();
+			this.ProgressBar_Status = new System.Windows.Forms.ProgressBar();
+			this.Label_Status = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
-			// progressBar_Status
+			// ProgressBar_Status
 			// 
-			this.progressBar_Status.Location = new System.Drawing.Point(15, 28);
-			this.progressBar_Status.Name = "progressBar_Status";
-			this.progressBar_Status.Size = new System.Drawing.Size(381, 23);
-			this.progressBar_Status.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
-			this.progressBar_Status.TabIndex = 0;
+			this.ProgressBar_Status.Location = new System.Drawing.Point(15, 28);
+			this.ProgressBar_Status.Name = "ProgressBar_Status";
+			this.ProgressBar_Status.Size = new System.Drawing.Size(381, 23);
+			this.ProgressBar_Status.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+			this.ProgressBar_Status.TabIndex = 0;
 			// 
-			// label_Status
+			// Label_Status
 			// 
-			this.label_Status.AutoSize = true;
-			this.label_Status.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label_Status.Location = new System.Drawing.Point(12, 9);
-			this.label_Status.Name = "label_Status";
-			this.label_Status.Size = new System.Drawing.Size(51, 16);
-			this.label_Status.TabIndex = 1;
-			this.label_Status.Text = "label1";
+			this.Label_Status.AutoSize = true;
+			this.Label_Status.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Label_Status.Location = new System.Drawing.Point(12, 9);
+			this.Label_Status.Name = "Label_Status";
+			this.Label_Status.Size = new System.Drawing.Size(98, 16);
+			this.Label_Status.TabIndex = 1;
+			this.Label_Status.Text = "Label_Status";
 			// 
 			// FrmWait
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(410, 67);
-			this.Controls.Add(this.label_Status);
-			this.Controls.Add(this.progressBar_Status);
+			this.Controls.Add(this.Label_Status);
+			this.Controls.Add(this.ProgressBar_Status);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "FrmWait";
 			this.ShowInTaskbar = false;
@@ -69,7 +69,7 @@
 
 		#endregion
 
-		private System.Windows.Forms.ProgressBar progressBar_Status;
-		private System.Windows.Forms.Label label_Status;
+		private System.Windows.Forms.ProgressBar ProgressBar_Status;
+		private System.Windows.Forms.Label Label_Status;
 	}
 }

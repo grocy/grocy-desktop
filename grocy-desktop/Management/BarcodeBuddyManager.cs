@@ -1,29 +1,30 @@
+using GrocyDesktop.Helpers;
 using System.Collections.Generic;
 using System.IO;
 
-namespace GrocyDesktop
+namespace GrocyDesktop.Management
 {
-	public class BarcodeBuddyEnvironmentManager
+	public class BarcodeBuddyManager
 	{
-		public BarcodeBuddyEnvironmentManager(string basePath, string barcodeBuddyDataPath, int desiredPort = -1)
+		public BarcodeBuddyManager(string basePath, string dataPath, int desiredPort = -1)
 		{
 			this.BasePath = basePath;
-			this.DataPath = barcodeBuddyDataPath;
+			this.DataPath = dataPath;
 			this.EnvironmentVariables = new Dictionary<string, string>();
 
 			if (desiredPort == -1)
 			{
-				this.Port = Extensions.GetRandomFreePort();
+				this.Port = NetHelper.GetRandomFreePort();
 			}
 			else
 			{
-				if (Extensions.IsPortFree(desiredPort))
+				if (NetHelper.IsPortFree(desiredPort))
 				{
 					this.Port = desiredPort;
 				}
 				else
 				{
-					this.Port = Extensions.GetRandomFreePort();
+					this.Port = NetHelper.GetRandomFreePort();
 				}
 			}
 		}
@@ -37,7 +38,7 @@ namespace GrocyDesktop
 		{
 			get
 			{
-				return "http://" + Extensions.GetNetworkIp() + ":" + this.Port.ToString();
+				return "http://" + NetHelper.GetNetworkIp() + ":" + this.Port.ToString();
 			}
 		}
 
@@ -45,7 +46,7 @@ namespace GrocyDesktop
 		{
 			get
 			{
-				return "http://" + Extensions.GetHostname() + ":" + this.Port.ToString();
+				return "http://" + NetHelper.GetHostname() + ":" + this.Port.ToString();
 			}
 		}
 

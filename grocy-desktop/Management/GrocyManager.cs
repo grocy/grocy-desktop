@@ -1,29 +1,30 @@
-﻿using System.Collections.Generic;
+﻿using GrocyDesktop.Helpers;
+using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 
-namespace GrocyDesktop
+namespace GrocyDesktop.Management
 {
-	public class GrocyEnvironmentManager
+	public class GrocyManager
 	{
-		public GrocyEnvironmentManager(string grocyBasePath, string grocyDataPath, int desiredPort = -1)
+		public GrocyManager(string basePath, string dataPath, int desiredPort = -1)
 		{
-			this.BasePath = grocyBasePath;
-			this.DataPath = grocyDataPath;
+			this.BasePath = basePath;
+			this.DataPath = dataPath;
 
 			if (desiredPort == -1)
 			{
-				this.Port = Extensions.GetRandomFreePort();
+				this.Port = NetHelper.GetRandomFreePort();
 			}
 			else
 			{
-				if (Extensions.IsPortFree(desiredPort))
+				if (NetHelper.IsPortFree(desiredPort))
 				{
 					this.Port = desiredPort;
 				}
 				else
 				{
-					this.Port = Extensions.GetRandomFreePort();
+					this.Port = NetHelper.GetRandomFreePort();
 				}
 			}
 		}
@@ -36,7 +37,7 @@ namespace GrocyDesktop
 		{
 			get
 			{
-				return "http://" + Extensions.GetNetworkIp() + ":" + this.Port.ToString();
+				return "http://" + NetHelper.GetNetworkIp() + ":" + this.Port.ToString();
 			}
 		}
 
@@ -44,7 +45,7 @@ namespace GrocyDesktop
 		{
 			get
 			{
-				return "http://" + Extensions.GetHostname() + ":" + this.Port.ToString();
+				return "http://" + NetHelper.GetHostname() + ":" + this.Port.ToString();
 			}
 		}
 
@@ -63,7 +64,7 @@ namespace GrocyDesktop
 			this.SetSetting("BASE_URL", "/");
 			this.SetSetting("CURRENCY", new RegionInfo(CultureInfo.CurrentCulture.LCID).ISOCurrencySymbol);
 
-			Extensions.CopyFolder(Path.Combine(this.BasePath, "data"), this.DataPath);
+			IOHelper.CopyFolder(Path.Combine(this.BasePath, "data"), this.DataPath);
 			File.Copy(Path.Combine(this.BasePath, "config-dist.php"), Path.Combine(this.DataPath, "config.php"), true);
 
 			foreach (string item in Directory.GetFiles(Path.Combine(this.DataPath, "viewcache")))

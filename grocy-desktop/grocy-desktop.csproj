@@ -66,8 +66,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DpiAwarenessHelper.cs" />
-    <Compile Include="Extensions.cs" />
+    <Compile Include="Helpers\DpiAwarenessHelper.cs" />
+    <Compile Include="Helpers\ApplicationHelper.cs" />
+    <Compile Include="Helpers\NetHelper.cs" />
+    <Compile Include="Helpers\IOHelper.cs" />
     <Compile Include="FrmAbout.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,15 +100,15 @@
     <Compile Include="FrmWait.Designer.cs">
       <DependentUpon>FrmWait.cs</DependentUpon>
     </Compile>
-    <Compile Include="GrocyDesktopDependencyManager.cs" />
-    <Compile Include="BarcodeBuddyEnvironmentManager.cs" />
-    <Compile Include="GrocyEnvironmentManager.cs" />
-    <Compile Include="PhpProcessManager.cs" />
-    <Compile Include="NginxServerManager.cs" />
+    <Compile Include="Management\GrocyDesktopDependencyManager.cs" />
+    <Compile Include="Management\BarcodeBuddyManager.cs" />
+    <Compile Include="Management\GrocyManager.cs" />
+    <Compile Include="Management\PhpManager.cs" />
+    <Compile Include="Management\NginxServerManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserSettings.cs" />
-    <Compile Include="UwpHelper.cs" />
+    <Compile Include="Helpers\UwpHelper.cs" />
     <EmbeddedResource Include="FrmAbout.resx">
       <DependentUpon>FrmAbout.cs</DependentUpon>
     </EmbeddedResource>
