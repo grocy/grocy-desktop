@@ -166,6 +166,7 @@ namespace GrocyDesktop
 				environmentVariables = this.BarcodeBuddyManager.GetEnvironmentVariables();
 			}
 
+			environmentVariables.Add("PHP_FCGI_MAX_REQUESTS", "0");
 			this.PhpFastCgiServer1 = new PhpManager(GrocyDesktopDependencyManager.PhpExecutingPath, GrocyDesktopDependencyManager.PhpExecutingPath, "-b 127.0.0.1:" + this.PhpFastCgiServerPort1.ToString(), true, environmentVariables);
 			this.PhpFastCgiServer1.Start();
 			this.PhpFastCgiServer2 = new PhpManager(GrocyDesktopDependencyManager.PhpExecutingPath, GrocyDesktopDependencyManager.PhpExecutingPath, "-b 127.0.0.1:" + this.PhpFastCgiServerPort2.ToString(), true, environmentVariables);
