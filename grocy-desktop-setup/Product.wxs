@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-	<Product Id="*" Name="grocy-desktop" Language="1033" Version="1.7.0.0" Manufacturer="Bernd Bestel" UpgradeCode="78f7234c-0724-4b82-8ff7-4ca0e8761871">
+	<Product Id="*" Name="grocy-desktop" Language="1033" Version="1.8.0.0" Manufacturer="Bernd Bestel" UpgradeCode="78f7234c-0724-4b82-8ff7-4ca0e8761871">
 		<Package InstallerVersion="200" Compressed="yes" InstallScope="perUser" Description="ERP beyond your fridge" Manufacturer="Bernd Bestel" />
 
 		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
@@ -12,6 +12,10 @@
 		<Feature Id="ProductFeature" Title="grocy-desktop Setup" Level="1">
 			<ComponentGroupRef Id="ProductComponents" />
 			<ComponentRef Id="RESOURCES_DE" />
+			<ComponentRef Id="RESOURCES_EL" />
+			<ComponentRef Id="RESOURCES_HE_IL" />
+			<ComponentRef Id="RESOURCES_ID" />
+			<ComponentRef Id="RESOURCES_ID_ID" />
 			<ComponentRef Id="ApplicationShortcut" />
 			<ComponentRef Id="ApplicationShortcutDesktop" />
 		</Feature>
@@ -47,6 +51,10 @@
 			<Directory Id="ProgramFilesFolder">
 				<Directory Id="INSTALLFOLDER" Name="grocy-desktop">
 					<Directory Id="RESOURCES_DE" Name="de" />
+					<Directory Id="RESOURCES_EL" Name="el" />
+					<Directory Id="RESOURCES_HE_IL" Name="he-IL" />
+					<Directory Id="RESOURCES_ID" Name="id" />
+					<Directory Id="RESOURCES_ID_ID" Name="id-ID" />
 				</Directory>
 			</Directory>
 			<Directory Id="ProgramMenuFolder" />
@@ -88,6 +96,18 @@
 		</ComponentGroup>
 		<Component Id="RESOURCES_DE" Directory="RESOURCES_DE">
 			<File Id="LocalizationResourcesDe" Source="$(var.SolutionDir)grocy-desktop\bin\$(var.Configuration)\de\grocy-desktop.resources.dll" KeyPath="yes" Checksum="yes"></File>
+		</Component>
+		<Component Id="RESOURCES_EL" Directory="RESOURCES_EL">
+			<File Id="LocalizationResourcesEl" Source="$(var.SolutionDir)grocy-desktop\bin\$(var.Configuration)\el\grocy-desktop.resources.dll" KeyPath="yes" Checksum="yes"></File>
+		</Component>
+		<Component Id="RESOURCES_HE_IL" Directory="RESOURCES_HE_IL">
+			<File Id="LocalizationResourcesHeIl" Source="$(var.SolutionDir)grocy-desktop\bin\$(var.Configuration)\he-IL\grocy-desktop.resources.dll" KeyPath="yes" Checksum="yes"></File>
+		</Component>
+		<Component Id="RESOURCES_ID" Directory="RESOURCES_ID">
+			<File Id="LocalizationResourcesId" Source="$(var.SolutionDir)grocy-desktop\bin\$(var.Configuration)\id\grocy-desktop.resources.dll" KeyPath="yes" Checksum="yes"></File>
+		</Component>
+		<Component Id="RESOURCES_ID_ID" Directory="RESOURCES_ID_ID">
+			<File Id="LocalizationResourcesIdId" Source="$(var.SolutionDir)grocy-desktop\bin\$(var.Configuration)\id-ID\grocy-desktop.resources.dll" KeyPath="yes" Checksum="yes"></File>
 		</Component>
 	</Fragment>
 </Wix>
