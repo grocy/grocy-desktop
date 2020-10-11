@@ -154,45 +154,45 @@
   <data name="ToolStripMenuItem_File.Text" xml:space="preserve">
     <value>File</value>
   </data>
-  <data name="ToolStripMenuItem_grocy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 20</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ToolStripMenuItem_ZoomIn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+Oemplus</value>
   </data>
-  <data name="ToolStripMenuItem_grocy.Text" xml:space="preserve">
-    <value>grocy</value>
+  <data name="ToolStripMenuItem_ZoomIn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>222, 22</value>
   </data>
-  <data name="ToolStripMenuItem_BarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 20</value>
+  <data name="ToolStripMenuItem_ZoomIn.Text" xml:space="preserve">
+    <value>Zoom In</value>
   </data>
-  <data name="ToolStripMenuItem_BarcodeBuddy.Text" xml:space="preserve">
-    <value>Barcode Buddy</value>
+  <data name="ToolStripMenuItem_ZoomOut.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+OemMinus</value>
   </data>
-  <data name="ToolStripMenuItem_Help.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="ToolStripMenuItem_ZoomOut.Size" type="System.Drawing.Size, System.Drawing">
+    <value>222, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_ZoomOut.Text" xml:space="preserve">
+    <value>Zoom Out</value>
+  </data>
+  <data name="ToolStripMenuItem_ResetZoom.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+0</value>
+  </data>
+  <data name="ToolStripMenuItem_ResetZoom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>222, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_ResetZoom.Text" xml:space="preserve">
+    <value>Reset Zoom</value>
+  </data>
+  <data name="ToolStripMenuItem_BrowserZoom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_BrowserZoom.Text" xml:space="preserve">
+    <value>Browser Zoom</value>
+  </data>
+  <data name="ToolStripMenuItem_View.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 20</value>
   </data>
-  <data name="ToolStripMenuItem_Help.Text" xml:space="preserve">
-    <value>Help</value>
-  </data>
-  <data name="MenuStrip_Main.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="MenuStrip_Main.Size" type="System.Drawing.Size, System.Drawing">
-    <value>600, 24</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="MenuStrip_Main.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;MenuStrip_Main.Name" xml:space="preserve">
-    <value>MenuStrip_Main</value>
-  </data>
-  <data name="&gt;&gt;MenuStrip_Main.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MenuStrip_Main.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;MenuStrip_Main.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="ToolStripMenuItem_View.Text" xml:space="preserve">
+    <value>View</value>
   </data>
   <data name="ToolStripMenuItem_UpdateGrocy.Size" type="System.Drawing.Size, System.Drawing">
     <value>243, 22</value>
@@ -230,6 +230,12 @@
   <data name="ToolStripMenuItem_RecreateGrocyDatabase.Text" xml:space="preserve">
     <value>Recreate database</value>
   </data>
+  <data name="ToolStripMenuItem_grocy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 20</value>
+  </data>
+  <data name="ToolStripMenuItem_grocy.Text" xml:space="preserve">
+    <value>grocy</value>
+  </data>
   <data name="ToolStripMenuItem_UpdateBarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
     <value>243, 22</value>
   </data>
@@ -257,11 +263,11 @@
   <data name="ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy.Text" xml:space="preserve">
     <value>Configure/change data location</value>
   </data>
-  <data name="ToolStripMenuItem_Debug.Size" type="System.Drawing.Size, System.Drawing">
-    <value>187, 22</value>
+  <data name="ToolStripMenuItem_BarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 20</value>
   </data>
-  <data name="ToolStripMenuItem_Debug.Text" xml:space="preserve">
-    <value>Debug</value>
+  <data name="ToolStripMenuItem_BarcodeBuddy.Text" xml:space="preserve">
+    <value>Barcode Buddy</value>
   </data>
   <data name="ToolStripMenuItem_ShowNginxOutput.Size" type="System.Drawing.Size, System.Drawing">
     <value>232, 22</value>
@@ -281,6 +287,12 @@
   <data name="ToolStripMenuItem_ShowBrowserDeveloperTools.Text" xml:space="preserve">
     <value>Show browser developer tools</value>
   </data>
+  <data name="ToolStripMenuItem_Debug.Size" type="System.Drawing.Size, System.Drawing">
+    <value>187, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_Debug.Text" xml:space="preserve">
+    <value>Debug</value>
+  </data>
   <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 6</value>
   </data>
@@ -290,61 +302,43 @@
   <data name="ToolStripMenuItem_About.Text" xml:space="preserve">
     <value>About grocy-desktop</value>
   </data>
-  <metadata name="StatusStrip_Main.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>437, 17</value>
-  </metadata>
-  <data name="&gt;&gt;StatusStrip_Main.Name" xml:space="preserve">
-    <value>StatusStrip_Main</value>
+  <data name="ToolStripMenuItem_Help.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 20</value>
   </data>
-  <data name="&gt;&gt;StatusStrip_Main.Type" xml:space="preserve">
-    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="ToolStripMenuItem_Help.Text" xml:space="preserve">
+    <value>Help</value>
   </data>
-  <data name="&gt;&gt;StatusStrip_Main.Parent" xml:space="preserve">
-    <value>Panel_Main</value>
+  <data name="MenuStrip_Main.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
-  <data name="&gt;&gt;StatusStrip_Main.ZOrder" xml:space="preserve">
+  <data name="MenuStrip_Main.Size" type="System.Drawing.Size, System.Drawing">
+    <value>600, 24</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="MenuStrip_Main.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;TabControl_Main.Name" xml:space="preserve">
-    <value>TabControl_Main</value>
+  <data name="&gt;&gt;MenuStrip_Main.Name" xml:space="preserve">
+    <value>MenuStrip_Main</value>
   </data>
-  <data name="&gt;&gt;TabControl_Main.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;MenuStrip_Main.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;TabControl_Main.Parent" xml:space="preserve">
-    <value>Panel_Main</value>
-  </data>
-  <data name="&gt;&gt;TabControl_Main.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Panel_Main.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="Panel_Main.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 24</value>
-  </data>
-  <data name="Panel_Main.Size" type="System.Drawing.Size, System.Drawing">
-    <value>600, 342</value>
-  </data>
-  <data name="Panel_Main.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;Panel_Main.Name" xml:space="preserve">
-    <value>Panel_Main</value>
-  </data>
-  <data name="&gt;&gt;Panel_Main.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Panel_Main.Parent" xml:space="preserve">
+  <data name="&gt;&gt;MenuStrip_Main.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;Panel_Main.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;MenuStrip_Main.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <metadata name="StatusStrip_Main.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>437, 17</value>
   </metadata>
+  <data name="ToolStripStatusLabel_ExternalAccessInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>217, 17</value>
+  </data>
+  <data name="ToolStripStatusLabel_ExternalAccessInfo.Text" xml:space="preserve">
+    <value>ToolStripStatusLabel_ExternalAccessInfo</value>
+  </data>
   <data name="StatusStrip_Main.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 320</value>
   </data>
@@ -368,63 +362,6 @@
   </data>
   <data name="&gt;&gt;StatusStrip_Main.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="ToolStripStatusLabel_ExternalAccessInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>217, 17</value>
-  </data>
-  <data name="ToolStripStatusLabel_ExternalAccessInfo.Text" xml:space="preserve">
-    <value>ToolStripStatusLabel_ExternalAccessInfo</value>
-  </data>
-  <data name="&gt;&gt;TabPage_Grocy.Name" xml:space="preserve">
-    <value>TabPage_Grocy</value>
-  </data>
-  <data name="&gt;&gt;TabPage_Grocy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TabPage_Grocy.Parent" xml:space="preserve">
-    <value>TabControl_Main</value>
-  </data>
-  <data name="&gt;&gt;TabPage_Grocy.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;TabPage_BarcodeBuddy.Name" xml:space="preserve">
-    <value>TabPage_BarcodeBuddy</value>
-  </data>
-  <data name="&gt;&gt;TabPage_BarcodeBuddy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TabPage_BarcodeBuddy.Parent" xml:space="preserve">
-    <value>TabControl_Main</value>
-  </data>
-  <data name="&gt;&gt;TabPage_BarcodeBuddy.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="TabControl_Main.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="TabControl_Main.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="TabControl_Main.Padding" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="TabControl_Main.Size" type="System.Drawing.Size, System.Drawing">
-    <value>600, 342</value>
-  </data>
-  <data name="TabControl_Main.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;TabControl_Main.Name" xml:space="preserve">
-    <value>TabControl_Main</value>
-  </data>
-  <data name="&gt;&gt;TabControl_Main.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TabControl_Main.Parent" xml:space="preserve">
-    <value>Panel_Main</value>
-  </data>
-  <data name="&gt;&gt;TabControl_Main.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="TabPage_Grocy.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -474,18 +411,60 @@
   <data name="&gt;&gt;TabPage_BarcodeBuddy.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="TabControl_Main.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="TabControl_Main.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="TabControl_Main.Padding" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="TabControl_Main.Size" type="System.Drawing.Size, System.Drawing">
+    <value>600, 342</value>
+  </data>
+  <data name="TabControl_Main.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;TabControl_Main.Name" xml:space="preserve">
+    <value>TabControl_Main</value>
+  </data>
+  <data name="&gt;&gt;TabControl_Main.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabControl_Main.Parent" xml:space="preserve">
+    <value>Panel_Main</value>
+  </data>
+  <data name="&gt;&gt;TabControl_Main.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Panel_Main.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Panel_Main.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 24</value>
+  </data>
+  <data name="Panel_Main.Size" type="System.Drawing.Size, System.Drawing">
+    <value>600, 342</value>
+  </data>
+  <data name="Panel_Main.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;Panel_Main.Name" xml:space="preserve">
+    <value>Panel_Main</value>
+  </data>
+  <data name="&gt;&gt;Panel_Main.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Panel_Main.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Panel_Main.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <metadata name="ContextMenuStrip_DummyForResxStrings.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>158, 17</value>
   </metadata>
-  <data name="ContextMenuStrip_DummyForResxStrings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>593, 466</value>
-  </data>
-  <data name="&gt;&gt;ContextMenuStrip_DummyForResxStrings.Name" xml:space="preserve">
-    <value>ContextMenuStrip_DummyForResxStrings</value>
-  </data>
-  <data name="&gt;&gt;ContextMenuStrip_DummyForResxStrings.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="STRING_PHPOutput.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
@@ -611,6 +590,15 @@
   </data>
   <data name="STRING_NginxOutput.Text" xml:space="preserve">
     <value>nginx output</value>
+  </data>
+  <data name="ContextMenuStrip_DummyForResxStrings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>593, 466</value>
+  </data>
+  <data name="&gt;&gt;ContextMenuStrip_DummyForResxStrings.Name" xml:space="preserve">
+    <value>ContextMenuStrip_DummyForResxStrings</value>
+  </data>
+  <data name="&gt;&gt;ContextMenuStrip_DummyForResxStrings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -909,6 +897,12 @@
   <data name="&gt;&gt;ToolStripMenuItem_EnableExternalAccess.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;ToolStripMenuItem_EnableUserDataSync.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_EnableUserDataSync</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_EnableUserDataSync.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;toolStripSeparator5.Name" xml:space="preserve">
     <value>toolStripSeparator5</value>
   </data>
@@ -1179,10 +1173,34 @@
   <data name="&gt;&gt;STRING_NginxOutput.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ToolStripMenuItem_EnableUserDataSync.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_EnableUserDataSync</value>
+  <data name="&gt;&gt;ToolStripMenuItem_View.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_View</value>
   </data>
-  <data name="&gt;&gt;ToolStripMenuItem_EnableUserDataSync.Type" xml:space="preserve">
+  <data name="&gt;&gt;ToolStripMenuItem_View.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_BrowserZoom.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_BrowserZoom</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_BrowserZoom.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_ZoomIn.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_ZoomIn</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_ZoomIn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_ZoomOut.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_ZoomOut</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_ZoomOut.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_ResetZoom.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_ResetZoom</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_ResetZoom.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

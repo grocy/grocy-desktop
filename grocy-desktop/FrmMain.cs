@@ -21,7 +21,9 @@ namespace GrocyDesktop
 
 		private ResourceManager ResourceManager = new ResourceManager(typeof(FrmMain));
 		private ChromiumWebBrowser GrocyBrowser;
+		private bool GrocyBrowserFirstLoad = true;
 		private ChromiumWebBrowser BarcodeBuddyBrowser;
+		private bool BarcodeBuddyBrowserFirstLoad = true;
 		private NginxServerManager NginxServer;
 		private GrocyManager GrocyManager;
 		private BarcodeBuddyManager BarcodeBuddyManager;
@@ -72,10 +74,12 @@ namespace GrocyDesktop
 				this.GrocyBrowser = new ChromiumWebBrowser(this.GrocyManager.LocalUrl);
 				this.GrocyBrowser.Dock = DockStyle.Fill;
 				this.TabPage_Grocy.Controls.Add(this.GrocyBrowser);
+				this.GrocyBrowser.LoadingStateChanged += GrocyBrowser_LoadingStateChanged;
 
 				this.BarcodeBuddyBrowser = new ChromiumWebBrowser(this.BarcodeBuddyManager.LocalUrl);
 				this.BarcodeBuddyBrowser.Dock = DockStyle.Fill;
 				this.TabPage_BarcodeBuddy.Controls.Add(this.BarcodeBuddyBrowser);
+				this.BarcodeBuddyBrowser.LoadingStateChanged += BarcodeBuddyBrowser_LoadingStateChanged;
 			}
 			else
 			{
@@ -85,9 +89,28 @@ namespace GrocyDesktop
 				this.GrocyBrowser = new ChromiumWebBrowser(this.GrocyManager.LocalUrl);
 				this.GrocyBrowser.Dock = DockStyle.Fill;
 				this.Panel_Main.Controls.Add(this.GrocyBrowser);
+				this.GrocyBrowser.LoadingStateChanged += GrocyBrowser_LoadingStateChanged;
 			}
 
 			this.StatusStrip_Main.Visible = this.UserSettings.EnableExternalWebserverAccess;
+		}
+
+		private void GrocyBrowser_LoadingStateChanged(object sender, LoadingStateChangedEventArgs e)
+		{
+			if (this.GrocyBrowser.IsBrowserInitialized && e.IsLoading == false && this.GrocyBrowserFirstLoad)
+			{
+				this.GrocyBrowser.SetZoomLevel(this.UserSettings.GrocyBrowserZoomLevel);
+				this.GrocyBrowserFirstLoad = false;
+			}
+		}
+
+		private void BarcodeBuddyBrowser_LoadingStateChanged(object sender, LoadingStateChangedEventArgs e)
+		{
+			if (this.BarcodeBuddyBrowser.IsBrowserInitialized && e.IsLoading == false && this.BarcodeBuddyBrowserFirstLoad)
+			{
+				this.BarcodeBuddyBrowser.SetZoomLevel(this.UserSettings.BarcodeBuddyBrowserZoomLevel);
+				this.BarcodeBuddyBrowserFirstLoad = false;
+			}
 		}
 
 		private void SetupNginx()
@@ -540,6 +563,61 @@ namespace GrocyDesktop
 					}
 				}
 			}
+		}
+
+		private void BrowserZoom(bool? zoomIn)
+		{
+			if (this.TabControl_Main.SelectedTab == TabPage_Grocy)
+			{
+				if (zoomIn == null)
+				{
+					this.UserSettings.GrocyBrowserZoomLevel = 0;
+				}
+				else if (zoomIn == true)
+				{
+					this.UserSettings.GrocyBrowserZoomLevel += 0.2;
+				}
+				else if (zoomIn == false)
+				{
+					this.UserSettings.GrocyBrowserZoomLevel -= 0.2;
+				}
+				this.UserSettings.Save();
+
+				this.GrocyBrowser.SetZoomLevel(this.UserSettings.GrocyBrowserZoomLevel);
+			}
+			else if (this.TabControl_Main.SelectedTab == TabPage_BarcodeBuddy)
+			{
+				if (zoomIn == null)
+				{
+					this.UserSettings.BarcodeBuddyBrowserZoomLevel = 0;
+				}
+				else if (zoomIn == true)
+				{
+					this.UserSettings.BarcodeBuddyBrowserZoomLevel += 0.2;
+				}
+				else if (zoomIn == false)
+				{
+					this.UserSettings.BarcodeBuddyBrowserZoomLevel -= 0.2;
+				}
+				this.UserSettings.Save();
+
+				this.BarcodeBuddyBrowser.SetZoomLevel(this.UserSettings.BarcodeBuddyBrowserZoomLevel);
+			}
+		}
+
+		private void ToolStripMenuItem_ZoomIn_Click(object sender, EventArgs e)
+		{
+			this.BrowserZoom(true);
+		}
+
+		private void ToolStripMenuItem_ZoomOut_Click(object sender, EventArgs e)
+		{
+			this.BrowserZoom(false);
+		}
+
+		private void ToolStripMenuItem_ResetZoom_Click(object sender, EventArgs e)
+		{
+			this.BrowserZoom(null);
 		}
 	}
 }

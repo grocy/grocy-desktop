@@ -14,6 +14,8 @@ namespace GrocyDesktop
 		public bool EnableExternalWebserverAccess = false;
 		public bool EnableUserDataSync = false;
 		public string UserDataSyncFolderPath = string.Empty;
+		public double GrocyBrowserZoomLevel = 0;
+		public double BarcodeBuddyBrowserZoomLevel = 0;
 
 		public static UserSettings Load()
 		{

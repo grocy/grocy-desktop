@@ -34,6 +34,7 @@
 			this.ToolStripMenuItem_File = new System.Windows.Forms.ToolStripMenuItem();
 			this.ToolStripMenuItem_EnableBarcodeBuddy = new System.Windows.Forms.ToolStripMenuItem();
 			this.ToolStripMenuItem_EnableExternalAccess = new System.Windows.Forms.ToolStripMenuItem();
+			this.ToolStripMenuItem_EnableUserDataSync = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
 			this.ToolStripMenuItem_Exit = new System.Windows.Forms.ToolStripMenuItem();
 			this.ToolStripMenuItem_grocy = new System.Windows.Forms.ToolStripMenuItem();
@@ -85,7 +86,11 @@
 			this.STRING_GrocyExternalAccessInfo = new System.Windows.Forms.ToolStripMenuItem();
 			this.STRING_GrocyAndBarcodeBuddyExternalAccessInfo = new System.Windows.Forms.ToolStripMenuItem();
 			this.STRING_NginxOutput = new System.Windows.Forms.ToolStripMenuItem();
-			this.ToolStripMenuItem_EnableUserDataSync = new System.Windows.Forms.ToolStripMenuItem();
+			this.ToolStripMenuItem_View = new System.Windows.Forms.ToolStripMenuItem();
+			this.ToolStripMenuItem_BrowserZoom = new System.Windows.Forms.ToolStripMenuItem();
+			this.ToolStripMenuItem_ZoomIn = new System.Windows.Forms.ToolStripMenuItem();
+			this.ToolStripMenuItem_ZoomOut = new System.Windows.Forms.ToolStripMenuItem();
+			this.ToolStripMenuItem_ResetZoom = new System.Windows.Forms.ToolStripMenuItem();
 			this.MenuStrip_Main.SuspendLayout();
 			this.Panel_Main.SuspendLayout();
 			this.StatusStrip_Main.SuspendLayout();
@@ -97,6 +102,7 @@
 			// 
 			this.MenuStrip_Main.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripMenuItem_File,
+            this.ToolStripMenuItem_View,
             this.ToolStripMenuItem_grocy,
             this.ToolStripMenuItem_BarcodeBuddy,
             this.ToolStripMenuItem_Help});
@@ -127,6 +133,13 @@
 			this.ToolStripMenuItem_EnableExternalAccess.Name = "ToolStripMenuItem_EnableExternalAccess";
 			resources.ApplyResources(this.ToolStripMenuItem_EnableExternalAccess, "ToolStripMenuItem_EnableExternalAccess");
 			this.ToolStripMenuItem_EnableExternalAccess.Click += new System.EventHandler(this.ToolStripMenuItem_EnableExternalAccess_Click);
+			// 
+			// ToolStripMenuItem_EnableUserDataSync
+			// 
+			this.ToolStripMenuItem_EnableUserDataSync.CheckOnClick = true;
+			this.ToolStripMenuItem_EnableUserDataSync.Name = "ToolStripMenuItem_EnableUserDataSync";
+			resources.ApplyResources(this.ToolStripMenuItem_EnableUserDataSync, "ToolStripMenuItem_EnableUserDataSync");
+			this.ToolStripMenuItem_EnableUserDataSync.Click += new System.EventHandler(this.ToolStripMenuItem_EnableUserDataSync_Click);
 			// 
 			// toolStripSeparator5
 			// 
@@ -452,12 +465,39 @@
 			this.STRING_NginxOutput.Name = "STRING_NginxOutput";
 			resources.ApplyResources(this.STRING_NginxOutput, "STRING_NginxOutput");
 			// 
-			// ToolStripMenuItem_EnableUserDataSync
+			// ToolStripMenuItem_View
 			// 
-			this.ToolStripMenuItem_EnableUserDataSync.CheckOnClick = true;
-			this.ToolStripMenuItem_EnableUserDataSync.Name = "ToolStripMenuItem_EnableUserDataSync";
-			resources.ApplyResources(this.ToolStripMenuItem_EnableUserDataSync, "ToolStripMenuItem_EnableUserDataSync");
-			this.ToolStripMenuItem_EnableUserDataSync.Click += new System.EventHandler(this.ToolStripMenuItem_EnableUserDataSync_Click);
+			this.ToolStripMenuItem_View.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItem_BrowserZoom});
+			this.ToolStripMenuItem_View.Name = "ToolStripMenuItem_View";
+			resources.ApplyResources(this.ToolStripMenuItem_View, "ToolStripMenuItem_View");
+			// 
+			// ToolStripMenuItem_BrowserZoom
+			// 
+			this.ToolStripMenuItem_BrowserZoom.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItem_ZoomIn,
+            this.ToolStripMenuItem_ZoomOut,
+            this.ToolStripMenuItem_ResetZoom});
+			this.ToolStripMenuItem_BrowserZoom.Name = "ToolStripMenuItem_BrowserZoom";
+			resources.ApplyResources(this.ToolStripMenuItem_BrowserZoom, "ToolStripMenuItem_BrowserZoom");
+			// 
+			// ToolStripMenuItem_ZoomIn
+			// 
+			this.ToolStripMenuItem_ZoomIn.Name = "ToolStripMenuItem_ZoomIn";
+			resources.ApplyResources(this.ToolStripMenuItem_ZoomIn, "ToolStripMenuItem_ZoomIn");
+			this.ToolStripMenuItem_ZoomIn.Click += new System.EventHandler(this.ToolStripMenuItem_ZoomIn_Click);
+			// 
+			// ToolStripMenuItem_ZoomOut
+			// 
+			this.ToolStripMenuItem_ZoomOut.Name = "ToolStripMenuItem_ZoomOut";
+			resources.ApplyResources(this.ToolStripMenuItem_ZoomOut, "ToolStripMenuItem_ZoomOut");
+			this.ToolStripMenuItem_ZoomOut.Click += new System.EventHandler(this.ToolStripMenuItem_ZoomOut_Click);
+			// 
+			// ToolStripMenuItem_ResetZoom
+			// 
+			this.ToolStripMenuItem_ResetZoom.Name = "ToolStripMenuItem_ResetZoom";
+			resources.ApplyResources(this.ToolStripMenuItem_ResetZoom, "ToolStripMenuItem_ResetZoom");
+			this.ToolStripMenuItem_ResetZoom.Click += new System.EventHandler(this.ToolStripMenuItem_ResetZoom_Click);
 			// 
 			// FrmMain
 			// 
@@ -541,6 +581,11 @@
 		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_ShowNginxOutput;
 		private System.Windows.Forms.ToolStripMenuItem STRING_NginxOutput;
 		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_EnableUserDataSync;
+		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_View;
+		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_BrowserZoom;
+		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_ZoomIn;
+		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_ZoomOut;
+		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_ResetZoom;
 	}
 }
 
