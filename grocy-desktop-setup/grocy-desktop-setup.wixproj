@@ -67,8 +67,16 @@
   copy "$(SolutionDir)grocy-desktop\bin\Release\Newtonsoft.Json.dll" "$(SolutionDir).deploy\appx_content\Newtonsoft.Json.dll"
 
   mkdir "$(SolutionDir).deploy\appx_content\de"
+  mkdir "$(SolutionDir).deploy\appx_content\el"
+  mkdir "$(SolutionDir).deploy\appx_content\he-IL"
+  mkdir "$(SolutionDir).deploy\appx_content\id"
+  mkdir "$(SolutionDir).deploy\appx_content\id-ID"
 
   copy "$(SolutionDir)grocy-desktop\bin\Release\de\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\de\grocy-desktop.resources.dll"
+  copy "$(SolutionDir)grocy-desktop\bin\Release\el\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\el\grocy-desktop.resources.dll"
+  copy "$(SolutionDir)grocy-desktop\bin\Release\he-IL\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\he-IL\grocy-desktop.resources.dll"
+  copy "$(SolutionDir)grocy-desktop\bin\Release\id\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\id\grocy-desktop.resources.dll"
+  copy "$(SolutionDir)grocy-desktop\bin\Release\id-ID\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\id-ID\grocy-desktop.resources.dll"
 
   "%25programfiles(x86)%25\Windows Kits\10\bin\10.0.18362.0\x86\MakePri.exe" createconfig /cf "$(SolutionDir).deploy\appx_content\priconfig.xml" /dq lang-en-US
   pushd "$(SolutionDir).deploy\appx_content"
@@ -78,7 +86,6 @@
   "%25programfiles(x86)%25\Windows Kits\10\bin\10.0.18362.0\x86\MakeAppx.exe" pack /d "$(SolutionDir).deploy\appx_content" /p "$(SolutionDir).deploy\grocy-desktop_x.x.x.appx"
 
   "%25programfiles(x86)%25\Windows Kits\10\bin\10.0.18362.0\x86\signtool.exe" sign /fd sha256 /f "$(SolutionDir)appx_dependencies\grocy-desktop_developer_cert.pfx" /p "123456" "$(SolutionDir).deploy\grocy-desktop_x.x.x.appx"
-
 )</PostBuildEvent>
   </PropertyGroup>
   <!--

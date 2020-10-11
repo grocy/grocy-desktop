@@ -125,19 +125,19 @@
     <value>247, 22</value>
   </data>
   <data name="ToolStripMenuItem_EnableBarcodeBuddy.Text" xml:space="preserve">
-    <value>Barcode Buddy aktivieren</value>
+    <value>Ενεργοποίηση φίλου barcode</value>
   </data>
   <data name="ToolStripMenuItem_EnableExternalAccess.Size" type="System.Drawing.Size, System.Drawing">
     <value>247, 22</value>
   </data>
   <data name="ToolStripMenuItem_EnableExternalAccess.Text" xml:space="preserve">
-    <value>Externen Zugriff erlauben</value>
+    <value>Ενεργοποίηση εξωτερικής πρόσβασης</value>
   </data>
   <data name="ToolStripMenuItem_EnableUserDataSync.Size" type="System.Drawing.Size, System.Drawing">
     <value>247, 22</value>
   </data>
   <data name="ToolStripMenuItem_EnableUserDataSync.Text" xml:space="preserve">
-    <value>Benutzerdaten synchronisieren</value>
+    <value>Ενεργοποίηση συγχρονισμού δεδομένων χρήστη</value>
   </data>
   <data name="toolStripSeparator5.Size" type="System.Drawing.Size, System.Drawing">
     <value>244, 6</value>
@@ -146,13 +146,13 @@
     <value>247, 22</value>
   </data>
   <data name="ToolStripMenuItem_Exit.Text" xml:space="preserve">
-    <value>Beenden</value>
+    <value>Εξοδος</value>
   </data>
   <data name="ToolStripMenuItem_File.Size" type="System.Drawing.Size, System.Drawing">
     <value>37, 20</value>
   </data>
   <data name="ToolStripMenuItem_File.Text" xml:space="preserve">
-    <value>Datei</value>
+    <value>Αρχείο</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
   <data name="ToolStripMenuItem_ZoomIn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
@@ -162,7 +162,7 @@
     <value>222, 22</value>
   </data>
   <data name="ToolStripMenuItem_ZoomIn.Text" xml:space="preserve">
-    <value>Hineinzoomen</value>
+    <value>Zoom In</value>
   </data>
   <data name="ToolStripMenuItem_ZoomOut.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+OemMinus</value>
@@ -171,7 +171,7 @@
     <value>222, 22</value>
   </data>
   <data name="ToolStripMenuItem_ZoomOut.Text" xml:space="preserve">
-    <value>Herauszoomen</value>
+    <value>Zoom Out</value>
   </data>
   <data name="ToolStripMenuItem_ResetZoom.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+0</value>
@@ -180,7 +180,7 @@
     <value>222, 22</value>
   </data>
   <data name="ToolStripMenuItem_ResetZoom.Text" xml:space="preserve">
-    <value>Zoom zurücksetzen</value>
+    <value>Reset Zoom</value>
   </data>
   <data name="ToolStripMenuItem_BrowserZoom.Size" type="System.Drawing.Size, System.Drawing">
     <value>180, 22</value>
@@ -192,13 +192,13 @@
     <value>44, 20</value>
   </data>
   <data name="ToolStripMenuItem_View.Text" xml:space="preserve">
-    <value>Ansicht</value>
+    <value>View</value>
   </data>
   <data name="ToolStripMenuItem_UpdateGrocy.Size" type="System.Drawing.Size, System.Drawing">
     <value>243, 22</value>
   </data>
   <data name="ToolStripMenuItem_UpdateGrocy.Text" xml:space="preserve">
-    <value>Update</value>
+    <value>Εκσυγχρονίζω</value>
   </data>
   <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
     <value>240, 6</value>
@@ -207,19 +207,19 @@
     <value>243, 22</value>
   </data>
   <data name="ToolStripMenuItem_BackupDataGrocy.Text" xml:space="preserve">
-    <value>Daten sichern</value>
+    <value>Αντιγράφων ασφαλείας των δεδομένων</value>
   </data>
   <data name="ToolStripMenuItem_RestoreDataGrocy.Size" type="System.Drawing.Size, System.Drawing">
     <value>243, 22</value>
   </data>
   <data name="ToolStripMenuItem_RestoreDataGrocy.Text" xml:space="preserve">
-    <value>Daten wiederherstellen</value>
+    <value>Επαναφορά δεδομένων</value>
   </data>
   <data name="ToolStripMenuItem_ConfigureChangeDataLocationGrocy.Size" type="System.Drawing.Size, System.Drawing">
     <value>243, 22</value>
   </data>
   <data name="ToolStripMenuItem_ConfigureChangeDataLocationGrocy.Text" xml:space="preserve">
-    <value>Datenverzeichnis konfigurieren/ändern</value>
+    <value>Διαμόρφωση / αλλαγή τοποθεσίας δεδομένων</value>
   </data>
   <data name="toolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
     <value>240, 6</value>
@@ -228,7 +228,7 @@
     <value>243, 22</value>
   </data>
   <data name="ToolStripMenuItem_RecreateGrocyDatabase.Text" xml:space="preserve">
-    <value>Datenbank neu erstellen</value>
+    <value>Αναδημιουργήστε τη βάση δεδομένων</value>
   </data>
   <data name="ToolStripMenuItem_grocy.Size" type="System.Drawing.Size, System.Drawing">
     <value>49, 20</value>
@@ -240,7 +240,7 @@
     <value>243, 22</value>
   </data>
   <data name="ToolStripMenuItem_UpdateBarcodeBuddy.Text" xml:space="preserve">
-    <value>Update</value>
+    <value>Εκσυγχρονίζω</value>
   </data>
   <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
     <value>240, 6</value>
@@ -249,19 +249,19 @@
     <value>243, 22</value>
   </data>
   <data name="ToolStripMenuItem_BackupDataBarcodeBuddy.Text" xml:space="preserve">
-    <value>Daten sichern</value>
+    <value>Αντιγράφων ασφαλείας των δεδομένων</value>
   </data>
   <data name="ToolStripMenuItem_RestoreDataBarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
     <value>243, 22</value>
   </data>
   <data name="ToolStripMenuItem_RestoreDataBarcodeBuddy.Text" xml:space="preserve">
-    <value>Daten wiederherstellen</value>
+    <value>Επαναφορά δεδομένων</value>
   </data>
   <data name="ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
     <value>243, 22</value>
   </data>
   <data name="ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy.Text" xml:space="preserve">
-    <value>Datenverzeichnis konfigurieren/ändern</value>
+    <value>Διαμόρφωση / αλλαγή τοποθεσίας δεδομένων</value>
   </data>
   <data name="ToolStripMenuItem_BarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
     <value>99, 20</value>
@@ -273,25 +273,25 @@
     <value>232, 22</value>
   </data>
   <data name="ToolStripMenuItem_ShowNginxOutput.Text" xml:space="preserve">
-    <value>nginx Ausgabe anzeigen</value>
+    <value>Show nginx output</value>
   </data>
   <data name="ToolStripMenuItem_ShowPhpRuntimeOutput.Size" type="System.Drawing.Size, System.Drawing">
     <value>232, 22</value>
   </data>
   <data name="ToolStripMenuItem_ShowPhpRuntimeOutput.Text" xml:space="preserve">
-    <value>PHP Ausgabe anzeigen</value>
+    <value>Εμφάνιση εξόδου PHP</value>
   </data>
   <data name="ToolStripMenuItem_ShowBrowserDeveloperTools.Size" type="System.Drawing.Size, System.Drawing">
     <value>232, 22</value>
   </data>
   <data name="ToolStripMenuItem_ShowBrowserDeveloperTools.Text" xml:space="preserve">
-    <value>Browser Entwicklerwerkzeuge anzeigen</value>
+    <value>Εμφάνιση εργαλείων προγραμματιστή προγράμματος περιήγησης</value>
   </data>
   <data name="ToolStripMenuItem_Debug.Size" type="System.Drawing.Size, System.Drawing">
     <value>187, 22</value>
   </data>
   <data name="ToolStripMenuItem_Debug.Text" xml:space="preserve">
-    <value>Debug</value>
+    <value>Εντοπισμός σφαλμάτων</value>
   </data>
   <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 6</value>
@@ -300,13 +300,13 @@
     <value>187, 22</value>
   </data>
   <data name="ToolStripMenuItem_About.Text" xml:space="preserve">
-    <value>Über grocy-desktop</value>
+    <value>Σχετικά με το grocy-desktop</value>
   </data>
   <data name="ToolStripMenuItem_Help.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 20</value>
   </data>
   <data name="ToolStripMenuItem_Help.Text" xml:space="preserve">
-    <value>Hilfe</value>
+    <value>Βοήθεια</value>
   </data>
   <data name="MenuStrip_Main.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -469,127 +469,127 @@
     <value>592, 22</value>
   </data>
   <data name="STRING_PHPOutput.Text" xml:space="preserve">
-    <value>PHP Ausgabe</value>
+    <value>Έξοδος PHP</value>
   </data>
   <data name="STRING_ChangeDataLocation.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
   <data name="STRING_ChangeDataLocation.Text" xml:space="preserve">
-    <value>Datenverzeichnis ändern</value>
+    <value>Αλλαγή τοποθεσίας δεδομένων</value>
   </data>
   <data name="STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
   <data name="STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue.Text" xml:space="preserve">
-    <value>grocy-desktop wird neu gestartet, um die geänderten Einstellungen zu übernehmen, fortfahren?</value>
+    <value>Η grocy-desktop θα κάνει επανεκκίνηση για να εφαρμόσει τις τροποποιημένες ρυθμίσεις, συνεχίστε;</value>
   </data>
   <data name="STRING_Backup.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
   <data name="STRING_Backup.Text" xml:space="preserve">
-    <value>Sicherung</value>
+    <value>Αντιγράφων ασφαλείας</value>
   </data>
   <data name="STRING_BackupSuccessfullyCreated.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
   <data name="STRING_BackupSuccessfullyCreated.Text" xml:space="preserve">
-    <value>Backup wurde erfolgreich erstellt</value>
+    <value>Δημιουργήθηκε αντίγραφο ασφαλείας με επιτυχία</value>
   </data>
   <data name="STRING_Restore.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
   <data name="STRING_Restore.Text" xml:space="preserve">
-    <value>Wiederherstellung</value>
+    <value>Επαναφορά</value>
   </data>
   <data name="STRING_TheCurrentDataWillBeOverwrittenAndGrocydesktopWillRestartContinue.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
   <data name="STRING_TheCurrentDataWillBeOverwrittenAndGrocydesktopWillRestartContinue.Text" xml:space="preserve">
-    <value>Die aktuellen Daten werden überschrieben und grocy-desktop wird neu gestartet, fortfahren?</value>
+    <value>Τα τρέχοντα δεδομένα θα αντικατασταθούν και θα γίνει επανεκκίνηση του grocy-desktop, συνεχίστε;</value>
   </data>
   <data name="STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
   <data name="STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue.Text" xml:space="preserve">
-    <value>Dadurch wird die grocy Datenbank gelöscht und neu erstellt, was bedeutet, dass alle deine Daten gelöscht werden, wirklich fortfahren?</value>
+    <value>Αυτό θα διαγράψει και θα αναδημιουργήσει τη βάση δεδομένων grocy, σημαίνει ότι όλα τα δεδομένα σας θα διαγραφούν, θα συνεχίσει πραγματικά;</value>
   </data>
   <data name="STRING_ZipFiles.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
   <data name="STRING_ZipFiles.Text" xml:space="preserve">
-    <value>ZIP Dateien</value>
+    <value>Αρχεία ZIP</value>
   </data>
   <data name="STRING_SayThanks.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
   <data name="STRING_SayThanks.Text" xml:space="preserve">
-    <value>Sag Danke</value>
+    <value>Πες ευχαριστώ</value>
   </data>
   <data name="STRING_SayThanksQuestion.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
   <data name="STRING_SayThanksQuestion.Text" xml:space="preserve">
-    <value>Findest du grocy nützlich?</value>
+    <value>Βρίσκετε το grocy χρήσιμο;</value>
   </data>
   <data name="STRING_PreparingWebbrowser.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
   <data name="STRING_PreparingWebbrowser.Text" xml:space="preserve">
-    <value>Der eingebettete Webbrowser wird vorbereitet...</value>
+    <value>Προετοιμασία ενσωματωμένου προγράμματος περιήγησης ιστού ...</value>
   </data>
   <data name="STRING_PreparingWebserver.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
   <data name="STRING_PreparingWebserver.Text" xml:space="preserve">
-    <value>Der eingebettete Webserver wird vorbereitet...</value>
+    <value>Προετοιμασία ενσωματωμένου προγράμματος περιήγησης ιστού ...</value>
   </data>
   <data name="STRING_PreparingPhpRuntime.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
   <data name="STRING_PreparingPhpRuntime.Text" xml:space="preserve">
-    <value>Die eingebettete PHP Laufzeitumgebung wird vorbereitet...</value>
+    <value>Προετοιμασία ενσωματωμένου χρόνου εκτέλεσης PHP ...</value>
   </data>
   <data name="STRING_PreparingGrocy.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
   <data name="STRING_PreparingGrocy.Text" xml:space="preserve">
-    <value>grocy wird vorbereitet...</value>
+    <value>Προετοιμασία grocy...</value>
   </data>
   <data name="STRING_PreparingBarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
   <data name="STRING_PreparingBarcodeBuddy.Text" xml:space="preserve">
-    <value>Barcode Buddy wird vorbereitet...</value>
+    <value>Προετοιμασία φίλου barcode ...</value>
   </data>
   <data name="STRING_DownloadingGrocyRelease.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
   <data name="STRING_DownloadingGrocyRelease.Text" xml:space="preserve">
-    <value>Die neueste grocy Version wird heruntergeladen...</value>
+    <value>Λήψη της τελευταίας έκδοσης grocy ...</value>
   </data>
   <data name="STRING_DownloadingBarcodeBuddyRelease.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
   <data name="STRING_DownloadingBarcodeBuddyRelease.Text" xml:space="preserve">
-    <value>Die neueste Barcode Buddy Version wird heruntergeladen...</value>
+    <value>Λήψη της τελευταίας έκδοσης του Barcode Buddy ...</value>
   </data>
   <data name="STRING_GrocyExternalAccessInfo.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
   <data name="STRING_GrocyExternalAccessInfo.Text" xml:space="preserve">
-    <value>grocy ist extern erreichbar unter %1$s oder %2$s</value>
+    <value>Πρόσβαση στο grocy εξωτερικά μέσω% 1 $ s ή% 2 $ s</value>
   </data>
   <data name="STRING_GrocyAndBarcodeBuddyExternalAccessInfo.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
   <data name="STRING_GrocyAndBarcodeBuddyExternalAccessInfo.Text" xml:space="preserve">
-    <value>grocy ist extern erreichbar unter %1$s oder %2$s und Barcode Buddy unter %3$s oder %4$s</value>
+    <value>Πρόσβαση στο grocy εξωτερικά μέσω% 1 $ s ή% 2 $ s και του Barcode Buddy μέσω% 3 $ s ή% 4 $ s</value>
   </data>
   <data name="STRING_NginxOutput.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
   <data name="STRING_NginxOutput.Text" xml:space="preserve">
-    <value>nginx Ausgabe</value>
+    <value>έξοδος nginx</value>
   </data>
   <data name="ContextMenuStrip_DummyForResxStrings.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 466</value>

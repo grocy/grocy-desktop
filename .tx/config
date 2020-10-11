@@ -6,3 +6,5 @@ file_filter = grocy-desktop/FrmMain.<lang>.resx
 source_file = grocy-desktop/FrmMain.resx
 source_lang = en
 type = RESX
+trans.he_IL = grocy-desktop/FrmMain.he-IL.resx
+trans.id_ID = grocy-desktop/FrmMain.id-ID.resx
