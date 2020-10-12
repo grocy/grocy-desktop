@@ -160,7 +160,7 @@ namespace GrocyDesktop
 			this.PhpFastCgiServerPort7 = NetHelper.GetRandomFreePort();
 			this.PhpFastCgiServerPort8 = NetHelper.GetRandomFreePort();
 
-			Dictionary<string, string> environmentVariables = null;
+			Dictionary<string, string> environmentVariables = new Dictionary<string, string>;
 			if (this.UserSettings.EnableBarcodeBuddyIntegration)
 			{
 				environmentVariables = this.BarcodeBuddyManager.GetEnvironmentVariables();
