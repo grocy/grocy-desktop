@@ -16,6 +16,10 @@
 			<ComponentRef Id="RESOURCES_HE_IL" />
 			<ComponentRef Id="RESOURCES_ID" />
 			<ComponentRef Id="RESOURCES_ID_ID" />
+			<ComponentRef Id="RESOURCES_FI" />
+			<ComponentRef Id="RESOURCES_FR_FR" />
+			<ComponentRef Id="RESOURCES_PL" />
+			<ComponentRef Id="RESOURCES_ZH_CN" />
 			<ComponentRef Id="ApplicationShortcut" />
 			<ComponentRef Id="ApplicationShortcutDesktop" />
 		</Feature>
@@ -55,6 +59,10 @@
 					<Directory Id="RESOURCES_HE_IL" Name="he-IL" />
 					<Directory Id="RESOURCES_ID" Name="id" />
 					<Directory Id="RESOURCES_ID_ID" Name="id-ID" />
+					<Directory Id="RESOURCES_FI" Name="fi" />
+					<Directory Id="RESOURCES_FR_FR" Name="fr-FR" />
+					<Directory Id="RESOURCES_PL" Name="pl" />
+					<Directory Id="RESOURCES_ZH_CN" Name="zh-CN" />
 				</Directory>
 			</Directory>
 			<Directory Id="ProgramMenuFolder" />
@@ -108,6 +116,18 @@
 		</Component>
 		<Component Id="RESOURCES_ID_ID" Directory="RESOURCES_ID_ID">
 			<File Id="LocalizationResourcesIdId" Source="$(var.SolutionDir)grocy-desktop\bin\$(var.Configuration)\id-ID\grocy-desktop.resources.dll" KeyPath="yes" Checksum="yes"></File>
+		</Component>
+		<Component Id="RESOURCES_FI" Directory="RESOURCES_FI">
+			<File Id="LocalizationResourcesFi" Source="$(var.SolutionDir)grocy-desktop\bin\$(var.Configuration)\fi\grocy-desktop.resources.dll" KeyPath="yes" Checksum="yes"></File>
+		</Component>
+		<Component Id="RESOURCES_FR_FR" Directory="RESOURCES_FR_FR">
+			<File Id="LocalizationResourcesFrFr" Source="$(var.SolutionDir)grocy-desktop\bin\$(var.Configuration)\fr-FR\grocy-desktop.resources.dll" KeyPath="yes" Checksum="yes"></File>
+		</Component>
+		<Component Id="RESOURCES_PL" Directory="RESOURCES_PL">
+			<File Id="LocalizationResourcesPl" Source="$(var.SolutionDir)grocy-desktop\bin\$(var.Configuration)\pl\grocy-desktop.resources.dll" KeyPath="yes" Checksum="yes"></File>
+		</Component>
+		<Component Id="RESOURCES_ZH_CN" Directory="RESOURCES_ZH_CN">
+			<File Id="LocalizationResourcesZhCn" Source="$(var.SolutionDir)grocy-desktop\bin\$(var.Configuration)\zh-CN\grocy-desktop.resources.dll" KeyPath="yes" Checksum="yes"></File>
 		</Component>
 	</Fragment>
 </Wix>

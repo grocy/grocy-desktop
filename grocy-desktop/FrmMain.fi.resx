@@ -125,19 +125,19 @@
     <value>247, 22</value>
   </data>
   <data name="ToolStripMenuItem_EnableBarcodeBuddy.Text" xml:space="preserve">
-    <value>הפעלת מסייע הברקודים</value>
+    <value>Aktivoi 'Barcode Buddy'</value>
   </data>
   <data name="ToolStripMenuItem_EnableExternalAccess.Size" type="System.Drawing.Size, System.Drawing">
     <value>247, 22</value>
   </data>
   <data name="ToolStripMenuItem_EnableExternalAccess.Text" xml:space="preserve">
-    <value>הפעלת גישה חיצונית</value>
+    <value>Salli ulkopuolinen pääsy</value>
   </data>
   <data name="ToolStripMenuItem_EnableUserDataSync.Size" type="System.Drawing.Size, System.Drawing">
     <value>247, 22</value>
   </data>
   <data name="ToolStripMenuItem_EnableUserDataSync.Text" xml:space="preserve">
-    <value>הפעלת סנכרון נתוני משתמש</value>
+    <value>Salli käyttäjätietojen synkronointi</value>
   </data>
   <data name="toolStripSeparator5.Size" type="System.Drawing.Size, System.Drawing">
     <value>244, 6</value>
@@ -146,13 +146,13 @@
     <value>247, 22</value>
   </data>
   <data name="ToolStripMenuItem_Exit.Text" xml:space="preserve">
-    <value>יציאה</value>
+    <value>Lopetus</value>
   </data>
   <data name="ToolStripMenuItem_File.Size" type="System.Drawing.Size, System.Drawing">
     <value>37, 20</value>
   </data>
   <data name="ToolStripMenuItem_File.Text" xml:space="preserve">
-    <value>קובץ</value>
+    <value>Tiedosto</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
   <data name="ToolStripMenuItem_ZoomIn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
@@ -162,7 +162,7 @@
     <value>222, 22</value>
   </data>
   <data name="ToolStripMenuItem_ZoomIn.Text" xml:space="preserve">
-    <value>להתקרב</value>
+    <value>Lähennä</value>
   </data>
   <data name="ToolStripMenuItem_ZoomOut.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+OemMinus</value>
@@ -171,7 +171,7 @@
     <value>222, 22</value>
   </data>
   <data name="ToolStripMenuItem_ZoomOut.Text" xml:space="preserve">
-    <value>להתרחק</value>
+    <value>Loitonna</value>
   </data>
   <data name="ToolStripMenuItem_ResetZoom.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+0</value>
@@ -180,25 +180,25 @@
     <value>222, 22</value>
   </data>
   <data name="ToolStripMenuItem_ResetZoom.Text" xml:space="preserve">
-    <value>לאפס תקריב</value>
+    <value>Resetoi zoom</value>
   </data>
   <data name="ToolStripMenuItem_BrowserZoom.Size" type="System.Drawing.Size, System.Drawing">
     <value>180, 22</value>
   </data>
   <data name="ToolStripMenuItem_BrowserZoom.Text" xml:space="preserve">
-    <value>תקריב דפדפן</value>
+    <value>Browser Zoom</value>
   </data>
   <data name="ToolStripMenuItem_View.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 20</value>
   </data>
   <data name="ToolStripMenuItem_View.Text" xml:space="preserve">
-    <value>תצוגה</value>
+    <value>View</value>
   </data>
   <data name="ToolStripMenuItem_UpdateGrocy.Size" type="System.Drawing.Size, System.Drawing">
     <value>243, 22</value>
   </data>
   <data name="ToolStripMenuItem_UpdateGrocy.Text" xml:space="preserve">
-    <value>עדכון</value>
+    <value>Päivitä</value>
   </data>
   <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
     <value>240, 6</value>
@@ -207,19 +207,19 @@
     <value>243, 22</value>
   </data>
   <data name="ToolStripMenuItem_BackupDataGrocy.Text" xml:space="preserve">
-    <value>גיבוי נתונים</value>
+    <value>Varmuuskopioi data</value>
   </data>
   <data name="ToolStripMenuItem_RestoreDataGrocy.Size" type="System.Drawing.Size, System.Drawing">
     <value>243, 22</value>
   </data>
   <data name="ToolStripMenuItem_RestoreDataGrocy.Text" xml:space="preserve">
-    <value>שחזור נתונים</value>
+    <value>Palauta data</value>
   </data>
   <data name="ToolStripMenuItem_ConfigureChangeDataLocationGrocy.Size" type="System.Drawing.Size, System.Drawing">
     <value>243, 22</value>
   </data>
   <data name="ToolStripMenuItem_ConfigureChangeDataLocationGrocy.Text" xml:space="preserve">
-    <value>הגדרת/החלפת מיקום הנתונים</value>
+    <value>Määritä/muuta datan paikkaa</value>
   </data>
   <data name="toolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
     <value>240, 6</value>
@@ -228,7 +228,7 @@
     <value>243, 22</value>
   </data>
   <data name="ToolStripMenuItem_RecreateGrocyDatabase.Text" xml:space="preserve">
-    <value>יצירת מסד הנתונים מחדש</value>
+    <value>Luo database uudestaan</value>
   </data>
   <data name="ToolStripMenuItem_grocy.Size" type="System.Drawing.Size, System.Drawing">
     <value>49, 20</value>
@@ -240,7 +240,7 @@
     <value>243, 22</value>
   </data>
   <data name="ToolStripMenuItem_UpdateBarcodeBuddy.Text" xml:space="preserve">
-    <value>עדכון</value>
+    <value>Päivitä</value>
   </data>
   <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
     <value>240, 6</value>
@@ -249,19 +249,19 @@
     <value>243, 22</value>
   </data>
   <data name="ToolStripMenuItem_BackupDataBarcodeBuddy.Text" xml:space="preserve">
-    <value>גיבוי נתונים</value>
+    <value>Varmuuskopioi data</value>
   </data>
   <data name="ToolStripMenuItem_RestoreDataBarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
     <value>243, 22</value>
   </data>
   <data name="ToolStripMenuItem_RestoreDataBarcodeBuddy.Text" xml:space="preserve">
-    <value>שחזור נתונים</value>
+    <value>Palauta data</value>
   </data>
   <data name="ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
     <value>243, 22</value>
   </data>
   <data name="ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy.Text" xml:space="preserve">
-    <value>הגדרת/החלפת מיקום הנתונים</value>
+    <value>Määritä/muuta datan paikkaa</value>
   </data>
   <data name="ToolStripMenuItem_BarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
     <value>99, 20</value>
@@ -273,25 +273,25 @@
     <value>232, 22</value>
   </data>
   <data name="ToolStripMenuItem_ShowNginxOutput.Text" xml:space="preserve">
-    <value>הצגת הפלט של nginx</value>
+    <value>Show nginx output</value>
   </data>
   <data name="ToolStripMenuItem_ShowPhpRuntimeOutput.Size" type="System.Drawing.Size, System.Drawing">
     <value>232, 22</value>
   </data>
   <data name="ToolStripMenuItem_ShowPhpRuntimeOutput.Text" xml:space="preserve">
-    <value>הצגת פלט PHP</value>
+    <value>Show PHP output</value>
   </data>
   <data name="ToolStripMenuItem_ShowBrowserDeveloperTools.Size" type="System.Drawing.Size, System.Drawing">
     <value>232, 22</value>
   </data>
   <data name="ToolStripMenuItem_ShowBrowserDeveloperTools.Text" xml:space="preserve">
-    <value>הצגת כלי פיתוח דפדפן</value>
+    <value>Näytä kehittäjän työkalut</value>
   </data>
   <data name="ToolStripMenuItem_Debug.Size" type="System.Drawing.Size, System.Drawing">
     <value>187, 22</value>
   </data>
   <data name="ToolStripMenuItem_Debug.Text" xml:space="preserve">
-    <value>ניפוי שגיאות</value>
+    <value>Debug</value>
   </data>
   <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 6</value>
@@ -300,13 +300,13 @@
     <value>187, 22</value>
   </data>
   <data name="ToolStripMenuItem_About.Text" xml:space="preserve">
-    <value>על אודות grocy-desktop</value>
+    <value>About grocy-desktop</value>
   </data>
   <data name="ToolStripMenuItem_Help.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 20</value>
   </data>
   <data name="ToolStripMenuItem_Help.Text" xml:space="preserve">
-    <value>עזרה</value>
+    <value>Auta</value>
   </data>
   <data name="MenuStrip_Main.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -469,127 +469,127 @@
     <value>592, 22</value>
   </data>
   <data name="STRING_PHPOutput.Text" xml:space="preserve">
-    <value>פלט PHP</value>
+    <value>PHP output</value>
   </data>
   <data name="STRING_ChangeDataLocation.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
   <data name="STRING_ChangeDataLocation.Text" xml:space="preserve">
-    <value>החלפת מיקום הנתונים</value>
+    <value>Muuta datan sijainti</value>
   </data>
   <data name="STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
   <data name="STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue.Text" xml:space="preserve">
-    <value>grocy-desktop יופעל מחדש כדי להחיל את ההגדרות שהשתנו, להמשיך?</value>
+    <value>Ohjelma käynnistetään uudestaan muutetuin asetuksin, haluatko jatkaa?</value>
   </data>
   <data name="STRING_Backup.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
   <data name="STRING_Backup.Text" xml:space="preserve">
-    <value>גיבוי</value>
+    <value>Varmuuskopioi</value>
   </data>
   <data name="STRING_BackupSuccessfullyCreated.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
   <data name="STRING_BackupSuccessfullyCreated.Text" xml:space="preserve">
-    <value>הגיבוי נוצר בהצלחה</value>
+    <value>Varmuuskopiointi luotu onnistuneesti</value>
   </data>
   <data name="STRING_Restore.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
   <data name="STRING_Restore.Text" xml:space="preserve">
-    <value>שחזור</value>
+    <value>Palauta</value>
   </data>
   <data name="STRING_TheCurrentDataWillBeOverwrittenAndGrocydesktopWillRestartContinue.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
   <data name="STRING_TheCurrentDataWillBeOverwrittenAndGrocydesktopWillRestartContinue.Text" xml:space="preserve">
-    <value>הנתונים הנוכחיים ישוכתבו ו־grocy-desktop יופעל מחדש, להמשיך?</value>
+    <value>Tämän hetkinen data ylikirjoitetaan ja ohjelma käynnistetään uudestaan, haluatko jatkaa?</value>
   </data>
   <data name="STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
   <data name="STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue.Text" xml:space="preserve">
-    <value>פעולה זו תמחק ותיצור מחדש את מסד הנתונים של grocy, משמעות הדבר היא שכל הנתונים שלך יימחקו, באמת להמשיך?</value>
+    <value>Toiminto tuhoaa ja luo uudestaan grocy -databasen. KAIKKI TIEDOT menetetään, haluatko todella jatkaa?</value>
   </data>
   <data name="STRING_ZipFiles.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
   <data name="STRING_ZipFiles.Text" xml:space="preserve">
-    <value>קובצי ZIP</value>
+    <value>ZIP -tiedostot</value>
   </data>
   <data name="STRING_SayThanks.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
   <data name="STRING_SayThanks.Text" xml:space="preserve">
-    <value>אמירת תודה</value>
+    <value>Kiitä</value>
   </data>
   <data name="STRING_SayThanksQuestion.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
   <data name="STRING_SayThanksQuestion.Text" xml:space="preserve">
-    <value>לדעתך grocy מביא תועלת?</value>
+    <value>Do you find grocy useful?</value>
   </data>
   <data name="STRING_PreparingWebbrowser.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
   <data name="STRING_PreparingWebbrowser.Text" xml:space="preserve">
-    <value>הדפדפן המוטמע מתכונן…</value>
+    <value>Valmistelee web -selainta...</value>
   </data>
   <data name="STRING_PreparingWebserver.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
   <data name="STRING_PreparingWebserver.Text" xml:space="preserve">
-    <value>השרת המוטמע מתכונן…</value>
+    <value>Valmistelee web -serveriä...</value>
   </data>
   <data name="STRING_PreparingPhpRuntime.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
   <data name="STRING_PreparingPhpRuntime.Text" xml:space="preserve">
-    <value>סביבת ה־PHP המוטמעת מתכוננת…</value>
+    <value>Preparing embedded PHP runtime...</value>
   </data>
   <data name="STRING_PreparingGrocy.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
   <data name="STRING_PreparingGrocy.Text" xml:space="preserve">
-    <value>grocy מתכונן…</value>
+    <value>Valmistellaan grocya...</value>
   </data>
   <data name="STRING_PreparingBarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
   <data name="STRING_PreparingBarcodeBuddy.Text" xml:space="preserve">
-    <value>מסייע הברקודים מתכונן…</value>
+    <value>Valmistalee 'Barcode Buddy':a</value>
   </data>
   <data name="STRING_DownloadingGrocyRelease.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
   <data name="STRING_DownloadingGrocyRelease.Text" xml:space="preserve">
-    <value>המהדורה העדכנית ביותר של grocy מתקבלת כעת…</value>
+    <value>Lataa viimeisin grocy -riliisi...</value>
   </data>
   <data name="STRING_DownloadingBarcodeBuddyRelease.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
   <data name="STRING_DownloadingBarcodeBuddyRelease.Text" xml:space="preserve">
-    <value>המהדורה העדכנית ביותר של מסייע הברקודים מתקבלת כעת…</value>
+    <value>Lataa viimeisin 'Barcode Buddy' -riliisi...</value>
   </data>
   <data name="STRING_GrocyExternalAccessInfo.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
   <data name="STRING_GrocyExternalAccessInfo.Text" xml:space="preserve">
-    <value>גישה חיצונית ל־grocy דרך %1$s או %2$s</value>
+    <value>Access grocy externally via %1$s or %2$s</value>
   </data>
   <data name="STRING_GrocyAndBarcodeBuddyExternalAccessInfo.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
   <data name="STRING_GrocyAndBarcodeBuddyExternalAccessInfo.Text" xml:space="preserve">
-    <value>ניתן לגשת ל־grocy חיצונית דרך %1$s או %2$s ולמסייע הברקודים דרך %3$s או %4$s</value>
+    <value>Access grocy externally via %1$s or %2$s and Barcode Buddy via %3$s or %4$s</value>
   </data>
   <data name="STRING_NginxOutput.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
   <data name="STRING_NginxOutput.Text" xml:space="preserve">
-    <value>פלט nginx</value>
+    <value>nginx output</value>
   </data>
   <data name="ContextMenuStrip_DummyForResxStrings.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 466</value>
