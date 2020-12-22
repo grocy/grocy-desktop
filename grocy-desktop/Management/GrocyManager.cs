@@ -61,7 +61,7 @@ namespace GrocyDesktop.Management
 		public void Setup()
 		{
 			File.WriteAllText(Path.Combine(this.BasePath, "embedded.txt"), this.DataPath);
-			this.SetSetting("CULTURE", this.GuessLocalization());
+			this.SetSetting("DEFAULT_LOCALE", this.GuessLocalization());
 			this.SetSetting("BASE_URL", "/");
 			this.SetSetting("CURRENCY", new RegionInfo(CultureInfo.CurrentCulture.LCID).ISOCurrencySymbol);
 
