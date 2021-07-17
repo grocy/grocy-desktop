@@ -54,9 +54,9 @@ grocy-desktop will do the following things and then opens the locally hosted ins
   - grocy to `%appdata%\grocy-desktop\grocy`
   - Barcode Buddy (if enabled) to `%appdata%\grocy-desktop\barcodebuddy`
   - When running the UWP app (normally installed from the Microsoft Store) the used paths are
-  - `%userprofile%\.grocy-desktop\runtime-dependencies`
-  - `%userprofile%\.grocy-desktop\grocy`
-  - `%userprofile%\.grocy-desktop\barcodebuddy`
+    - `%userprofile%\.grocy-desktop\runtime-dependencies`
+    - `%userprofile%\.grocy-desktop\grocy`
+    - `%userprofile%\.grocy-desktop\barcodebuddy`
 - Configuring grocy and Barcode Buddy (if enabled) in embedded mode (user data will be saved to `%appdata%\grocy-desktop\grocy-data` / `%appdata%\grocy-desktop\barcodebuddy-data`, these paths can be changed (see the `grocy` and `Barcode Buddy` (if enabled) menu in the top menu bar)
   - When running the UWP app (normally installed from the Microsoft Store), the default path used is `%userprofile%\.grocy-desktop\grocy-data` / `%userprofile%\.grocy-desktop\barcodebuddy-data`
   - The default ports used are `4010` for grocy and `4011` for Barcode Buddy, if they're already used, a random free port is used instead
