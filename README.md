@@ -8,7 +8,7 @@ grocy is a selfhosted PHP web application, so normally runs on webservers. If yo
 - Classic installer
   - Just download and execute the [latest release](https://releases.grocy.info/latest-desktop), afterwards you will have a shortcut on your desktop which starts grocy.
 - Microsoft Store  
-<a href="//www.microsoft.com/store/apps/9nwb1trnnksf?cid=storebadge&ocid=badge"><img src="https://assets.windowsphone.com/85864462-9c82-451e-9355-a3d5f874397a/English_get-it-from-MS_InvariantCulture_Default.png" alt="Get it from Microsoft" width="150px" /></a>
+<a href="//www.microsoft.com/store/apps/9nwb1trnnksf?cid=storebadge&ocid=badge"><img src="https://github.com/grocy/grocy-desktop/raw/master/.github/publication_assets/microsoft-store-badge-en.png" alt="Get it from Microsoft" width="150px" /></a>
 
 Please note that the user data is not automatically transfered when switching between the classic installer and the Microsoft Store version, please use the [backup/restore functionality](#how-to-backuprestore) to transfer your data.
 
@@ -61,7 +61,7 @@ See https://grocy.info/#say-thanks for more ideas if you just want to say thanks
 There is none. grocy is only my hobby, one I like, but not the only one, and because of that, there are no release dates, no schedules for when anything is ready, it's done when it's done, maybe tomorrow, maybe tomorrow next year, everyone is invited to contribute - I appreciate all ideas and contributions. The progress of a specific bug/enhancement is always tracked in the corresponding issue, at least by commit comment references.
 
 ## Screenshots
-![grocy-desktop](https://github.com/berrnd/grocy-desktop/raw/master/publication_assets/grocy-desktop.png "grocy-desktop")
+![grocy-desktop](https://github.com/berrnd/grocy-desktop/raw/master/.github/publication_assets/grocy-desktop.png "grocy-desktop")
 
 ### How to build
 You will need Visual Studio 2019. All dependencies are included, available via NuGet or will be downloaded at compile time (see build events).
