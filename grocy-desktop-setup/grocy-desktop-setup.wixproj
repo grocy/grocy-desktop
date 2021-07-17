@@ -65,6 +65,9 @@
   copy "$(SolutionDir)grocy-desktop\bin\Release\grocy-desktop.exe.config" "$(SolutionDir).deploy\appx_content\grocy-desktop.exe.config"
 
   copy "$(SolutionDir)grocy-desktop\bin\Release\Newtonsoft.Json.dll" "$(SolutionDir).deploy\appx_content\Newtonsoft.Json.dll"
+  copy "$(SolutionDir)grocy-desktop\bin\Release\CefSharp.Core.dll" "$(SolutionDir).deploy\appx_content\CefSharp.Core.dll"
+  copy "$(SolutionDir)grocy-desktop\bin\Release\CefSharp.dll" "$(SolutionDir).deploy\appx_content\CefSharp.dll"
+  copy "$(SolutionDir)grocy-desktop\bin\Release\CefSharp.WinForms.dll" "$(SolutionDir).deploy\appx_content\CefSharp.WinForms.dll"
 
   mkdir "$(SolutionDir).deploy\appx_content\de"
   mkdir "$(SolutionDir).deploy\appx_content\el"
