@@ -6,9 +6,6 @@
 
 -----
 
-# grocy-desktop
-A (Windows) desktop application wrapper for [grocy](https://github.com/grocy/grocy)
-
 ## Questions / Help / Bug reporting / Feature requests
 There is the [r/grocy subreddit](https://www.reddit.com/r/grocy) to connect with other grocy users and getting help.
 
