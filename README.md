@@ -1,3 +1,11 @@
+<div align="center">
+<img alt="Logo" height="50" src="https://raw.githubusercontent.com/grocy/grocy/master/public/img/grocy_logo.svg?sanitize=true" />
+<h3>grocy-desktop</h3>
+<h4>A (Windows) desktop application wrapper for <a href="https://github.com/grocy/grocy">grocy</a><br>Created by <a href="https://github.com/berrnd">@berrnd</a></h4>
+</div>
+
+-----
+
 # grocy-desktop
 A (Windows) desktop application wrapper for [grocy](https://github.com/grocy/grocy)
 
