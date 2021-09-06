@@ -4,7 +4,7 @@ A (Windows) desktop application wrapper for [grocy](https://github.com/grocy/gro
 ## Questions / Help / Bug reporting / Feature requests
 There is the [r/grocy subreddit](https://www.reddit.com/r/grocy) to connect with other grocy users and getting help.
 
-If you've found something that does not work or if you have an idea for an improvement or new things which you would find useful, feel free to open a request on the [issue tracker](https://github.com/grocy/grocy-desktop/issues/new/choose) here (please remember: grocy-desktop is only the desktop application wrapper for [grocy](https://github.com/grocy/grocy), which has [its own issue tracker](https://github.com/grocy/grocy/issues/new/choose) for bug reports and feature requests.)
+If you've found something that does not work or if you have an idea for an improvement or new things which you would find useful, feel free to open a request on the [issue tracker](https://github.com/grocy/grocy-desktop/issues/new/choose) here (please remember: grocy-desktop is only the desktop application wrapper for [grocy](https://github.com/grocy/grocy), which has [its own issue tracker](https://github.com/grocy/grocy/issues/new/choose) for bug reports and feature requests).
 
 Please don't send me private messages regarding grocy help. I check the issue tracker and the subreddit pretty much daily, but don't provide grocy support beyond that.
 
