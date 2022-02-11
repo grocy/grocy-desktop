@@ -61,6 +61,7 @@ namespace GrocyDesktop.Management
 					waitWindow.SetStatus(ResourceManager.GetString("STRING_PreparingWebbrowser.Text"));
 				}
 				await Task.Run(() => IOHelper.ExtractZipToDirectory(cefZipPathx86, cefPathx86, true));
+				await Task.Run(() => IOHelper.ExtractZipToDirectory(vc2019x86ZipPath, cefPathx86, true));
 			}
 
 			// nginx
