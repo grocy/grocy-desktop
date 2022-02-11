@@ -3,4 +3,5 @@
 [Bb]in/
 [Oo]bj/
 *.csproj.user
+*.wixproj.user
 /.deploy

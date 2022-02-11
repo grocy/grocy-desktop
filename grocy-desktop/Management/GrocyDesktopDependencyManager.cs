@@ -49,7 +49,7 @@ namespace GrocyDesktop.Management
 				waitWindow.Show(ownerFormReference);
 			}
 
-			string vc2019x86ZipPath = Path.Combine(Program.BaseExecutingPath, "vc2019x86.zip");
+			string vcredistx86ZipPath = Path.Combine(Program.BaseExecutingPath, "vcredistx86.zip");
 
 			// CefSharp x86
 			string cefZipPathx86 = Path.Combine(Program.BaseExecutingPath, "cefx86.zip");
@@ -61,7 +61,7 @@ namespace GrocyDesktop.Management
 					waitWindow.SetStatus(ResourceManager.GetString("STRING_PreparingWebbrowser.Text"));
 				}
 				await Task.Run(() => IOHelper.ExtractZipToDirectory(cefZipPathx86, cefPathx86, true));
-				await Task.Run(() => IOHelper.ExtractZipToDirectory(vc2019x86ZipPath, cefPathx86, true));
+				await Task.Run(() => IOHelper.ExtractZipToDirectory(vcredistx86ZipPath, cefPathx86, true));
 			}
 
 			// nginx
@@ -84,7 +84,7 @@ namespace GrocyDesktop.Management
 					waitWindow.SetStatus(ResourceManager.GetString("STRING_PreparingPhpRuntime.Text"));
 				}
 				await Task.Run(() => IOHelper.ExtractZipToDirectory(phpZipPath, PhpExecutingPath, true));
-				await Task.Run(() => IOHelper.ExtractZipToDirectory(vc2019x86ZipPath, PhpExecutingPath, true));
+				await Task.Run(() => IOHelper.ExtractZipToDirectory(vcredistx86ZipPath, PhpExecutingPath, true));
 			}
 
 			// grocy
