@@ -60,23 +60,23 @@ namespace GrocyDesktop
 
 			if (this.UserSettings.EnableBarcodeBuddyIntegration)
 			{
-				cefSettings.CefCommandLineArgs.Add("--unsafely-treat-insecure-origin-as-secure", this.GrocyManager.LocalUrl + "," + this.BarcodeBuddyManager.LocalUrl);
+				cefSettings.CefCommandLineArgs.Add("--unsafely-treat-insecure-origin-as-secure", this.GrocyManager.DesiredUrl + "," + this.BarcodeBuddyManager.DesiredUrl);
 			}
 			else
 			{
-				cefSettings.CefCommandLineArgs.Add("--unsafely-treat-insecure-origin-as-secure", this.GrocyManager.LocalUrl);
+				cefSettings.CefCommandLineArgs.Add("--unsafely-treat-insecure-origin-as-secure", this.GrocyManager.DesiredUrl);
 			}
 			
 			Cef.Initialize(cefSettings, performDependencyCheck: false, browserProcessHandler: null);
 
 			if (this.UserSettings.EnableBarcodeBuddyIntegration)
 			{
-				this.GrocyBrowser = new ChromiumWebBrowser(this.GrocyManager.LocalUrl);
+				this.GrocyBrowser = new ChromiumWebBrowser(this.GrocyManager.DesiredUrl);
 				this.GrocyBrowser.Dock = DockStyle.Fill;
 				this.TabPage_Grocy.Controls.Add(this.GrocyBrowser);
 				this.GrocyBrowser.LoadingStateChanged += GrocyBrowser_LoadingStateChanged;
 
-				this.BarcodeBuddyBrowser = new ChromiumWebBrowser(this.BarcodeBuddyManager.LocalUrl);
+				this.BarcodeBuddyBrowser = new ChromiumWebBrowser(this.BarcodeBuddyManager.DesiredUrl);
 				this.BarcodeBuddyBrowser.Dock = DockStyle.Fill;
 				this.TabPage_BarcodeBuddy.Controls.Add(this.BarcodeBuddyBrowser);
 				this.BarcodeBuddyBrowser.LoadingStateChanged += BarcodeBuddyBrowser_LoadingStateChanged;
@@ -86,7 +86,7 @@ namespace GrocyDesktop
 				this.TabControl_Main.Visible = false;
 				this.ToolStripMenuItem_BarcodeBuddy.Visible = false;
 
-				this.GrocyBrowser = new ChromiumWebBrowser(this.GrocyManager.LocalUrl);
+				this.GrocyBrowser = new ChromiumWebBrowser(this.GrocyManager.DesiredUrl);
 				this.GrocyBrowser.Dock = DockStyle.Fill;
 				this.Panel_Main.Controls.Add(this.GrocyBrowser);
 				this.GrocyBrowser.LoadingStateChanged += GrocyBrowser_LoadingStateChanged;
@@ -187,14 +187,14 @@ namespace GrocyDesktop
 
 		private void SetupGrocy()
 		{
-			this.GrocyManager = new GrocyManager(GrocyDesktopDependencyManager.GrocyExecutingPath, this.UserSettings.GrocyDataLocation, this.UserSettings.GrocyWebserverDesiredPort);
+			this.GrocyManager = new GrocyManager(GrocyDesktopDependencyManager.GrocyExecutingPath, this.UserSettings.GrocyDataLocation, this.UserSettings.EnableExternalWebserverAccess, this.UserSettings.GrocyWebserverDesiredPort);
 			this.GrocyManager.Setup();
 		}
 
 		private void SetupBarcodeBuddy()
 		{
-			this.BarcodeBuddyManager = new BarcodeBuddyManager(GrocyDesktopDependencyManager.BarcodeBuddyExecutingPath, this.UserSettings.BarcodeBuddyDataLocation, this.UserSettings.BarcodeBuddyWebserverDesiredPort);
-			this.BarcodeBuddyManager.Setup(this.GrocyManager.LocalUrl.TrimEnd('/') + "/api/");
+			this.BarcodeBuddyManager = new BarcodeBuddyManager(GrocyDesktopDependencyManager.BarcodeBuddyExecutingPath, this.UserSettings.BarcodeBuddyDataLocation, this.UserSettings.EnableExternalWebserverAccess, this.UserSettings.BarcodeBuddyWebserverDesiredPort);
+			this.BarcodeBuddyManager.Setup(this.GrocyManager.DesiredUrl.TrimEnd('/') + "/api/");
 
 			this.BarcodeBuddyWebsocketServer = new PhpManager(GrocyDesktopDependencyManager.PhpExecutingPath, GrocyDesktopDependencyManager.BarcodeBuddyExecutingPath, "wsserver.php", false);
 			this.BarcodeBuddyWebsocketServer.Start();
@@ -326,7 +326,7 @@ namespace GrocyDesktop
 		{
 			await GrocyDesktopDependencyManager.UpdateEmbeddedGrocyRelease(this);
 			this.GrocyManager.Setup();
-			this.GrocyBrowser.Load(this.GrocyManager.LocalUrl);
+			this.GrocyBrowser.Load(this.GrocyManager.DesiredUrl);
 		}
 
 		private void ToolStripMenuItem_RecreateGrocyDatabase_Click(object sender, EventArgs e)
@@ -341,8 +341,8 @@ namespace GrocyDesktop
 		private async void ToolStripMenuItem_UpdateBarcodeBuddy_Click(object sender, EventArgs e)
 		{
 			await GrocyDesktopDependencyManager.UpdateEmbeddedBarcodeBuddyRelease(this);
-			this.BarcodeBuddyManager.Setup(this.GrocyManager.LocalUrl);
-			this.BarcodeBuddyBrowser.Load(this.BarcodeBuddyManager.LocalUrl);
+			this.BarcodeBuddyManager.Setup(this.GrocyManager.DesiredUrl);
+			this.BarcodeBuddyBrowser.Load(this.BarcodeBuddyManager.DesiredUrl);
 		}
 
 		private void ToolStripMenuItem_EnableBarcodeBuddy_Click(object sender, EventArgs e)

@@ -8,10 +8,11 @@ namespace GrocyDesktop.Management
 {
 	public class GrocyManager
 	{
-		public GrocyManager(string basePath, string dataPath, int desiredPort = -1)
+		public GrocyManager(string basePath, string dataPath, bool preferExternalAccess, int desiredPort = -1)
 		{
 			this.BasePath = basePath;
 			this.DataPath = dataPath;
+			this.PreferExternalAccess = preferExternalAccess;
 
 			if (desiredPort == -1)
 			{
@@ -32,6 +33,7 @@ namespace GrocyDesktop.Management
 
 		private string BasePath;
 		private string DataPath;
+		private bool PreferExternalAccess;
 		public int Port { get; private set; }
 
 		public string IpUrl
@@ -55,6 +57,21 @@ namespace GrocyDesktop.Management
 			get
 			{
 				return "http://localhost:" + this.Port.ToString();
+			}
+		}
+
+		public string DesiredUrl
+		{
+			get
+			{
+				if (this.PreferExternalAccess)
+				{
+					return this.IpUrl;
+				}
+				else
+				{
+					return this.LocalUrl;
+				}
 			}
 		}
 

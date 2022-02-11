@@ -6,10 +6,11 @@ namespace GrocyDesktop.Management
 {
 	public class BarcodeBuddyManager
 	{
-		public BarcodeBuddyManager(string basePath, string dataPath, int desiredPort = -1)
+		public BarcodeBuddyManager(string basePath, string dataPath, bool preferExternalAccess, int desiredPort = -1)
 		{
 			this.BasePath = basePath;
 			this.DataPath = dataPath;
+			this.PreferExternalAccess = preferExternalAccess;
 			this.EnvironmentVariables = new Dictionary<string, string>();
 
 			if (desiredPort == -1)
@@ -31,6 +32,7 @@ namespace GrocyDesktop.Management
 
 		private string BasePath;
 		private string DataPath;
+		private bool PreferExternalAccess;
 		private Dictionary<string, string> EnvironmentVariables;
 		public int Port { get; private set; }
 
@@ -57,6 +59,21 @@ namespace GrocyDesktop.Management
 				return "http://localhost:" + this.Port.ToString();
 			}
 		}
+
+		public string DesiredUrl
+        {
+			get
+            {
+				if (this.PreferExternalAccess)
+                {
+					return this.IpUrl;
+                }
+				else
+                {
+					return this.LocalUrl;
+                }
+            }
+        }
 
 		public void Setup(string grocyApiUrl)
 		{
