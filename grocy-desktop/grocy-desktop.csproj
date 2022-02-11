@@ -195,6 +195,7 @@
     <PreBuildEvent>if $(ConfigurationName)==Release (
     del "$(SolutionDir)embedded_dependencies\cefx86.zip"
     del "$(SolutionDir)embedded_dependencies\grocy.zip"
+    del "$(SolutionDir)embedded_dependencies\barcodebuddy.zip"
 )</PreBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
