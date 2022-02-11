@@ -186,13 +186,13 @@
     <value>180, 22</value>
   </data>
   <data name="ToolStripMenuItem_BrowserZoom.Text" xml:space="preserve">
-    <value>Browser Zoom</value>
+    <value>Selaimen zoom</value>
   </data>
   <data name="ToolStripMenuItem_View.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 20</value>
   </data>
   <data name="ToolStripMenuItem_View.Text" xml:space="preserve">
-    <value>View</value>
+    <value>Näytä</value>
   </data>
   <data name="ToolStripMenuItem_UpdateGrocy.Size" type="System.Drawing.Size, System.Drawing">
     <value>243, 22</value>
@@ -273,13 +273,13 @@
     <value>232, 22</value>
   </data>
   <data name="ToolStripMenuItem_ShowNginxOutput.Text" xml:space="preserve">
-    <value>Show nginx output</value>
+    <value>Näytä nginx -tuloste</value>
   </data>
   <data name="ToolStripMenuItem_ShowPhpRuntimeOutput.Size" type="System.Drawing.Size, System.Drawing">
     <value>232, 22</value>
   </data>
   <data name="ToolStripMenuItem_ShowPhpRuntimeOutput.Text" xml:space="preserve">
-    <value>Show PHP output</value>
+    <value>Näytä PHP-tuloste</value>
   </data>
   <data name="ToolStripMenuItem_ShowBrowserDeveloperTools.Size" type="System.Drawing.Size, System.Drawing">
     <value>232, 22</value>
@@ -291,7 +291,7 @@
     <value>187, 22</value>
   </data>
   <data name="ToolStripMenuItem_Debug.Text" xml:space="preserve">
-    <value>Debug</value>
+    <value>Virheenkorjaus</value>
   </data>
   <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 6</value>
@@ -300,7 +300,7 @@
     <value>187, 22</value>
   </data>
   <data name="ToolStripMenuItem_About.Text" xml:space="preserve">
-    <value>About grocy-desktop</value>
+    <value>Tietoja ohjelmasta grocy-desktop</value>
   </data>
   <data name="ToolStripMenuItem_Help.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 20</value>
@@ -469,7 +469,7 @@
     <value>592, 22</value>
   </data>
   <data name="STRING_PHPOutput.Text" xml:space="preserve">
-    <value>PHP output</value>
+    <value>PHP-tuloste</value>
   </data>
   <data name="STRING_ChangeDataLocation.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
@@ -529,7 +529,7 @@
     <value>592, 22</value>
   </data>
   <data name="STRING_SayThanksQuestion.Text" xml:space="preserve">
-    <value>Do you find grocy useful?</value>
+    <value>Pidätkö grocya hyödyllisenä?</value>
   </data>
   <data name="STRING_PreparingWebbrowser.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
@@ -547,7 +547,7 @@
     <value>592, 22</value>
   </data>
   <data name="STRING_PreparingPhpRuntime.Text" xml:space="preserve">
-    <value>Preparing embedded PHP runtime...</value>
+    <value>Alustetaan sulautettua PHP-ajoympäristöä...</value>
   </data>
   <data name="STRING_PreparingGrocy.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
@@ -577,19 +577,19 @@
     <value>592, 22</value>
   </data>
   <data name="STRING_GrocyExternalAccessInfo.Text" xml:space="preserve">
-    <value>Access grocy externally via %1$s or %2$s</value>
+    <value>Käytä grocya ulkoisesti käyttäen %1$s tai %2$s</value>
   </data>
   <data name="STRING_GrocyAndBarcodeBuddyExternalAccessInfo.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
   <data name="STRING_GrocyAndBarcodeBuddyExternalAccessInfo.Text" xml:space="preserve">
-    <value>Access grocy externally via %1$s or %2$s and Barcode Buddy via %3$s or %4$s</value>
+    <value>Käytä grocya ulkoisesti käyttäen %1$s tai %2$s sekä Barcode Buddya käyttäen %3$s tai %4$s</value>
   </data>
   <data name="STRING_NginxOutput.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
   <data name="STRING_NginxOutput.Text" xml:space="preserve">
-    <value>nginx output</value>
+    <value>nginx-tuloste</value>
   </data>
   <data name="ContextMenuStrip_DummyForResxStrings.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 466</value>

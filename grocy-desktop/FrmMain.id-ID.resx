@@ -162,7 +162,7 @@
     <value>222, 22</value>
   </data>
   <data name="ToolStripMenuItem_ZoomIn.Text" xml:space="preserve">
-    <value>Zoom In</value>
+    <value>Perbesar</value>
   </data>
   <data name="ToolStripMenuItem_ZoomOut.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+OemMinus</value>
@@ -171,7 +171,7 @@
     <value>222, 22</value>
   </data>
   <data name="ToolStripMenuItem_ZoomOut.Text" xml:space="preserve">
-    <value>Zoom Out</value>
+    <value>Perkecil</value>
   </data>
   <data name="ToolStripMenuItem_ResetZoom.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+0</value>
@@ -192,7 +192,7 @@
     <value>44, 20</value>
   </data>
   <data name="ToolStripMenuItem_View.Text" xml:space="preserve">
-    <value>View</value>
+    <value>Tampilan</value>
   </data>
   <data name="ToolStripMenuItem_UpdateGrocy.Size" type="System.Drawing.Size, System.Drawing">
     <value>243, 22</value>
