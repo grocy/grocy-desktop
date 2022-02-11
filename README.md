@@ -6,17 +6,12 @@
 
 -----
 
-## Questions / Help / Bug reporting / Feature requests
+## Questions / Help / Bug Reports / Feature Requests
 
-There is the [r/grocy subreddit](https://www.reddit.com/r/grocy) to connect with other grocy users and getting help.
+- General help and usage questions &rarr;  [r/grocy subreddit](https://www.reddit.com/r/grocy)
+- Bug Reports and Feature Requests &rarr; [Issue Tracker](https://github.com/grocy/grocy-desktop/issues/new/choose)
 
-If you've found something that does not work or if you have an idea for an improvement or new things which you would find useful, feel free to open a request on the [issue tracker](https://github.com/grocy/grocy-desktop/issues/new/choose) here (please remember: grocy-desktop is only the desktop application wrapper for [grocy](https://github.com/grocy/grocy), which has [its own issue tracker](https://github.com/grocy/grocy/issues/new/choose) for bug reports and feature requests).
-
-Please don't send me private messages regarding grocy help. I check the issue tracker and the subreddit pretty much daily, but don't provide grocy support beyond that.
-
-## Motivation
-
-grocy is a selfhosted PHP web application, so normally runs on webservers. If you are not so familiar with the technical things regarding webservers, but just want to have grocy running like a normal (Windows) desktop application, this is what you need.
+_Please don't send me private messages or call me regarding grocy help. I check the issue tracker and the subreddit pretty much daily, but don't provide grocy support beyond that._
 
 ## How to install
 
@@ -59,6 +54,10 @@ _This should only be used in trusted (local) networks._
 If you want to have grocy-desktop on more than one machine, you can enable synchronization of all user data via `File -> Enable user data synchronization`.
 All user data will be exported to the selected directory an closing the application and restored on application start (e. g. use any cloud-synced directory for that).
 
+## Motivation
+
+grocy is a selfhosted PHP web application, so normally runs on webservers. If you are not so familiar with the technical things regarding webservers, but just want to have grocy running like a normal (Windows) desktop application, this is what you need.
+
 ## Things worth to know
 
 ### How this works technically
@@ -87,7 +86,7 @@ grocy-desktop will do the following things and then opens the locally hosted ins
 - Starting nginx, bound to `localhost` if external access is disabled, otherwise bound to all network interfaces
 - Starting PHP FastCGI, bound to `localhost` on a random free port
 
-## Contributing / Say thanks
+## Contributing / Say Thanks
 
 Any help is more than appreciated. Feel free to pick any open unassigned issue and submit a pull request, but please leave a short comment or assign the issue yourself, to avoid working on the same thing.
 
@@ -101,7 +100,7 @@ There is none. The progress of a specific bug/enhancement is always tracked in t
 
 ![grocy-desktop](https://github.com/berrnd/grocy-desktop/raw/master/.github/publication_assets/grocy-desktop.png "grocy-desktop")
 
-### How to build
+## How to build
 
 You will need Visual Studio 2022. All dependencies are included, available via NuGet or will be downloaded at compile time (see build events).
 The setup is built using [WiX Toolset](https://wixtoolset.org), which should be installed along with the [Wix Toolset Visual Studio 2022 Extension](https://marketplace.visualstudio.com/items?itemName=WixToolset.WixToolsetVisualStudio2022Extension).
