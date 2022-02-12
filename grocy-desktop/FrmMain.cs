@@ -220,16 +220,16 @@ namespace GrocyDesktop
 			if (this.UserSettings.EnableBarcodeBuddyIntegration)
 			{
 				this.ToolStripStatusLabel_ExternalAccessInfo.Text = this.ResourceManager.GetString("STRING_GrocyAndBarcodeBuddyExternalAccessInfo.Text")
-					.Replace("%1$s", this.GrocyManager.HostnameUrl)
-					.Replace("%2$s", this.GrocyManager.IpUrl)
-					.Replace("%3$s", this.BarcodeBuddyManager.HostnameUrl)
-					.Replace("%4$s", this.BarcodeBuddyManager.IpUrl);
+					.Replace("%1$s", this.GrocyManager.IpUrl)
+					.Replace("%2$s", this.GrocyManager.HostnameUrl)
+					.Replace("%3$s", this.BarcodeBuddyManager.IpUrl)
+					.Replace("%4$s", this.BarcodeBuddyManager.HostnameUrl);
 			}
 			else
 			{
 				this.ToolStripStatusLabel_ExternalAccessInfo.Text = this.ResourceManager.GetString("STRING_GrocyExternalAccessInfo.Text")
-					.Replace("%1$s", this.GrocyManager.HostnameUrl)
-					.Replace("%2$s", this.GrocyManager.IpUrl);
+					.Replace("%1$s", this.GrocyManager.IpUrl)
+					.Replace("%2$s", this.GrocyManager.HostnameUrl);
 			}
 		}
 
