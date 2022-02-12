@@ -200,15 +200,15 @@
   </PropertyGroup>
   <PropertyGroup>
     <PostBuildEvent>if not exist "$(SolutionDir)embedded_dependencies\cefx86.zip" (
-    PowerShell -ExecutionPolicy Unrestricted -Command "&amp; Get-ChildItem '$(TargetDir)\x86\*' -Recurse | Compress-Archive -DestinationPath '$(SolutionDir)embedded_dependencies\cefx86.zip'"
+    PowerShell -ExecutionPolicy Unrestricted -Command "Get-ChildItem '$(TargetDir)\x86\*' -Recurse | Compress-Archive -DestinationPath '$(SolutionDir)embedded_dependencies\cefx86.zip'"
 )
 
 if not exist "$(SolutionDir)embedded_dependencies\grocy.zip" (
-    PowerShell -ExecutionPolicy Unrestricted -Command "&amp; Invoke-WebRequest 'https://releases.grocy.info/latest' -OutFile '$(SolutionDir)embedded_dependencies\grocy.zip'"
+    PowerShell -ExecutionPolicy Unrestricted -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest 'https://releases.grocy.info/latest' -OutFile '$(SolutionDir)embedded_dependencies\grocy.zip'"
 )
 
 if not exist "$(SolutionDir)embedded_dependencies\barcodebuddy.zip" (
-    PowerShell -ExecutionPolicy Unrestricted -Command "&amp; Invoke-WebRequest ('https://github.com/Forceu/barcodebuddy/archive/' + (Invoke-RestMethod -Uri https://api.github.com/repos/Forceu/barcodebuddy/releases/latest | Select -Expand tag_name) + '.zip') -OutFile '$(SolutionDir)embedded_dependencies\barcodebuddy.zip'"
+    PowerShell -ExecutionPolicy Unrestricted -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest ('https://github.com/Forceu/barcodebuddy/archive/' + (Invoke-RestMethod -Uri https://api.github.com/repos/Forceu/barcodebuddy/releases/latest | Select -Expand tag_name) + '.zip') -OutFile '$(SolutionDir)embedded_dependencies\barcodebuddy.zip'"
 )
 </PostBuildEvent>
   </PropertyGroup>
