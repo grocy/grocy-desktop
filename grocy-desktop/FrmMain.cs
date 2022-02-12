@@ -52,7 +52,7 @@ namespace GrocyDesktop
 			Cef.EnableHighDPISupport();
 			
 			CefSettings cefSettings = new CefSettings();
-			cefSettings.BrowserSubprocessPath = Path.Combine(GrocyDesktopDependencyManager.CefExecutingPath, @"x86\CefSharp.BrowserSubprocess.exe");
+			cefSettings.BrowserSubprocessPath = Path.Combine(GrocyDesktopDependencyManager.CefExecutingPath, @"CefSharp.BrowserSubprocess.exe");
 			cefSettings.CachePath = GrocyDesktopDependencyManager.CefCachePath;
 			cefSettings.LogSeverity = LogSeverity.Disable;
 			cefSettings.CefCommandLineArgs.Add("--enable-media-stream", "");

@@ -1,5 +1,5 @@
 *
 !.gitignore
-!php.zip
-!vc2015x86.zip
 !nginx.zip
+!php.zip
+!vcredist.zip

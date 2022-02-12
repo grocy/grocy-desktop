@@ -2,19 +2,19 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" InitialTargets="EnsureWixToolsetInstalled" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
     <ProductVersion>3.10</ProductVersion>
     <ProjectGuid>2d7f5878-407e-4cae-a738-b50d7c3ef090</ProjectGuid>
     <SchemaVersion>2.0</SchemaVersion>
     <OutputName>grocy_desktop_setup</OutputName>
     <OutputType>Package</OutputType>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
     <DefineConstants>Debug</DefineConstants>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
   </PropertyGroup>
@@ -50,7 +50,7 @@
   copy "$(TargetDir)grocy_desktop_setup.msi" "$(SolutionDir).deploy\grocy-desktop_x.x.x.msi"
   robocopy "$(SolutionDir)appx_dependencies" "$(SolutionDir).deploy\appx_content" /MIR /XF "grocy-desktop_developer_cert.pfx" /XF "README.md"
 
-  copy "$(SolutionDir)embedded_dependencies\cefx86.zip" "$(SolutionDir).deploy\appx_content\cefx86.zip"
+  copy "$(SolutionDir)embedded_dependencies\cef.zip" "$(SolutionDir).deploy\appx_content\cef.zip"
   copy "$(SolutionDir)embedded_dependencies\grocy.zip" "$(SolutionDir).deploy\appx_content\grocy.zip"
 
   copy "$(SolutionDir)embedded_dependencies\barcodebuddy.zip" "$(SolutionDir).deploy\appx_content\barcodebuddy.zip"
@@ -58,7 +58,7 @@
   copy "$(SolutionDir)embedded_dependencies\php.zip" "$(SolutionDir).deploy\appx_content\php.zip"
   copy "$(SolutionDir)embedded_dependencies\nginx.zip" "$(SolutionDir).deploy\appx_content\nginx.zip"
 
-  copy "$(SolutionDir)embedded_dependencies\vcredistx86.zip" "$(SolutionDir).deploy\appx_content\vcredistx86.zip"
+  copy "$(SolutionDir)embedded_dependencies\vcredist.zip" "$(SolutionDir).deploy\appx_content\vcredist.zip"
 
   copy "$(SolutionDir)grocy-desktop\bin\Release\grocy-desktop.exe" "$(SolutionDir).deploy\appx_content\grocy-desktop.exe"
 
@@ -95,14 +95,14 @@
   copy "$(SolutionDir)grocy-desktop\bin\Release\es\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\es\grocy-desktop.resources.dll"
   copy "$(SolutionDir)grocy-desktop\bin\Release\it\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\it\grocy-desktop.resources.dll"
 
-  "%25programfiles(x86)%25\Windows Kits\10\bin\10.0.19041.0\x86\makepri.exe" createconfig /cf "$(SolutionDir).deploy\appx_content\priconfig.xml" /dq lang-en-US /pv 10.0.0
+  "%25programfiles(x86)%25\Windows Kits\10\bin\10.0.19041.0\x64\makepri.exe" createconfig /cf "$(SolutionDir).deploy\appx_content\priconfig.xml" /dq lang-en-US /pv 10.0.0
   pushd "$(SolutionDir).deploy\appx_content"
-  "%25programfiles(x86)%25\Windows Kits\10\bin\10.0.19041.0\x86\makepri.exe" new /cf "$(SolutionDir).deploy\appx_content\priconfig.xml" /pr "$(SolutionDir).deploy\appx_content" /in 114BerndBestel.grocy
+  "%25programfiles(x86)%25\Windows Kits\10\bin\10.0.19041.0\x64\makepri.exe" new /cf "$(SolutionDir).deploy\appx_content\priconfig.xml" /pr "$(SolutionDir).deploy\appx_content" /in 114BerndBestel.grocy
   popd
   del "$(SolutionDir).deploy\appx_content\priconfig.xml"
-  "%25programfiles(x86)%25\Windows Kits\10\bin\10.0.19041.0\x86\makeappx.exe" pack /d "$(SolutionDir).deploy\appx_content" /p "$(SolutionDir).deploy\grocy-desktop_x.x.x.appx"
+  "%25programfiles(x86)%25\Windows Kits\10\bin\10.0.19041.0\x64\makeappx.exe" pack /d "$(SolutionDir).deploy\appx_content" /p "$(SolutionDir).deploy\grocy-desktop_x.x.x.appx"
 
-  "%25programfiles(x86)%25\Windows Kits\10\bin\10.0.19041.0\x86\signtool.exe" sign /fd sha256 /f "$(SolutionDir)appx_dependencies\grocy-desktop_developer_cert.pfx" /p "123456" "$(SolutionDir).deploy\grocy-desktop_x.x.x.appx"
+  "%25programfiles(x86)%25\Windows Kits\10\bin\10.0.19041.0\x64\signtool.exe" sign /fd sha256 /f "$(SolutionDir)appx_dependencies\grocy-desktop_developer_cert.pfx" /p "123456" "$(SolutionDir).deploy\grocy-desktop_x.x.x.appx"
 )</PostBuildEvent>
   </PropertyGroup>
   <!--

@@ -34,6 +34,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>GrocyDesktop.Program</StartupObject>
@@ -193,14 +194,14 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>if $(ConfigurationName)==Release (
-    del "$(SolutionDir)embedded_dependencies\cefx86.zip"
+    del "$(SolutionDir)embedded_dependencies\cef.zip"
     REM del "$(SolutionDir)embedded_dependencies\grocy.zip"
     REM del "$(SolutionDir)embedded_dependencies\barcodebuddy.zip"
 )</PreBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <PostBuildEvent>if not exist "$(SolutionDir)embedded_dependencies\cefx86.zip" (
-    PowerShell -ExecutionPolicy Unrestricted -Command "Get-ChildItem '$(TargetDir)\x86\*' -Recurse | Compress-Archive -DestinationPath '$(SolutionDir)embedded_dependencies\cefx86.zip'"
+    <PostBuildEvent>if not exist "$(SolutionDir)embedded_dependencies\cef.zip" (
+    PowerShell -ExecutionPolicy Unrestricted -Command "Get-ChildItem '$(TargetDir)\x64\*' -Recurse | Compress-Archive -DestinationPath '$(SolutionDir)embedded_dependencies\cef.zip'"
 )
 
 if not exist "$(SolutionDir)embedded_dependencies\grocy.zip" (

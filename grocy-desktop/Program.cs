@@ -63,7 +63,7 @@ namespace GrocyDesktop
 			if (args.Name.StartsWith("CefSharp"))
 			{
 				string assemblyName = args.Name.Split(new[] { ',' }, 2)[0] + ".dll";
-				string potentialAssemblyPath = Path.Combine(GrocyDesktopDependencyManager.CefExecutingPath, "x86", assemblyName);
+				string potentialAssemblyPath = Path.Combine(GrocyDesktopDependencyManager.CefExecutingPath, assemblyName);
 
 				return File.Exists(potentialAssemblyPath) ? Assembly.LoadFile(potentialAssemblyPath) : null;
 			}

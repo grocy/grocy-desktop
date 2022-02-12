@@ -49,19 +49,18 @@ namespace GrocyDesktop.Management
 				waitWindow.Show(ownerFormReference);
 			}
 
-			string vcredistx86ZipPath = Path.Combine(Program.BaseExecutingPath, "vcredistx86.zip");
+			string vcredistZipPath = Path.Combine(Program.BaseExecutingPath, "vcredist.zip");
 
-			// CefSharp x86
-			string cefZipPathx86 = Path.Combine(Program.BaseExecutingPath, "cefx86.zip");
-			string cefPathx86 = Path.Combine(CefExecutingPath, "x86");
-			if (!Directory.Exists(cefPathx86))
+			// CefSharp
+			string cefZipPath = Path.Combine(Program.BaseExecutingPath, "cef.zip");
+			if (!Directory.Exists(CefExecutingPath))
 			{
 				if (waitWindow != null)
 				{
 					waitWindow.SetStatus(ResourceManager.GetString("STRING_PreparingWebbrowser.Text"));
 				}
-				await Task.Run(() => IOHelper.ExtractZipToDirectory(cefZipPathx86, cefPathx86, true));
-				await Task.Run(() => IOHelper.ExtractZipToDirectory(vcredistx86ZipPath, cefPathx86, true));
+				await Task.Run(() => IOHelper.ExtractZipToDirectory(cefZipPath, CefExecutingPath, true));
+				await Task.Run(() => IOHelper.ExtractZipToDirectory(vcredistZipPath, CefExecutingPath, true));
 			}
 
 			// nginx
@@ -84,7 +83,7 @@ namespace GrocyDesktop.Management
 					waitWindow.SetStatus(ResourceManager.GetString("STRING_PreparingPhpRuntime.Text"));
 				}
 				await Task.Run(() => IOHelper.ExtractZipToDirectory(phpZipPath, PhpExecutingPath, true));
-				await Task.Run(() => IOHelper.ExtractZipToDirectory(vcredistx86ZipPath, PhpExecutingPath, true));
+				await Task.Run(() => IOHelper.ExtractZipToDirectory(vcredistZipPath, PhpExecutingPath, true));
 			}
 
 			// grocy

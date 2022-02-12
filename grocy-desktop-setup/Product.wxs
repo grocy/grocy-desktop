@@ -43,7 +43,7 @@
 			<UpgradeVersion OnlyDetect="no" Property="PREVIOUSFOUND" Minimum="1.0.0.0" IncludeMinimum="yes" Maximum="99.0.0.0" IncludeMaximum="no" />
 		</Upgrade>
 	
-		<CustomAction Id="CleanAdditionalFiles" Directory="ProgramFilesFolder" ExeCommand="cmd /C &quot;rd /S /Q .\grocy-desktop&quot;" Execute="deferred" Return="ignore" HideTarget="no" Impersonate="no" />
+		<CustomAction Id="CleanAdditionalFiles" Directory="ProgramFiles64Folder" ExeCommand="cmd /C &quot;rd /S /Q .\grocy-desktop&quot;" Execute="deferred" Return="ignore" HideTarget="no" Impersonate="no" />
 		<InstallExecuteSequence>
 			<Custom Action="CleanAdditionalFiles" Before="RemoveFiles" >
 				REMOVE="ALL"
@@ -55,7 +55,7 @@
 		<SetProperty Id="ProgramFilesFolder" Value="[LocalAppDataFolder]" Before="CostFinalize"><![CDATA[NOT Privileged]]></SetProperty>
 		
 		<Directory Id="TARGETDIR" Name="SourceDir">
-			<Directory Id="ProgramFilesFolder">
+			<Directory Id="ProgramFiles64Folder">
 				<Directory Id="INSTALLFOLDER" Name="grocy-desktop">
 					<Directory Id="RESOURCES_DE" Name="de" />
 					<Directory Id="RESOURCES_EL" Name="el" />
@@ -106,8 +106,8 @@
 				<File Id="BarcodeBuddyReleasePackage" Source="$(var.SolutionDir)embedded_dependencies\barcodebuddy.zip"></File>
 				<File Id="NginxPackage" Source="$(var.SolutionDir)embedded_dependencies\nginx.zip"></File>
 				<File Id="PhpPackage" Source="$(var.SolutionDir)embedded_dependencies\php.zip"></File>
-				<File Id="Vcredistx86Package" Source="$(var.SolutionDir)embedded_dependencies\vcredistx86.zip"></File>
-				<File Id="CefSharpPackagex86" Source="$(var.SolutionDir)embedded_dependencies\cefx86.zip"></File>
+				<File Id="VcredistPackage" Source="$(var.SolutionDir)embedded_dependencies\vcredist.zip"></File>
+				<File Id="CefSharpPackage" Source="$(var.SolutionDir)embedded_dependencies\cef.zip"></File>
 				<RemoveFolder Id="PurgeAppFolder" Directory="INSTALLFOLDER" On="uninstall" />
 			</Component>
 		</ComponentGroup>
