@@ -35,6 +35,7 @@ namespace GrocyDesktop.Management
 
 		public readonly static string CefExecutingPath = Path.Combine(Program.RuntimeDependenciesExecutingPath, "cef");
 		public readonly static string CefCachePath = Path.Combine(Program.RuntimeDependenciesExecutingPath, "cef-cache");
+		public readonly static string CefUserDataPath = Path.Combine(Program.RuntimeDependenciesExecutingPath, "cef-userdata");
 		public readonly static string NginxExecutingPath = Path.Combine(Program.RuntimeDependenciesExecutingPath, "nginx");
 		public readonly static string PhpExecutingPath = Path.Combine(Program.RuntimeDependenciesExecutingPath, "php");
 		public readonly static string GrocyExecutingPath = Path.Combine(Program.BaseFixedUserDataFolderPath, "grocy");

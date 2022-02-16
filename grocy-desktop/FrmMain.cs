@@ -54,6 +54,7 @@ namespace GrocyDesktop
 			CefSettings cefSettings = new CefSettings();
 			cefSettings.BrowserSubprocessPath = Path.Combine(GrocyDesktopDependencyManager.CefExecutingPath, @"CefSharp.BrowserSubprocess.exe");
 			cefSettings.CachePath = GrocyDesktopDependencyManager.CefCachePath;
+			cefSettings.UserDataPath = GrocyDesktopDependencyManager.CefUserDataPath;
 			cefSettings.LogSeverity = LogSeverity.Disable;
 			cefSettings.CefCommandLineArgs.Add("--enable-media-stream", "");
 			cefSettings.CefCommandLineArgs.Add("--lang", CultureInfo.CurrentCulture.TwoLetterISOLanguageName);
