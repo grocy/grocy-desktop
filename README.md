@@ -34,7 +34,9 @@ All user data can be exported and restored as a ZIP file (see the `grocy` and `B
 
 grocy-desktop is fully localizable - the default language is English (integrated into code), a German localization is always maintained by me.
 
-You can easily help translating grocy-desktop on [Transfifex](https://www.transifex.com/grocy/grocy-desktop/dashboard/) if your language is incomplete or not available yet.
+You can easily help translating grocy on [Transifex](https://www.transifex.com/grocy/grocy-desktop/dashboard/) if your language is incomplete or not available yet.
+
+Any translation which once reached a completion level of 70 % will be included in releases.
 
 grocy-desktop and grocy will use automatically the localization based on your system language, if available.
 
@@ -68,7 +70,7 @@ grocy-desktop is a .Net Windows Forms application. It uses [CefSharp](https://gi
 
 The installer has bundled, beside the application itself and the CefSharp dependencies, a for grocy configured PHP and nginx version (in `embedded_dependencies/php.zip` / `embedded_dependencies/nginx.zip`) and the current grocy and Barcode Buddy release.
 
-Everything will be unpacked to `%localappdata%\grocy-desktop` by default, the path can also be changed during the installation process. (This does not apply when running/installing the UWP app, normally from the Microsoft Store - UWP apps have their own default package locations.)
+Everything will be unpacked to `%programfiles%\grocy-desktop` by default, the path can also be changed during the installation process. (This does not apply when running/installing the UWP app, normally from the Microsoft Store - UWP apps have their own default package locations.)
 
 ### What happens on start
 
