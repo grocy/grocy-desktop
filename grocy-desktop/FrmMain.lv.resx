@@ -175,13 +175,13 @@
     <value>ToolStripMenuItem_Debug</value>
   </data>
   <data name="ToolStripMenuItem_ResetZoom.Text" xml:space="preserve">
-    <value>Réinitialiser le zoom</value>
+    <value>Atiestatīt tālummaiņu</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue.Text" xml:space="preserve">
-    <value>Redémarrer grocy-desktop pour appliquer les changements de paramètres ?</value>
+    <value>Lai lietotu mainītos iestatījumus, grocy-desktop tiks restartēta, vai turpināt?</value>
   </data>
   <data name="STRING_ZipFiles.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
@@ -196,7 +196,7 @@
     <value>ToolStripMenuItem_grocy</value>
   </data>
   <data name="STRING_ZipFiles.Text" xml:space="preserve">
-    <value>Fichiers ZIP</value>
+    <value>ZIP fails</value>
   </data>
   <data name="&gt;&gt;TabControl_Main.Name" xml:space="preserve">
     <value>TabControl_Main</value>
@@ -226,7 +226,7 @@
     <value>44, 20</value>
   </data>
   <data name="ToolStripMenuItem_About.Text" xml:space="preserve">
-    <value>A propos de grocy-desktop</value>
+    <value>Par grocy-desktop</value>
   </data>
   <data name="&gt;&gt;STRING_SayThanksQuestion.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -238,7 +238,7 @@
     <value>4, 22</value>
   </data>
   <data name="STRING_DownloadingGrocyRelease.Text" xml:space="preserve">
-    <value>Téléchargement de la dernière version de grocy...</value>
+    <value>Notiek jaunākā grocy laidiena lejupielāde...</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>600, 366</value>
@@ -256,7 +256,7 @@
     <value>ToolStripMenuItem_UpdateBarcodeBuddy</value>
   </data>
   <data name="ToolStripMenuItem_RestoreDataBarcodeBuddy.Text" xml:space="preserve">
-    <value>Restaurer les données</value>
+    <value>Datu atjaunošana</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>grocy</value>
@@ -274,7 +274,7 @@
     <value>STRING_PreparingWebbrowser</value>
   </data>
   <data name="STRING_ChangeDataLocation.Text" xml:space="preserve">
-    <value>Changer la localisation des données</value>
+    <value>Mainīt datu atrašanās vietu</value>
   </data>
   <data name="&gt;&gt;ToolStripMenuItem_UpdateBarcodeBuddy.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -367,10 +367,10 @@
     <value>STRING_ZipFiles</value>
   </data>
   <data name="ToolStripMenuItem_UpdateBarcodeBuddy.Text" xml:space="preserve">
-    <value>Mettre à jour</value>
+    <value>Atjaunināt</value>
   </data>
   <data name="STRING_NginxOutput.Text" xml:space="preserve">
-    <value>Sortie nginx</value>
+    <value>nginx izvade</value>
   </data>
   <data name="ToolStripMenuItem_UpdateBarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
     <value>243, 22</value>
@@ -409,10 +409,10 @@
     <value>600, 22</value>
   </data>
   <data name="ToolStripMenuItem_BackupDataGrocy.Text" xml:space="preserve">
-    <value>Sauvegarder les données</value>
+    <value>Datu dublēšana</value>
   </data>
   <data name="ToolStripMenuItem_ShowNginxOutput.Text" xml:space="preserve">
-    <value>Montrer la sortie de nginx</value>
+    <value>Parādīt nginx izvadi</value>
   </data>
   <data name="&gt;&gt;STRING_GrocyExternalAccessInfo.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -424,7 +424,7 @@
     <value>243, 22</value>
   </data>
   <data name="STRING_BackupSuccessfullyCreated.Text" xml:space="preserve">
-    <value>Sauvegarde créée</value>
+    <value>Dublēšana ir veiksmīgi izveidota</value>
   </data>
   <data name="&gt;&gt;ToolStripMenuItem_BackupDataGrocy.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -436,13 +436,13 @@
     <value>243, 22</value>
   </data>
   <data name="STRING_GrocyAndBarcodeBuddyExternalAccessInfo.Text" xml:space="preserve">
-    <value>Accéder à grocy extérieurement par %1$s ou %2$s et Barcode Buddy via %3$s ou %4$s</value>
+    <value>Ārēji piekļūstiet grocy, izmantojot %1$s vai %2$s un Barcode Buddy, izmantojot %3$s vai %4$s</value>
   </data>
   <data name="ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy.Text" xml:space="preserve">
-    <value>Configurer/changer les données de localisation</value>
+    <value>Konfigurēt/mainīt datu atrašanās vietu</value>
   </data>
   <data name="ToolStripMenuItem_BackupDataBarcodeBuddy.Text" xml:space="preserve">
-    <value>Sauvegarder les données</value>
+    <value>Datu dublēšana</value>
   </data>
   <data name="&gt;&gt;MenuStrip_Main.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -724,7 +724,7 @@
     <value>ToolStripMenuItem_View</value>
   </data>
   <data name="STRING_PreparingWebserver.Text" xml:space="preserve">
-    <value>Préparation du serveur web intégré...</value>
+    <value>Notiek iegulto tīmekļa serveru sagatavošana...</value>
   </data>
   <data name="&gt;&gt;ToolStripMenuItem_ShowBrowserDeveloperTools.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -733,7 +733,7 @@
     <value>592, 22</value>
   </data>
   <data name="STRING_Backup.Text" xml:space="preserve">
-    <value>Sauvegarder</value>
+    <value>Dublēšana</value>
   </data>
   <data name="&gt;&gt;ToolStripStatusLabel_ExternalAccessInfo.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -751,13 +751,13 @@
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="ToolStripMenuItem_View.Text" xml:space="preserve">
-    <value>Vue</value>
+    <value>Skats</value>
   </data>
   <data name="&gt;&gt;STRING_PreparingPhpRuntime.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="STRING_SayThanksQuestion.Text" xml:space="preserve">
-    <value>Vous trouvez grocy utile ?</value>
+    <value>Vai jums šķiet, ka grocy ir noderīgs?</value>
   </data>
   <data name="&gt;&gt;STRING_PreparingBarcodeBuddy.Name" xml:space="preserve">
     <value>STRING_PreparingBarcodeBuddy</value>
@@ -784,13 +784,13 @@
     <value>STRING_BackupSuccessfullyCreated</value>
   </data>
   <data name="STRING_PreparingGrocy.Text" xml:space="preserve">
-    <value>Préparation de grocy...</value>
+    <value>Tiek sagatavots grocy...</value>
   </data>
   <data name="ToolStripMenuItem_Exit.Size" type="System.Drawing.Size, System.Drawing">
     <value>247, 22</value>
   </data>
   <data name="ToolStripMenuItem_RecreateGrocyDatabase.Text" xml:space="preserve">
-    <value>Recréer la base de données</value>
+    <value>Atkārtoti izveidot datu bāzi</value>
   </data>
   <data name="&gt;&gt;StatusStrip_Main.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -820,7 +820,7 @@
     <value>STRING_GrocyExternalAccessInfo</value>
   </data>
   <data name="ToolStripMenuItem_ZoomIn.Text" xml:space="preserve">
-    <value>Zoomer</value>
+    <value>Tuvināt</value>
   </data>
   <data name="&gt;&gt;ToolStripMenuItem_grocy.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -829,13 +829,13 @@
     <value>STRING_NginxOutput</value>
   </data>
   <data name="ToolStripMenuItem_ShowBrowserDeveloperTools.Text" xml:space="preserve">
-    <value>Montrer les outils de développement du navigateur</value>
+    <value>Rādīt pārlūka izstrādātāja rīkus</value>
   </data>
   <data name="&gt;&gt;MenuStrip_Main.Name" xml:space="preserve">
     <value>MenuStrip_Main</value>
   </data>
   <data name="ToolStripMenuItem_Exit.Text" xml:space="preserve">
-    <value>Sortir</value>
+    <value>Iziet</value>
   </data>
   <data name="ToolStripMenuItem_ShowPhpRuntimeOutput.Size" type="System.Drawing.Size, System.Drawing">
     <value>232, 22</value>
@@ -862,7 +862,7 @@
     <value>1</value>
   </data>
   <data name="STRING_PreparingPhpRuntime.Text" xml:space="preserve">
-    <value>Préparation de l'instance PHP...</value>
+    <value>Notiek iegulto PHP izpildlaika sagatavošana...</value>
   </data>
   <data name="&gt;&gt;STRING_PreparingBarcodeBuddy.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -907,10 +907,10 @@
     <value>592, 22</value>
   </data>
   <data name="STRING_PreparingBarcodeBuddy.Text" xml:space="preserve">
-    <value>Préparation de Barcode Buddy...</value>
+    <value>Tiek sagatavots Barcode Buddy...</value>
   </data>
   <data name="ToolStripMenuItem_UpdateGrocy.Text" xml:space="preserve">
-    <value>Mettre à jour</value>
+    <value>Atjaunināt</value>
   </data>
   <data name="&gt;&gt;STRING_PreparingWebserver.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -940,13 +940,13 @@
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="ToolStripMenuItem_File.Text" xml:space="preserve">
-    <value>Fichier</value>
+    <value>Fails</value>
   </data>
   <data name="ToolStripMenuItem_Help.Text" xml:space="preserve">
-    <value>Aide</value>
+    <value>Palīdzība</value>
   </data>
   <data name="ToolStripMenuItem_Debug.Text" xml:space="preserve">
-    <value>Débogage</value>
+    <value>Atkļūdot</value>
   </data>
   <data name="STRING_DownloadingGrocyRelease.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
@@ -961,7 +961,7 @@
     <value>STRING_Restore</value>
   </data>
   <data name="ToolStripMenuItem_RestoreDataGrocy.Text" xml:space="preserve">
-    <value>Restaurer les données</value>
+    <value>Datu atjaunošana</value>
   </data>
   <data name="ToolStripMenuItem_ShowNginxOutput.Size" type="System.Drawing.Size, System.Drawing">
     <value>232, 22</value>
@@ -970,7 +970,7 @@
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="STRING_TheCurrentDataWillBeOverwrittenAndGrocydesktopWillRestartContinue.Text" xml:space="preserve">
-    <value>Les données actuelles vont être remplacées et grocy-desktop va redémarrer ?</value>
+    <value>Pašreizējie dati tiks pārrakstīti, un grocy-desktop tiks restartēta, vai turpināt?</value>
   </data>
   <data name="STRING_PreparingBarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
@@ -979,13 +979,13 @@
     <value>592, 22</value>
   </data>
   <data name="STRING_PreparingWebbrowser.Text" xml:space="preserve">
-    <value>Préparation du navigateur web intégré...</value>
+    <value>Notiek iegultās tīmekļa pārlūkprogrammas sagatavošana...</value>
   </data>
   <data name="&gt;&gt;ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="ToolStripMenuItem_EnableBarcodeBuddy.Text" xml:space="preserve">
-    <value>Activer Barcode Buddy</value>
+    <value>Ieslēgt Barcode Buddy</value>
   </data>
   <data name="STRING_SayThanks.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
@@ -1006,7 +1006,7 @@
     <value>ToolStripMenuItem_About</value>
   </data>
   <data name="STRING_SayThanks.Text" xml:space="preserve">
-    <value>Dire merci</value>
+    <value>Teikt paldies</value>
   </data>
   <data name="MenuStrip_Main.Size" type="System.Drawing.Size, System.Drawing">
     <value>600, 24</value>
@@ -1015,7 +1015,7 @@
     <value>99, 20</value>
   </data>
   <data name="ToolStripMenuItem_ShowPhpRuntimeOutput.Text" xml:space="preserve">
-    <value>Montrer la sortie de PHP</value>
+    <value>Parādīt PHP izvadi</value>
   </data>
   <data name="&gt;&gt;ToolStripMenuItem_ShowPhpRuntimeOutput.Name" xml:space="preserve">
     <value>ToolStripMenuItem_ShowPhpRuntimeOutput</value>
@@ -1051,19 +1051,19 @@
     <value>243, 22</value>
   </data>
   <data name="ToolStripMenuItem_ConfigureChangeDataLocationGrocy.Text" xml:space="preserve">
-    <value>Configurer/changer les données de localisation</value>
+    <value>Konfigurēt/mainīt datu atrašanās vietu</value>
   </data>
   <data name="&gt;&gt;ToolStripMenuItem_Help.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue.Text" xml:space="preserve">
-    <value>Cela va supprimer et re-créer la bade de données de grocy, cela signifie que toutes vos données vont être supprimées, voulez-vous vraiment continuer ?</value>
+    <value>Tiks izdzēsta un atkārtoti izveidota grocy datu bāze, tas nozīmē, ka visi jūsu dati tiks izdzēsti, vai tiešām vēlaties turpināt?</value>
   </data>
   <data name="&gt;&gt;ToolStripMenuItem_UpdateGrocy.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="ToolStripMenuItem_EnableExternalAccess.Text" xml:space="preserve">
-    <value>Activer l'accès extérieur</value>
+    <value>Iespējot ārējo piekļuvi</value>
   </data>
   <data name="&gt;&gt;STRING_Backup.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1072,7 +1072,7 @@
     <value>592, 22</value>
   </data>
   <data name="ToolStripMenuItem_ZoomOut.Text" xml:space="preserve">
-    <value>Dé-Zoomer</value>
+    <value>Tālināt</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
     <value>toolStripSeparator1</value>
@@ -1102,7 +1102,7 @@
     <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="ToolStripMenuItem_BrowserZoom.Text" xml:space="preserve">
-    <value>Zoom du navigateur</value>
+    <value>Pārlūka tālummaiņa</value>
   </data>
   <data name="ContextMenuStrip_DummyForResxStrings.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 466</value>
@@ -1111,7 +1111,7 @@
     <value>ToolStripMenuItem_ZoomIn</value>
   </data>
   <data name="STRING_DownloadingBarcodeBuddyRelease.Text" xml:space="preserve">
-    <value>Téléchargement de la dernière version de Barcode Buddy...</value>
+    <value>Notiek jaunākā Barcode Buddy laidiena lejupielāde...</value>
   </data>
   <data name="TabPage_Grocy.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1132,13 +1132,13 @@
     <value>1</value>
   </data>
   <data name="STRING_GrocyExternalAccessInfo.Text" xml:space="preserve">
-    <value>Accéder à grocy extérieurement par %1$s ou %2$s</value>
+    <value>Ārēji piekļūstat grocy, izmantojot %1$s vai %2$s</value>
   </data>
   <data name="&gt;&gt;STRING_SayThanks.Name" xml:space="preserve">
     <value>STRING_SayThanks</value>
   </data>
   <data name="STRING_PHPOutput.Text" xml:space="preserve">
-    <value>Sortie PHP</value>
+    <value>PHP izvade</value>
   </data>
   <data name="&gt;&gt;ToolStripMenuItem_RestoreDataGrocy.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1153,7 +1153,7 @@
     <value>STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue</value>
   </data>
   <data name="ToolStripMenuItem_EnableUserDataSync.Text" xml:space="preserve">
-    <value>Activer la synchronisation des données utilisateur</value>
+    <value>Iespējot lietotāja datu sinhronizāciju</value>
   </data>
   <data name="&gt;&gt;STRING_Backup.Name" xml:space="preserve">
     <value>STRING_Backup</value>
@@ -1192,7 +1192,7 @@
     <value>ToolStripMenuItem_ShowBrowserDeveloperTools</value>
   </data>
   <data name="STRING_Restore.Text" xml:space="preserve">
-    <value>Restaurer</value>
+    <value>Atjaunot</value>
   </data>
   <data name="&gt;&gt;ToolStripMenuItem_EnableExternalAccess.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
