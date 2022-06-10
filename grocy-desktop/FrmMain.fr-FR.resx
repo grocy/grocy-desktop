@@ -226,7 +226,7 @@
     <value>44, 20</value>
   </data>
   <data name="ToolStripMenuItem_About.Text" xml:space="preserve">
-    <value>A propos de grocy-desktop</value>
+    <value>À propos de grocy-desktop</value>
   </data>
   <data name="&gt;&gt;STRING_SayThanksQuestion.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>

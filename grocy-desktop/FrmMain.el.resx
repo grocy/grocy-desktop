@@ -117,500 +117,341 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="MenuStrip_Main.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
+  <data name="&gt;&gt;ToolStripMenuItem_RecreateGrocyDatabase.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_BrowserZoom.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_BrowserZoom</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_BrowserZoom.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
-  <data name="ToolStripMenuItem_EnableBarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>247, 22</value>
+  <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 6</value>
   </data>
-  <data name="ToolStripMenuItem_EnableBarcodeBuddy.Text" xml:space="preserve">
-    <value>Ενεργοποίηση φίλου barcode</value>
+  <data name="&gt;&gt;toolStripSeparator5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="ToolStripMenuItem_EnableExternalAccess.Size" type="System.Drawing.Size, System.Drawing">
-    <value>247, 22</value>
+  <data name="&gt;&gt;ToolStripMenuItem_RestoreDataBarcodeBuddy.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_RestoreDataBarcodeBuddy</value>
   </data>
-  <data name="ToolStripMenuItem_EnableExternalAccess.Text" xml:space="preserve">
-    <value>Ενεργοποίηση εξωτερικής πρόσβασης</value>
+  <data name="ToolStripMenuItem_grocy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 20</value>
   </data>
-  <data name="ToolStripMenuItem_EnableUserDataSync.Size" type="System.Drawing.Size, System.Drawing">
-    <value>247, 22</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+  <data name="TabPage_BarcodeBuddy.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
-  <data name="ToolStripMenuItem_EnableUserDataSync.Text" xml:space="preserve">
-    <value>Ενεργοποίηση συγχρονισμού δεδομένων χρήστη</value>
+  <data name="&gt;&gt;ToolStripMenuItem_BackupDataBarcodeBuddy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="toolStripSeparator5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>244, 6</value>
+  <data name="&gt;&gt;STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="ToolStripMenuItem_Exit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>247, 22</value>
+  <data name="&gt;&gt;TabControl_Main.Parent" xml:space="preserve">
+    <value>Panel_Main</value>
   </data>
-  <data name="ToolStripMenuItem_Exit.Text" xml:space="preserve">
-    <value>Εξοδος</value>
+  <data name="STRING_TheCurrentDataWillBeOverwrittenAndGrocydesktopWillRestartContinue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
   </data>
-  <data name="ToolStripMenuItem_File.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 20</value>
-  </data>
-  <data name="ToolStripMenuItem_File.Text" xml:space="preserve">
-    <value>Αρχείο</value>
+  <data name="ToolStripMenuItem_RestoreDataBarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 22</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
   <data name="ToolStripMenuItem_ZoomIn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+Oemplus</value>
   </data>
-  <data name="ToolStripMenuItem_ZoomIn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>222, 22</value>
+  <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="ToolStripMenuItem_ZoomIn.Text" xml:space="preserve">
-    <value>Zoom In</value>
+  <data name="&gt;&gt;toolStripSeparator4.Name" xml:space="preserve">
+    <value>toolStripSeparator4</value>
   </data>
-  <data name="ToolStripMenuItem_ZoomOut.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+OemMinus</value>
+  <data name="&gt;&gt;ToolStripMenuItem_Help.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_Help</value>
   </data>
-  <data name="ToolStripMenuItem_ZoomOut.Size" type="System.Drawing.Size, System.Drawing">
-    <value>222, 22</value>
-  </data>
-  <data name="ToolStripMenuItem_ZoomOut.Text" xml:space="preserve">
-    <value>Zoom Out</value>
-  </data>
-  <data name="ToolStripMenuItem_ResetZoom.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+0</value>
-  </data>
-  <data name="ToolStripMenuItem_ResetZoom.Size" type="System.Drawing.Size, System.Drawing">
-    <value>222, 22</value>
+  <data name="&gt;&gt;ToolStripMenuItem_Debug.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_Debug</value>
   </data>
   <data name="ToolStripMenuItem_ResetZoom.Text" xml:space="preserve">
     <value>Reset Zoom</value>
   </data>
-  <data name="ToolStripMenuItem_BrowserZoom.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="ToolStripMenuItem_BrowserZoom.Text" xml:space="preserve">
-    <value>Browser Zoom</value>
-  </data>
-  <data name="ToolStripMenuItem_View.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 20</value>
-  </data>
-  <data name="ToolStripMenuItem_View.Text" xml:space="preserve">
-    <value>View</value>
-  </data>
-  <data name="ToolStripMenuItem_UpdateGrocy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>243, 22</value>
-  </data>
-  <data name="ToolStripMenuItem_UpdateGrocy.Text" xml:space="preserve">
-    <value>Εκσυγχρονίζω</value>
-  </data>
-  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 6</value>
-  </data>
-  <data name="ToolStripMenuItem_BackupDataGrocy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>243, 22</value>
-  </data>
-  <data name="ToolStripMenuItem_BackupDataGrocy.Text" xml:space="preserve">
-    <value>Αντιγράφων ασφαλείας των δεδομένων</value>
-  </data>
-  <data name="ToolStripMenuItem_RestoreDataGrocy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>243, 22</value>
-  </data>
-  <data name="ToolStripMenuItem_RestoreDataGrocy.Text" xml:space="preserve">
-    <value>Επαναφορά δεδομένων</value>
-  </data>
-  <data name="ToolStripMenuItem_ConfigureChangeDataLocationGrocy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>243, 22</value>
-  </data>
-  <data name="ToolStripMenuItem_ConfigureChangeDataLocationGrocy.Text" xml:space="preserve">
-    <value>Διαμόρφωση / αλλαγή τοποθεσίας δεδομένων</value>
-  </data>
-  <data name="toolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 6</value>
-  </data>
-  <data name="ToolStripMenuItem_RecreateGrocyDatabase.Size" type="System.Drawing.Size, System.Drawing">
-    <value>243, 22</value>
-  </data>
-  <data name="ToolStripMenuItem_RecreateGrocyDatabase.Text" xml:space="preserve">
-    <value>Αναδημιουργήστε τη βάση δεδομένων</value>
-  </data>
-  <data name="ToolStripMenuItem_grocy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 20</value>
-  </data>
-  <data name="ToolStripMenuItem_grocy.Text" xml:space="preserve">
-    <value>grocy</value>
-  </data>
-  <data name="ToolStripMenuItem_UpdateBarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>243, 22</value>
-  </data>
-  <data name="ToolStripMenuItem_UpdateBarcodeBuddy.Text" xml:space="preserve">
-    <value>Εκσυγχρονίζω</value>
-  </data>
-  <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 6</value>
-  </data>
-  <data name="ToolStripMenuItem_BackupDataBarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>243, 22</value>
-  </data>
-  <data name="ToolStripMenuItem_BackupDataBarcodeBuddy.Text" xml:space="preserve">
-    <value>Αντιγράφων ασφαλείας των δεδομένων</value>
-  </data>
-  <data name="ToolStripMenuItem_RestoreDataBarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>243, 22</value>
-  </data>
-  <data name="ToolStripMenuItem_RestoreDataBarcodeBuddy.Text" xml:space="preserve">
-    <value>Επαναφορά δεδομένων</value>
-  </data>
-  <data name="ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>243, 22</value>
-  </data>
-  <data name="ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy.Text" xml:space="preserve">
-    <value>Διαμόρφωση / αλλαγή τοποθεσίας δεδομένων</value>
-  </data>
-  <data name="ToolStripMenuItem_BarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 20</value>
-  </data>
-  <data name="ToolStripMenuItem_BarcodeBuddy.Text" xml:space="preserve">
-    <value>Barcode Buddy</value>
-  </data>
-  <data name="ToolStripMenuItem_ShowNginxOutput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>232, 22</value>
-  </data>
-  <data name="ToolStripMenuItem_ShowNginxOutput.Text" xml:space="preserve">
-    <value>Show nginx output</value>
-  </data>
-  <data name="ToolStripMenuItem_ShowPhpRuntimeOutput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>232, 22</value>
-  </data>
-  <data name="ToolStripMenuItem_ShowPhpRuntimeOutput.Text" xml:space="preserve">
-    <value>Εμφάνιση εξόδου PHP</value>
-  </data>
-  <data name="ToolStripMenuItem_ShowBrowserDeveloperTools.Size" type="System.Drawing.Size, System.Drawing">
-    <value>232, 22</value>
-  </data>
-  <data name="ToolStripMenuItem_ShowBrowserDeveloperTools.Text" xml:space="preserve">
-    <value>Εμφάνιση εργαλείων προγραμματιστή προγράμματος περιήγησης</value>
-  </data>
-  <data name="ToolStripMenuItem_Debug.Size" type="System.Drawing.Size, System.Drawing">
-    <value>187, 22</value>
-  </data>
-  <data name="ToolStripMenuItem_Debug.Text" xml:space="preserve">
-    <value>Εντοπισμός σφαλμάτων</value>
-  </data>
-  <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 6</value>
-  </data>
-  <data name="ToolStripMenuItem_About.Size" type="System.Drawing.Size, System.Drawing">
-    <value>187, 22</value>
-  </data>
-  <data name="ToolStripMenuItem_About.Text" xml:space="preserve">
-    <value>Σχετικά με το grocy-desktop</value>
-  </data>
-  <data name="ToolStripMenuItem_Help.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 20</value>
-  </data>
-  <data name="ToolStripMenuItem_Help.Text" xml:space="preserve">
-    <value>Βοήθεια</value>
-  </data>
-  <data name="MenuStrip_Main.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="MenuStrip_Main.Size" type="System.Drawing.Size, System.Drawing">
-    <value>600, 24</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
-  <data name="MenuStrip_Main.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;MenuStrip_Main.Name" xml:space="preserve">
-    <value>MenuStrip_Main</value>
-  </data>
-  <data name="&gt;&gt;MenuStrip_Main.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MenuStrip_Main.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;MenuStrip_Main.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <metadata name="StatusStrip_Main.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>437, 17</value>
-  </metadata>
-  <data name="ToolStripStatusLabel_ExternalAccessInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>217, 17</value>
-  </data>
-  <data name="ToolStripStatusLabel_ExternalAccessInfo.Text" xml:space="preserve">
-    <value>ToolStripStatusLabel_ExternalAccessInfo</value>
-  </data>
-  <data name="StatusStrip_Main.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 320</value>
-  </data>
-  <data name="StatusStrip_Main.Size" type="System.Drawing.Size, System.Drawing">
-    <value>600, 22</value>
-  </data>
-  <data name="StatusStrip_Main.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="StatusStrip_Main.Text" xml:space="preserve">
-    <value>statusStrip1</value>
-  </data>
-  <data name="&gt;&gt;StatusStrip_Main.Name" xml:space="preserve">
-    <value>StatusStrip_Main</value>
-  </data>
-  <data name="&gt;&gt;StatusStrip_Main.Type" xml:space="preserve">
-    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;StatusStrip_Main.Parent" xml:space="preserve">
-    <value>Panel_Main</value>
-  </data>
-  <data name="&gt;&gt;StatusStrip_Main.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="TabPage_Grocy.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="TabPage_Grocy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>592, 316</value>
-  </data>
-  <data name="TabPage_Grocy.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="TabPage_Grocy.Text" xml:space="preserve">
-    <value>grocy</value>
-  </data>
-  <data name="&gt;&gt;TabPage_Grocy.Name" xml:space="preserve">
-    <value>TabPage_Grocy</value>
-  </data>
-  <data name="&gt;&gt;TabPage_Grocy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TabPage_Grocy.Parent" xml:space="preserve">
-    <value>TabControl_Main</value>
-  </data>
-  <data name="&gt;&gt;TabPage_Grocy.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="TabPage_BarcodeBuddy.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="TabPage_BarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>592, 316</value>
-  </data>
-  <data name="TabPage_BarcodeBuddy.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="TabPage_BarcodeBuddy.Text" xml:space="preserve">
-    <value>Barcode Buddy</value>
-  </data>
-  <data name="&gt;&gt;TabPage_BarcodeBuddy.Name" xml:space="preserve">
-    <value>TabPage_BarcodeBuddy</value>
-  </data>
-  <data name="&gt;&gt;TabPage_BarcodeBuddy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TabPage_BarcodeBuddy.Parent" xml:space="preserve">
-    <value>TabControl_Main</value>
-  </data>
-  <data name="&gt;&gt;TabPage_BarcodeBuddy.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="TabControl_Main.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="TabControl_Main.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="TabControl_Main.Padding" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="TabControl_Main.Size" type="System.Drawing.Size, System.Drawing">
-    <value>600, 342</value>
-  </data>
-  <data name="TabControl_Main.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;TabControl_Main.Name" xml:space="preserve">
-    <value>TabControl_Main</value>
-  </data>
-  <data name="&gt;&gt;TabControl_Main.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TabControl_Main.Parent" xml:space="preserve">
-    <value>Panel_Main</value>
-  </data>
-  <data name="&gt;&gt;TabControl_Main.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="Panel_Main.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="Panel_Main.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 24</value>
-  </data>
-  <data name="Panel_Main.Size" type="System.Drawing.Size, System.Drawing">
-    <value>600, 342</value>
-  </data>
-  <data name="Panel_Main.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;Panel_Main.Name" xml:space="preserve">
-    <value>Panel_Main</value>
-  </data>
-  <data name="&gt;&gt;Panel_Main.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Panel_Main.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Panel_Main.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <metadata name="ContextMenuStrip_DummyForResxStrings.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>158, 17</value>
-  </metadata>
-  <data name="STRING_PHPOutput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>592, 22</value>
-  </data>
-  <data name="STRING_PHPOutput.Text" xml:space="preserve">
-    <value>Έξοδος PHP</value>
-  </data>
-  <data name="STRING_ChangeDataLocation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>592, 22</value>
-  </data>
-  <data name="STRING_ChangeDataLocation.Text" xml:space="preserve">
-    <value>Αλλαγή τοποθεσίας δεδομένων</value>
-  </data>
-  <data name="STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue.Size" type="System.Drawing.Size, System.Drawing">
-    <value>592, 22</value>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue.Text" xml:space="preserve">
     <value>Η grocy-desktop θα κάνει επανεκκίνηση για να εφαρμόσει τις τροποποιημένες ρυθμίσεις, συνεχίστε;</value>
   </data>
-  <data name="STRING_Backup.Size" type="System.Drawing.Size, System.Drawing">
-    <value>592, 22</value>
-  </data>
-  <data name="STRING_Backup.Text" xml:space="preserve">
-    <value>Αντιγράφων ασφαλείας</value>
-  </data>
-  <data name="STRING_BackupSuccessfullyCreated.Size" type="System.Drawing.Size, System.Drawing">
-    <value>592, 22</value>
-  </data>
-  <data name="STRING_BackupSuccessfullyCreated.Text" xml:space="preserve">
-    <value>Δημιουργήθηκε αντίγραφο ασφαλείας με επιτυχία</value>
-  </data>
-  <data name="STRING_Restore.Size" type="System.Drawing.Size, System.Drawing">
-    <value>592, 22</value>
-  </data>
-  <data name="STRING_Restore.Text" xml:space="preserve">
-    <value>Επαναφορά</value>
-  </data>
-  <data name="STRING_TheCurrentDataWillBeOverwrittenAndGrocydesktopWillRestartContinue.Size" type="System.Drawing.Size, System.Drawing">
-    <value>592, 22</value>
-  </data>
-  <data name="STRING_TheCurrentDataWillBeOverwrittenAndGrocydesktopWillRestartContinue.Text" xml:space="preserve">
-    <value>Τα τρέχοντα δεδομένα θα αντικατασταθούν και θα γίνει επανεκκίνηση του grocy-desktop, συνεχίστε;</value>
-  </data>
-  <data name="STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue.Size" type="System.Drawing.Size, System.Drawing">
-    <value>592, 22</value>
-  </data>
-  <data name="STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue.Text" xml:space="preserve">
-    <value>Αυτό θα διαγράψει και θα αναδημιουργήσει τη βάση δεδομένων grocy, σημαίνει ότι όλα τα δεδομένα σας θα διαγραφούν, θα συνεχίσει πραγματικά;</value>
-  </data>
   <data name="STRING_ZipFiles.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
+  </data>
+  <data name="&gt;&gt;TabPage_BarcodeBuddy.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;STRING_BackupSuccessfullyCreated.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_grocy.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_grocy</value>
   </data>
   <data name="STRING_ZipFiles.Text" xml:space="preserve">
     <value>Αρχεία ZIP</value>
   </data>
-  <data name="STRING_SayThanks.Size" type="System.Drawing.Size, System.Drawing">
-    <value>592, 22</value>
+  <data name="&gt;&gt;TabControl_Main.Name" xml:space="preserve">
+    <value>TabControl_Main</value>
   </data>
-  <data name="STRING_SayThanks.Text" xml:space="preserve">
-    <value>Πες ευχαριστώ</value>
+  <data name="&gt;&gt;TabPage_BarcodeBuddy.Parent" xml:space="preserve">
+    <value>TabControl_Main</value>
   </data>
-  <data name="STRING_SayThanksQuestion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>592, 22</value>
+  <data name="TabControl_Main.Size" type="System.Drawing.Size, System.Drawing">
+    <value>600, 342</value>
   </data>
-  <data name="STRING_SayThanksQuestion.Text" xml:space="preserve">
-    <value>Βρίσκετε το grocy χρήσιμο;</value>
+  <data name="ToolStripMenuItem_EnableExternalAccess.Size" type="System.Drawing.Size, System.Drawing">
+    <value>247, 22</value>
   </data>
-  <data name="STRING_PreparingWebbrowser.Size" type="System.Drawing.Size, System.Drawing">
-    <value>592, 22</value>
+  <data name="&gt;&gt;ToolStripMenuItem_RecreateGrocyDatabase.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_RecreateGrocyDatabase</value>
   </data>
-  <data name="STRING_PreparingWebbrowser.Text" xml:space="preserve">
-    <value>Προετοιμασία ενσωματωμένου προγράμματος περιήγησης ιστού ...</value>
+  <data name="&gt;&gt;ToolStripMenuItem_EnableBarcodeBuddy.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_EnableBarcodeBuddy</value>
   </data>
-  <data name="STRING_PreparingWebserver.Size" type="System.Drawing.Size, System.Drawing">
-    <value>592, 22</value>
+  <data name="&gt;&gt;ToolStripMenuItem_ShowNginxOutput.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_ShowNginxOutput</value>
   </data>
-  <data name="STRING_PreparingWebserver.Text" xml:space="preserve">
-    <value>Προετοιμασία ενσωματωμένου προγράμματος περιήγησης ιστού ...</value>
+  <data name="MenuStrip_Main.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="STRING_PreparingPhpRuntime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>592, 22</value>
+  <data name="ToolStripMenuItem_View.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 20</value>
   </data>
-  <data name="STRING_PreparingPhpRuntime.Text" xml:space="preserve">
-    <value>Προετοιμασία ενσωματωμένου χρόνου εκτέλεσης PHP ...</value>
+  <data name="ToolStripMenuItem_About.Text" xml:space="preserve">
+    <value>Σχετικά με το grocy-desktop</value>
   </data>
-  <data name="STRING_PreparingGrocy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>592, 22</value>
+  <data name="&gt;&gt;STRING_SayThanksQuestion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="STRING_PreparingGrocy.Text" xml:space="preserve">
-    <value>Προετοιμασία grocy...</value>
+  <data name="&gt;&gt;toolStripSeparator5.Name" xml:space="preserve">
+    <value>toolStripSeparator5</value>
   </data>
-  <data name="STRING_PreparingBarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>592, 22</value>
-  </data>
-  <data name="STRING_PreparingBarcodeBuddy.Text" xml:space="preserve">
-    <value>Προετοιμασία φίλου barcode ...</value>
-  </data>
-  <data name="STRING_DownloadingGrocyRelease.Size" type="System.Drawing.Size, System.Drawing">
-    <value>592, 22</value>
+  <data name="TabPage_Grocy.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
   </data>
   <data name="STRING_DownloadingGrocyRelease.Text" xml:space="preserve">
     <value>Λήψη της τελευταίας έκδοσης grocy ...</value>
   </data>
-  <data name="STRING_DownloadingBarcodeBuddyRelease.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>600, 366</value>
+  </data>
+  <data name="ToolStripMenuItem_BrowserZoom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_File.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_File</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Debug.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_UpdateBarcodeBuddy.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_UpdateBarcodeBuddy</value>
+  </data>
+  <data name="ToolStripMenuItem_RestoreDataBarcodeBuddy.Text" xml:space="preserve">
+    <value>Επαναφορά δεδομένων</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>grocy</value>
+  </data>
+  <data name="TabPage_BarcodeBuddy.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_Debug.Size" type="System.Drawing.Size, System.Drawing">
+    <value>187, 22</value>
+  </data>
+  <data name="&gt;&gt;STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;STRING_PreparingWebbrowser.Name" xml:space="preserve">
+    <value>STRING_PreparingWebbrowser</value>
+  </data>
+  <data name="STRING_ChangeDataLocation.Text" xml:space="preserve">
+    <value>Αλλαγή τοποθεσίας δεδομένων</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_UpdateBarcodeBuddy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="STRING_SayThanksQuestion.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
-  <data name="STRING_DownloadingBarcodeBuddyRelease.Text" xml:space="preserve">
-    <value>Λήψη της τελευταίας έκδοσης του Barcode Buddy ...</value>
+  <data name="ToolStripMenuItem_About.Size" type="System.Drawing.Size, System.Drawing">
+    <value>187, 22</value>
   </data>
-  <data name="STRING_GrocyExternalAccessInfo.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="&gt;&gt;Panel_Main.Name" xml:space="preserve">
+    <value>Panel_Main</value>
+  </data>
+  <data name="&gt;&gt;STRING_NginxOutput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="STRING_ChangeDataLocation.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
-  <data name="STRING_GrocyExternalAccessInfo.Text" xml:space="preserve">
-    <value>Πρόσβαση στο grocy εξωτερικά μέσω% 1 $ s ή% 2 $ s</value>
+  <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>184, 6</value>
   </data>
-  <data name="STRING_GrocyAndBarcodeBuddyExternalAccessInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>592, 22</value>
+  <data name="&gt;&gt;ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy</value>
   </data>
-  <data name="STRING_GrocyAndBarcodeBuddyExternalAccessInfo.Text" xml:space="preserve">
-    <value>Πρόσβαση στο grocy εξωτερικά μέσω% 1 $ s ή% 2 $ s και του Barcode Buddy μέσω% 3 $ s ή% 4 $ s</value>
-  </data>
-  <data name="STRING_NginxOutput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>592, 22</value>
-  </data>
-  <data name="STRING_NginxOutput.Text" xml:space="preserve">
-    <value>έξοδος nginx</value>
-  </data>
-  <data name="ContextMenuStrip_DummyForResxStrings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>593, 466</value>
-  </data>
-  <data name="&gt;&gt;ContextMenuStrip_DummyForResxStrings.Name" xml:space="preserve">
-    <value>ContextMenuStrip_DummyForResxStrings</value>
-  </data>
-  <data name="&gt;&gt;ContextMenuStrip_DummyForResxStrings.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
+  </data>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 6</value>
+  </data>
+  <data name="TabControl_Main.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="ToolStripMenuItem_ZoomOut.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+OemMinus</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_ZoomOut.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ToolStripMenuItem_ResetZoom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>222, 22</value>
+  </data>
+  <data name="&gt;&gt;STRING_SayThanksQuestion.Name" xml:space="preserve">
+    <value>STRING_SayThanksQuestion</value>
+  </data>
+  <data name="Panel_Main.Size" type="System.Drawing.Size, System.Drawing">
+    <value>600, 342</value>
+  </data>
+  <data name="&gt;&gt;STRING_PHPOutput.Name" xml:space="preserve">
+    <value>STRING_PHPOutput</value>
+  </data>
+  <data name="TabPage_BarcodeBuddy.Text" xml:space="preserve">
+    <value>Barcode Buddy</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;STRING_DownloadingGrocyRelease.Name" xml:space="preserve">
+    <value>STRING_DownloadingGrocyRelease</value>
   </data>
   <data name="$this.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>600, 366</value>
+  <data name="&gt;&gt;ContextMenuStrip_DummyForResxStrings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TabControl_Main.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="TabPage_Grocy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 316</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_ResetZoom.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabPage_Grocy.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_BackupDataBarcodeBuddy.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_BackupDataBarcodeBuddy</value>
+  </data>
+  <data name="&gt;&gt;STRING_PHPOutput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="StatusStrip_Main.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 320</value>
+  </data>
+  <data name="&gt;&gt;STRING_ZipFiles.Name" xml:space="preserve">
+    <value>STRING_ZipFiles</value>
+  </data>
+  <data name="ToolStripMenuItem_UpdateBarcodeBuddy.Text" xml:space="preserve">
+    <value>Εκσυγχρονίζω</value>
+  </data>
+  <data name="STRING_NginxOutput.Text" xml:space="preserve">
+    <value>έξοδος nginx</value>
+  </data>
+  <data name="ToolStripMenuItem_UpdateBarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 22</value>
+  </data>
+  <data name="StatusStrip_Main.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_RestoreDataBarcodeBuddy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TabPage_Grocy.Text" xml:space="preserve">
+    <value>grocy</value>
+  </data>
+  <data name="&gt;&gt;STRING_ZipFiles.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;STRING_PreparingPhpRuntime.Name" xml:space="preserve">
+    <value>STRING_PreparingPhpRuntime</value>
+  </data>
+  <data name="ToolStripMenuItem_EnableBarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>247, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_Help.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 20</value>
+  </data>
+  <data name="Panel_Main.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_EnableExternalAccess.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_EnableExternalAccess</value>
+  </data>
+  <data name="&gt;&gt;STRING_ChangeDataLocation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="StatusStrip_Main.Size" type="System.Drawing.Size, System.Drawing">
+    <value>600, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_BackupDataGrocy.Text" xml:space="preserve">
+    <value>Αντιγράφων ασφαλείας των δεδομένων</value>
+  </data>
+  <data name="ToolStripMenuItem_ShowNginxOutput.Text" xml:space="preserve">
+    <value>Show nginx output</value>
+  </data>
+  <data name="&gt;&gt;STRING_GrocyExternalAccessInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_RestoreDataGrocy.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_RestoreDataGrocy</value>
+  </data>
+  <data name="ToolStripMenuItem_RestoreDataGrocy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 22</value>
+  </data>
+  <data name="STRING_BackupSuccessfullyCreated.Text" xml:space="preserve">
+    <value>Δημιουργήθηκε αντίγραφο ασφαλείας με επιτυχία</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_BackupDataGrocy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_ConfigureChangeDataLocationGrocy.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_ConfigureChangeDataLocationGrocy</value>
+  </data>
+  <data name="ToolStripMenuItem_ConfigureChangeDataLocationGrocy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 22</value>
+  </data>
+  <data name="STRING_GrocyAndBarcodeBuddyExternalAccessInfo.Text" xml:space="preserve">
+    <value>Πρόσβαση στο grocy εξωτερικά μέσω% 1 $ s ή% 2 $ s και του Barcode Buddy μέσω% 3 $ s ή% 4 $ s</value>
+  </data>
+  <data name="ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy.Text" xml:space="preserve">
+    <value>Διαμόρφωση / αλλαγή τοποθεσίας δεδομένων</value>
+  </data>
+  <data name="ToolStripMenuItem_BackupDataBarcodeBuddy.Text" xml:space="preserve">
+    <value>Αντιγράφων ασφαλείας των δεδομένων</value>
+  </data>
+  <data name="&gt;&gt;MenuStrip_Main.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="TabControl_Main.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_ZoomOut.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_ZoomOut</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -873,340 +714,502 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
 </value>
   </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+  <data name="Panel_Main.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>grocy</value>
+  <data name="ToolStripMenuItem_BarcodeBuddy.Text" xml:space="preserve">
+    <value>Barcode Buddy</value>
   </data>
-  <data name="&gt;&gt;ToolStripMenuItem_File.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_File</value>
+  <data name="&gt;&gt;ToolStripMenuItem_View.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_View</value>
   </data>
-  <data name="&gt;&gt;ToolStripMenuItem_File.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_EnableBarcodeBuddy.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_EnableBarcodeBuddy</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_EnableBarcodeBuddy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_EnableExternalAccess.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_EnableExternalAccess</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_EnableExternalAccess.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_EnableUserDataSync.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_EnableUserDataSync</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_EnableUserDataSync.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator5.Name" xml:space="preserve">
-    <value>toolStripSeparator5</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Exit.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_Exit</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Exit.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_grocy.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_grocy</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_grocy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_UpdateGrocy.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_UpdateGrocy</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_UpdateGrocy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
-    <value>toolStripSeparator1</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_BackupDataGrocy.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_BackupDataGrocy</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_BackupDataGrocy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_RestoreDataGrocy.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_RestoreDataGrocy</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_RestoreDataGrocy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_ConfigureChangeDataLocationGrocy.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_ConfigureChangeDataLocationGrocy</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_ConfigureChangeDataLocationGrocy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator4.Name" xml:space="preserve">
-    <value>toolStripSeparator4</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_RecreateGrocyDatabase.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_RecreateGrocyDatabase</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_RecreateGrocyDatabase.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_BarcodeBuddy.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_BarcodeBuddy</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_BarcodeBuddy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_UpdateBarcodeBuddy.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_UpdateBarcodeBuddy</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_UpdateBarcodeBuddy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator3.Name" xml:space="preserve">
-    <value>toolStripSeparator3</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_BackupDataBarcodeBuddy.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_BackupDataBarcodeBuddy</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_BackupDataBarcodeBuddy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_RestoreDataBarcodeBuddy.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_RestoreDataBarcodeBuddy</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_RestoreDataBarcodeBuddy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Help.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_Help</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Help.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Debug.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_Debug</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Debug.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_ShowNginxOutput.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_ShowNginxOutput</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_ShowNginxOutput.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_ShowPhpRuntimeOutput.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_ShowPhpRuntimeOutput</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_ShowPhpRuntimeOutput.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_ShowBrowserDeveloperTools.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_ShowBrowserDeveloperTools</value>
+  <data name="STRING_PreparingWebserver.Text" xml:space="preserve">
+    <value>Προετοιμασία ενσωματωμένου προγράμματος περιήγησης ιστού ...</value>
   </data>
   <data name="&gt;&gt;ToolStripMenuItem_ShowBrowserDeveloperTools.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStripSeparator2.Name" xml:space="preserve">
-    <value>toolStripSeparator2</value>
+  <data name="STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
   </data>
-  <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_About.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_About</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_About.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripStatusLabel_ExternalAccessInfo.Name" xml:space="preserve">
-    <value>ToolStripStatusLabel_ExternalAccessInfo</value>
+  <data name="STRING_Backup.Text" xml:space="preserve">
+    <value>Αντιγράφων ασφαλείας</value>
   </data>
   <data name="&gt;&gt;ToolStripStatusLabel_ExternalAccessInfo.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;STRING_PHPOutput.Name" xml:space="preserve">
-    <value>STRING_PHPOutput</value>
+  <data name="ToolStripMenuItem_File.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 20</value>
   </data>
-  <data name="&gt;&gt;STRING_PHPOutput.Type" xml:space="preserve">
+  <data name="STRING_PreparingWebbrowser.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_BarcodeBuddy.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_BarcodeBuddy</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_ShowNginxOutput.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;STRING_ChangeDataLocation.Name" xml:space="preserve">
-    <value>STRING_ChangeDataLocation</value>
+  <data name="ToolStripMenuItem_View.Text" xml:space="preserve">
+    <value>View</value>
   </data>
-  <data name="&gt;&gt;STRING_ChangeDataLocation.Type" xml:space="preserve">
+  <data name="&gt;&gt;STRING_PreparingPhpRuntime.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue.Name" xml:space="preserve">
-    <value>STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue</value>
+  <data name="STRING_SayThanksQuestion.Text" xml:space="preserve">
+    <value>Βρίσκετε το grocy χρήσιμο;</value>
   </data>
-  <data name="&gt;&gt;STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue.Type" xml:space="preserve">
+  <data name="&gt;&gt;STRING_PreparingBarcodeBuddy.Name" xml:space="preserve">
+    <value>STRING_PreparingBarcodeBuddy</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator3.Name" xml:space="preserve">
+    <value>toolStripSeparator3</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_View.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;STRING_Backup.Name" xml:space="preserve">
-    <value>STRING_Backup</value>
+  <data name="&gt;&gt;MenuStrip_Main.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;STRING_Backup.Type" xml:space="preserve">
+  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ToolStripMenuItem_EnableUserDataSync.Size" type="System.Drawing.Size, System.Drawing">
+    <value>247, 22</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_BarcodeBuddy.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;STRING_BackupSuccessfullyCreated.Name" xml:space="preserve">
     <value>STRING_BackupSuccessfullyCreated</value>
   </data>
-  <data name="&gt;&gt;STRING_BackupSuccessfullyCreated.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="STRING_PreparingGrocy.Text" xml:space="preserve">
+    <value>Προετοιμασία grocy...</value>
   </data>
-  <data name="&gt;&gt;STRING_Restore.Name" xml:space="preserve">
-    <value>STRING_Restore</value>
+  <data name="ToolStripMenuItem_Exit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>247, 22</value>
   </data>
-  <data name="&gt;&gt;STRING_Restore.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="ToolStripMenuItem_RecreateGrocyDatabase.Text" xml:space="preserve">
+    <value>Αναδημιουργήστε τη βάση δεδομένων</value>
+  </data>
+  <data name="&gt;&gt;StatusStrip_Main.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;STRING_TheCurrentDataWillBeOverwrittenAndGrocydesktopWillRestartContinue.Name" xml:space="preserve">
     <value>STRING_TheCurrentDataWillBeOverwrittenAndGrocydesktopWillRestartContinue</value>
   </data>
-  <data name="&gt;&gt;STRING_TheCurrentDataWillBeOverwrittenAndGrocydesktopWillRestartContinue.Type" xml:space="preserve">
+  <data name="&gt;&gt;ToolStripMenuItem_UpdateGrocy.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_UpdateGrocy</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_ZoomIn.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue.Name" xml:space="preserve">
-    <value>STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue</value>
+  <data name="ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 22</value>
   </data>
-  <data name="&gt;&gt;STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
   </data>
-  <data name="&gt;&gt;STRING_ZipFiles.Name" xml:space="preserve">
-    <value>STRING_ZipFiles</value>
+  <data name="&gt;&gt;StatusStrip_Main.Parent" xml:space="preserve">
+    <value>Panel_Main</value>
   </data>
-  <data name="&gt;&gt;STRING_ZipFiles.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;STRING_SayThanks.Name" xml:space="preserve">
-    <value>STRING_SayThanks</value>
-  </data>
-  <data name="&gt;&gt;STRING_SayThanks.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;STRING_SayThanksQuestion.Name" xml:space="preserve">
-    <value>STRING_SayThanksQuestion</value>
-  </data>
-  <data name="&gt;&gt;STRING_SayThanksQuestion.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;STRING_PreparingWebbrowser.Name" xml:space="preserve">
-    <value>STRING_PreparingWebbrowser</value>
-  </data>
-  <data name="&gt;&gt;STRING_PreparingWebbrowser.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;STRING_PreparingWebserver.Name" xml:space="preserve">
-    <value>STRING_PreparingWebserver</value>
-  </data>
-  <data name="&gt;&gt;STRING_PreparingWebserver.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;STRING_PreparingPhpRuntime.Name" xml:space="preserve">
-    <value>STRING_PreparingPhpRuntime</value>
-  </data>
-  <data name="&gt;&gt;STRING_PreparingPhpRuntime.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;STRING_PreparingGrocy.Name" xml:space="preserve">
-    <value>STRING_PreparingGrocy</value>
-  </data>
-  <data name="&gt;&gt;STRING_PreparingGrocy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;STRING_PreparingBarcodeBuddy.Name" xml:space="preserve">
-    <value>STRING_PreparingBarcodeBuddy</value>
-  </data>
-  <data name="&gt;&gt;STRING_PreparingBarcodeBuddy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;STRING_DownloadingGrocyRelease.Name" xml:space="preserve">
-    <value>STRING_DownloadingGrocyRelease</value>
-  </data>
-  <data name="&gt;&gt;STRING_DownloadingGrocyRelease.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;STRING_DownloadingBarcodeBuddyRelease.Name" xml:space="preserve">
-    <value>STRING_DownloadingBarcodeBuddyRelease</value>
-  </data>
-  <data name="&gt;&gt;STRING_DownloadingBarcodeBuddyRelease.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;ToolStripMenuItem_EnableUserDataSync.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_EnableUserDataSync</value>
   </data>
   <data name="&gt;&gt;STRING_GrocyExternalAccessInfo.Name" xml:space="preserve">
     <value>STRING_GrocyExternalAccessInfo</value>
   </data>
-  <data name="&gt;&gt;STRING_GrocyExternalAccessInfo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="ToolStripMenuItem_ZoomIn.Text" xml:space="preserve">
+    <value>Zoom In</value>
   </data>
-  <data name="&gt;&gt;STRING_GrocyAndBarcodeBuddyExternalAccessInfo.Name" xml:space="preserve">
-    <value>STRING_GrocyAndBarcodeBuddyExternalAccessInfo</value>
-  </data>
-  <data name="&gt;&gt;STRING_GrocyAndBarcodeBuddyExternalAccessInfo.Type" xml:space="preserve">
+  <data name="&gt;&gt;ToolStripMenuItem_grocy.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;STRING_NginxOutput.Name" xml:space="preserve">
     <value>STRING_NginxOutput</value>
   </data>
-  <data name="&gt;&gt;STRING_NginxOutput.Type" xml:space="preserve">
+  <data name="ToolStripMenuItem_ShowBrowserDeveloperTools.Text" xml:space="preserve">
+    <value>Εμφάνιση εργαλείων προγραμματιστή προγράμματος περιήγησης</value>
+  </data>
+  <data name="&gt;&gt;MenuStrip_Main.Name" xml:space="preserve">
+    <value>MenuStrip_Main</value>
+  </data>
+  <data name="ToolStripMenuItem_Exit.Text" xml:space="preserve">
+    <value>Εξοδος</value>
+  </data>
+  <data name="ToolStripMenuItem_ShowPhpRuntimeOutput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>232, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_ResetZoom.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+0</value>
+  </data>
+  <data name="STRING_GrocyAndBarcodeBuddyExternalAccessInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
+  </data>
+  <data name="&gt;&gt;Panel_Main.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ContextMenuStrip_DummyForResxStrings.Name" xml:space="preserve">
+    <value>ContextMenuStrip_DummyForResxStrings</value>
+  </data>
+  <data name="StatusStrip_Main.Text" xml:space="preserve">
+    <value>statusStrip1</value>
+  </data>
+  <data name="&gt;&gt;STRING_DownloadingBarcodeBuddyRelease.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ToolStripMenuItem_View.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_View</value>
+  <data name="&gt;&gt;Panel_Main.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="&gt;&gt;ToolStripMenuItem_View.Type" xml:space="preserve">
+  <data name="STRING_PreparingPhpRuntime.Text" xml:space="preserve">
+    <value>Προετοιμασία ενσωματωμένου χρόνου εκτέλεσης PHP ...</value>
+  </data>
+  <data name="&gt;&gt;STRING_PreparingBarcodeBuddy.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ToolStripMenuItem_BrowserZoom.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_BrowserZoom</value>
+  <data name="STRING_PreparingGrocy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
   </data>
-  <data name="&gt;&gt;ToolStripMenuItem_BrowserZoom.Type" xml:space="preserve">
+  <data name="ToolStripStatusLabel_ExternalAccessInfo.Text" xml:space="preserve">
+    <value>ToolStripStatusLabel_ExternalAccessInfo</value>
+  </data>
+  <data name="&gt;&gt;STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue.Name" xml:space="preserve">
+    <value>STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue</value>
+  </data>
+  <data name="&gt;&gt;STRING_PreparingWebserver.Name" xml:space="preserve">
+    <value>STRING_PreparingWebserver</value>
+  </data>
+  <data name="&gt;&gt;STRING_SayThanks.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ToolStripMenuItem_ZoomIn.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_ZoomIn</value>
+  <data name="&gt;&gt;toolStripSeparator2.Name" xml:space="preserve">
+    <value>toolStripSeparator2</value>
   </data>
-  <data name="&gt;&gt;ToolStripMenuItem_ZoomIn.Type" xml:space="preserve">
+  <data name="&gt;&gt;TabPage_Grocy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="STRING_DownloadingBarcodeBuddyRelease.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
+  </data>
+  <data name="ToolStripStatusLabel_ExternalAccessInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>217, 17</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_File.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ToolStripMenuItem_ZoomOut.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_ZoomOut</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_ZoomOut.Type" xml:space="preserve">
+  <data name="&gt;&gt;STRING_PreparingWebbrowser.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ToolStripMenuItem_ResetZoom.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_ResetZoom</value>
+  <data name="&gt;&gt;TabPage_Grocy.Name" xml:space="preserve">
+    <value>TabPage_Grocy</value>
   </data>
-  <data name="&gt;&gt;ToolStripMenuItem_ResetZoom.Type" xml:space="preserve">
+  <data name="STRING_Restore.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
+  </data>
+  <data name="STRING_PreparingBarcodeBuddy.Text" xml:space="preserve">
+    <value>Προετοιμασία φίλου barcode ...</value>
+  </data>
+  <data name="ToolStripMenuItem_UpdateGrocy.Text" xml:space="preserve">
+    <value>Εκσυγχρονίζω</value>
+  </data>
+  <data name="&gt;&gt;STRING_PreparingWebserver.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="STRING_GrocyExternalAccessInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_ShowPhpRuntimeOutput.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FrmMain</value>
   </data>
+  <data name="&gt;&gt;STRING_GrocyAndBarcodeBuddyExternalAccessInfo.Name" xml:space="preserve">
+    <value>STRING_GrocyAndBarcodeBuddyExternalAccessInfo</value>
+  </data>
+  <data name="ToolStripMenuItem_ShowBrowserDeveloperTools.Size" type="System.Drawing.Size, System.Drawing">
+    <value>232, 22</value>
+  </data>
+  <data name="STRING_PreparingWebserver.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Exit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;STRING_GrocyAndBarcodeBuddyExternalAccessInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ToolStripMenuItem_File.Text" xml:space="preserve">
+    <value>Αρχείο</value>
+  </data>
+  <data name="ToolStripMenuItem_Help.Text" xml:space="preserve">
+    <value>Βοήθεια</value>
+  </data>
+  <data name="ToolStripMenuItem_Debug.Text" xml:space="preserve">
+    <value>Εντοπισμός σφαλμάτων</value>
+  </data>
+  <data name="STRING_DownloadingGrocyRelease.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
+  </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;STRING_PreparingGrocy.Name" xml:space="preserve">
+    <value>STRING_PreparingGrocy</value>
+  </data>
+  <data name="&gt;&gt;STRING_Restore.Name" xml:space="preserve">
+    <value>STRING_Restore</value>
+  </data>
+  <data name="ToolStripMenuItem_RestoreDataGrocy.Text" xml:space="preserve">
+    <value>Επαναφορά δεδομένων</value>
+  </data>
+  <data name="ToolStripMenuItem_ShowNginxOutput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>232, 22</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="STRING_TheCurrentDataWillBeOverwrittenAndGrocydesktopWillRestartContinue.Text" xml:space="preserve">
+    <value>Τα τρέχοντα δεδομένα θα αντικατασταθούν και θα γίνει επανεκκίνηση του grocy-desktop, συνεχίστε;</value>
+  </data>
+  <data name="STRING_PreparingBarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
+  </data>
+  <data name="STRING_NginxOutput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
+  </data>
+  <data name="STRING_PreparingWebbrowser.Text" xml:space="preserve">
+    <value>Προετοιμασία ενσωματωμένου προγράμματος περιήγησης ιστού ...</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ToolStripMenuItem_EnableBarcodeBuddy.Text" xml:space="preserve">
+    <value>Ενεργοποίηση φίλου barcode</value>
+  </data>
+  <data name="STRING_SayThanks.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
+  </data>
+  <data name="&gt;&gt;TabPage_BarcodeBuddy.Name" xml:space="preserve">
+    <value>TabPage_BarcodeBuddy</value>
+  </data>
+  <data name="ToolStripMenuItem_RecreateGrocyDatabase.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_BackupDataGrocy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_ZoomOut.Size" type="System.Drawing.Size, System.Drawing">
+    <value>222, 22</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_About.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_About</value>
+  </data>
+  <data name="STRING_SayThanks.Text" xml:space="preserve">
+    <value>Πες ευχαριστώ</value>
+  </data>
+  <data name="MenuStrip_Main.Size" type="System.Drawing.Size, System.Drawing">
+    <value>600, 24</value>
+  </data>
+  <data name="ToolStripMenuItem_BarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 20</value>
+  </data>
+  <data name="ToolStripMenuItem_ShowPhpRuntimeOutput.Text" xml:space="preserve">
+    <value>Εμφάνιση εξόδου PHP</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_ShowPhpRuntimeOutput.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_ShowPhpRuntimeOutput</value>
+  </data>
+  <data name="&gt;&gt;STRING_DownloadingGrocyRelease.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TabPage_BarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 316</value>
+  </data>
+  <data name="&gt;&gt;StatusStrip_Main.Name" xml:space="preserve">
+    <value>StatusStrip_Main</value>
+  </data>
+  <data name="STRING_BackupSuccessfullyCreated.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
+  </data>
+  <data name="&gt;&gt;ToolStripStatusLabel_ExternalAccessInfo.Name" xml:space="preserve">
+    <value>ToolStripStatusLabel_ExternalAccessInfo</value>
+  </data>
+  <data name="&gt;&gt;MenuStrip_Main.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;STRING_Restore.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ToolStripMenuItem_BackupDataBarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 22</value>
+  </data>
+  <data name="toolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 6</value>
+  </data>
+  <data name="ToolStripMenuItem_UpdateGrocy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_ConfigureChangeDataLocationGrocy.Text" xml:space="preserve">
+    <value>Διαμόρφωση / αλλαγή τοποθεσίας δεδομένων</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Help.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue.Text" xml:space="preserve">
+    <value>Αυτό θα διαγράψει και θα αναδημιουργήσει τη βάση δεδομένων grocy, σημαίνει ότι όλα τα δεδομένα σας θα διαγραφούν, θα συνεχίσει πραγματικά;</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_UpdateGrocy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ToolStripMenuItem_EnableExternalAccess.Text" xml:space="preserve">
+    <value>Ενεργοποίηση εξωτερικής πρόσβασης</value>
+  </data>
+  <data name="&gt;&gt;STRING_Backup.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="STRING_Backup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_ZoomOut.Text" xml:space="preserve">
+    <value>Zoom Out</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
+    <value>toolStripSeparator1</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_EnableUserDataSync.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabPage_BarcodeBuddy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;STRING_ChangeDataLocation.Name" xml:space="preserve">
+    <value>STRING_ChangeDataLocation</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_About.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="STRING_PHPOutput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
+  </data>
+  <data name="&gt;&gt;STRING_PreparingGrocy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TabControl_Main.Padding" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;TabControl_Main.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ToolStripMenuItem_BrowserZoom.Text" xml:space="preserve">
+    <value>Browser Zoom</value>
+  </data>
+  <data name="ContextMenuStrip_DummyForResxStrings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>593, 466</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_ZoomIn.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_ZoomIn</value>
+  </data>
+  <data name="STRING_DownloadingBarcodeBuddyRelease.Text" xml:space="preserve">
+    <value>Λήψη της τελευταίας έκδοσης του Barcode Buddy ...</value>
+  </data>
+  <data name="TabPage_Grocy.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_ResetZoom.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_ResetZoom</value>
+  </data>
+  <data name="&gt;&gt;STRING_DownloadingBarcodeBuddyRelease.Name" xml:space="preserve">
+    <value>STRING_DownloadingBarcodeBuddyRelease</value>
+  </data>
+  <data name="&gt;&gt;Panel_Main.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Exit.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_Exit</value>
+  </data>
+  <data name="&gt;&gt;TabControl_Main.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="STRING_GrocyExternalAccessInfo.Text" xml:space="preserve">
+    <value>Πρόσβαση στο grocy εξωτερικά μέσω% 1 $ s ή% 2 $ s</value>
+  </data>
+  <data name="&gt;&gt;STRING_SayThanks.Name" xml:space="preserve">
+    <value>STRING_SayThanks</value>
+  </data>
+  <data name="STRING_PHPOutput.Text" xml:space="preserve">
+    <value>Έξοδος PHP</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_RestoreDataGrocy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_ConfigureChangeDataLocationGrocy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_EnableBarcodeBuddy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue.Name" xml:space="preserve">
+    <value>STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue</value>
+  </data>
+  <data name="ToolStripMenuItem_EnableUserDataSync.Text" xml:space="preserve">
+    <value>Ενεργοποίηση συγχρονισμού δεδομένων χρήστη</value>
+  </data>
+  <data name="&gt;&gt;STRING_Backup.Name" xml:space="preserve">
+    <value>STRING_Backup</value>
+  </data>
+  <data name="ToolStripMenuItem_grocy.Text" xml:space="preserve">
+    <value>grocy</value>
+  </data>
+  <data name="&gt;&gt;StatusStrip_Main.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Panel_Main.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 24</value>
+  </data>
+  <data name="&gt;&gt;STRING_TheCurrentDataWillBeOverwrittenAndGrocydesktopWillRestartContinue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="STRING_PreparingPhpRuntime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
+  </data>
+  <data name="&gt;&gt;TabPage_Grocy.Parent" xml:space="preserve">
+    <value>TabControl_Main</value>
+  </data>
+  <data name="toolStripSeparator5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>244, 6</value>
+  </data>
+  <data name="MenuStrip_Main.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="ToolStripMenuItem_ZoomIn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>222, 22</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_BackupDataGrocy.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_BackupDataGrocy</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_ShowBrowserDeveloperTools.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_ShowBrowserDeveloperTools</value>
+  </data>
+  <data name="STRING_Restore.Text" xml:space="preserve">
+    <value>Επαναφορά</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_EnableExternalAccess.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <metadata name="StatusStrip_Main.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>437, 17</value>
+  </metadata>
+  <metadata name="MenuStrip_Main.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>he-IL</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ContextMenuStrip_DummyForResxStrings.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>158, 17</value>
+  </metadata>
 </root>
