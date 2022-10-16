@@ -118,7 +118,7 @@ namespace GrocyDesktop.Management
 			List<string> availableLocalizations = this.GetAvailableLocalizations();
 			string systemCulture = CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
 			string systemSubculture = CultureInfo.CurrentCulture.Name.Replace("-", "_");
-			
+
 			// Try to find the "sub" culture first
 			foreach (string item in availableLocalizations)
 			{

@@ -50,7 +50,7 @@ namespace GrocyDesktop
 		private void SetupCef()
 		{
 			Cef.EnableHighDPISupport();
-			
+
 			CefSettings cefSettings = new CefSettings();
 			cefSettings.BrowserSubprocessPath = Path.Combine(GrocyDesktopDependencyManager.CefExecutingPath, @"CefSharp.BrowserSubprocess.exe");
 			cefSettings.CachePath = GrocyDesktopDependencyManager.CefCachePath;
@@ -67,7 +67,7 @@ namespace GrocyDesktop
 			{
 				cefSettings.CefCommandLineArgs.Add("--unsafely-treat-insecure-origin-as-secure", this.GrocyManager.DesiredUrl);
 			}
-			
+
 			Cef.Initialize(cefSettings, performDependencyCheck: false, browserProcessHandler: null);
 
 			if (this.UserSettings.EnableBarcodeBuddyIntegration)
@@ -553,7 +553,7 @@ namespace GrocyDesktop
 					Directory.CreateDirectory(this.UserSettings.GrocyDataLocation);
 					ZipFile.ExtractToDirectory(grocySyncZipPath, this.UserSettings.GrocyDataLocation);
 				}
-				
+
 				if (this.UserSettings.EnableBarcodeBuddyIntegration)
 				{
 					string barcodeBuddySyncZipPath = Path.Combine(this.UserSettings.UserDataSyncFolderPath, "barcodebuddy-data.zip");

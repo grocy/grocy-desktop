@@ -61,19 +61,19 @@ namespace GrocyDesktop.Management
 		}
 
 		public string DesiredUrl
-        {
+		{
 			get
-            {
+			{
 				if (this.PreferExternalAccess)
-                {
+				{
 					return this.IpUrl;
-                }
+				}
 				else
-                {
+				{
 					return this.LocalUrl;
-                }
-            }
-        }
+				}
+			}
+		}
 
 		public void Setup(string grocyApiUrl)
 		{
@@ -83,7 +83,7 @@ namespace GrocyDesktop.Management
 			}
 
 			// Dummy API key, not needed, due to disabled authentication, but required
-			this.SetSetting("OVERRIDDEN_USER_CONFIG", "GROCY_API_URL="+grocyApiUrl+";GROCY_API_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+			this.SetSetting("OVERRIDDEN_USER_CONFIG", "GROCY_API_URL=" + grocyApiUrl + ";GROCY_API_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
 			this.SetSetting("DISABLE_AUTHENTICATION", "true");
 			this.SetSetting("CONFIG_PATH", Path.Combine(this.DataPath, "config.php"));
 			this.SetSetting("AUTHDB_PATH", Path.Combine(this.DataPath, "users.db"));

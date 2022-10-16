@@ -29,7 +29,7 @@ namespace GrocyDesktop.Management
 		private Process Process;
 		private List<string> OutputLines;
 		private bool UseFastCgi;
-		
+
 		public void Start()
 		{
 			this.Process = new Process();
@@ -52,7 +52,7 @@ namespace GrocyDesktop.Management
 			this.Process.StartInfo.FileName = Path.Combine(this.BinDirectory, exe);
 			this.Process.StartInfo.Arguments = this.Arguments;
 			this.Process.StartInfo.WorkingDirectory = this.WorkingDirectory;
-			
+
 			foreach (KeyValuePair<string, string> item in this.EnvironmentVariables)
 			{
 				this.Process.StartInfo.EnvironmentVariables.Add(item.Key, item.Value);
