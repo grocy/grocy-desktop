@@ -1,8 +1,9 @@
-﻿using GrocyDesktop.Helpers;
+using GrocyDesktop.Helpers;
 using GrocyDesktop.Management;
 using System;
 using System.IO;
 using System.Reflection;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -10,7 +11,7 @@ namespace GrocyDesktop
 {
 	internal static class Program
 	{
-		internal static readonly string RunningVersion = Assembly.GetExecutingAssembly().GetName().Version.ToString();
+		internal static readonly string RunningVersion = Regex.Replace(Assembly.GetExecutingAssembly().GetName().Version.ToString(), @"^(.+?)(\.0+)$", "$1");
 		internal static readonly string BaseExecutingPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location.TrimEnd('\\'));
 
 		internal static string BaseFixedUserDataFolderPath
