@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-	<Product Id="*" Name="grocy-desktop" Language="1033" Version="2.2.0.0" Manufacturer="Bernd Bestel" UpgradeCode="78f7234c-0724-4b82-8ff7-4ca0e8761871">
+	<Product Id="*" Name="grocy-desktop" Language="1033" Version="2.3.0.0" Manufacturer="Bernd Bestel" UpgradeCode="78f7234c-0724-4b82-8ff7-4ca0e8761871">
 		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" Description="ERP beyond your fridge" Manufacturer="Bernd Bestel" />
 
 		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
