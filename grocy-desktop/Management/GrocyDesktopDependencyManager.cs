@@ -1,4 +1,4 @@
-﻿using GrocyDesktop.Helpers;
+using GrocyDesktop.Helpers;
 using Newtonsoft.Json.Linq;
 using System;
 using System.IO;
@@ -38,8 +38,8 @@ namespace GrocyDesktop.Management
 		public readonly static string CefUserDataPath = Path.Combine(Program.RuntimeDependenciesExecutingPath, "cef-userdata");
 		public readonly static string NginxExecutingPath = Path.Combine(Program.RuntimeDependenciesExecutingPath, "nginx");
 		public readonly static string PhpExecutingPath = Path.Combine(Program.RuntimeDependenciesExecutingPath, "php");
-		public readonly static string GrocyExecutingPath = Path.Combine(Program.BaseFixedUserDataFolderPath, "grocy");
-		public readonly static string BarcodeBuddyExecutingPath = Path.Combine(Program.BaseFixedUserDataFolderPath, "barcodebuddy");
+		public readonly static string GrocyExecutingPath = Path.Combine(Program.RuntimeDependenciesExecutingPath, "grocy");
+		public readonly static string BarcodeBuddyExecutingPath = Path.Combine(Program.RuntimeDependenciesExecutingPath, "barcodebuddy");
 
 		public static async Task UnpackIncludedDependenciesIfNeeded(UserSettings settings, Form ownerFormReference = null)
 		{
@@ -121,6 +121,18 @@ namespace GrocyDesktop.Management
 				{
 					Directory.Delete(item, true);
 				}
+			}
+
+			// Clean up old grocy / Barcode Buddy directories (used until v2.2.0)
+			string oldPath = Path.Combine(Program.BaseFixedUserDataFolderPath, "grocy");
+			if (Directory.Exists(oldPath))
+			{
+				Directory.Delete(oldPath, true);
+			}
+			string oldPath2 = Path.Combine(Program.BaseFixedUserDataFolderPath, "barcodebuddy");
+			if (Directory.Exists(oldPath2))
+			{
+				Directory.Delete(oldPath2, true);
 			}
 
 			if (waitWindow != null)
