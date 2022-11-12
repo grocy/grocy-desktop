@@ -1,0 +1,1215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="&gt;&gt;ToolStripMenuItem_RecreateGrocyDatabase.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_BrowserZoom.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_BrowserZoom</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_BrowserZoom.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
+  <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 6</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_RestoreDataBarcodeBuddy.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_RestoreDataBarcodeBuddy</value>
+  </data>
+  <data name="ToolStripMenuItem_grocy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 20</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+  <data name="TabPage_BarcodeBuddy.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_BackupDataBarcodeBuddy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabControl_Main.Parent" xml:space="preserve">
+    <value>Panel_Main</value>
+  </data>
+  <data name="STRING_TheCurrentDataWillBeOverwrittenAndGrocydesktopWillRestartContinue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_RestoreDataBarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 22</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+  <data name="ToolStripMenuItem_ZoomIn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+Oemplus</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator4.Name" xml:space="preserve">
+    <value>toolStripSeparator4</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Help.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_Help</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Debug.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_Debug</value>
+  </data>
+  <data name="ToolStripMenuItem_ResetZoom.Text" xml:space="preserve">
+    <value>重設</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue.Text" xml:space="preserve">
+    <value>grocy-desktop 需要重新啟動以套用變更，確定要繼續嗎？</value>
+  </data>
+  <data name="STRING_ZipFiles.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
+  </data>
+  <data name="&gt;&gt;TabPage_BarcodeBuddy.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;STRING_BackupSuccessfullyCreated.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_grocy.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_grocy</value>
+  </data>
+  <data name="STRING_ZipFiles.Text" xml:space="preserve">
+    <value>ZIP 檔案</value>
+  </data>
+  <data name="&gt;&gt;TabControl_Main.Name" xml:space="preserve">
+    <value>TabControl_Main</value>
+  </data>
+  <data name="&gt;&gt;TabPage_BarcodeBuddy.Parent" xml:space="preserve">
+    <value>TabControl_Main</value>
+  </data>
+  <data name="TabControl_Main.Size" type="System.Drawing.Size, System.Drawing">
+    <value>600, 342</value>
+  </data>
+  <data name="ToolStripMenuItem_EnableExternalAccess.Size" type="System.Drawing.Size, System.Drawing">
+    <value>247, 22</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_RecreateGrocyDatabase.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_RecreateGrocyDatabase</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_EnableBarcodeBuddy.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_EnableBarcodeBuddy</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_ShowNginxOutput.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_ShowNginxOutput</value>
+  </data>
+  <data name="MenuStrip_Main.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="ToolStripMenuItem_View.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 20</value>
+  </data>
+  <data name="ToolStripMenuItem_About.Text" xml:space="preserve">
+    <value>關於 grocy-desktop</value>
+  </data>
+  <data name="&gt;&gt;STRING_SayThanksQuestion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator5.Name" xml:space="preserve">
+    <value>toolStripSeparator5</value>
+  </data>
+  <data name="TabPage_Grocy.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="STRING_DownloadingGrocyRelease.Text" xml:space="preserve">
+    <value>正在下載最新版本的grocy</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>600, 366</value>
+  </data>
+  <data name="ToolStripMenuItem_BrowserZoom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_File.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_File</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Debug.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_UpdateBarcodeBuddy.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_UpdateBarcodeBuddy</value>
+  </data>
+  <data name="ToolStripMenuItem_RestoreDataBarcodeBuddy.Text" xml:space="preserve">
+    <value>還原</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>grocy</value>
+  </data>
+  <data name="TabPage_BarcodeBuddy.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_Debug.Size" type="System.Drawing.Size, System.Drawing">
+    <value>187, 22</value>
+  </data>
+  <data name="&gt;&gt;STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;STRING_PreparingWebbrowser.Name" xml:space="preserve">
+    <value>STRING_PreparingWebbrowser</value>
+  </data>
+  <data name="STRING_ChangeDataLocation.Text" xml:space="preserve">
+    <value>變更資料位置</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_UpdateBarcodeBuddy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="STRING_SayThanksQuestion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_About.Size" type="System.Drawing.Size, System.Drawing">
+    <value>187, 22</value>
+  </data>
+  <data name="&gt;&gt;Panel_Main.Name" xml:space="preserve">
+    <value>Panel_Main</value>
+  </data>
+  <data name="&gt;&gt;STRING_NginxOutput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="STRING_ChangeDataLocation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
+  </data>
+  <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>184, 6</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 6</value>
+  </data>
+  <data name="TabControl_Main.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="ToolStripMenuItem_ZoomOut.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+OemMinus</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_ZoomOut.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ToolStripMenuItem_ResetZoom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>222, 22</value>
+  </data>
+  <data name="&gt;&gt;STRING_SayThanksQuestion.Name" xml:space="preserve">
+    <value>STRING_SayThanksQuestion</value>
+  </data>
+  <data name="Panel_Main.Size" type="System.Drawing.Size, System.Drawing">
+    <value>600, 342</value>
+  </data>
+  <data name="&gt;&gt;STRING_PHPOutput.Name" xml:space="preserve">
+    <value>STRING_PHPOutput</value>
+  </data>
+  <data name="TabPage_BarcodeBuddy.Text" xml:space="preserve">
+    <value>Barcode Buddy</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;STRING_DownloadingGrocyRelease.Name" xml:space="preserve">
+    <value>STRING_DownloadingGrocyRelease</value>
+  </data>
+  <data name="$this.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;ContextMenuStrip_DummyForResxStrings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TabControl_Main.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="TabPage_Grocy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 316</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_ResetZoom.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabPage_Grocy.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_BackupDataBarcodeBuddy.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_BackupDataBarcodeBuddy</value>
+  </data>
+  <data name="&gt;&gt;STRING_PHPOutput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="StatusStrip_Main.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 320</value>
+  </data>
+  <data name="&gt;&gt;STRING_ZipFiles.Name" xml:space="preserve">
+    <value>STRING_ZipFiles</value>
+  </data>
+  <data name="ToolStripMenuItem_UpdateBarcodeBuddy.Text" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="STRING_NginxOutput.Text" xml:space="preserve">
+    <value>NGINX 輸出</value>
+  </data>
+  <data name="ToolStripMenuItem_UpdateBarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 22</value>
+  </data>
+  <data name="StatusStrip_Main.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_RestoreDataBarcodeBuddy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TabPage_Grocy.Text" xml:space="preserve">
+    <value>grocy</value>
+  </data>
+  <data name="&gt;&gt;STRING_ZipFiles.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;STRING_PreparingPhpRuntime.Name" xml:space="preserve">
+    <value>STRING_PreparingPhpRuntime</value>
+  </data>
+  <data name="ToolStripMenuItem_EnableBarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>247, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_Help.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 20</value>
+  </data>
+  <data name="Panel_Main.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_EnableExternalAccess.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_EnableExternalAccess</value>
+  </data>
+  <data name="&gt;&gt;STRING_ChangeDataLocation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="StatusStrip_Main.Size" type="System.Drawing.Size, System.Drawing">
+    <value>600, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_BackupDataGrocy.Text" xml:space="preserve">
+    <value>備份</value>
+  </data>
+  <data name="ToolStripMenuItem_ShowNginxOutput.Text" xml:space="preserve">
+    <value>顯示 NGINX 輸出</value>
+  </data>
+  <data name="&gt;&gt;STRING_GrocyExternalAccessInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_RestoreDataGrocy.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_RestoreDataGrocy</value>
+  </data>
+  <data name="ToolStripMenuItem_RestoreDataGrocy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 22</value>
+  </data>
+  <data name="STRING_BackupSuccessfullyCreated.Text" xml:space="preserve">
+    <value>備份已建立</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_BackupDataGrocy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_ConfigureChangeDataLocationGrocy.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_ConfigureChangeDataLocationGrocy</value>
+  </data>
+  <data name="ToolStripMenuItem_ConfigureChangeDataLocationGrocy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 22</value>
+  </data>
+  <data name="STRING_GrocyAndBarcodeBuddyExternalAccessInfo.Text" xml:space="preserve">
+    <value>從%1$s或%2$s存取grocy，並且從%3$s或%4$s存取Barcode Buddy</value>
+  </data>
+  <data name="ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy.Text" xml:space="preserve">
+    <value>設定/變更資料位置</value>
+  </data>
+  <data name="ToolStripMenuItem_BackupDataBarcodeBuddy.Text" xml:space="preserve">
+    <value>備份</value>
+  </data>
+  <data name="&gt;&gt;MenuStrip_Main.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="TabControl_Main.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_ZoomOut.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_ZoomOut</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAMAEBAAAAEAIABoBAAANgAAACAgAAABACAAKBEAAJ4EAAAwMAAAAQAgAGgmAADGFQAAKAAAABAA
+        AAAgAAAAAQAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANzc3H3d3d343d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d+N7e3n3c3Nz53d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/c3Nz53d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/0szN/6yUlv+jhYn/vKyt/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/wLGz/1MNFf9RChL/VA4X/0wCC/+DVVr/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/9va2v+kh4r/2NbW/9vb2/+LYWb/TAIL/7qoqv/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/xbi6/6CBhf+rkpX/vq6v/0wCC/+aeHz/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/rZWY/08GD/9RChL/Wxgg/1oXH/9MAgv/lnJ2/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/29ra/1oXH/9XExv/y8HD/9zc3P+EVlz/TAIL/5Vxdf/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/8Gztf9MAgv/i2Fn/93d3f/d3d3/x7y9/0wCC/+UcHT/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f+2oqT/TAIL/5t5ff/d3d3/3d3d/9fU1f9MAgv/lHB0/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/wLKz/0wCC/+HWmD/3d3d/93d3f/CtLb/TAIL/5Rw
+        dP/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/9va2v9gICf/UwwV/7yrrf/Uz9D/dD5F/0wC
+        C/+UcHT/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/vq6w/1kWHv9MAgv/TAIL/2ow
+        N/9MAgv/lHB0/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/Y1db/vKut/8O2
+        uP/c3Nz/v7Cx/87Gx//d3d3/3d3d/93d3f/d3d3/3d3d+N3d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d+Nzc3Hzd3d343d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d+N7e3n0AAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAACAAAABAAAAAAQAgAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///wHb29t63Nzc5d3d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d5d3d3Xr///8B3NzcfN3d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/9zc3Hzc3Nzm3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3Nzc5t3d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/b2tr/spyf/4le
+        Y/9vNz3/ZCcu/200O/+EV1z/s56g/9zc3P/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/y8LD/2ku
+        Nf9MAgv/TAIL/0wCC/9MAgv/TAIL/0wCC/9MAgv/dUBG/9bT0//d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f97SVD/TAIL/0wCC/9MAgv/YCEo/2cqMv9SCxP/TAIL/0wCC/9MAgv/dUBG/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/9XR0f9rMTj/d0JJ/8rAwv/d3d3/3d3d/9fU1f+PaG3/TAIL/0wCC/9MAgv/sJqc/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/9XR0v/Z19f/3d3d/93d3f/d3d3/3d3d/93d3f9zPUT/TAIL/0wC
+        C/99TFL/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/6KE
+        h/9MAgv/TAIL/2AgJ//d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/Nxcb/jGNo/2gsNP9eHSX/aS41/4th
+        Zv/Fubr/s52g/0wCC/9MAgv/UAgR/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/uaap/1cTHP9MAgv/TAIL/0wC
+        C/9MAgv/TAIL/04GD/+BUlj/TAIL/0wCC/9PBw//3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/8vBwv9VEBj/TAIL/0wC
+        C/9MAgv/YCEo/3dDSf9cGyP/TAIL/0wCC/9MAgv/TAIL/04GDv/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/gFFW/0wC
+        C/9MAgv/TAIL/5Zxdv/c29v/3d3d/9rZ2f+GWV//TAIL/0wCC/9MAgv/TgUO/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/9TQ
+        0P9QCBD/TAIL/0wCC/94RUz/3d3d/93d3f/d3d3/3d3d/9rZ2f9jJi3/TAIL/0wCC/9NBA3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/sZue/0wCC/9MAgv/TAIL/7imqP/d3d3/3d3d/93d3f/d3d3/3d3d/55/g/9MAgv/TAIL/0wD
+        DP/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f+aeH3/TAIL/0wCC/9PBxD/2dfY/93d3f/d3d3/3d3d/93d3f/d3d3/xLa4/0wC
+        C/9MAgv/TAIL/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/49obP9MAgv/TAIL/1kWHv/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/Tzs//TAIL/0wCC/9MAgv/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/jmVq/0wCC/9MAgv/WRUd/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/9DKyv9MAgv/TAIL/0wCC//d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f+YdHn/TAIL/0wCC/9NAwz/1dDR/93d
+        3f/d3d3/3d3d/93d3f/d3d3/vayu/0wCC/9MAgv/TAIL/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/7CZm/9MAgv/TAIL/0wC
+        C/+ulZj/3d3d/93d3f/d3d3/3d3d/93d3f+Sa3D/TAIL/0wCC/9MAgv/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/1dLS/1MN
+        Fv9MAgv/TAIL/2crMv/Z19f/3d3d/93d3f/d3d3/zcTF/1QPF/9MAgv/TAIL/0wCC//d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/k21y/0wCC/9MAgv/TAIL/3VARv/EuLr/3Nvb/7qoqv9jJCz/TAIL/0wCC/9MAgv/TAIL/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/Z19f/bTM7/0wCC/9MAgv/TAIL/0wCC/9NBA3/TAIL/0wCC/9MAgv/TAIL/0wC
+        C/9MAgv/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/W0tP/gFFW/00EDf9MAgv/TAIL/0wCC/9MAgv/YyUt/62V
+        mP9MAgv/TAIL/0wCC//d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/yb/A/6OFif+TbnL/m3l9/7mm
+        qP/b2dr/3d3d/6GDh/+ggoX/oIGF/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3l3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d5d3d3Xnd3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d17////Ad7e3nbd3d3k3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3l3d3dev///wEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAADAA
+        AABgAAAAAQAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADa2toO3NzcWN3d3cTc3Nz13d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/c3Nz13d3dxdzc3Fnd3d0PAAAAANra2g7c3NyT3Nzc993d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/9zc3Pfc3NyT7OzsDtvb
+        217c3Nz33d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/c3Nz329vbXtzc3Mjd3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3NzcyNzc3PTd3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3Nzc9N3d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/9fT0//Bs7X/taGj/62VmP+vmJv/uKWn/8i9v//Y1tb/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/9zb2//BsrT/iF1i/2QnLv9bGSH/VxIb/1QPF/9VEBj/WBQc/10c
+        JP9wOD//qI2R/9zb2//d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/087O/5Nucv9SDBT/TAIL/0wCC/9MAgv/TAIL/0wC
+        C/9MAgv/TAIL/0wCC/9MAgv/TAIL/3M9Qv/Hu73/3Nzc/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/LwsP/fEtR/0wCC/9MAgv/TAIL/0wC
+        C/9MAgv/TAIL/0wCC/9MAgv/TAIL/0wCC/9MAgv/TAIL/00DDP9uNjz/xrq7/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/Jv8D/YSIq/0wC
+        C/9MAgv/TAIL/0wCC/9ZFh7/cz5E/3xKUP9qLzb/TwcQ/0wCC/9MAgv/TAIL/0wCC/9NAwz/cjtC/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/x7y9/2AgKP9PBg//Zyoy/66VmP/a2Nj/3d3d/93d3f/d3d3/zcXG/4RWW/9TDBX/TAIL/0wC
+        C/9MAgv/TAIL/6SHiv/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/8K0tv+Ra3D/zcTF/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/9fU
+        1f+OZmv/UAgQ/0wCC/9MAgv/TAIL/200O//X09T/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/9zc3P/Z19f/3dzc/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/HvL3/XRwk/0wCC/9MAgv/TAIL/1oXH/++rrD/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/dD5F/0wCC/9MAgv/TAIL/1QOFv+sk5b/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/c29v/zMPE/7Wgo/+ojZD/p4uP/66Wmf+/sLL/19TU/93d3f/d3d3/jGNo/0wCC/9MAgv/TAIL/08H
+        EP+efoL/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/9TQ0P+MY2j/YCEp/1cSG/9SDBT/UgsU/1UPF/9aGCD/aS00/6KFif/X1NX/mXZ7/0wC
+        C/9MAgv/TAIL/00EDf+YdXn/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/c3Nz/xLe4/2wyOf9MAgv/TAIL/0wCC/9MAgv/TAIL/0wCC/9MAgv/TAIL/00E
+        Df95R03/kWpv/0wCC/9MAgv/TAIL/00EDP+XdHj/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f+/r7H/YyUt/0wCC/9MAgv/TAIL/0wCC/9MAgv/TAIL/0wC
+        C/9MAgv/TAIL/0wCC/9MAwz/XRwk/0wCC/9MAgv/TAIL/00DDP+XdHj/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/9POz/96SE7/TQQM/0wCC/9MAgv/TAIL/0wC
+        C/9SCxT/fEtR/5VvdP+HXGH/Whcf/0wCC/9MAgv/TAIL/0wCC/9MAgv/TAIL/00DDP+Xc3f/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/7Kcn/9QCBD/TAIL/0wC
+        C/9MAgv/TAIL/2UoL/+8q63/3Nzc/93d3f/d3d3/1dHS/39OVP9QCBH/TAIL/0wCC/9MAgv/TAIL/00D
+        DP+Wcnf/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/242
+        PP9MAgv/TAIL/0wCC/9MAgv/YCEp/8K1tv/d3d3/3d3d/93d3f/d3d3/3d3d/9TPz/98S1H/TQQN/0wC
+        C/9MAgv/TAIL/0wDDP+Wcnb/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/xbm6/04FDv9MAgv/TAIL/0wCC/9NBA3/qpGU/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f+2o6X/WBQc/0wCC/9MAgv/TAIL/0wCDP+WcXb/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/m3p+/0wCC/9MAgv/TAIL/0wCC/9nKzL/zsbH/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/Z2Nj/bTM6/0wCC/9MAgv/TAIL/0wCC/+VcHX/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/gFBW/0wCC/9MAgv/TAIL/0wCC/+FWF7/2NXW/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/mHR5/0wCC/9MAgv/TAIL/0wCC/+VcHT/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/aS82/0wCC/9MAgv/TAIL/04F
+        Dv+Zdnr/3dzc/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/u6ms/0wCC/9MAgv/TAIL/0wC
+        C/+UcHT/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/Z19f/YyUs/0wC
+        C/9MAgv/TAIL/1AJEf+hg4f/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/y8HD/0wC
+        C/9MAgv/TAIL/0wCC/+UcHT/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/V0dL/YiMq/0wCC/9MAgv/TAIL/1EJEv+jhYj/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/zsbH/0wCC/9MAgv/TAIL/0wCC/+UcHT/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/X1NX/YiQr/0wCC/9MAgv/TAIL/1AIEP+ggIT/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/xbm6/0wCC/9MAgv/TAIL/0wCC/+UcHT/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/c3Nz/Zysy/0wCC/9MAgv/TAIL/0wDDP+Sa3D/3Nvb/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/r5ib/0wCC/9MAgv/TAIL/0wCC/+UcHT/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/ekhO/0wCC/9MAgv/TAIL/0wC
+        C/98SlD/1dDR/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/il9k/0wCC/9MAgv/TAIL/0wC
+        C/+UcHT/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/m3l9/0wC
+        C/9MAgv/TAIL/0wCC/9dHCT/ysHC/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/PyMn/YyQs/0wC
+        C/9MAgv/TAIL/0wCC/+UcHT/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/yL6//1AIEf9MAgv/TAIL/0wCC/9MAgv/kGht/9va2v/d3d3/3d3d/93d3f/d3d3/3d3d/9va
+        2v+dfYD/UQkS/0wCC/9MAgv/TAIL/0wCC/+UcHT/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/4RXXP9MAgv/TAIL/0wCC/9MAgv/UgsU/6OFif/Y1tb/3d3d/93d
+        3f/d3d3/3d3d/7Sfov9gISn/TAIL/0wCC/9MAgv/TAIL/0wCC/+UcHT/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/8S3uf9aGCD/TAIL/0wCC/9MAgv/TAIL/1UP
+        GP+HWmD/wLK0/9zb2//LwsP/kmxx/1kVHf9MAgv/TAIL/0wCC/9MAgv/TAIL/0wCC/+UcHT/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/9vZ2v+cfID/UgsT/0wC
+        C/9MAgv/TAIL/0wCC/9MAgv/TAIL/08GD/9MAgv/TAIL/0wCC/9MAgv/TAIL/0wCC/9MAgv/TAIL/0wC
+        C/+UcHT/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/V0NH/lG90/1MMFf9MAgv/TAIL/0wCC/9MAgv/TAIL/0wCC/9MAgv/TAIL/0wCC/9WERr/cTlA/0wC
+        C/9MAgv/TAIL/0wCC/+UcHT/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/2dfX/7Gbnv9oLDP/TQMM/0wCC/9MAgv/TAIL/0wCC/9MAgv/TAIL/2Ag
+        KP+tlJf/xLe4/0wCC/9MAgv/TAIL/0wCC/+UcHT/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/X1NT/rpWY/4RXXf9rMTj/ZCYt/2sx
+        OP+BUlj/rZSX/9fT1P/d3d3/3d3d/3tITv95Rkz/eEVL/3hFS/+rkZT/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/2tnZ/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/9zc3PTd3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3Nzc9N3d3cbd3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3dxt3d3Vvc3Nz23d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/c3Nz33d3dXNra2g7d3d2P3d3d9t3d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/9zc3Pfd3d2S2traDgAA
+        AADa2toO3d3dVNzc3MLc3Nz13d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d
+        3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/d3d3/3d3d/93d3f/c3Nz13d3dxdzc
+        3Fna2toOAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+</value>
+  </data>
+  <data name="Panel_Main.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="ToolStripMenuItem_BarcodeBuddy.Text" xml:space="preserve">
+    <value>Barcode Buddy</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_View.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_View</value>
+  </data>
+  <data name="STRING_PreparingWebserver.Text" xml:space="preserve">
+    <value>正在準備嵌入式網頁伺服器...</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_ShowBrowserDeveloperTools.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
+  </data>
+  <data name="STRING_Backup.Text" xml:space="preserve">
+    <value>備份</value>
+  </data>
+  <data name="&gt;&gt;ToolStripStatusLabel_ExternalAccessInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ToolStripMenuItem_File.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 20</value>
+  </data>
+  <data name="STRING_PreparingWebbrowser.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_BarcodeBuddy.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_BarcodeBuddy</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_ShowNginxOutput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ToolStripMenuItem_View.Text" xml:space="preserve">
+    <value>檢視</value>
+  </data>
+  <data name="&gt;&gt;STRING_PreparingPhpRuntime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="STRING_SayThanksQuestion.Text" xml:space="preserve">
+    <value>覺得 grocy 有用嗎？</value>
+  </data>
+  <data name="&gt;&gt;STRING_PreparingBarcodeBuddy.Name" xml:space="preserve">
+    <value>STRING_PreparingBarcodeBuddy</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator3.Name" xml:space="preserve">
+    <value>toolStripSeparator3</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_View.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuStrip_Main.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ToolStripMenuItem_EnableUserDataSync.Size" type="System.Drawing.Size, System.Drawing">
+    <value>247, 22</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_BarcodeBuddy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;STRING_BackupSuccessfullyCreated.Name" xml:space="preserve">
+    <value>STRING_BackupSuccessfullyCreated</value>
+  </data>
+  <data name="STRING_PreparingGrocy.Text" xml:space="preserve">
+    <value>正在準備grocy...</value>
+  </data>
+  <data name="ToolStripMenuItem_Exit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>247, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_RecreateGrocyDatabase.Text" xml:space="preserve">
+    <value>重設資料庫</value>
+  </data>
+  <data name="&gt;&gt;StatusStrip_Main.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;STRING_TheCurrentDataWillBeOverwrittenAndGrocydesktopWillRestartContinue.Name" xml:space="preserve">
+    <value>STRING_TheCurrentDataWillBeOverwrittenAndGrocydesktopWillRestartContinue</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_UpdateGrocy.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_UpdateGrocy</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_ZoomIn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 22</value>
+  </data>
+  <data name="STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
+  </data>
+  <data name="&gt;&gt;StatusStrip_Main.Parent" xml:space="preserve">
+    <value>Panel_Main</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_EnableUserDataSync.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_EnableUserDataSync</value>
+  </data>
+  <data name="&gt;&gt;STRING_GrocyExternalAccessInfo.Name" xml:space="preserve">
+    <value>STRING_GrocyExternalAccessInfo</value>
+  </data>
+  <data name="ToolStripMenuItem_ZoomIn.Text" xml:space="preserve">
+    <value>放大</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_grocy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;STRING_NginxOutput.Name" xml:space="preserve">
+    <value>STRING_NginxOutput</value>
+  </data>
+  <data name="ToolStripMenuItem_ShowBrowserDeveloperTools.Text" xml:space="preserve">
+    <value>顯示瀏覽器開發工具</value>
+  </data>
+  <data name="&gt;&gt;MenuStrip_Main.Name" xml:space="preserve">
+    <value>MenuStrip_Main</value>
+  </data>
+  <data name="ToolStripMenuItem_Exit.Text" xml:space="preserve">
+    <value>離開</value>
+  </data>
+  <data name="ToolStripMenuItem_ShowPhpRuntimeOutput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>232, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_ResetZoom.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+0</value>
+  </data>
+  <data name="STRING_GrocyAndBarcodeBuddyExternalAccessInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
+  </data>
+  <data name="&gt;&gt;Panel_Main.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ContextMenuStrip_DummyForResxStrings.Name" xml:space="preserve">
+    <value>ContextMenuStrip_DummyForResxStrings</value>
+  </data>
+  <data name="StatusStrip_Main.Text" xml:space="preserve">
+    <value>statusStrip1</value>
+  </data>
+  <data name="&gt;&gt;STRING_DownloadingBarcodeBuddyRelease.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Panel_Main.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="STRING_PreparingPhpRuntime.Text" xml:space="preserve">
+    <value>正在準備嵌入式PHP runtime...</value>
+  </data>
+  <data name="&gt;&gt;STRING_PreparingBarcodeBuddy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="STRING_PreparingGrocy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
+  </data>
+  <data name="ToolStripStatusLabel_ExternalAccessInfo.Text" xml:space="preserve">
+    <value>ToolStripStatusLabel_ExternalAccessInfo</value>
+  </data>
+  <data name="&gt;&gt;STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue.Name" xml:space="preserve">
+    <value>STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue</value>
+  </data>
+  <data name="&gt;&gt;STRING_PreparingWebserver.Name" xml:space="preserve">
+    <value>STRING_PreparingWebserver</value>
+  </data>
+  <data name="&gt;&gt;STRING_SayThanks.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Name" xml:space="preserve">
+    <value>toolStripSeparator2</value>
+  </data>
+  <data name="&gt;&gt;TabPage_Grocy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="STRING_DownloadingBarcodeBuddyRelease.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
+  </data>
+  <data name="ToolStripStatusLabel_ExternalAccessInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>217, 17</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_File.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;STRING_PreparingWebbrowser.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabPage_Grocy.Name" xml:space="preserve">
+    <value>TabPage_Grocy</value>
+  </data>
+  <data name="STRING_Restore.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
+  </data>
+  <data name="STRING_PreparingBarcodeBuddy.Text" xml:space="preserve">
+    <value>正在準備Barcode Buddy...</value>
+  </data>
+  <data name="ToolStripMenuItem_UpdateGrocy.Text" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="&gt;&gt;STRING_PreparingWebserver.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="STRING_GrocyExternalAccessInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_ShowPhpRuntimeOutput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FrmMain</value>
+  </data>
+  <data name="&gt;&gt;STRING_GrocyAndBarcodeBuddyExternalAccessInfo.Name" xml:space="preserve">
+    <value>STRING_GrocyAndBarcodeBuddyExternalAccessInfo</value>
+  </data>
+  <data name="ToolStripMenuItem_ShowBrowserDeveloperTools.Size" type="System.Drawing.Size, System.Drawing">
+    <value>232, 22</value>
+  </data>
+  <data name="STRING_PreparingWebserver.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Exit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;STRING_GrocyAndBarcodeBuddyExternalAccessInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ToolStripMenuItem_File.Text" xml:space="preserve">
+    <value>檔案</value>
+  </data>
+  <data name="ToolStripMenuItem_Help.Text" xml:space="preserve">
+    <value>說明</value>
+  </data>
+  <data name="ToolStripMenuItem_Debug.Text" xml:space="preserve">
+    <value>偵錯</value>
+  </data>
+  <data name="STRING_DownloadingGrocyRelease.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;STRING_PreparingGrocy.Name" xml:space="preserve">
+    <value>STRING_PreparingGrocy</value>
+  </data>
+  <data name="&gt;&gt;STRING_Restore.Name" xml:space="preserve">
+    <value>STRING_Restore</value>
+  </data>
+  <data name="ToolStripMenuItem_RestoreDataGrocy.Text" xml:space="preserve">
+    <value>還原</value>
+  </data>
+  <data name="ToolStripMenuItem_ShowNginxOutput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>232, 22</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="STRING_TheCurrentDataWillBeOverwrittenAndGrocydesktopWillRestartContinue.Text" xml:space="preserve">
+    <value>現有的資料將被覆蓋，而且 grocy-desktop 將重新啟動，確定要繼續嗎？</value>
+  </data>
+  <data name="STRING_PreparingBarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
+  </data>
+  <data name="STRING_NginxOutput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
+  </data>
+  <data name="STRING_PreparingWebbrowser.Text" xml:space="preserve">
+    <value>正在準備嵌入式瀏覽器...</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ToolStripMenuItem_EnableBarcodeBuddy.Text" xml:space="preserve">
+    <value>啟用Barcode Buddy</value>
+  </data>
+  <data name="STRING_SayThanks.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
+  </data>
+  <data name="&gt;&gt;TabPage_BarcodeBuddy.Name" xml:space="preserve">
+    <value>TabPage_BarcodeBuddy</value>
+  </data>
+  <data name="ToolStripMenuItem_RecreateGrocyDatabase.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_BackupDataGrocy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_ZoomOut.Size" type="System.Drawing.Size, System.Drawing">
+    <value>222, 22</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_About.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_About</value>
+  </data>
+  <data name="STRING_SayThanks.Text" xml:space="preserve">
+    <value>表示感謝</value>
+  </data>
+  <data name="MenuStrip_Main.Size" type="System.Drawing.Size, System.Drawing">
+    <value>600, 24</value>
+  </data>
+  <data name="ToolStripMenuItem_BarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 20</value>
+  </data>
+  <data name="ToolStripMenuItem_ShowPhpRuntimeOutput.Text" xml:space="preserve">
+    <value>顯示 PHP 輸出</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_ShowPhpRuntimeOutput.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_ShowPhpRuntimeOutput</value>
+  </data>
+  <data name="&gt;&gt;STRING_DownloadingGrocyRelease.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TabPage_BarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 316</value>
+  </data>
+  <data name="&gt;&gt;StatusStrip_Main.Name" xml:space="preserve">
+    <value>StatusStrip_Main</value>
+  </data>
+  <data name="STRING_BackupSuccessfullyCreated.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
+  </data>
+  <data name="&gt;&gt;ToolStripStatusLabel_ExternalAccessInfo.Name" xml:space="preserve">
+    <value>ToolStripStatusLabel_ExternalAccessInfo</value>
+  </data>
+  <data name="&gt;&gt;MenuStrip_Main.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;STRING_Restore.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ToolStripMenuItem_BackupDataBarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 22</value>
+  </data>
+  <data name="toolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 6</value>
+  </data>
+  <data name="ToolStripMenuItem_UpdateGrocy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_ConfigureChangeDataLocationGrocy.Text" xml:space="preserve">
+    <value>設定/變更資料位置</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Help.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue.Text" xml:space="preserve">
+    <value>將會刪除並重新建立grocy資料庫，這表示您的所有資料將被刪除，確定要繼續嗎？</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_UpdateGrocy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ToolStripMenuItem_EnableExternalAccess.Text" xml:space="preserve">
+    <value>啟用外部存取</value>
+  </data>
+  <data name="&gt;&gt;STRING_Backup.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="STRING_Backup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_ZoomOut.Text" xml:space="preserve">
+    <value>縮小</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
+    <value>toolStripSeparator1</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_EnableUserDataSync.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabPage_BarcodeBuddy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;STRING_ChangeDataLocation.Name" xml:space="preserve">
+    <value>STRING_ChangeDataLocation</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_About.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="STRING_PHPOutput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
+  </data>
+  <data name="&gt;&gt;STRING_PreparingGrocy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TabControl_Main.Padding" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;TabControl_Main.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ToolStripMenuItem_BrowserZoom.Text" xml:space="preserve">
+    <value>縮放</value>
+  </data>
+  <data name="ContextMenuStrip_DummyForResxStrings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>593, 466</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_ZoomIn.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_ZoomIn</value>
+  </data>
+  <data name="STRING_DownloadingBarcodeBuddyRelease.Text" xml:space="preserve">
+    <value>正在下載最新版本的Barcode Buddy</value>
+  </data>
+  <data name="TabPage_Grocy.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_ResetZoom.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_ResetZoom</value>
+  </data>
+  <data name="&gt;&gt;STRING_DownloadingBarcodeBuddyRelease.Name" xml:space="preserve">
+    <value>STRING_DownloadingBarcodeBuddyRelease</value>
+  </data>
+  <data name="&gt;&gt;Panel_Main.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Exit.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_Exit</value>
+  </data>
+  <data name="&gt;&gt;TabControl_Main.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="STRING_GrocyExternalAccessInfo.Text" xml:space="preserve">
+    <value>從%1$s或%2$s存取grocy</value>
+  </data>
+  <data name="&gt;&gt;STRING_SayThanks.Name" xml:space="preserve">
+    <value>STRING_SayThanks</value>
+  </data>
+  <data name="STRING_PHPOutput.Text" xml:space="preserve">
+    <value>PHP 輸出</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_RestoreDataGrocy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_ConfigureChangeDataLocationGrocy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_EnableBarcodeBuddy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue.Name" xml:space="preserve">
+    <value>STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue</value>
+  </data>
+  <data name="ToolStripMenuItem_EnableUserDataSync.Text" xml:space="preserve">
+    <value>啟用資料同步</value>
+  </data>
+  <data name="&gt;&gt;STRING_Backup.Name" xml:space="preserve">
+    <value>STRING_Backup</value>
+  </data>
+  <data name="ToolStripMenuItem_grocy.Text" xml:space="preserve">
+    <value>grocy</value>
+  </data>
+  <data name="&gt;&gt;StatusStrip_Main.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Panel_Main.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 24</value>
+  </data>
+  <data name="&gt;&gt;STRING_TheCurrentDataWillBeOverwrittenAndGrocydesktopWillRestartContinue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="STRING_PreparingPhpRuntime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 22</value>
+  </data>
+  <data name="&gt;&gt;TabPage_Grocy.Parent" xml:space="preserve">
+    <value>TabControl_Main</value>
+  </data>
+  <data name="toolStripSeparator5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>244, 6</value>
+  </data>
+  <data name="MenuStrip_Main.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="ToolStripMenuItem_ZoomIn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>222, 22</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_BackupDataGrocy.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_BackupDataGrocy</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_ShowBrowserDeveloperTools.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_ShowBrowserDeveloperTools</value>
+  </data>
+  <data name="STRING_Restore.Text" xml:space="preserve">
+    <value>還原</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_EnableExternalAccess.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <metadata name="StatusStrip_Main.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>437, 17</value>
+  </metadata>
+  <metadata name="MenuStrip_Main.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>he-IL</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ContextMenuStrip_DummyForResxStrings.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>158, 17</value>
+  </metadata>
+</root>
