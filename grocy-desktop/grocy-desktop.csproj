@@ -210,7 +210,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <PostBuildEvent>if not exist "$(SolutionDir)embedded_dependencies\cef.zip" (
-    PowerShell -ExecutionPolicy Unrestricted -Command "Get-ChildItem '$(TargetDir)\x64\*' -Recurse | Compress-Archive -DestinationPath '$(SolutionDir)embedded_dependencies\cef.zip'"
+    del "$(TargetDir)\x64\*.pdb"
+    del "$(TargetDir)\x64\*.xml"
+    PowerShell -ExecutionPolicy Unrestricted -Command "Compress-Archive -Path '$(TargetDir)\x64\*' -DestinationPath '$(SolutionDir)embedded_dependencies\cef.zip'"
 )
 
 if not exist "$(SolutionDir)embedded_dependencies\grocy.zip" (
