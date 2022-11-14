@@ -78,9 +78,11 @@
   mkdir "$(SolutionDir).deploy\appx_content\fr-FR"
   mkdir "$(SolutionDir).deploy\appx_content\pl"
   mkdir "$(SolutionDir).deploy\appx_content\zh-CN"
+  mkdir "$(SolutionDir).deploy\appx_content\zh-TW"
   mkdir "$(SolutionDir).deploy\appx_content\cs"
   mkdir "$(SolutionDir).deploy\appx_content\es"
   mkdir "$(SolutionDir).deploy\appx_content\it"
+  mkdir "$(SolutionDir).deploy\appx_content\lt"
 
   copy "$(SolutionDir)grocy-desktop\bin\Release\de\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\de\grocy-desktop.resources.dll"
   copy "$(SolutionDir)grocy-desktop\bin\Release\el\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\el\grocy-desktop.resources.dll"
@@ -91,9 +93,11 @@
   copy "$(SolutionDir)grocy-desktop\bin\Release\fr-FR\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\fr-FR\grocy-desktop.resources.dll"
   copy "$(SolutionDir)grocy-desktop\bin\Release\pl\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\pl\grocy-desktop.resources.dll"
   copy "$(SolutionDir)grocy-desktop\bin\Release\zh-CN\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\zh-CN\grocy-desktop.resources.dll"
+  copy "$(SolutionDir)grocy-desktop\bin\Release\zh-TW\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\zh-TW\grocy-desktop.resources.dll"
   copy "$(SolutionDir)grocy-desktop\bin\Release\cs\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\cs\grocy-desktop.resources.dll"
   copy "$(SolutionDir)grocy-desktop\bin\Release\es\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\es\grocy-desktop.resources.dll"
   copy "$(SolutionDir)grocy-desktop\bin\Release\it\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\it\grocy-desktop.resources.dll"
+  copy "$(SolutionDir)grocy-desktop\bin\Release\lt\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\lt\grocy-desktop.resources.dll"
 
   "%25programfiles(x86)%25\Windows Kits\10\bin\10.0.19041.0\x64\makepri.exe" createconfig /cf "$(SolutionDir).deploy\appx_content\priconfig.xml" /dq lang-en-US /pv 10.0.0
   pushd "$(SolutionDir).deploy\appx_content"
