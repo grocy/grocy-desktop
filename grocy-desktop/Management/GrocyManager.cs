@@ -1,4 +1,4 @@
-﻿using GrocyDesktop.Helpers;
+using GrocyDesktop.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -85,6 +85,15 @@ namespace GrocyDesktop.Management
 			IOHelper.CopyFolder(Path.Combine(this.BasePath, "data"), this.DataPath);
 			File.Copy(Path.Combine(this.BasePath, "config-dist.php"), Path.Combine(this.DataPath, "config.php"), true);
 			File.Copy(Path.Combine(this.BasePath, "config-dist.php"), Path.Combine(this.BasePath, "data", "config.php"), true); // Dummy
+
+			// Set the PHP timezone to the system ones by adding code calling date_default_timezone_set to (the end of) config.php
+			int utcOffsetHours = DateTimeOffset.Now.Offset.Hours;
+			string isDst = "0";
+			if (TimeZoneInfo.Local.IsDaylightSavingTime(DateTime.Now))
+			{
+				isDst = "1";
+			}
+			File.AppendAllText(Path.Combine(this.DataPath, "config.php"), $"{System.Environment.NewLine}date_default_timezone_set(timezone_name_from_abbr(\"\", {utcOffsetHours}*3600, {isDst}));");
 
 			foreach (string item in Directory.GetFiles(Path.Combine(this.DataPath, "viewcache")))
 			{
