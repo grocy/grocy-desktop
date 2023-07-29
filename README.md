@@ -1,6 +1,6 @@
 <div align="center">
 <img alt="Logo" height="50" src="https://raw.githubusercontent.com/grocy/grocy/master/public/img/grocy_logo.svg?sanitize=true" />
-<h3>grocy-desktop</h3>
+<h3>Grocy Desktop</h3>
 <h4>A (Windows) desktop application wrapper for <a href="https://github.com/grocy/grocy">grocy</a><br>Created by <a href="https://github.com/berrnd">@berrnd</a></h4>
 </div>
 
@@ -32,13 +32,13 @@ All user data can be exported and restored as a ZIP file (see the `grocy` and `B
 
 ## Localization
 
-grocy-desktop is fully localizable - the default language is English (integrated into code), a German localization is always maintained by me.
+Grocy Desktop is fully localizable - the default language is English (integrated into code), a German localization is always maintained by me.
 
 You can easily help translating grocy on [Transifex](https://www.transifex.com/grocy/grocy-desktop/dashboard/) if your language is incomplete or not available yet.
 
 Any translation which once reached a completion level of 70 % will be included in releases.
 
-grocy-desktop and grocy will use automatically the localization based on your system language, if available.
+Grocy Desktop and grocy will use automatically the localization based on your system language, if available.
 
 ## Barcode Buddy integration
 
@@ -53,7 +53,7 @@ _This should only be used in trusted (local) networks._
 
 ## User data synchronization
 
-If you want to have grocy-desktop on more than one machine, you can enable synchronization of all user data via `File -> Enable user data synchronization`.
+If you want to have Grocy Desktop on more than one machine, you can enable synchronization of all user data via `File -> Enable user data synchronization`.
 All user data will be exported to the selected directory an closing the application and restored on application start (e. g. use any cloud-synced directory for that).
 
 ## Motivation
@@ -64,7 +64,7 @@ grocy is a selfhosted PHP web application, so normally runs on webservers. If yo
 
 ### How this works technically
 
-grocy-desktop is a .Net Windows Forms application. It uses [CefSharp](https://github.com/cefsharp/CefSharp) as an integrated browser and utilizes [nginx](https://nginx.org) and [PHP](https://www.php.net/) (FastCGI)  to host grocy. The UWP app (`.appx` package to be distributed through the Microsoft Store) is built using [Desktop Bridge](https://docs.microsoft.com/en-us/windows/msix/desktop/source-code-overview), all needed dependencies/manifests are located in the `appx_dependencies` folder.
+Grocy Desktop is a .Net Windows Forms application. It uses [CefSharp](https://github.com/cefsharp/CefSharp) as an integrated browser and utilizes [nginx](https://nginx.org) and [PHP](https://www.php.net/) (FastCGI)  to host grocy. The UWP app (`.appx` package to be distributed through the Microsoft Store) is built using [Desktop Bridge](https://docs.microsoft.com/en-us/windows/msix/desktop/source-code-overview), all needed dependencies/manifests are located in the `appx_dependencies` folder.
 
 ### What the installer does
 
@@ -74,7 +74,7 @@ Everything will be unpacked to `%programfiles%\grocy-desktop` by default, the pa
 
 ### What happens on start
 
-grocy-desktop will do the following things and then opens the locally hosted instance in the integrated browser:
+Grocy Desktop will do the following things and then opens the locally hosted instance in the integrated browser:
 - Unpacking the dependency ZIP files, if needed, to `%appdata%\grocy-desktop\runtime-dependencies`
   - grocy to `%appdata%\grocy-desktop\grocy`
   - Barcode Buddy (if enabled) to `%appdata%\grocy-desktop\barcodebuddy`
@@ -100,7 +100,7 @@ There is none. The progress of a specific bug/enhancement is always tracked in t
 
 ## Screenshots
 
-![grocy-desktop](https://github.com/berrnd/grocy-desktop/raw/master/.github/publication_assets/grocy-desktop.png "grocy-desktop")
+![Grocy Desktop](https://github.com/berrnd/grocy-desktop/raw/master/.github/publication_assets/grocy-desktop.png "Grocy Desktop")
 
 ## How to build
 

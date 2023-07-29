@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-	<Product Id="*" Name="grocy-desktop" Language="1033" Version="2.3.1.0" Manufacturer="Bernd Bestel" UpgradeCode="78f7234c-0724-4b82-8ff7-4ca0e8761871">
+	<Product Id="*" Name="grocy-desktop" Language="1033" Version="2.4.0.0" Manufacturer="Bernd Bestel" UpgradeCode="78f7234c-0724-4b82-8ff7-4ca0e8761871">
 		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" Description="ERP beyond your fridge" Manufacturer="Bernd Bestel" />
 
 		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
@@ -9,7 +9,7 @@
 		<Icon Id="icon.ico" SourceFile="$(var.SolutionDir)grocy-desktop\grocy-desktop_icon.ico"/>
 		<Property Id="ARPPRODUCTICON" Value="icon.ico" />
 
-		<Feature Id="ProductFeature" Title="grocy-desktop Setup" Level="1">
+		<Feature Id="ProductFeature" Title="Grocy Desktop Setup" Level="1">
 			<ComponentGroupRef Id="ProductComponents" />
 			<ComponentRef Id="RESOURCES_DE" />
 			<ComponentRef Id="RESOURCES_EL" />
@@ -36,7 +36,7 @@
 			<Publish Dialog="VerifyReadyDlg" Control="Back" Event="NewDialog" Value="WelcomeDlg" Order="2">1</Publish>
 			<Publish Dialog="ExitDialog" Control="Finish" Event="DoAction" Value="LaunchApplication">WIXUI_EXITDIALOGOPTIONALCHECKBOX = 1 and NOT Installed</Publish>
 		</UI>
-		<Property Id="WIXUI_EXITDIALOGOPTIONALCHECKBOXTEXT" Value="Start grocy-desktop after finishing installation" />
+		<Property Id="WIXUI_EXITDIALOGOPTIONALCHECKBOXTEXT" Value="Start Grocy Desktop after finishing installation" />
 
 		<Property Id="WixShellExecTarget" Value="[INSTALLFOLDER]grocy-desktop.exe" />
 		<CustomAction Id="LaunchApplication" BinaryKey="WixCA" DllEntry="WixShellExec" Impersonate="yes" />
@@ -83,7 +83,7 @@
 	<Fragment>
 		<DirectoryRef Id="ProgramMenuFolder">
 			<Component Id="ApplicationShortcut" Guid="5B9422D4-A456-4CCE-8A0F-0810175D3C6C">
-				<Shortcut Id="ApplicationStartMenuShortcut" Name="grocy" Description="ERP beyond your fridge" Target="[INSTALLFOLDER]grocy-desktop.exe" WorkingDirectory="INSTALLFOLDER" />
+				<Shortcut Id="ApplicationStartMenuShortcut" Name="Grocy" Description="ERP beyond your fridge" Target="[INSTALLFOLDER]grocy-desktop.exe" WorkingDirectory="INSTALLFOLDER" />
 				<RemoveFolder Id="RemoveApplicationProgramsFolder" Directory="ProgramMenuFolder" On="uninstall" />
 				<RegistryValue Root="HKCU" Key="Software\grocy-desktop" Name="installed" Type="integer" Value="1" KeyPath="yes" />
 			</Component>
