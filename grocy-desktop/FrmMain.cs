@@ -1,4 +1,4 @@
-﻿using CefSharp;
+using CefSharp;
 using CefSharp.WinForms;
 using GrocyDesktop.Helpers;
 using GrocyDesktop.Management;
@@ -49,8 +49,6 @@ namespace GrocyDesktop
 
 		private void SetupCef()
 		{
-			Cef.EnableHighDPISupport();
-
 			CefSettings cefSettings = new CefSettings();
 			cefSettings.BrowserSubprocessPath = Path.Combine(GrocyDesktopDependencyManager.CefExecutingPath, @"CefSharp.BrowserSubprocess.exe");
 			cefSettings.CachePath = GrocyDesktopDependencyManager.CefCachePath;
