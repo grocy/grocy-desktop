@@ -1,5 +1,5 @@
 <div align="center">
-<img alt="Logo" height="50" src="https://raw.githubusercontent.com/grocy/grocy/master/public/img/grocy_logo.svg?sanitize=true" />
+<img alt="Logo" height="50" src="https://raw.githubusercontent.com/grocy/grocy/master/public/img/logo.svg?sanitize=true" />
 <h3>Grocy Desktop</h3>
 <h4>A (Windows) desktop application wrapper for <a href="https://github.com/grocy/grocy">grocy</a><br>Created by <a href="https://github.com/berrnd">@berrnd</a></h4>
 </div>
