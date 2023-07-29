@@ -1,7 +1,7 @@
 <div align="center">
 <img alt="Logo" height="50" src="https://raw.githubusercontent.com/grocy/grocy/master/public/img/logo.svg?sanitize=true" />
 <h3>Grocy Desktop</h3>
-<h4>A (Windows) desktop application wrapper for <a href="https://github.com/grocy/grocy">grocy</a><br>Created by <a href="https://github.com/berrnd">@berrnd</a></h4>
+<h4>A (Windows) desktop application wrapper for <a href="https://github.com/grocy/grocy">Grocy</a><br>Created by <a href="https://github.com/berrnd">@berrnd</a></h4>
 </div>
 
 -----
@@ -11,12 +11,12 @@
 - General help and usage questions &rarr;  [r/grocy subreddit](https://www.reddit.com/r/grocy)
 - Bug Reports and Feature Requests &rarr; [Issue Tracker](https://github.com/grocy/grocy-desktop/issues/new/choose)
 
-_Please don't send me private messages or call me regarding grocy help. I check the issue tracker and the subreddit pretty much daily, but don't provide grocy support beyond that._
+_Please don't send me private messages or call me regarding Grocy help. I check the issue tracker and the subreddit pretty much daily, but don't provide any support beyond that._
 
 ## How to install
 
 - Classic installer
-  - Just download and execute the [latest release setup](https://releases.grocy.info/latest-desktop), afterwards you will have a shortcut on your desktop which starts grocy.
+  - Just download and execute the [latest release setup](https://releases.grocy.info/latest-desktop), afterwards you will have a shortcut on your desktop which starts Grocy.
 - Microsoft Store  
 <a href="//www.microsoft.com/store/apps/9nwb1trnnksf?cid=storebadge&ocid=badge"><img src="https://github.com/grocy/grocy-desktop/raw/master/.github/publication_assets/microsoft-store-badge-en.png" alt="Get it from Microsoft" width="150px" /></a>
 
@@ -24,29 +24,29 @@ Please note that user data is not automatically transfered when switching betwee
 
 ## How to update
 
-Just download and execute the [latest release installer](https://releases.grocy.info/latest-desktop). grocy and Barcode Buddy (if enabled) can also be updated separately (see the `grocy` and `Barcode Buddy` menu in the top menu bar).
+Just download and execute the [latest release installer](https://releases.grocy.info/latest-desktop). Grocy and Barcode Buddy (if enabled) can also be updated separately (see the `Grocy` and `Barcode Buddy` menu in the top menu bar).
 
 ## How to backup/restore
 
-All user data can be exported and restored as a ZIP file (see the `grocy` and `Barcode Buddy` (if enabled) menu in the top menu bar).
+All user data can be exported and restored as a ZIP file (see the `Grocy` and `Barcode Buddy` (if enabled) menu in the top menu bar).
 
 ## Localization
 
 Grocy Desktop is fully localizable - the default language is English (integrated into code), a German localization is always maintained by me.
 
-You can easily help translating grocy on [Transifex](https://www.transifex.com/grocy/grocy-desktop/dashboard/) if your language is incomplete or not available yet.
+You can easily help translating Grocy on [Transifex](https://www.transifex.com/grocy/grocy-desktop/dashboard/) if your language is incomplete or not available yet.
 
 Any translation which once reached a completion level of 70 % will be included in releases.
 
-Grocy Desktop and grocy will use automatically the localization based on your system language, if available.
+Grocy Desktop and Grocy will use automatically the localization based on your system language, if available.
 
 ## Barcode Buddy integration
 
-[Barcode Buddy](https://github.com/Forceu/barcodebuddy) is a community contributed barcode helper tool for grocy and can be activated via `File -> Enable Barcode Buddy`.
+[Barcode Buddy](https://github.com/Forceu/barcodebuddy) is a community contributed barcode helper tool for Grocy and can be activated via `File -> Enable Barcode Buddy`.
 
 ## External access
 
-Both, grocy and Barcode Buddy (if enabled), can be optionally accessed from external machines, external access can be enabled via `File -> Enable external access` (please accept the native Windows firewall question accordingly).
+Both, Grocy and Barcode Buddy (if enabled), can be optionally accessed from external machines, external access can be enabled via `File -> Enable external access` (please accept the native Windows firewall question accordingly).
 See the status bar for information about the URLs.
 
 _This should only be used in trusted (local) networks._
@@ -58,17 +58,17 @@ All user data will be exported to the selected directory an closing the applicat
 
 ## Motivation
 
-grocy is a selfhosted PHP web application, so normally runs on webservers. If you are not so familiar with the technical things regarding webservers, but just want to have grocy running like a normal (Windows) desktop application, this is what you need.
+Grocy is a selfhosted PHP web application, so normally runs on webservers. If you are not so familiar with the technical things regarding webservers, but just want to have Grocy running like a normal (Windows) desktop application, this is what you need.
 
 ## Things worth to know
 
 ### How this works technically
 
-Grocy Desktop is a .Net Windows Forms application. It uses [CefSharp](https://github.com/cefsharp/CefSharp) as an integrated browser and utilizes [nginx](https://nginx.org) and [PHP](https://www.php.net/) (FastCGI)  to host grocy. The UWP app (`.appx` package to be distributed through the Microsoft Store) is built using [Desktop Bridge](https://docs.microsoft.com/en-us/windows/msix/desktop/source-code-overview), all needed dependencies/manifests are located in the `appx_dependencies` folder.
+Grocy Desktop is a .Net Windows Forms application. It uses [CefSharp](https://github.com/cefsharp/CefSharp) as an integrated browser and utilizes [nginx](https://nginx.org) and [PHP](https://www.php.net/) (FastCGI)  to host Grocy. The UWP app (`.appx` package to be distributed through the Microsoft Store) is built using [Desktop Bridge](https://docs.microsoft.com/en-us/windows/msix/desktop/source-code-overview), all needed dependencies/manifests are located in the `appx_dependencies` folder.
 
 ### What the installer does
 
-The installer has bundled, beside the application itself and the CefSharp dependencies, a for grocy configured PHP and nginx version (in `embedded_dependencies/php.zip` / `embedded_dependencies/nginx.zip`) and the current grocy and Barcode Buddy release.
+The installer has bundled, beside the application itself and the CefSharp dependencies, a for Grocy configured PHP and nginx version (in `embedded_dependencies/php.zip` / `embedded_dependencies/nginx.zip`) and the current Grocy and Barcode Buddy release.
 
 Everything will be unpacked to `%programfiles%\grocy-desktop` by default, the path can also be changed during the installation process. (This does not apply when running/installing the UWP app, normally from the Microsoft Store - UWP apps have their own default package locations.)
 
@@ -76,7 +76,7 @@ Everything will be unpacked to `%programfiles%\grocy-desktop` by default, the pa
 
 Grocy Desktop will do the following things and then opens the locally hosted instance in the integrated browser:
 - Unpacking the dependency ZIP files, if needed, to `%appdata%\grocy-desktop\runtime-dependencies`
-  - grocy to `%appdata%\grocy-desktop\grocy`
+  - Grocy to `%appdata%\grocy-desktop\grocy`
   - Barcode Buddy (if enabled) to `%appdata%\grocy-desktop\barcodebuddy`
   - When running the UWP app (normally installed from the Microsoft Store) the used paths are
     - `%userprofile%\.grocy-desktop\runtime-dependencies`
@@ -84,7 +84,7 @@ Grocy Desktop will do the following things and then opens the locally hosted ins
     - `%userprofile%\.grocy-desktop\barcodebuddy`
 - Configuring grocy and Barcode Buddy (if enabled) in embedded mode (user data will be saved to `%appdata%\grocy-desktop\grocy-data` / `%appdata%\grocy-desktop\barcodebuddy-data`, these paths can be changed (see the `grocy` and `Barcode Buddy` (if enabled) menu in the top menu bar)
   - When running the UWP app (normally installed from the Microsoft Store), the default path used is `%userprofile%\.grocy-desktop\grocy-data` / `%userprofile%\.grocy-desktop\barcodebuddy-data`
-  - The default ports used are `4010` for grocy and `4011` for Barcode Buddy, if they're already used, a random free port is used instead
+  - The default ports used are `4010` for Grocy and `4011` for Barcode Buddy, if they're already used, a random free port is used instead
 - Starting nginx, bound to `localhost` if external access is disabled, otherwise bound to all network interfaces
 - Starting PHP FastCGI, bound to `localhost` on a random free port
 
