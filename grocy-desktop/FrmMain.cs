@@ -323,9 +323,9 @@ namespace GrocyDesktop
 
 		private async void ToolStripMenuItem_UpdateGrocy_Click(object sender, EventArgs e)
 		{
+			this.FrmMain_FormClosing(null, null); // Stop runtime
 			await GrocyDesktopDependencyManager.UpdateEmbeddedGrocyRelease(this);
-			this.GrocyManager.Setup();
-			this.GrocyBrowser.Load(this.GrocyManager.DesiredUrl);
+			ApplicationHelper.RestartApp();
 		}
 
 		private void ToolStripMenuItem_RecreateGrocyDatabase_Click(object sender, EventArgs e)
@@ -339,9 +339,9 @@ namespace GrocyDesktop
 
 		private async void ToolStripMenuItem_UpdateBarcodeBuddy_Click(object sender, EventArgs e)
 		{
+			this.FrmMain_FormClosing(null, null); // Stop runtime
 			await GrocyDesktopDependencyManager.UpdateEmbeddedBarcodeBuddyRelease(this);
-			this.BarcodeBuddyManager.Setup(this.GrocyManager.DesiredUrl);
-			this.BarcodeBuddyBrowser.Load(this.BarcodeBuddyManager.DesiredUrl);
+			ApplicationHelper.RestartApp();
 		}
 
 		private void ToolStripMenuItem_EnableBarcodeBuddy_Click(object sender, EventArgs e)
