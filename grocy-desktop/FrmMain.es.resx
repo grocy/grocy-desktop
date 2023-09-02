@@ -247,7 +247,7 @@
     <value>243, 22</value>
   </data>
   <data name="ToolStripMenuItem_ConfigureChangeDataLocationGrocy.Text" xml:space="preserve">
-    <value>Conficturar/cambiar ubicación de los datos</value>
+    <value>Configurar/cambiar ubicación de los datos</value>
   </data>
   <data name="toolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
     <value>240, 6</value>
@@ -328,7 +328,7 @@
     <value>187, 22</value>
   </data>
   <data name="ToolStripMenuItem_About.Text" xml:space="preserve">
-    <value>About Grocy Desktop</value>
+    <value>Acerca de Grocy Desktop</value>
   </data>
   <data name="StatusStrip_Main.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>437, 17</value>
@@ -490,7 +490,7 @@
     <value>592, 22</value>
   </data>
   <data name="STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue.Text" xml:space="preserve">
-    <value>Grocy Desktop will restart to apply the changed settings, continue?</value>
+    <value>Grocy Desktop se reiniciará para aplicar los cambios en la configuración, ¿continuar?</value>
   </data>
   <data name="STRING_Backup.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
@@ -514,13 +514,13 @@
     <value>592, 22</value>
   </data>
   <data name="STRING_TheCurrentDataWillBeOverwrittenAndGrocydesktopWillRestartContinue.Text" xml:space="preserve">
-    <value>The current data will be overwritten and Grocy Desktop will restart, continue?</value>
+    <value>Los datos actuales serán sobrescritos y Grocy Desktop se reiniciará, ¿continuar?</value>
   </data>
   <data name="STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
   <data name="STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue.Text" xml:space="preserve">
-    <value>This will delete and recreate the Grocy database, means all your data will be wiped, really continue?</value>
+    <value>Esto eliminará y regenerará la base de datos de Grocy, lo que significa que todos sus datos serán borrados, ¿está seguro de que quiere continuar?</value>
   </data>
   <data name="STRING_ZipFiles.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
@@ -538,7 +538,7 @@
     <value>592, 22</value>
   </data>
   <data name="STRING_SayThanksQuestion.Text" xml:space="preserve">
-    <value>Do you find Grocy useful?</value>
+    <value>¿Le resulta útil Grocy?</value>
   </data>
   <data name="STRING_PreparingWebbrowser.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
@@ -562,7 +562,7 @@
     <value>592, 22</value>
   </data>
   <data name="STRING_PreparingGrocy.Text" xml:space="preserve">
-    <value>Preparing Grocy...</value>
+    <value>Preparando Grocy...</value>
   </data>
   <data name="STRING_PreparingBarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
@@ -574,7 +574,7 @@
     <value>592, 22</value>
   </data>
   <data name="STRING_DownloadingGrocyRelease.Text" xml:space="preserve">
-    <value>Downloading latest Grocy release...</value>
+    <value>Descargando la última versión publicada de Grocy...</value>
   </data>
   <data name="STRING_DownloadingBarcodeBuddyRelease.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
@@ -586,13 +586,13 @@
     <value>592, 22</value>
   </data>
   <data name="STRING_GrocyExternalAccessInfo.Text" xml:space="preserve">
-    <value>Access Grocy externally via %1$s or %2$s</value>
+    <value>Acceder a Grocy externamente a través de %1$s o %2$s</value>
   </data>
   <data name="STRING_GrocyAndBarcodeBuddyExternalAccessInfo.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
   </data>
   <data name="STRING_GrocyAndBarcodeBuddyExternalAccessInfo.Text" xml:space="preserve">
-    <value>Access Grocy externally via %1$s or %2$s and Barcode Buddy via %3$s or %4$s</value>
+    <value>Acceder a Grocy externamente a través de %1$s o %2$s y a Barcode Buddy a través de %3$s o %4$s</value>
   </data>
   <data name="STRING_NginxOutput.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 22</value>
