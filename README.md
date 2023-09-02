@@ -11,7 +11,7 @@
 - General help and usage questions &rarr;  [r/grocy subreddit](https://www.reddit.com/r/grocy)
 - Bug Reports and Feature Requests &rarr; [Issue Tracker](https://github.com/grocy/grocy-desktop/issues/new/choose)
 
-_Please don't send me private messages or call me regarding Grocy help. I check the issue tracker and the subreddit pretty much daily, but don't provide any support beyond that._
+_Please don't send me private messages or call me regarding anything Grocy. I check the issue tracker and the subreddit pretty much daily, but don't provide any support beyond that._
 
 ## How to install
 
@@ -90,13 +90,11 @@ Grocy Desktop will do the following things and then opens the locally hosted ins
 
 ## Contributing / Say Thanks
 
-Any help is more than appreciated. Feel free to pick any open unassigned issue and submit a pull request, but please leave a short comment or assign the issue yourself, to avoid working on the same thing.
-
-See https://grocy.info/#say-thanks for more ideas if you just want to say thanks.
+Any help is welcome, feel free to contribute anything which comes to your mind or see <https://grocy.info/#say-thanks> if you just want to say thanks.
 
 ## Roadmap
 
-There is none. The progress of a specific bug/enhancement is always tracked in the corresponding issue, at least by commit comment references.
+There is none, this is a hobby project. The progress of a specific bug/enhancement is always tracked in the corresponding issue, at least by commit comment references.
 
 ## Screenshots
 
