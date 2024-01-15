@@ -320,13 +320,6 @@ namespace GrocyDesktop
 			new FrmAbout().ShowDialog(this);
 		}
 
-		private async void ToolStripMenuItem_UpdateGrocy_Click(object sender, EventArgs e)
-		{
-			this.FrmMain_FormClosing(null, null); // Stop runtime
-			await GrocyDesktopDependencyManager.UpdateEmbeddedGrocyRelease(this);
-			ApplicationHelper.RestartApp();
-		}
-
 		private void ToolStripMenuItem_RecreateGrocyDatabase_Click(object sender, EventArgs e)
 		{
 			if (MessageBox.Show(this.ResourceManager.GetString("STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue.Text"), this.ResourceManager.GetString("ToolStripMenuItem_RecreateGrocyDatabase.Text"), MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
@@ -334,13 +327,6 @@ namespace GrocyDesktop
 				File.Delete(Path.Combine(this.UserSettings.GrocyDataLocation, "grocy.db"));
 				ApplicationHelper.RestartApp();
 			}
-		}
-
-		private async void ToolStripMenuItem_UpdateBarcodeBuddy_Click(object sender, EventArgs e)
-		{
-			this.FrmMain_FormClosing(null, null); // Stop runtime
-			await GrocyDesktopDependencyManager.UpdateEmbeddedBarcodeBuddyRelease(this);
-			ApplicationHelper.RestartApp();
 		}
 
 		private void ToolStripMenuItem_EnableBarcodeBuddy_Click(object sender, EventArgs e)

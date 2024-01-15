@@ -1,6 +1,5 @@
 using GrocyDesktop.Helpers;
 using Newtonsoft.Json.Linq;
-using System;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -64,7 +63,7 @@ namespace GrocyDesktop.Management
 				await Task.Run(() => IOHelper.ExtractZipToDirectory(vcredistZipPath, CefExecutingPath, true));
 			}
 
-			// nginx
+			// NGINX
 			string nginxZipPath = Path.Combine(Program.BaseExecutingPath, "nginx.zip");
 			if (!Directory.Exists(NginxExecutingPath))
 			{
@@ -87,7 +86,7 @@ namespace GrocyDesktop.Management
 				await Task.Run(() => IOHelper.ExtractZipToDirectory(vcredistZipPath, PhpExecutingPath, true));
 			}
 
-			// grocy
+			// Grocy
 			string grocyZipPath = Path.Combine(Program.BaseExecutingPath, "grocy.zip");
 			if (!Directory.Exists(GrocyExecutingPath))
 			{
@@ -123,7 +122,7 @@ namespace GrocyDesktop.Management
 				}
 			}
 
-			// Clean up old grocy / Barcode Buddy directories (used until v2.2.0)
+			// Clean up old Grocy / Barcode Buddy directories (used until v2.2.0)
 			string oldPath = Path.Combine(Program.BaseFixedUserDataFolderPath, "grocy");
 			if (Directory.Exists(oldPath))
 			{
@@ -134,82 +133,6 @@ namespace GrocyDesktop.Management
 			{
 				Directory.Delete(oldPath2, true);
 			}
-
-			if (waitWindow != null)
-			{
-				waitWindow.Close();
-			}
-		}
-
-		public static async Task UpdateEmbeddedGrocyRelease(Form ownerFormReference = null)
-		{
-			FrmWait waitWindow = null;
-			if (ownerFormReference != null)
-			{
-				waitWindow = new FrmWait();
-				waitWindow.Show(ownerFormReference);
-			}
-
-			if (Directory.Exists(GrocyExecutingPath))
-			{
-				Directory.Delete(GrocyExecutingPath, true);
-			}
-
-			string grocyZipPath = Path.GetTempFileName();
-			using (WebClient wc = new WebClient())
-			{
-				if (waitWindow != null)
-				{
-					waitWindow.SetStatus(ResourceManager.GetString("STRING_DownloadingGrocyRelease.Text"));
-				}
-				await wc.DownloadFileTaskAsync(new Uri(LATEST_GROCY_RELEASE_URL), grocyZipPath);
-			}
-
-			if (waitWindow != null)
-			{
-				waitWindow.SetStatus(ResourceManager.GetString("STRING_PreparingGrocy.Text"));
-			}
-			await Task.Run(() => IOHelper.ExtractZipToDirectory(grocyZipPath, GrocyExecutingPath, true));
-			File.Delete(grocyZipPath);
-
-			if (waitWindow != null)
-			{
-				waitWindow.Close();
-			}
-		}
-
-		public static async Task UpdateEmbeddedBarcodeBuddyRelease(Form ownerFormReference = null)
-		{
-			FrmWait waitWindow = null;
-			if (ownerFormReference != null)
-			{
-				waitWindow = new FrmWait();
-				waitWindow.Show(ownerFormReference);
-			}
-
-			if (Directory.Exists(BarcodeBuddyExecutingPath))
-			{
-				Directory.Delete(BarcodeBuddyExecutingPath, true);
-			}
-
-			string barcodeBuddyZipPath = Path.GetTempFileName();
-			using (WebClient wc = new WebClient())
-			{
-				if (waitWindow != null)
-				{
-					waitWindow.SetStatus(ResourceManager.GetString("STRING_DownloadingBarcodeBuddyRelease.Text"));
-				}
-				await wc.DownloadFileTaskAsync(new Uri(LATEST_BARCODE_BUDDY_RELEASE_URL), barcodeBuddyZipPath);
-			}
-
-			if (waitWindow != null)
-			{
-				waitWindow.SetStatus(ResourceManager.GetString("STRING_PreparingBarcodeBuddy.Text"));
-			}
-			await Task.Run(() => IOHelper.ExtractZipToDirectory(barcodeBuddyZipPath, BarcodeBuddyExecutingPath + "-tmp", true));
-			Directory.Move(Directory.GetDirectories(BarcodeBuddyExecutingPath + "-tmp").First(), BarcodeBuddyExecutingPath);
-			Directory.Delete(BarcodeBuddyExecutingPath + "-tmp", true);
-			File.Delete(barcodeBuddyZipPath);
 
 			if (waitWindow != null)
 			{

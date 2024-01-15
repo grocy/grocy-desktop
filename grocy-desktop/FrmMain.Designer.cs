@@ -43,16 +43,12 @@ namespace GrocyDesktop
             this.ToolStripMenuItem_ZoomOut = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem_ResetZoom = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem_grocy = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStripMenuItem_UpdateGrocy = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.ToolStripMenuItem_BackupDataGrocy = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem_RestoreDataGrocy = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem_ConfigureChangeDataLocationGrocy = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.ToolStripMenuItem_RecreateGrocyDatabase = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem_BarcodeBuddy = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStripMenuItem_UpdateBarcodeBuddy = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.ToolStripMenuItem_BackupDataBarcodeBuddy = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem_RestoreDataBarcodeBuddy = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy = new System.Windows.Forms.ToolStripMenuItem();
@@ -189,8 +185,6 @@ namespace GrocyDesktop
             // ToolStripMenuItem_grocy
             // 
             this.ToolStripMenuItem_grocy.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolStripMenuItem_UpdateGrocy,
-            this.toolStripSeparator1,
             this.ToolStripMenuItem_BackupDataGrocy,
             this.ToolStripMenuItem_RestoreDataGrocy,
             this.ToolStripMenuItem_ConfigureChangeDataLocationGrocy,
@@ -198,17 +192,6 @@ namespace GrocyDesktop
             this.ToolStripMenuItem_RecreateGrocyDatabase});
             this.ToolStripMenuItem_grocy.Name = "ToolStripMenuItem_grocy";
             resources.ApplyResources(this.ToolStripMenuItem_grocy, "ToolStripMenuItem_grocy");
-            // 
-            // ToolStripMenuItem_UpdateGrocy
-            // 
-            this.ToolStripMenuItem_UpdateGrocy.Name = "ToolStripMenuItem_UpdateGrocy";
-            resources.ApplyResources(this.ToolStripMenuItem_UpdateGrocy, "ToolStripMenuItem_UpdateGrocy");
-            this.ToolStripMenuItem_UpdateGrocy.Click += new System.EventHandler(this.ToolStripMenuItem_UpdateGrocy_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
             // 
             // ToolStripMenuItem_BackupDataGrocy
             // 
@@ -242,24 +225,11 @@ namespace GrocyDesktop
             // ToolStripMenuItem_BarcodeBuddy
             // 
             this.ToolStripMenuItem_BarcodeBuddy.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolStripMenuItem_UpdateBarcodeBuddy,
-            this.toolStripSeparator3,
             this.ToolStripMenuItem_BackupDataBarcodeBuddy,
             this.ToolStripMenuItem_RestoreDataBarcodeBuddy,
             this.ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy});
             this.ToolStripMenuItem_BarcodeBuddy.Name = "ToolStripMenuItem_BarcodeBuddy";
             resources.ApplyResources(this.ToolStripMenuItem_BarcodeBuddy, "ToolStripMenuItem_BarcodeBuddy");
-            // 
-            // ToolStripMenuItem_UpdateBarcodeBuddy
-            // 
-            this.ToolStripMenuItem_UpdateBarcodeBuddy.Name = "ToolStripMenuItem_UpdateBarcodeBuddy";
-            resources.ApplyResources(this.ToolStripMenuItem_UpdateBarcodeBuddy, "ToolStripMenuItem_UpdateBarcodeBuddy");
-            this.ToolStripMenuItem_UpdateBarcodeBuddy.Click += new System.EventHandler(this.ToolStripMenuItem_UpdateBarcodeBuddy_Click);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
             // 
             // ToolStripMenuItem_BackupDataBarcodeBuddy
             // 
@@ -535,14 +505,12 @@ namespace GrocyDesktop
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
 		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_About;
 		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_ShowBrowserDeveloperTools;
-		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_UpdateGrocy;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
 		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_RecreateGrocyDatabase;
 		private System.Windows.Forms.TabControl TabControl_Main;
 		private System.Windows.Forms.TabPage TabPage_Grocy;
 		private System.Windows.Forms.TabPage TabPage_BarcodeBuddy;
 		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_BarcodeBuddy;
-		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_UpdateBarcodeBuddy;
 		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_EnableBarcodeBuddy;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
 		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_ShowPhpRuntimeOutput;
@@ -555,11 +523,9 @@ namespace GrocyDesktop
 		private System.Windows.Forms.ToolStripMenuItem STRING_Restore;
 		private System.Windows.Forms.ToolStripMenuItem STRING_TheCurrentDataWillBeOverwrittenAndGrocydesktopWillRestartContinue;
 		private System.Windows.Forms.ToolStripMenuItem STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue;
-		private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
 		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_BackupDataGrocy;
 		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_RestoreDataGrocy;
 		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_ConfigureChangeDataLocationGrocy;
-		private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
 		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_BackupDataBarcodeBuddy;
 		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_RestoreDataBarcodeBuddy;
 		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy;

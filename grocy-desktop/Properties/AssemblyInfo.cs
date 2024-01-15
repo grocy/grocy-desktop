@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("grocy-desktop")]
+[assembly: AssemblyTitle("Grocy Desktop")]
 [assembly: AssemblyDescription("ERP beyond your fridge")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Bernd Bestel")]
-[assembly: AssemblyProduct("grocy")]
+[assembly: AssemblyProduct("Grocy")]
 [assembly: AssemblyCopyright("Licensed under the MIT license (Bernd Bestel 2018)")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
