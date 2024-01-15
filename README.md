@@ -24,7 +24,7 @@ Please note that user data is not automatically transfered when switching betwee
 
 ## How to update
 
-Just download and execute the [latest release installer](https://releases.grocy.info/latest-desktop). Grocy and Barcode Buddy (if enabled) can also be updated separately (see the `Grocy` and `Barcode Buddy` menu in the top menu bar).
+Just download and execute the [latest release installer](https://releases.grocy.info/latest-desktop).
 
 ## How to backup/restore
 
