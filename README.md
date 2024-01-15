@@ -18,7 +18,7 @@ _Please don't send me private messages or call me regarding anything Grocy. I ch
 - Classic installer
   - Just download and execute the [latest release setup](https://releases.grocy.info/latest-desktop), afterwards you will have a shortcut on your desktop which starts Grocy.
 - Microsoft Store  
-<a href="//www.microsoft.com/store/apps/9nwb1trnnksf?cid=storebadge&ocid=badge"><img src="https://github.com/grocy/grocy-desktop/raw/master/.github/publication_assets/microsoft-store-badge-en.png" alt="Get it from Microsoft" width="150px" /></a>
+<a href="https://apps.microsoft.com/detail/9NWB1TRNNKSF"><img src="https://github.com/grocy/grocy-desktop/raw/master/.github/publication_assets/microsoft-store-badge-en.png" alt="Get it from Microsoft" width="150px" /></a>
 
 Please note that user data is not automatically transfered when switching between the classic installer and the Microsoft Store version, please use the [backup/restore functionality](#how-to-backuprestore) to transfer your data.
 
