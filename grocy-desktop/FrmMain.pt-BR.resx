@@ -125,19 +125,19 @@
     <value>247, 22</value>
   </data>
   <data name="ToolStripMenuItem_EnableBarcodeBuddy.Text" xml:space="preserve">
-    <value>Abilita Barcode Buddy</value>
+    <value>Ativar Barcode Buddy</value>
   </data>
   <data name="ToolStripMenuItem_EnableExternalAccess.Size" type="System.Drawing.Size, System.Drawing">
     <value>247, 22</value>
   </data>
   <data name="ToolStripMenuItem_EnableExternalAccess.Text" xml:space="preserve">
-    <value>Abilita l'accesso esterno</value>
+    <value>Ativar acesso externo</value>
   </data>
   <data name="ToolStripMenuItem_EnableUserDataSync.Size" type="System.Drawing.Size, System.Drawing">
     <value>247, 22</value>
   </data>
   <data name="ToolStripMenuItem_EnableUserDataSync.Text" xml:space="preserve">
-    <value>Abilita la sincronizzazione dei dati dell'utente</value>
+    <value>Ativar sincronização dos dados do usuário</value>
   </data>
   <data name="toolStripSeparator5.Size" type="System.Drawing.Size, System.Drawing">
     <value>244, 6</value>
@@ -146,13 +146,13 @@
     <value>247, 22</value>
   </data>
   <data name="ToolStripMenuItem_Exit.Text" xml:space="preserve">
-    <value>Esci</value>
+    <value>Sair</value>
   </data>
   <data name="ToolStripMenuItem_File.Size" type="System.Drawing.Size, System.Drawing">
     <value>37, 20</value>
   </data>
   <data name="ToolStripMenuItem_File.Text" xml:space="preserve">
-    <value>File</value>
+    <value>Arquivo</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
   <data name="ToolStripMenuItem_ZoomIn.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
@@ -162,7 +162,7 @@
     <value>222, 22</value>
   </data>
   <data name="ToolStripMenuItem_ZoomIn.Text" xml:space="preserve">
-    <value>Ingrandisci</value>
+    <value>Aproximar</value>
   </data>
   <data name="ToolStripMenuItem_ZoomOut.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+OemMinus</value>
@@ -171,7 +171,7 @@
     <value>222, 22</value>
   </data>
   <data name="ToolStripMenuItem_ZoomOut.Text" xml:space="preserve">
-    <value>Rimpicciolisci</value>
+    <value>Afastar</value>
   </data>
   <data name="ToolStripMenuItem_ResetZoom.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+0</value>
@@ -180,37 +180,37 @@
     <value>222, 22</value>
   </data>
   <data name="ToolStripMenuItem_ResetZoom.Text" xml:space="preserve">
-    <value>Ripristina zoom</value>
+    <value>Limpar zoom</value>
   </data>
   <data name="ToolStripMenuItem_BrowserZoom.Size" type="System.Drawing.Size, System.Drawing">
     <value>151, 22</value>
   </data>
   <data name="ToolStripMenuItem_BrowserZoom.Text" xml:space="preserve">
-    <value>Zoom del browser</value>
+    <value>Zoom do navegador</value>
   </data>
   <data name="ToolStripMenuItem_View.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 20</value>
   </data>
   <data name="ToolStripMenuItem_View.Text" xml:space="preserve">
-    <value>Vista</value>
+    <value>Visualizar</value>
   </data>
   <data name="ToolStripMenuItem_BackupDataGrocy.Size" type="System.Drawing.Size, System.Drawing">
     <value>243, 22</value>
   </data>
   <data name="ToolStripMenuItem_BackupDataGrocy.Text" xml:space="preserve">
-    <value>Dati di backup</value>
+    <value>Fazer backup dos dados</value>
   </data>
   <data name="ToolStripMenuItem_RestoreDataGrocy.Size" type="System.Drawing.Size, System.Drawing">
     <value>243, 22</value>
   </data>
   <data name="ToolStripMenuItem_RestoreDataGrocy.Text" xml:space="preserve">
-    <value>Ripristina i dati</value>
+    <value>Restaurar dados</value>
   </data>
   <data name="ToolStripMenuItem_ConfigureChangeDataLocationGrocy.Size" type="System.Drawing.Size, System.Drawing">
     <value>243, 22</value>
   </data>
   <data name="ToolStripMenuItem_ConfigureChangeDataLocationGrocy.Text" xml:space="preserve">
-    <value>Configura/cambia la posizione dei dati</value>
+    <value>Configurar/atualizar localização dos dados</value>
   </data>
   <data name="toolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
     <value>240, 6</value>
@@ -219,7 +219,7 @@
     <value>243, 22</value>
   </data>
   <data name="ToolStripMenuItem_RecreateGrocyDatabase.Text" xml:space="preserve">
-    <value>Ricrea database</value>
+    <value>Recriar banco de dados</value>
   </data>
   <data name="ToolStripMenuItem_grocy.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 20</value>
@@ -231,19 +231,19 @@
     <value>243, 22</value>
   </data>
   <data name="ToolStripMenuItem_BackupDataBarcodeBuddy.Text" xml:space="preserve">
-    <value>Dati di backup</value>
+    <value>Fazer backup dos dados</value>
   </data>
   <data name="ToolStripMenuItem_RestoreDataBarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
     <value>243, 22</value>
   </data>
   <data name="ToolStripMenuItem_RestoreDataBarcodeBuddy.Text" xml:space="preserve">
-    <value>Ripristina i dati</value>
+    <value>Restaurar dados</value>
   </data>
   <data name="ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
     <value>243, 22</value>
   </data>
   <data name="ToolStripMenuItem_ConfigureChangeDataLocationBarcodeBuddy.Text" xml:space="preserve">
-    <value>Configura/cambia la posizione dei dati</value>
+    <value>Configurar/alterar localização dos dados</value>
   </data>
   <data name="ToolStripMenuItem_BarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
     <value>99, 20</value>
@@ -255,25 +255,25 @@
     <value>232, 22</value>
   </data>
   <data name="ToolStripMenuItem_ShowNginxOutput.Text" xml:space="preserve">
-    <value>Mostra l'output di nginx</value>
+    <value>Mostrar saída nginx</value>
   </data>
   <data name="ToolStripMenuItem_ShowPhpRuntimeOutput.Size" type="System.Drawing.Size, System.Drawing">
     <value>232, 22</value>
   </data>
   <data name="ToolStripMenuItem_ShowPhpRuntimeOutput.Text" xml:space="preserve">
-    <value>Mostra output PHP</value>
+    <value>Mostrar saída PHP</value>
   </data>
   <data name="ToolStripMenuItem_ShowBrowserDeveloperTools.Size" type="System.Drawing.Size, System.Drawing">
     <value>232, 22</value>
   </data>
   <data name="ToolStripMenuItem_ShowBrowserDeveloperTools.Text" xml:space="preserve">
-    <value>Mostra gli strumenti per sviluppatori del browser</value>
+    <value>Mostrar ferramentas de desenvolvimento do navegador</value>
   </data>
   <data name="ToolStripMenuItem_Debug.Size" type="System.Drawing.Size, System.Drawing">
     <value>187, 22</value>
   </data>
   <data name="ToolStripMenuItem_Debug.Text" xml:space="preserve">
-    <value>Debug</value>
+    <value>Depurar</value>
   </data>
   <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 6</value>
@@ -282,13 +282,13 @@
     <value>187, 22</value>
   </data>
   <data name="ToolStripMenuItem_About.Text" xml:space="preserve">
-    <value>Informazioni su Grocy Desktop</value>
+    <value>Sobre o Grocy Desktop</value>
   </data>
   <data name="ToolStripMenuItem_Help.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 20</value>
   </data>
   <data name="ToolStripMenuItem_Help.Text" xml:space="preserve">
-    <value>Aiuto</value>
+    <value>Ajuda</value>
   </data>
   <data name="MenuStrip_Main.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -451,19 +451,19 @@
     <value>593, 22</value>
   </data>
   <data name="STRING_PHPOutput.Text" xml:space="preserve">
-    <value>Output PHP</value>
+    <value>Saída PHP</value>
   </data>
   <data name="STRING_ChangeDataLocation.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 22</value>
   </data>
   <data name="STRING_ChangeDataLocation.Text" xml:space="preserve">
-    <value>Modifica posizione dati</value>
+    <value>Alterar localização dos dados</value>
   </data>
   <data name="STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 22</value>
   </data>
   <data name="STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue.Text" xml:space="preserve">
-    <value>Grocy Desktop verrà riavviato per rendere effettive le modifiche alle impostazioni. Continuare?</value>
+    <value>Grocy Desktop será reiniciado para aplicar as configurações alteradas, continuar?</value>
   </data>
   <data name="STRING_Backup.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 22</value>
@@ -475,103 +475,103 @@
     <value>593, 22</value>
   </data>
   <data name="STRING_BackupSuccessfullyCreated.Text" xml:space="preserve">
-    <value>Backup creato con successo</value>
+    <value>Backup criado com sucesso</value>
   </data>
   <data name="STRING_Restore.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 22</value>
   </data>
   <data name="STRING_Restore.Text" xml:space="preserve">
-    <value>Ripristina</value>
+    <value>Restaurar</value>
   </data>
   <data name="STRING_TheCurrentDataWillBeOverwrittenAndGrocydesktopWillRestartContinue.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 22</value>
   </data>
   <data name="STRING_TheCurrentDataWillBeOverwrittenAndGrocydesktopWillRestartContinue.Text" xml:space="preserve">
-    <value>I datti attuali verranno sovrascritti e Grocy Desktop verrà riavviato. Continuare?</value>
+    <value>Os dados atuais serão substituídos e o Grocy Desktop será reiniciado, continuar?</value>
   </data>
   <data name="STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 22</value>
   </data>
   <data name="STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue.Text" xml:space="preserve">
-    <value>Questo cancellerà e ricreerà il database Grocy, e tutti i dati verranno eliminati. Continuare veramente?</value>
+    <value>Isso excluirá e recriará o banco de dados Grocy, significa que todos os seus dados serão apagados. Continua mesmo?</value>
   </data>
   <data name="STRING_ZipFiles.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 22</value>
   </data>
   <data name="STRING_ZipFiles.Text" xml:space="preserve">
-    <value>File ZIP</value>
+    <value>Arquivos ZIP</value>
   </data>
   <data name="STRING_SayThanks.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 22</value>
   </data>
   <data name="STRING_SayThanks.Text" xml:space="preserve">
-    <value>Ringraziami</value>
+    <value>Diga obrigado</value>
   </data>
   <data name="STRING_SayThanksQuestion.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 22</value>
   </data>
   <data name="STRING_SayThanksQuestion.Text" xml:space="preserve">
-    <value>Trovi utile Grocy?</value>
+    <value>Você achou Grocy útil?</value>
   </data>
   <data name="STRING_PreparingWebbrowser.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 22</value>
   </data>
   <data name="STRING_PreparingWebbrowser.Text" xml:space="preserve">
-    <value>Preparazione del browser Web incorporato...</value>
+    <value>Preparando navegador da web incorporado...</value>
   </data>
   <data name="STRING_PreparingWebserver.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 22</value>
   </data>
   <data name="STRING_PreparingWebserver.Text" xml:space="preserve">
-    <value>Preparazione del server Web incorporato in corso...</value>
+    <value>Preparando servidor da web incorporado...</value>
   </data>
   <data name="STRING_PreparingPhpRuntime.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 22</value>
   </data>
   <data name="STRING_PreparingPhpRuntime.Text" xml:space="preserve">
-    <value>Preparazione del runtime PHP incorporato ...</value>
+    <value>Preparando PHP incorporado...</value>
   </data>
   <data name="STRING_PreparingGrocy.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 22</value>
   </data>
   <data name="STRING_PreparingGrocy.Text" xml:space="preserve">
-    <value>Preparazione di Grocy in corso...</value>
+    <value>Preparando Grocy...</value>
   </data>
   <data name="STRING_PreparingBarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 22</value>
   </data>
   <data name="STRING_PreparingBarcodeBuddy.Text" xml:space="preserve">
-    <value>Preparazione di Barcode Buddy...</value>
+    <value>Preparando Barcode Buddy...</value>
   </data>
   <data name="STRING_DownloadingGrocyRelease.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 22</value>
   </data>
   <data name="STRING_DownloadingGrocyRelease.Text" xml:space="preserve">
-    <value>Scaricamento dell'ultima versione di Grocy in corso...</value>
+    <value>Baixando a versão mais recente do Grocy...</value>
   </data>
   <data name="STRING_DownloadingBarcodeBuddyRelease.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 22</value>
   </data>
   <data name="STRING_DownloadingBarcodeBuddyRelease.Text" xml:space="preserve">
-    <value>Download dell'ultima versione di Barcode Buddy in corso...</value>
+    <value>Baixando a versão mais recente do Barcode Buddy...</value>
   </data>
   <data name="STRING_GrocyExternalAccessInfo.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 22</value>
   </data>
   <data name="STRING_GrocyExternalAccessInfo.Text" xml:space="preserve">
-    <value>Accedere a Grocy dall'esterno via %1$s o %2$s</value>
+    <value>Acessar Grocy externamente via %1$s ou %2$s</value>
   </data>
   <data name="STRING_GrocyAndBarcodeBuddyExternalAccessInfo.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 22</value>
   </data>
   <data name="STRING_GrocyAndBarcodeBuddyExternalAccessInfo.Text" xml:space="preserve">
-    <value>Accedere a Grocy dall'esterno via %1$s o %2$s e a Barcode Buddy via %3$s o %4$s</value>
+    <value>Accessar Grocy externamente via %1$s ou %2$s e Barcode Buddy via %3$s ou %4$s</value>
   </data>
   <data name="STRING_NginxOutput.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 22</value>
   </data>
   <data name="STRING_NginxOutput.Text" xml:space="preserve">
-    <value>Output nginx</value>
+    <value>saída nginx</value>
   </data>
   <data name="ContextMenuStrip_DummyForResxStrings.Size" type="System.Drawing.Size, System.Drawing">
     <value>594, 466</value>

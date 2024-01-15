@@ -19,6 +19,7 @@
 			<ComponentRef Id="RESOURCES_FI" />
 			<ComponentRef Id="RESOURCES_FR_FR" />
 			<ComponentRef Id="RESOURCES_PL" />
+			<ComponentRef Id="RESOURCES_PT_BR" />
 			<ComponentRef Id="RESOURCES_ZH_CN" />
 			<ComponentRef Id="RESOURCES_ZH_TW" />
 			<ComponentRef Id="RESOURCES_CS" />
@@ -67,6 +68,7 @@
 					<Directory Id="RESOURCES_FI" Name="fi" />
 					<Directory Id="RESOURCES_FR_FR" Name="fr-FR" />
 					<Directory Id="RESOURCES_PL" Name="pl" />
+					<Directory Id="RESOURCES_PT_BR" Name="pt-BR" />
 					<Directory Id="RESOURCES_ZH_CN" Name="zh-CN" />
 					<Directory Id="RESOURCES_ZH_TW" Name="zh-TW" />
 					<Directory Id="RESOURCES_CS" Name="cs" />
@@ -135,6 +137,9 @@
 		</Component>
 		<Component Id="RESOURCES_FR_FR" Directory="RESOURCES_FR_FR">
 			<File Id="LocalizationResourcesFrFr" Source="$(var.SolutionDir)grocy-desktop\bin\$(var.Configuration)\fr-FR\grocy-desktop.resources.dll" KeyPath="yes" Checksum="yes"></File>
+		</Component>
+		<Component Id="RESOURCES_PT_BR" Directory="RESOURCES_PT_BR">
+			<File Id="LocalizationResourcesPtBr" Source="$(var.SolutionDir)grocy-desktop\bin\$(var.Configuration)\pt-BR\grocy-desktop.resources.dll" KeyPath="yes" Checksum="yes"></File>
 		</Component>
 		<Component Id="RESOURCES_PL" Directory="RESOURCES_PL">
 			<File Id="LocalizationResourcesPl" Source="$(var.SolutionDir)grocy-desktop\bin\$(var.Configuration)\pl\grocy-desktop.resources.dll" KeyPath="yes" Checksum="yes"></File>
