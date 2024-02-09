@@ -150,7 +150,7 @@
     <EmbeddedResource Include="FrmMain.pl.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
-	<EmbeddedResource Include="FrmMain.pt-BR.resx">
+    <EmbeddedResource Include="FrmMain.pt-BR.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
@@ -198,7 +198,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="CefSharp.WinForms">
-      <Version>120.2.50</Version>
+      <Version>120.2.70</Version>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
       <Version>13.0.3</Version>
