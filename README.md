@@ -27,7 +27,7 @@ Please note that user data is not automatically transfered when switching betwee
 
 ## How to update
 
-Just download and execute the [latest release installer](https://releases.grocy.info/latest-desktop).
+Just download and execute the [latest release installer](https://releases.grocy.info/latest-desktop). When using the Microsoft Store version, updates happen automatically as usual.
 
 ## How to backup/restore
 
