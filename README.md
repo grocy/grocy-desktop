@@ -1,7 +1,10 @@
+-----
+
 <div align="center">
 <img alt="Logo" height="50" src="https://raw.githubusercontent.com/grocy/grocy/master/public/img/logo.svg?sanitize=true" />
-<h3>Grocy Desktop</h3>
-<h4>A (Windows) desktop application wrapper for <a href="https://github.com/grocy/grocy">Grocy</a><br>Created by <a href="https://github.com/berrnd">@berrnd</a></h4>
+<h2>Grocy Desktop</h2>
+<h3>A (Windows) desktop application wrapper for <a href="https://github.com/grocy/grocy">Grocy</a></h3>
+<em><h4>This is a hobby project by <a href="https://github.com/berrnd">@berrnd</a></h4></em>
 </div>
 
 -----
