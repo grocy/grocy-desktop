@@ -19,7 +19,7 @@ _Please don't send me private messages or call me regarding anything Grocy. I ch
 ## How to install
 
 - Classic installer
-  - Just download and execute the [latest release setup](https://releases.grocy.info/latest-desktop), afterwards you will have a shortcut on your desktop which starts Grocy.
+  - Just download and execute the [latest release setup](https://releases.grocy.info/latest-desktop), afterwards you will have a "Grocy" shortcut on your desktop.
 - Microsoft Store  
 <a href="https://apps.microsoft.com/detail/9NWB1TRNNKSF"><img src="https://github.com/grocy/grocy-desktop/raw/master/.github/publication_assets/microsoft-store-badge-en.png" alt="Get it from Microsoft" width="150px" /></a>
 
@@ -41,7 +41,7 @@ You can easily help translating Grocy on [Transifex](https://www.transifex.com/g
 
 Any translation which once reached a completion level of 70 % will be included in releases.
 
-Grocy Desktop and Grocy will use automatically the localization based on your system language, if available.
+Grocy Desktop and Grocy will automatically use the localization based on your system language, if available.
 
 ## Barcode Buddy integration
 
@@ -67,7 +67,7 @@ Grocy is a selfhosted PHP web application, so normally runs on webservers. If yo
 
 ### How this works technically
 
-Grocy Desktop is a .Net Windows Forms application. It uses [CefSharp](https://github.com/cefsharp/CefSharp) as an integrated browser and utilizes [nginx](https://nginx.org) and [PHP](https://www.php.net/) (FastCGI)  to host Grocy. The UWP app (`.appx` package to be distributed through the Microsoft Store) is built using [Desktop Bridge](https://docs.microsoft.com/en-us/windows/msix/desktop/source-code-overview), all needed dependencies/manifests are located in the `appx_dependencies` folder.
+Grocy Desktop is a .Net Windows Forms application. It uses [CefSharp](https://github.com/cefsharp/CefSharp) as an integrated browser and utilizes [nginx](https://nginx.org) and [PHP](https://www.php.net/) (FastCGI)  to host Grocy. The UWP app (`.appx` package to be distributed through the Microsoft Store) is built using [Desktop Bridge](https://techcommunity.microsoft.com/t5/modern-work-app-consult-blog/desktop-bridge-8211-the-bridge-between-desktop-apps-and-the/ba-p/316488), all needed dependencies/manifests are located in the `appx_dependencies` folder.
 
 ### What the installer does
 
@@ -85,7 +85,7 @@ Grocy Desktop will do the following things and then opens the locally hosted ins
     - `%userprofile%\.grocy-desktop\runtime-dependencies`
     - `%userprofile%\.grocy-desktop\grocy`
     - `%userprofile%\.grocy-desktop\barcodebuddy`
-- Configuring grocy and Barcode Buddy (if enabled) in embedded mode (user data will be saved to `%appdata%\grocy-desktop\grocy-data` / `%appdata%\grocy-desktop\barcodebuddy-data`, these paths can be changed (see the `grocy` and `Barcode Buddy` (if enabled) menu in the top menu bar)
+- Configuring Grocy and Barcode Buddy (if enabled) in embedded mode (user data will be saved to `%appdata%\grocy-desktop\grocy-data` / `%appdata%\grocy-desktop\barcodebuddy-data`, these paths can be changed (see the `Grocy` and `Barcode Buddy` (if enabled) menu in the top menu bar)
   - When running the UWP app (normally installed from the Microsoft Store), the default path used is `%userprofile%\.grocy-desktop\grocy-data` / `%userprofile%\.grocy-desktop\barcodebuddy-data`
   - The default ports used are `4010` for Grocy and `4011` for Barcode Buddy, if they're already used, a random free port is used instead
 - Starting nginx, bound to `localhost` if external access is disabled, otherwise bound to all network interfaces
@@ -108,7 +108,7 @@ There is none, this is a hobby project. The progress of a specific bug/enhanceme
 You will need Visual Studio 2022. All dependencies are included, available via NuGet or will be downloaded at compile time (see build events).
 The setup is built using [WiX Toolset](https://wixtoolset.org), which should be installed along with the [Wix Toolset Visual Studio 2022 Extension](https://marketplace.visualstudio.com/items?itemName=WixToolset.WixToolsetVisualStudio2022Extension).
 
-To build the `.appx` package (UWP app) you'll need the [Windows 10 SDK 10.0.19041.0](https://developer.microsoft.com/en-US/windows/downloads/windows-10-sdk) (this is done in the Post-build event of the `grocy-desktop-setup` project).
+To build the `.appx` package (UWP app) you'll need the [Windows 10 SDK 10.0.19041.0](https://developer.microsoft.com/en-us/windows/downloads/windows-sdk/) (this is done in the Post-build event of the `grocy-desktop-setup` project).
 
 ## License
 
