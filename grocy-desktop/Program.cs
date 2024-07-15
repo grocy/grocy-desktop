@@ -15,6 +15,22 @@ namespace GrocyDesktop
 		internal static readonly string RunningVersion = Regex.Replace(Assembly.GetExecutingAssembly().GetName().Version.ToString(), @"^(.+?)(\.0+)$", "$1");
 		internal static readonly string BaseExecutingPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location.TrimEnd('\\'));
 		internal static readonly string PortableFilePath = Path.Combine(BaseExecutingPath, "portable");
+		static bool IsValidPath(string path)
+		{
+			if (!Path.IsPathRooted(path))
+			{
+				return false;
+			}
+
+			char[] invalidPathChars = Path.GetInvalidPathChars();
+			if (path.Any(c => invalidPathChars.Contains(c)))
+			{
+				return false;
+			}
+
+			return true;
+		}
+
 
 		internal static string BaseFixedUserDataFolderPath
 		{
@@ -30,15 +46,17 @@ namespace GrocyDesktop
 					{
 						try
 						{
-							string firstLine = File.ReadLines(PortableFilePath).First();
-							if (firstLine != null)
+							string PortableSettingsPath = File.ReadLines(PortableFilePath).First();
+							if (PortableSettingsPath != null && IsValidPath(PortableSettingsPath))
 							{
-								return firstLine;
+								return PortableSettingsPath;
 							}
+							else
+								return Path.Combine(BaseExecutingPath, "grocy-desktop");
 						}
 						catch (Exception ex)
 						{
-							return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "grocy-desktop");
+							return Path.Combine(BaseExecutingPath, "grocy-desktop");
 						}
 					}
 
