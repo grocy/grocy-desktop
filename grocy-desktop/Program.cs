@@ -2,6 +2,7 @@ using GrocyDesktop.Helpers;
 using GrocyDesktop.Management;
 using System;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Threading;
@@ -13,6 +14,7 @@ namespace GrocyDesktop
 	{
 		internal static readonly string RunningVersion = Regex.Replace(Assembly.GetExecutingAssembly().GetName().Version.ToString(), @"^(.+?)(\.0+)$", "$1");
 		internal static readonly string BaseExecutingPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location.TrimEnd('\\'));
+		internal static readonly string PortableFilePath = Path.Combine(BaseExecutingPath, "portable");
 
 		internal static string BaseFixedUserDataFolderPath
 		{
@@ -24,6 +26,22 @@ namespace GrocyDesktop
 				}
 				else
 				{
+					if (File.Exists(PortableFilePath))
+					{
+						try
+						{
+							string firstLine = File.ReadLines(PortableFilePath).First();
+							if (firstLine != null)
+							{
+								return firstLine;
+							}
+						}
+						catch (Exception ex)
+						{
+							return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "grocy-desktop");
+						}
+					}
+
 					return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "grocy-desktop");
 				}
 			}
