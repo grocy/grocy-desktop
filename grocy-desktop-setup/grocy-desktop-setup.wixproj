@@ -99,14 +99,14 @@
   copy "$(SolutionDir)grocy-desktop\bin\Release\it\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\it\grocy-desktop.resources.dll"
   copy "$(SolutionDir)grocy-desktop\bin\Release\lt\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\lt\grocy-desktop.resources.dll"
 
-  "%25programfiles(x86)%25\Windows Kits\10\bin\10.0.19041.0\x64\makepri.exe" createconfig /cf "$(SolutionDir).deploy\appx_content\priconfig.xml" /dq lang-en-US /pv 10.0.0
+  "%25programfiles(x86)%25\Windows Kits\10\bin\10.0.22621.0\x64\makepri.exe" createconfig /cf "$(SolutionDir).deploy\appx_content\priconfig.xml" /dq lang-en-US /pv 10.0.0
   pushd "$(SolutionDir).deploy\appx_content"
-  "%25programfiles(x86)%25\Windows Kits\10\bin\10.0.19041.0\x64\makepri.exe" new /cf "$(SolutionDir).deploy\appx_content\priconfig.xml" /pr "$(SolutionDir).deploy\appx_content" /in 114BerndBestel.grocy
+  "%25programfiles(x86)%25\Windows Kits\10\bin\10.0.22621.0\x64\makepri.exe" new /cf "$(SolutionDir).deploy\appx_content\priconfig.xml" /pr "$(SolutionDir).deploy\appx_content" /in 114BerndBestel.grocy
   popd
   del "$(SolutionDir).deploy\appx_content\priconfig.xml"
-  "%25programfiles(x86)%25\Windows Kits\10\bin\10.0.19041.0\x64\makeappx.exe" pack /d "$(SolutionDir).deploy\appx_content" /p "$(SolutionDir).deploy\grocy-desktop_x.x.x.appx"
+  "%25programfiles(x86)%25\Windows Kits\10\bin\10.0.22621.0\x64\makeappx.exe" pack /d "$(SolutionDir).deploy\appx_content" /p "$(SolutionDir).deploy\grocy-desktop_x.x.x.appx"
 
-  "%25programfiles(x86)%25\Windows Kits\10\bin\10.0.19041.0\x64\signtool.exe" sign /fd sha256 /f "$(SolutionDir)appx_dependencies\grocy-desktop_developer_cert.pfx" /p "123456" "$(SolutionDir).deploy\grocy-desktop_x.x.x.appx"
+  "%25programfiles(x86)%25\Windows Kits\10\bin\10.0.22621.0\x64\signtool.exe" sign /fd sha256 /f "$(SolutionDir)appx_dependencies\grocy-desktop_developer_cert.pfx" /p "123456" "$(SolutionDir).deploy\grocy-desktop_x.x.x.appx"
 )</PostBuildEvent>
   </PropertyGroup>
   <!--
