@@ -4,7 +4,7 @@
 <img alt="Logo" height="50" src="https://raw.githubusercontent.com/grocy/grocy/master/public/img/logo.svg?sanitize=true" />
 <h2>Grocy Desktop</h2>
 <h3>A (Windows) desktop application wrapper for <a href="https://github.com/grocy/grocy">Grocy</a></h3>
-<em><h4>This is a hobby project by <a href="https://github.com/berrnd">@berrnd</a></h4></em>
+<em><h4>This is a hobby project by <a href="https://berrnd.de">Bernd Bestel</a></h4></em>
 </div>
 
 -----
