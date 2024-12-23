@@ -147,6 +147,9 @@
     <EmbeddedResource Include="FrmMain.lv.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.nl-BE.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.pl.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
