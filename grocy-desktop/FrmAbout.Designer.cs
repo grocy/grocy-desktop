@@ -52,7 +52,8 @@
             this.Label_Footer.Name = "Label_Footer";
             this.Label_Footer.Size = new System.Drawing.Size(241, 45);
             this.Label_Footer.TabIndex = 1;
-            this.Label_Footer.Text = "Grocy Desktop is project by Bernd Bestel\r\nCreated with passion since 2018";
+            this.Label_Footer.Text = "Grocy Desktop is hobby project by Bernd Bestel\r\nCreated with passion since 2018\r\n" +
+    "Life runs on Code";
             this.Label_Footer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Label_Version
