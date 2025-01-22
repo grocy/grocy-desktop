@@ -37,7 +37,7 @@ All user data can be exported and restored as a ZIP file (see the `Grocy` and `B
 
 Grocy Desktop is fully localizable - the default language is English (integrated into code), a German localization is always maintained by me.
 
-You can easily help translating Grocy on [Transifex](https://app.transifex.com/grocy/grocy-desktop/dashboard/) if your language is incomplete or not available yet.
+You can easily help translating Grocy on [Transifex](https://explore.transifex.com/grocy/grocy-desktop/) if your language is incomplete or not available yet.
 
 Any translation which once reached a completion level of 70 % will be included in releases.
 
