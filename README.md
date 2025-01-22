@@ -37,7 +37,7 @@ All user data can be exported and restored as a ZIP file (see the `Grocy` and `B
 
 Grocy Desktop is fully localizable - the default language is English (integrated into code), a German localization is always maintained by me.
 
-You can easily help translating Grocy on [Transifex](https://www.transifex.com/grocy/grocy-desktop/dashboard/) if your language is incomplete or not available yet.
+You can easily help translating Grocy on [Transifex](https://app.transifex.com/grocy/grocy-desktop/dashboard/) if your language is incomplete or not available yet.
 
 Any translation which once reached a completion level of 70 % will be included in releases.
 
@@ -67,7 +67,7 @@ Grocy is a selfhosted PHP web application, so normally runs on webservers. If yo
 
 ### How this works technically
 
-Grocy Desktop is a .Net Windows Forms application. It uses [CefSharp](https://github.com/cefsharp/CefSharp) as an integrated browser and utilizes [nginx](https://nginx.org) and [PHP](https://www.php.net/) (FastCGI)  to host Grocy. The UWP app (`.appx` package to be distributed through the Microsoft Store) is built using [Desktop Bridge](https://techcommunity.microsoft.com/t5/modern-work-app-consult-blog/desktop-bridge-8211-the-bridge-between-desktop-apps-and-the/ba-p/316488), all needed dependencies/manifests are located in the `appx_dependencies` folder.
+Grocy Desktop is a .Net Windows Forms application. It uses [CefSharp](https://github.com/cefsharp/CefSharp) as an integrated browser and utilizes [nginx](https://nginx.org) and [PHP](https://www.php.net/) (FastCGI)  to host Grocy. The UWP app (`.appx` package to be distributed through the Microsoft Store) is built using [Desktop Bridge](https://techcommunity.microsoft.com/blog/modernworkappconsult/desktop-bridge-8211-the-bridge-between-desktop-apps-and-the-universal-windows-pl/316488), all needed dependencies/manifests are located in the `appx_dependencies` folder.
 
 ### What the installer does
 
@@ -97,7 +97,7 @@ Any help is welcome, feel free to contribute anything which comes to your mind o
 
 ## Roadmap
 
-There is none, this is a hobby project. The progress of a specific bug/enhancement is always tracked in the corresponding issue, at least by commit comment references.
+There is none. The progress of a specific bug/enhancement is always tracked in the corresponding issue, at least by commit comment references.
 
 ## Screenshots
 
@@ -105,7 +105,7 @@ There is none, this is a hobby project. The progress of a specific bug/enhanceme
 
 ## How to build
 
-You will need Visual Studio 2022. All dependencies are included, available via NuGet or will be downloaded at compile time (see build events).
+You will need Visual Studio 2022. All dependencies are included, available via NuGet or will be downloaded at compile time (see the build events).
 The setup is built using [WiX Toolset](https://wixtoolset.org), which should be installed along with the [Wix Toolset Visual Studio 2022 Extension](https://marketplace.visualstudio.com/items?itemName=WixToolset.WixToolsetVisualStudio2022Extension).
 
 To build the `.appx` package (UWP app) you'll need the [Windows SDK 10.0.22621.0](https://developer.microsoft.com/en-us/windows/downloads/windows-sdk/) (this is done in the Post-build event of the `grocy-desktop-setup` project).
