@@ -84,6 +84,7 @@ namespace GrocyDesktop.Management
 				}
 				await Task.Run(() => IOHelper.ExtractZipToDirectory(phpZipPath, PhpExecutingPath, true));
 				await Task.Run(() => IOHelper.ExtractZipToDirectory(vcredistZipPath, PhpExecutingPath, true));
+				IOHelper.ReplaceInTextFile(Path.Combine(PhpExecutingPath, "php.ini"), "$PHPPATH$", PhpExecutingPath.Replace("\\", "/").TrimEnd('/'));
 			}
 
 			// Grocy
