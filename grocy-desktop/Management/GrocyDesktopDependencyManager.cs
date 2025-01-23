@@ -65,6 +65,7 @@ namespace GrocyDesktop.Management
 
 			// NGINX
 			string nginxZipPath = Path.Combine(Program.BaseExecutingPath, "nginx.zip");
+			string nginxCustomizationsZipPath = Path.Combine(Program.BaseExecutingPath, "nginx_customizations.zip");
 			if (!Directory.Exists(NginxExecutingPath))
 			{
 				if (waitWindow != null)
@@ -72,10 +73,12 @@ namespace GrocyDesktop.Management
 					waitWindow.SetStatus(ResourceManager.GetString("STRING_PreparingWebserver.Text"));
 				}
 				await Task.Run(() => IOHelper.ExtractZipToDirectory(nginxZipPath, NginxExecutingPath, true));
+				await Task.Run(() => IOHelper.ExtractZipToDirectory(nginxCustomizationsZipPath, NginxExecutingPath, true));
 			}
 
 			// PHP
 			string phpZipPath = Path.Combine(Program.BaseExecutingPath, "php.zip");
+			string phpCustomizationsZipPath = Path.Combine(Program.BaseExecutingPath, "php_customizations.zip");
 			if (!Directory.Exists(PhpExecutingPath))
 			{
 				if (waitWindow != null)
@@ -84,6 +87,7 @@ namespace GrocyDesktop.Management
 				}
 				await Task.Run(() => IOHelper.ExtractZipToDirectory(phpZipPath, PhpExecutingPath, true));
 				await Task.Run(() => IOHelper.ExtractZipToDirectory(vcredistZipPath, PhpExecutingPath, true));
+				await Task.Run(() => IOHelper.ExtractZipToDirectory(phpCustomizationsZipPath, PhpExecutingPath, true));
 				IOHelper.ReplaceInTextFile(Path.Combine(PhpExecutingPath, "php.ini"), "$PHPPATH$", PhpExecutingPath.Replace("\\", "/").TrimEnd('/'));
 			}
 

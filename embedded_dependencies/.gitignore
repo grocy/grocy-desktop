@@ -1,5 +1,7 @@
 *
 !.gitignore
 !nginx.zip
+!nginx_customizations.zip
 !php.zip
+!php_customizations.zip
 !vcredist.zip
