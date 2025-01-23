@@ -132,9 +132,6 @@
     <EmbeddedResource Include="FrmMain.he-IL.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmMain.id-ID.resx">
-      <DependentUpon>FrmMain.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.id.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
