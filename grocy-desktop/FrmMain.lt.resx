@@ -282,7 +282,7 @@
     <value>187, 22</value>
   </data>
   <data name="ToolStripMenuItem_About.Text" xml:space="preserve">
-    <value>About Grocy Desktop</value>
+    <value>Apie „Grocy Desktop“</value>
   </data>
   <data name="ToolStripMenuItem_Help.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 20</value>
@@ -463,7 +463,7 @@
     <value>593, 22</value>
   </data>
   <data name="STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue.Text" xml:space="preserve">
-    <value>Grocy Desktop will restart to apply the changed settings, continue?</value>
+    <value>„Grocy Desktop“ bus paleistas iš naujo, kad būtų pritaikyti pakeisti nustatymai, ar tęsti?</value>
   </data>
   <data name="STRING_Backup.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 22</value>
@@ -487,13 +487,13 @@
     <value>593, 22</value>
   </data>
   <data name="STRING_TheCurrentDataWillBeOverwrittenAndGrocydesktopWillRestartContinue.Text" xml:space="preserve">
-    <value>The current data will be overwritten and Grocy Desktop will restart, continue?</value>
+    <value>Dabartiniai duomenys bus perrašyti ir Grocy Desktop bus paleistas iš naujo, ar tęsti?</value>
   </data>
   <data name="STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 22</value>
   </data>
   <data name="STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue.Text" xml:space="preserve">
-    <value>This will delete and recreate the Grocy database, means all your data will be wiped, really continue?</value>
+    <value>Bus ištrinta ir iš naujo sukurta Grocy duomenų bazė, o tai reiškia, kad visi jūsų duomenys bus ištrinti, ar tikrai tęsti?</value>
   </data>
   <data name="STRING_ZipFiles.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 22</value>
@@ -511,7 +511,7 @@
     <value>593, 22</value>
   </data>
   <data name="STRING_SayThanksQuestion.Text" xml:space="preserve">
-    <value>Do you find Grocy useful?</value>
+    <value>Ar Grocy jums naudinga?</value>
   </data>
   <data name="STRING_PreparingWebbrowser.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 22</value>
@@ -535,7 +535,7 @@
     <value>593, 22</value>
   </data>
   <data name="STRING_PreparingGrocy.Text" xml:space="preserve">
-    <value>Preparing Grocy...</value>
+    <value>Ruošiama Grocy...</value>
   </data>
   <data name="STRING_PreparingBarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 22</value>
@@ -547,7 +547,7 @@
     <value>593, 22</value>
   </data>
   <data name="STRING_DownloadingGrocyRelease.Text" xml:space="preserve">
-    <value>Downloading latest Grocy release...</value>
+    <value>Atsisiunčiamas naujausias Grocy leidimas...</value>
   </data>
   <data name="STRING_DownloadingBarcodeBuddyRelease.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 22</value>
@@ -559,13 +559,13 @@
     <value>593, 22</value>
   </data>
   <data name="STRING_GrocyExternalAccessInfo.Text" xml:space="preserve">
-    <value>Access Grocy externally via %1$s or %2$s</value>
+    <value>Pasiekite „Grocy“ iš išorės per %1$s arba %2$s</value>
   </data>
   <data name="STRING_GrocyAndBarcodeBuddyExternalAccessInfo.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 22</value>
   </data>
   <data name="STRING_GrocyAndBarcodeBuddyExternalAccessInfo.Text" xml:space="preserve">
-    <value>Access Grocy externally via %1$s or %2$s and Barcode Buddy via %3$s or %4$s</value>
+    <value>Pasiekite „Grocy“ iš išorės per %1$s arba %2$s ir „Barcode Buddy“ per %3$s arba %4$s</value>
   </data>
   <data name="STRING_NginxOutput.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 22</value>
