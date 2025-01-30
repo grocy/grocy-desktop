@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" InitialTargets="EnsureWixToolsetInstalled" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" InitialTargets="EnsureWixToolsetInstalled"
+  xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
@@ -56,7 +57,9 @@
   copy "$(SolutionDir)embedded_dependencies\barcodebuddy.zip" "$(SolutionDir).deploy\appx_content\barcodebuddy.zip"
 
   copy "$(SolutionDir)embedded_dependencies\php.zip" "$(SolutionDir).deploy\appx_content\php.zip"
+  copy "$(SolutionDir)embedded_dependencies\php_customizations.zip" "$(SolutionDir).deploy\appx_content\php_customizations.zip"
   copy "$(SolutionDir)embedded_dependencies\nginx.zip" "$(SolutionDir).deploy\appx_content\nginx.zip"
+  copy "$(SolutionDir)embedded_dependencies\nginx_customizations.zip" "$(SolutionDir).deploy\appx_content\nginx_customizations.zip"
 
   copy "$(SolutionDir)embedded_dependencies\vcredist.zip" "$(SolutionDir).deploy\appx_content\vcredist.zip"
 
@@ -73,7 +76,6 @@
   mkdir "$(SolutionDir).deploy\appx_content\el"
   mkdir "$(SolutionDir).deploy\appx_content\he-IL"
   mkdir "$(SolutionDir).deploy\appx_content\id"
-  mkdir "$(SolutionDir).deploy\appx_content\id-ID"
   mkdir "$(SolutionDir).deploy\appx_content\fi"
   mkdir "$(SolutionDir).deploy\appx_content\fr-FR"
   mkdir "$(SolutionDir).deploy\appx_content\pl"
@@ -83,12 +85,14 @@
   mkdir "$(SolutionDir).deploy\appx_content\es"
   mkdir "$(SolutionDir).deploy\appx_content\it"
   mkdir "$(SolutionDir).deploy\appx_content\lt"
+  mkdir "$(SolutionDir).deploy\appx_content\lv"
+  mkdir "$(SolutionDir).deploy\appx_content\nl-BE"
+  mkdir "$(SolutionDir).deploy\appx_content\pt-BR"
 
   copy "$(SolutionDir)grocy-desktop\bin\Release\de\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\de\grocy-desktop.resources.dll"
   copy "$(SolutionDir)grocy-desktop\bin\Release\el\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\el\grocy-desktop.resources.dll"
   copy "$(SolutionDir)grocy-desktop\bin\Release\he-IL\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\he-IL\grocy-desktop.resources.dll"
   copy "$(SolutionDir)grocy-desktop\bin\Release\id\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\id\grocy-desktop.resources.dll"
-  copy "$(SolutionDir)grocy-desktop\bin\Release\id-ID\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\id-ID\grocy-desktop.resources.dll"
   copy "$(SolutionDir)grocy-desktop\bin\Release\fi\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\fi\grocy-desktop.resources.dll"
   copy "$(SolutionDir)grocy-desktop\bin\Release\fr-FR\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\fr-FR\grocy-desktop.resources.dll"
   copy "$(SolutionDir)grocy-desktop\bin\Release\pl\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\pl\grocy-desktop.resources.dll"
@@ -98,6 +102,9 @@
   copy "$(SolutionDir)grocy-desktop\bin\Release\es\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\es\grocy-desktop.resources.dll"
   copy "$(SolutionDir)grocy-desktop\bin\Release\it\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\it\grocy-desktop.resources.dll"
   copy "$(SolutionDir)grocy-desktop\bin\Release\lt\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\lt\grocy-desktop.resources.dll"
+  copy "$(SolutionDir)grocy-desktop\bin\Release\lv\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\lv\grocy-desktop.resources.dll"
+  copy "$(SolutionDir)grocy-desktop\bin\Release\nl-BE\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\nl-BE\grocy-desktop.resources.dll"
+  copy "$(SolutionDir)grocy-desktop\bin\Release\pt-BR\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\pt-BR\grocy-desktop.resources.dll"
 
   "%25programfiles(x86)%25\Windows Kits\10\bin\10.0.22621.0\x64\makepri.exe" createconfig /cf "$(SolutionDir).deploy\appx_content\priconfig.xml" /dq lang-en-US /pv 10.0.0
   pushd "$(SolutionDir).deploy\appx_content"
