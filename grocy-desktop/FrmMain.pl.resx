@@ -282,7 +282,7 @@
     <value>187, 22</value>
   </data>
   <data name="ToolStripMenuItem_About.Text" xml:space="preserve">
-    <value>About Grocy Desktop</value>
+    <value>O Aplikacji Grocy Desktop</value>
   </data>
   <data name="ToolStripMenuItem_Help.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 20</value>
@@ -463,7 +463,7 @@
     <value>593, 22</value>
   </data>
   <data name="STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue.Text" xml:space="preserve">
-    <value>Grocy Desktop will restart to apply the changed settings, continue?</value>
+    <value>Grocy Desktop uruchomi się ponownie aby zastosować zmienione ustawienia, kontynuować?</value>
   </data>
   <data name="STRING_Backup.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 22</value>
@@ -487,13 +487,13 @@
     <value>593, 22</value>
   </data>
   <data name="STRING_TheCurrentDataWillBeOverwrittenAndGrocydesktopWillRestartContinue.Text" xml:space="preserve">
-    <value>The current data will be overwritten and Grocy Desktop will restart, continue?</value>
+    <value>Aktualne dane zostaną nadpisane, a aplikacja uruchomi się ponownie, kontynuować?</value>
   </data>
   <data name="STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 22</value>
   </data>
   <data name="STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue.Text" xml:space="preserve">
-    <value>This will delete and recreate the Grocy database, means all your data will be wiped, really continue?</value>
+    <value>spowoduje to usunięcie i ponowne utworzenie bazy danych, co oznacza utratę  wszystkich danych, czy naprawdę chcesz kontynuować?</value>
   </data>
   <data name="STRING_ZipFiles.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 22</value>
@@ -511,7 +511,7 @@
     <value>593, 22</value>
   </data>
   <data name="STRING_SayThanksQuestion.Text" xml:space="preserve">
-    <value>Do you find Grocy useful?</value>
+    <value>Czy Uważasz Grocy za Przydatne?</value>
   </data>
   <data name="STRING_PreparingWebbrowser.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 22</value>
@@ -565,7 +565,7 @@
     <value>593, 22</value>
   </data>
   <data name="STRING_GrocyAndBarcodeBuddyExternalAccessInfo.Text" xml:space="preserve">
-    <value>Access Grocy externally via %1$s or %2$s and Barcode Buddy via %3$s or %4$s</value>
+    <value>Uzyskaj dostęp do Grocy desktop z zewnątrz  przez %1$s lub %2$ oraz do  Barcode Buddy przez %3$ lub %4$</value>
   </data>
   <data name="STRING_NginxOutput.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 22</value>
