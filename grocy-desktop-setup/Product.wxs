@@ -41,22 +41,21 @@
 
 		<Property Id="WixShellExecTarget" Value="[INSTALLFOLDER]grocy-desktop.exe" />
 		<CustomAction Id="LaunchApplication" BinaryKey="WixCA" DllEntry="WixShellExec" Impersonate="yes" />
-		
+
 		<Upgrade Id="6BFE12C7-63CC-48DB-BCFC-7A7DE95D72C1">
 			<UpgradeVersion OnlyDetect="no" Property="PREVIOUSFOUND" Minimum="1.0.0.0" IncludeMinimum="yes" Maximum="99.0.0.0" IncludeMaximum="no" />
 		</Upgrade>
-	
+
 		<CustomAction Id="CleanAdditionalFiles" Directory="ProgramFiles64Folder" ExeCommand="cmd /C &quot;rd /S /Q .\grocy-desktop&quot;" Execute="deferred" Return="ignore" HideTarget="no" Impersonate="no" />
 		<InstallExecuteSequence>
-			<Custom Action="CleanAdditionalFiles" Before="RemoveFiles" >
-				REMOVE="ALL"
+			<Custom Action="CleanAdditionalFiles" Before="RemoveFiles"> REMOVE="ALL"
 			</Custom>
 		</InstallExecuteSequence>
 	</Product>
 
 	<Fragment>
 		<SetProperty Id="ProgramFilesFolder" Value="[ProgramFiles64Folder]" Before="CostFinalize"><![CDATA[NOT Privileged]]></SetProperty>
-		
+
 		<Directory Id="TARGETDIR" Name="SourceDir">
 			<Directory Id="ProgramFiles64Folder">
 				<Directory Id="INSTALLFOLDER" Name="grocy-desktop">
@@ -75,6 +74,7 @@
 					<Directory Id="RESOURCES_IT" Name="it" />
 					<Directory Id="RESOURCES_LT" Name="lt" />
 					<Directory Id="RESOURCES_NL_BE" Name="nl-BE" />
+					<Directory Id="RESOURCES_BG" Name="bg" />
 				</Directory>
 			</Directory>
 			<Directory Id="ProgramMenuFolder" />
@@ -163,6 +163,9 @@
 		</Component>
 		<Component Id="RESOURCES_NL_BE" Directory="RESOURCES_NL_BE">
 			<File Id="LocalizationResourcesNlBe" Source="$(var.SolutionDir)grocy-desktop\bin\$(var.Configuration)\nl-BE\grocy-desktop.resources.dll" KeyPath="yes" Checksum="yes"></File>
+		</Component>
+		<Component Id="RESOURCES_BG" Directory="RESOURCES_BG">
+			<File Id="LocalizationResourcesBg" Source="$(var.SolutionDir)grocy-desktop\bin\$(var.Configuration)\bg\grocy-desktop.resources.dll" KeyPath="yes" Checksum="yes"></File>
 		</Component>
 	</Fragment>
 </Wix>

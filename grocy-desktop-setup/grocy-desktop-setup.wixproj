@@ -88,6 +88,7 @@
   mkdir "$(SolutionDir).deploy\appx_content\lv"
   mkdir "$(SolutionDir).deploy\appx_content\nl-BE"
   mkdir "$(SolutionDir).deploy\appx_content\pt-BR"
+  mkdir "$(SolutionDir).deploy\appx_content\bg"
 
   copy "$(SolutionDir)grocy-desktop\bin\Release\de\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\de\grocy-desktop.resources.dll"
   copy "$(SolutionDir)grocy-desktop\bin\Release\el\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\el\grocy-desktop.resources.dll"
@@ -105,6 +106,7 @@
   copy "$(SolutionDir)grocy-desktop\bin\Release\lv\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\lv\grocy-desktop.resources.dll"
   copy "$(SolutionDir)grocy-desktop\bin\Release\nl-BE\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\nl-BE\grocy-desktop.resources.dll"
   copy "$(SolutionDir)grocy-desktop\bin\Release\pt-BR\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\pt-BR\grocy-desktop.resources.dll"
+  copy "$(SolutionDir)grocy-desktop\bin\Release\bg\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\bg\grocy-desktop.resources.dll"
 
   "%25programfiles(x86)%25\Windows Kits\10\bin\10.0.22621.0\x64\makepri.exe" createconfig /cf "$(SolutionDir).deploy\appx_content\priconfig.xml" /dq lang-en-US /pv 10.0.0
   pushd "$(SolutionDir).deploy\appx_content"
