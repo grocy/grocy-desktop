@@ -109,6 +109,9 @@
     <EmbeddedResource Include="FrmDisplayException.resx">
       <DependentUpon>FrmDisplayException.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.bg.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.cs.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -198,7 +201,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="CefSharp.WinForms">
-      <Version>133.4.21</Version>
+      <Version>134.3.60</Version>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
       <Version>13.0.3</Version>
