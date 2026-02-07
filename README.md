@@ -11,7 +11,7 @@
 
 ## Questions / Help / Bug Reports / Feature Requests
 
-- General help and usage questions &rarr;  [r/grocy subreddit](https://www.reddit.com/r/grocy)
+- General help and usage questions &rarr;  [r/grocy on Reddit](https://www.reddit.com/r/grocy)
 - Bug Reports and Feature Requests &rarr; [Issue Tracker](https://github.com/grocy/grocy-desktop/issues/new/choose)
 
 _Please don't send me private messages or call me regarding anything Grocy. I check the issue tracker and the subreddit pretty much daily, but don't provide any support beyond that._
@@ -93,11 +93,11 @@ Grocy Desktop will do the following things and then opens the locally hosted ins
 
 ## Contributing / Say Thanks
 
-Any help is welcome, feel free to contribute anything which comes to your mind or see <https://grocy.info/#say-thanks> if you just want to say thanks.
+See <https://grocy.info/#say-thanks> if you just want to say thanks or [Contributing](https://github.com/grocy/grocy-desktop?tab=contributing-ov-file#contributing-ov-file) for anything else.
 
 ## Roadmap
 
-There is none. The progress of a specific bug/enhancement is always tracked in the corresponding issue, at least by commit comment references.
+There is none. The progress of a specific bug/enhancement is always tracked in the corresponding request, at least by commit comment references.
 
 ## Screenshots
 
