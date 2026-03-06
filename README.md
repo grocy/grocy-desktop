@@ -105,10 +105,10 @@ There is none. The progress of a specific bug/enhancement is always tracked in t
 
 ## How to build
 
-You will need Visual Studio 2022. All dependencies are included, available via NuGet or will be downloaded at compile time (see the build events).
-The setup is built using [WiX Toolset](https://wixtoolset.org), which should be installed along with the [Wix Toolset Visual Studio 2022 Extension](https://marketplace.visualstudio.com/items?itemName=WixToolset.WixToolsetVisualStudio2022Extension).
+You will need Visual Studio 2026. All dependencies are included, available via NuGet or will be downloaded at compile time (see the build events).
+The setup is built using [WiX Toolset v3.14.1](https://github.com/wixtoolset/wix3/releases), which should be installed along with the [Wix Toolset Visual Studio 2022 Extension](https://marketplace.visualstudio.com/items?itemName=WixToolset.WixToolsetVisualStudio2022Extension).
 
-To build the `.appx` package (UWP app) you'll need the [Windows SDK 10.0.22621.0](https://developer.microsoft.com/en-us/windows/downloads/windows-sdk/) (this is done in the Post-build event of the `grocy-desktop-setup` project).
+To build the `.appx` package (UWP app) you'll need the [Windows SDK 10.0.26100.0](https://learn.microsoft.com/en-us/windows/apps/windows-sdk/) (this is done in the Post-build event of the `grocy-desktop-setup` project).
 
 ## License
 
