@@ -27,6 +27,8 @@
 			<ComponentRef Id="RESOURCES_LT" />
 			<ComponentRef Id="RESOURCES_NL_BE" />
 			<ComponentRef Id="RESOURCES_BG" />
+			<ComponentRef Id="RESOURCES_JA" />
+			<ComponentRef Id="RESOURCES_MS" />
 			<ComponentRef Id="ApplicationShortcut" />
 			<ComponentRef Id="ApplicationShortcutDesktop" />
 		</Feature>
@@ -76,6 +78,8 @@
 					<Directory Id="RESOURCES_LT" Name="lt" />
 					<Directory Id="RESOURCES_NL_BE" Name="nl-BE" />
 					<Directory Id="RESOURCES_BG" Name="bg" />
+					<Directory Id="RESOURCES_JA" Name="ja" />
+					<Directory Id="RESOURCES_MS" Name="ms" />
 				</Directory>
 			</Directory>
 			<Directory Id="ProgramMenuFolder" />
@@ -167,6 +171,12 @@
 		</Component>
 		<Component Id="RESOURCES_BG" Directory="RESOURCES_BG">
 			<File Id="LocalizationResourcesBg" Source="$(var.SolutionDir)grocy-desktop\bin\$(var.Configuration)\bg\grocy-desktop.resources.dll" KeyPath="yes" Checksum="yes"></File>
+		</Component>
+		<Component Id="RESOURCES_JA" Directory="RESOURCES_JA">
+			<File Id="LocalizationResourcesJa" Source="$(var.SolutionDir)grocy-desktop\bin\$(var.Configuration)\ja\grocy-desktop.resources.dll" KeyPath="yes" Checksum="yes"></File>
+		</Component>
+		<Component Id="RESOURCES_MS" Directory="RESOURCES_MS">
+			<File Id="LocalizationResourcesMs" Source="$(var.SolutionDir)grocy-desktop\bin\$(var.Configuration)\ms\grocy-desktop.resources.dll" KeyPath="yes" Checksum="yes"></File>
 		</Component>
 	</Fragment>
 </Wix>

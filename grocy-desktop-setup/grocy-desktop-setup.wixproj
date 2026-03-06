@@ -22,18 +22,18 @@
   <ItemGroup>
     <Compile Include="Product.wxs" />
     <WixExtension Include="WixUIExtension">
-      <HintPath>C:\Program Files (x86)\WiX Toolset v3.11\bin\WixUIExtension.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\WiX Toolset v3.14\bin\WixUIExtension.dll</HintPath>
       <Name>WixUIExtension</Name>
     </WixExtension>
     <WixExtension Include="WixUtilExtension">
-      <HintPath>C:\Program Files (x86)\WiX Toolset v3.11\bin\WixUtilExtension.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\WiX Toolset v3.14\bin\WixUtilExtension.dll</HintPath>
       <Name>WixUtilExtension</Name>
     </WixExtension>
   </ItemGroup>
   <Import Project="$(WixTargetsPath)" Condition=" '$(WixTargetsPath)' != '' " />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets" Condition=" '$(WixTargetsPath)' == '' AND Exists('$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets') " />
   <Target Name="EnsureWixToolsetInstalled" Condition=" '$(WixTargetsImported)' != 'true' ">
-    <Error Text="The WiX Toolset v3.11 (or newer) build tools must be installed to build this project. To download the WiX Toolset, see http://wixtoolset.org/releases/" />
+    <Error Text="The WiX Toolset v3.14 (or newer) build tools must be installed to build this project. To download the WiX Toolset, see http://wixtoolset.org/releases/" />
   </Target>
   <PropertyGroup>
     <PreBuildEvent>if $(ConfigurationName)==Release (
@@ -89,6 +89,8 @@
   mkdir "$(SolutionDir).deploy\appx_content\nl-BE"
   mkdir "$(SolutionDir).deploy\appx_content\pt-BR"
   mkdir "$(SolutionDir).deploy\appx_content\bg"
+  mkdir "$(SolutionDir).deploy\appx_content\ja"
+  mkdir "$(SolutionDir).deploy\appx_content\ms"
 
   copy "$(SolutionDir)grocy-desktop\bin\Release\de\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\de\grocy-desktop.resources.dll"
   copy "$(SolutionDir)grocy-desktop\bin\Release\el\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\el\grocy-desktop.resources.dll"
@@ -107,6 +109,8 @@
   copy "$(SolutionDir)grocy-desktop\bin\Release\nl-BE\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\nl-BE\grocy-desktop.resources.dll"
   copy "$(SolutionDir)grocy-desktop\bin\Release\pt-BR\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\pt-BR\grocy-desktop.resources.dll"
   copy "$(SolutionDir)grocy-desktop\bin\Release\bg\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\bg\grocy-desktop.resources.dll"
+  copy "$(SolutionDir)grocy-desktop\bin\Release\ja\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\ja\grocy-desktop.resources.dll"
+  copy "$(SolutionDir)grocy-desktop\bin\Release\mx\grocy-desktop.resources.dll" "$(SolutionDir).deploy\appx_content\ms\grocy-desktop.resources.dll"
 
   "%25programfiles(x86)%25\Windows Kits\10\bin\10.0.22621.0\x64\makepri.exe" createconfig /cf "$(SolutionDir).deploy\appx_content\priconfig.xml" /dq lang-en-US /pv 10.0.0
   pushd "$(SolutionDir).deploy\appx_content"
