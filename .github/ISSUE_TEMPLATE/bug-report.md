@@ -14,4 +14,5 @@ Please make sure to:
 - Attach screenshots where useful
 - Check if the problem was maybe already reported or fixed by searching open and also already closed requests here
 - Keep it to one topic per request
+- Exclude any AI generated content and only include what you truly understand yourself
 -->
