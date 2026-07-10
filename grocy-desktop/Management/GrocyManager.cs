@@ -80,7 +80,7 @@ namespace GrocyDesktop.Management
 			File.WriteAllText(Path.Combine(this.BasePath, "embedded.txt"), this.DataPath);
 			this.SetSetting("DEFAULT_LOCALE", this.GuessLocalization());
 			this.SetSetting("BASE_URL", "/");
-			this.SetSetting("CURRENCY", new RegionInfo(CultureInfo.CurrentCulture.LCID).ISOCurrencySymbol);
+			this.SetSetting("CURRENCY", new RegionInfo(CultureInfo.CurrentCulture.Name).ISOCurrencySymbol);
 
 			IOHelper.CopyFolder(Path.Combine(this.BasePath, "data"), this.DataPath);
 			File.Copy(Path.Combine(this.BasePath, "config-dist.php"), Path.Combine(this.DataPath, "config.php"), true);
