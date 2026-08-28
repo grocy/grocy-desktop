@@ -553,7 +553,7 @@
     <value>593, 22</value>
   </data>
   <data name="STRING_DownloadingBarcodeBuddyRelease.Text" xml:space="preserve">
-    <value>Download dell'ultima versione di Barcode Buddy in corso...</value>
+    <value>Scaricamento dell'ultima versione di Barcode Buddy in corso...</value>
   </data>
   <data name="STRING_GrocyExternalAccessInfo.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 22</value>

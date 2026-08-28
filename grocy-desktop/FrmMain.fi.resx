@@ -282,7 +282,7 @@
     <value>187, 22</value>
   </data>
   <data name="ToolStripMenuItem_About.Text" xml:space="preserve">
-    <value>About Grocy Desktop</value>
+    <value>Tietoja Grocy Desktopista</value>
   </data>
   <data name="ToolStripMenuItem_Help.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 20</value>
@@ -463,7 +463,7 @@
     <value>593, 22</value>
   </data>
   <data name="STRING_GrocyDesktopWillRestartToApplyTheChangedSettingsContinue.Text" xml:space="preserve">
-    <value>Grocy Desktop will restart to apply the changed settings, continue?</value>
+    <value>Muutetut asetukset otetaan käyttöön, kun Grocy Desktop käynnistetään uudelleen. Haluatko jatkaa?</value>
   </data>
   <data name="STRING_Backup.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 22</value>
@@ -487,13 +487,13 @@
     <value>593, 22</value>
   </data>
   <data name="STRING_TheCurrentDataWillBeOverwrittenAndGrocydesktopWillRestartContinue.Text" xml:space="preserve">
-    <value>The current data will be overwritten and Grocy Desktop will restart, continue?</value>
+    <value>Tämän hetkinen data ylikirjoitetaan ja ohjelma käynnistetään uudestaan, haluatko jatkaa?</value>
   </data>
   <data name="STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 22</value>
   </data>
   <data name="STRING_ThisWillDeleteAndRecreateTheGrocyDatabaseMeansAllYourDataWillBeWipedReallyContinue.Text" xml:space="preserve">
-    <value>This will delete and recreate the Grocy database, means all your data will be wiped, really continue?</value>
+    <value>Toiminto tuhoaa ja luo uudestaan Grocyn tietokannan. KAIKKI TIEDOT menetetään, haluatko todella jatkaa?</value>
   </data>
   <data name="STRING_ZipFiles.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 22</value>
@@ -511,7 +511,7 @@
     <value>593, 22</value>
   </data>
   <data name="STRING_SayThanksQuestion.Text" xml:space="preserve">
-    <value>Do you find Grocy useful?</value>
+    <value>Pidätkö Grocya hyödyllisenä?</value>
   </data>
   <data name="STRING_PreparingWebbrowser.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 22</value>
@@ -535,7 +535,7 @@
     <value>593, 22</value>
   </data>
   <data name="STRING_PreparingGrocy.Text" xml:space="preserve">
-    <value>Preparing Grocy...</value>
+    <value>Valmistellaan Grocya...</value>
   </data>
   <data name="STRING_PreparingBarcodeBuddy.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 22</value>
@@ -547,7 +547,7 @@
     <value>593, 22</value>
   </data>
   <data name="STRING_DownloadingGrocyRelease.Text" xml:space="preserve">
-    <value>Downloading latest Grocy release...</value>
+    <value>Ladataan Grocyn uusinta julkaisua...</value>
   </data>
   <data name="STRING_DownloadingBarcodeBuddyRelease.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 22</value>
@@ -559,13 +559,13 @@
     <value>593, 22</value>
   </data>
   <data name="STRING_GrocyExternalAccessInfo.Text" xml:space="preserve">
-    <value>Access Grocy externally via %1$s or %2$s</value>
+    <value>Käytä Grocya ulkoisesti käyttäen %1$s tai %2$s</value>
   </data>
   <data name="STRING_GrocyAndBarcodeBuddyExternalAccessInfo.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 22</value>
   </data>
   <data name="STRING_GrocyAndBarcodeBuddyExternalAccessInfo.Text" xml:space="preserve">
-    <value>Access Grocy externally via %1$s or %2$s and Barcode Buddy via %3$s or %4$s</value>
+    <value>Käytä Grocya ulkoisesti käyttäen %1$s tai %2$s sekä Barcode Buddya käyttäen %3$s tai %4$s</value>
   </data>
   <data name="STRING_NginxOutput.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 22</value>
