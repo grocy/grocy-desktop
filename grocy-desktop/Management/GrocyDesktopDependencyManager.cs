@@ -14,22 +14,6 @@ namespace GrocyDesktop.Management
 		private GrocyDesktopDependencyManager()
 		{ }
 
-		private const string LATEST_GROCY_RELEASE_URL = "https://releases.grocy.info/latest";
-
-		private static string LATEST_BARCODE_BUDDY_RELEASE_URL
-		{
-			get
-			{
-				using (WebClient wc = new WebClient())
-				{
-					wc.Headers.Add("User-Agent", "grocy-desktop/" + Program.RunningVersion);
-					string latestReleaseJson = wc.DownloadString("https://api.github.com/repos/Forceu/barcodebuddy/releases/latest");
-					JObject latestRelease = JObject.Parse(latestReleaseJson);
-					return "https://github.com/Forceu/barcodebuddy/archive/" + latestRelease["tag_name"] + ".zip";
-				}
-			}
-		}
-
 		private static ResourceManager ResourceManager = new ResourceManager(typeof(FrmMain));
 
 		public readonly static string CefExecutingPath = Path.Combine(Program.RuntimeDependenciesExecutingPath, "cef");
@@ -125,18 +109,6 @@ namespace GrocyDesktop.Management
 				{
 					Directory.Delete(item, true);
 				}
-			}
-
-			// Clean up old Grocy / Barcode Buddy directories (used until v2.2.0)
-			string oldPath = Path.Combine(Program.BaseFixedUserDataFolderPath, "grocy");
-			if (Directory.Exists(oldPath))
-			{
-				Directory.Delete(oldPath, true);
-			}
-			string oldPath2 = Path.Combine(Program.BaseFixedUserDataFolderPath, "barcodebuddy");
-			if (Directory.Exists(oldPath2))
-			{
-				Directory.Delete(oldPath2, true);
 			}
 
 			if (waitWindow != null)
